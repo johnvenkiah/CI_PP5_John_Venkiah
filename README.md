@@ -14,14 +14,17 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 ## Table of Contents
 
 - [StepUp](#stepup)
-  * [Table of Contents](#table-of-contents)
   * [Project Overview](#project-overview)
   * [User Experience](#user-experience)
     + [Strategy](#strategy)
-      - [Primary Goal](#primary-goal)
+      - [Primary Goals](#primary-goals)
+      - [Business Model](#business-model)
+      - [Marketing](#marketing)
     + [Structure](#structure)
       - [Pages](#pages)
+      - [Pages provided by Django](#pages-provided-by-django)
       - [Code Structure](#code-structure)
+      - [Other Directories and files](#other-directories-and-files)
       - [Database](#database)
       - [Data Models](#data-models)
     + [Scope](#scope)
@@ -62,7 +65,7 @@ The focus points for this application are ecommerce, using the Django framework 
 
 #### Primary Goals
 
-The site owners primary goals are:
+**The site owners primary goals are:**
 
 * To be able to sell the stores products online
 
@@ -74,7 +77,7 @@ The site owners primary goals are:
 
 * To own a website which is easy to use and navigate, for all types of users on all devices.
 
-A potential customers primary goals are:
+**A potential customers primary goals are:**
 
 * To be able to view details of and purchase any of the available products from the online store.
 
@@ -100,7 +103,7 @@ Upon registering for an account, customers can check a box to receive news and o
 
 ### Structure
 
-This website has over 15 pages, with a dynamic navigation bar at the top of the screen, giving users access to the most important pages at all times.
+This website has 9 custom pages, with a dynamic navigation bar at the top of the screen, giving users access to the most important pages at all times.
 
 #### Pages
 
@@ -110,15 +113,90 @@ This website has over 15 pages, with a dynamic navigation bar at the top of the 
 
 * Product Detail - The dedicated page for a specific product, where users can read a description and perform all given tasks for the product
 
-* Manage Products - This is where admin users can edit, add and remove products and product details
+* Add Product - This is where admin users can add new products to the website
 
-* 
+* Edit Product - The page for admins to edit or delete products
+
+* Profile - The users order history, billing and shipping info is here, as well as the users saved items, editable here in the profile page.
+
+* Cart - A user purchases an item by adding it to the cart; clicking on it will show all cart items
+
+* Checkout - Here users enter their delivery details and card info to proceed with their order
+
+* Payment Successful - The page show when a payment has successfully been made, showing the order information
+
+#### Pages provided by Django
+
+These pages are provided by the Allauth package of the Django framework, but are customised by me to fit in with the rest of the site. Read more about Allauth [here](https://django-allauth.readthedocs.io/en/latest/)
+
+* Sign Up - where users can register for an account on the site
+
+* Sign in - Registered users can log accessing their personal info etc by signing in
+
+* Sign Out - The same goes for signing out
+
+* Various pages for email verification and password reset, etc (16 pages)
 
 #### Code Structure
 
+I have devided the code into apps as per the Django best practice, for the different areas of functionality.
+
+* Home - basic functionality for the home page
+
+* Products - all functionality related to the products on the site
+
+* Profile - functionality regarding the users profile and order data
+
+* Cart - functionality for the users shopping cart
+
+* Checkout - functionality for the user to go through with the order and payment
+
+* Contact - basic functionality for users to get in touch
+
+#### Other Directories and files
+
+* step_up - project folder containing settings, urls and other configuration files for the whole project
+
+* templates - contains the base template and templates (HTML-files with Django logic) for the Django allauth authentication
+
+* manage.py - the main python project file to get the web application running
+* README.md - the document you are reading right now, documentation of the whole project
+
+* TESTING.md - documentation of testing the project
+
+* custom_storages.py - configuration for storage of media and static files on AWS S3
+
+* Procfile - needed for deployment to Heroku to specify commands to be executed by the app on startup
+
+* requirements.txt - a list of dependancies (installed packages) that the project requires for the application to function
+
+Enviromental Variables such as API-keys, passwords etc are stored securely in the back end (in the development environment and in the Heroku App settings) so that regular users do not have access to them.
+
 #### Database
 
+The [SQLite](https://www.sqlite.org/index.html) database was used for the development environment, and the [Postgres](https://www.postgresql.org/) database for production as an add-on via Heroku. Both are relational databases and work well with the Django framework used for this project.
+
 #### Data Models
+
+The following models have been used to populate the database and for the site to function as it should:
+
+* Category - the category in which the product is placed
+
+* Product - the model for the product itself and its details
+
+* User - the built in Django User model, facilitates the users basic information
+
+* Profile - the model storing the users product and order information
+
+* Review - a model for users to give the product a rating and a review
+
+* Cart - the model for the users shopping cart
+
+* Order - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data
+
+* LineItem - a model holding the product information for a single product, binding the product model together with the order
+
+* WishList - the customer has the option to save an item, which will then appear in their profile wish list
 
 ### Scope
 
