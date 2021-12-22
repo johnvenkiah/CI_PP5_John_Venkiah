@@ -13,67 +13,74 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
 ## Table of Contents
 
-- [StepUp](#stepup)
-  * [Project Overview](#project-overview)
-  * [User Experience](#user-experience)
-    + [Strategy](#strategy)
-      - [Primary Goals](#primary-goals)
-      - [Business Model](#business-model)
-      - [Marketing](#marketing)
-    + [Structure](#structure)
-      - [Pages](#pages)
-      - [Pages provided by Django](#pages-provided-by-django)
-      - [Technical Design](#technical-design)
-        * [Code Structure](#code-structure)
-        * [Database](#database)
-        * [Schema of models](#schema-of-models)
-        * [Data Models](#data-models)
-    + [Scope - Epics and User Stories](#scope---epics-and-user-stories)
-      - [Epic 1: Base functionality and ease of use](#epic-1--base-functionality-and-ease-of-use)
-      - [Epic 2: Products](#epic-2--products)
-      - [Epic 3: The Cart](#epic-3--the-cart)
-      - [Epic 4: Checkout](#epic-4--checkout)
-      - [Epic 5: User registration and account](#epic-5--user-registration-and-account)
-      - [Epic 6: The Wish List](#epic-6--the-wish-list)
-      - [Epic 7: Reviews](#epic-7--reviews)
-      - [Epic 8: Contact](#epic-8--contact)
-      - [Epic 9: Site Owner functionality](#epic-9--site-owner-functionality)
-    + [Skeleton](#skeleton)
-      - [Wireframes](#wireframes)
-    + [Surface](#surface)
-      - [Colors](#colors)
-      - [Typography](#typography)
-  * [Existing Features](#existing-features)
-    + [Feature 1: The Navbar](#feature-1--the-navbar)
-    + [Feature 2: The Home Page](#feature-2--the-home-page)
-    + [Feature 3: The Products List](#feature-3--the-products-list)
-    + [Feature 4: The Product Detail Page](#feature-4--the-product-detail-page)
-    + [Feature 5: The Cart](#feature-5--the-cart)
-    + [Feature 6: The Checkout Page](#feature-6--the-checkout-page)
-    + [Feature 7: The Checkout Confirmation Page](#feature-7--the-checkout-confirmation-page)
-    + [Feature 8: The Sign Up/In/Out Pages](#feature-8--the-sign-up-in-out-pages)
-    + [Feature 9: The Profile](#feature-9--the-profile)
-    + [Feature 10: The Wish List](#feature-10--the-wish-list)
-    + [Feature 11: The Contact Page](#feature-11--the-contact-page)
-    + [Feature 12: The Admin Features](#feature-12--the-admin-features)
-    + [Feature 13: The Django Admin](#feature-13--the-django-admin)
-  * [Features Yet to Implement](#features-yet-to-implement)
-  * [Technologies Used](#technologies-used)
-    + [Languages](#languages)
-    + [Frameworks, Libraries and Other Resources](#frameworks--libraries-and-other-resources)
-  * [Testing](#testing)
-  * [API's and Configuration](#api-s-and-configuration)
-  * [Deployment](#deployment)
-  * [Bugs](#bugs)
-  * [Credits](#credits)
+- [Project Overview](#project-overview)
+- [User Experience](#user-experience)
+  * [Strategy](#strategy)
+    + [Primary Goals](#primary-goals)
+    + [Business Model](#business-model)
+    + [Marketing](#marketing)
+  * [Structure](#structure)
+    + [Pages](#pages)
+    + [Pages provided by Django](#pages-provided-by-django)
+    + [Technical Design](#technical-design)
+      - [Code Structure](#code-structure)
+      - [Database](#database)
+      - [Schema of models](#schema-of-models)
+      - [Data Models](#data-models)
+  * [Scope - Epics and User Stories](#scope---epics-and-user-stories)
+    + [Epic 1: Base functionality and ease of use](#epic-1--base-functionality-and-ease-of-use)
+    + [Epic 2: Products](#epic-2--products)
+    + [Epic 3: The Cart](#epic-3--the-cart)
+    + [Epic 4: Checkout](#epic-4--checkout)
+    + [Epic 5: User registration and account](#epic-5--user-registration-and-account)
+    + [Epic 6: The Wish List](#epic-6--the-wish-list)
+    + [Epic 7: Reviews](#epic-7--reviews)
+    + [Epic 8: Contact](#epic-8--contact)
+    + [Epic 9: Site Owner functionality](#epic-9--site-owner-functionality)
+  * [Skeleton](#skeleton)
+    + [Wireframes](#wireframes)
+  * [Surface](#surface)
+    + [Colors](#colors)
+    + [Typography](#typography)
+- [Existing Features](#existing-features)
+  * [Feature 1: The Navbar](#feature-1--the-navbar)
+  * [Feature 2: The Home Page](#feature-2--the-home-page)
+  * [Feature 3: The Footer](#feature-3--the-footer)
+  * [Feature 3: The Products List](#feature-3--the-products-list)
+  * [Feature 4: The Product Detail Page](#feature-4--the-product-detail-page)
+  * [Feature 5: The Cart](#feature-5--the-cart)
+  * [Feature 6: The Checkout Page](#feature-6--the-checkout-page)
+  * [Feature 7: The Order Successful Page](#feature-7--the-order-successful-page)
+  * [Feature 8: The Sign Up/In/Out Pages](#feature-8--the-sign-up-in-out-pages)
+  * [Feature 9: The Profile](#feature-9--the-profile)
+  * [Feature 10: The Wish List](#feature-10--the-wish-list)
+  * [Feature 11: The Contact Page](#feature-11--the-contact-page)
+  * [Feature 12: The Admin Features](#feature-12--the-admin-features)
+  * [Feature 13: The Django Admin](#feature-13--the-django-admin)
+- [Features Yet to Implement](#features-yet-to-implement)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Frameworks, Libraries and Other Resources](#frameworks--libraries-and-other-resources)
+- [Testing](#testing)
+- [API's and Configuration](#api-s-and-configuration)
+- [Deployment](#deployment)
+  * [Forking the GitHub Repository](#forking-the-github-repository)
+  * [Making a Local Clone](#making-a-local-clone)
+  * [Heroku](#heroku)
+  * [AWS S3](#aws-s3)
+- [Bugs](#bugs)
+- [Credits](#credits)
+  * [Copyrights](#copyrights)
     + [Media](#media)
     + [Content](#content)
-    + [Acknowledgments](#acknowledgments)
+  * [Coding Tips and Tricks](#coding-tips-and-tricks)
+  * [Acknowledgments](#acknowledgments)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 
 
 ## Project Overview
@@ -382,7 +389,7 @@ The user is presented with, apart from the navbar, a two hero image carousel at 
 
 2. As a user, I can access important links such as home, products, my cart, sign in/out, and profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
-5. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
+6. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
 
 ### Feature 3: The Footer
 
@@ -402,13 +409,13 @@ The products list is dynamic and will show the relevant products, depending on i
 
 **User stories covered:**
 
-6. As a user, I can browse a list of products for sale on the site so that I can find the product I seek
+7. As a user, I can browse a list of products for sale on the site so that I can find the product I seek
 
-7. As a user, i can perform a search, so that products matching the search appear in the products list
+8. As a user, i can perform a search, so that products matching the search appear in the products list
 
-8. As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek
+9. As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek
 
-9. As a user, I can view the most important details of the product in the product list, such as model, brand, category, price, rating, and image so that i know most details without having to click on the product
+10. As a user, I can view the most important details of the product in the product list, such as model, brand, category, price, rating, and image so that i know most details without having to click on the product
 
 ### Feature 4: The Product Detail Page
 
@@ -418,9 +425,9 @@ Logged in users can also write and remove their own reviews here.
 
 **User stories covered:**
 
-10. As a user, i can click the product in the products list so that I can view the products details
+11. As a user, i can click the product in the products list so that I can view the products details
 
-11. As a user, I can choose the size of the product, as well as the quantity, so that I can purchase the correct size/quantity
+12. As a user, I can choose the size of the product, as well as the quantity, so that I can purchase the correct size/quantity
 
 31. As a user, i can read user reviews for products that have received them, so that I easier know if the product is right for me
 
@@ -435,15 +442,15 @@ It is partially visible in the navbar but has a dedicated page through which use
 
 **User stories covered:**
 
-12. As a user, I can add a product to my cart by clicking ’Add to Cart’ from the product detail page so that I can purchase the product
+13. As a user, I can add a product to my cart by clicking ’Add to Cart’ from the product detail page so that I can purchase the product
 
-13. As a user, I can always see the total price of my cart in the navigation bar, so that I know what the total cost will be
+14. As a user, I can always see the total price of my cart in the navigation bar, so that I know what the total cost will be
 
-14. As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart
+15. As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart
 
-15. As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart
+16. As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart
 
-16. As a user, I can click the remove from cart button, so that I can easily remove products from my cart
+17. As a user, I can click the remove from cart button, so that I can easily remove products from my cart
 
 ### Feature 6: The Checkout Page
 
@@ -487,6 +494,8 @@ Each user can access their own personal profile where they can enter their deliv
 
 26. As a logged in user, I can add my delivery details to my profile, so that it is my default delivery address for my order on the checkout page
 
+27. As a logged in user, I can choose to inactivate my account, so that I can cancel my account should I wish to
+
 ### Feature 10: The Wish List
 
 Users can also add products to their Wish List, if they do not wish to purchase items straght away. The products will remain in the wish list until the user has purchased them or removed them from the list.
@@ -511,6 +520,8 @@ This is a standard contact form, through which users can contact the site owner.
 
 ### Feature 12: The Admin Features
 
+There are extra features for admin users, so that site owners can edit products on the site.
+
 **User stories covered:**
 
 36. As a site owner, I can add, edit or remove any product on the site
@@ -529,7 +540,44 @@ The Django framework provides an excellent admin interface which this site has t
 
 ### Languages
 
+- [Python 3.8](https://www.python.org/) was used for backend programming
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for building all web pages
+
+- [CSS3](https://en.wikipedia.org/wiki/CSS) was utilized for styling the website
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) for frontend programming
+
 ### Frameworks, Libraries and Other Resources
+
+This project is built solely through the framework [Django](https://www.djangoproject.com/), and I have tried to make use of its many powerfiul features.
+
+- I have used [Bootstrap 5](https://getbootstrap.com/) as a framework for styling for efficiency purposes, although that wasn't always the case.
+
+- The JavaScript framework [JQuery](https://jquery.com/) was used to minimize written code.
+
+- [Font Awesome](https://fontawesome.com/) fonts were used for all icons in this project.
+
+- [Google Fonts](https://fonts.google.com/) - Were used for all fonts in this project.
+
+- [Facebook Pages](https://www.facebook.com/pages/create/?ref_type=site_footer) was used to create the Facebook Business Page that is linked on the site.
+
+- [Mailchimp](https://mailchimp.com/) was used to create the newsletter signup form.
+
+- [Git](https://git-scm.com/) - Version control system used to commit and push to Github via Gitpod.
+
+- [Github](https://github.com/) - The projects repository and all its branches were commited,
+and pushed to Github.
+
+- [Heroku](https://www.heroku.com) - Used to deploy the application.
+
+- [AWS S3 Bucket](https://aws.amazon.com/s3/) - Used to host media (images) and static(CSS and JavaScript) files for the site.
+
+- [Gitpod](https://gitpod.com/) - All code was written and tested with the Gitpod web-based IDE.
+
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/) was used to create wireframe images of the website which you can view [here](#).
+
+- [Lucidchart](https://lucid.co/product/lucidchart) was used to create the visual [model schema](#schema-of-models) of the project.
 
 ## Testing
 
@@ -537,12 +585,63 @@ The Django framework provides an excellent admin interface which this site has t
 
 ## Deployment
 
+### Forking the GitHub Repository
+
+To make a clone, or 'Fork' this repository, follow the steps below.
+
+1. Access your GitHub account and find the relevant repository.
+2. Click on 'Fork' on the top right of the page.
+3. You will find a copy of the repository in your own Github account.
+
+### Making a Local Clone
+
+1. Access your GitHub account and find the relevant repository.
+2. Click the 'Code' button next to 'Add file'.
+3. To clone the repository using HTTPS, under clone with HTTPS, copy the link.
+4. Open Git Bash.
+5. Access the directory you want the clone to be have.
+6. In your IDE's terminal type 'git clone' and the paste the URL you copied.
+7. Press Enter.
+8. You now have a local clone.
+
+### Heroku
+
+This application has been deployed from Github using Heroku. Here's how:
+
+1. Create an account at [heroku.com](https://.heroku.com/)
+2. Create a new app, add app name and your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars, add your sensitive data (creds.json for example)
+6. For this project, I set buildpacks to <Python> and <NodeJS> in that order.
+7. Go to "Deploy" and at "Deployment method", click on "Connect to Github"
+8. Enter your repository name and click on it when it shows below
+9. Choose the branch you want to buid your app from
+10. If desired, click on "Enable Automatic Deploys", which keeps the app up to date with your Github repository
+11. All done!
+
+### AWS S3
+
+The deployed version of this website has static(CSS and JavaScript) and media files hosted to it via a web based service called Amazon Web Services S3 Bucket.
+
+The steps to take are:
+
+1. Create an account at aws.amazon.com
+2. Navigate to the IAM application and create a user and group
+3. Set the AmazonS3FullAccess for the user and copy the AWS ACCESS and SECRET keys as config vars to your workspace and deployment environment
+4. Create a new Bucket within the S3 application with an appropriate name.
+5. Enable public access for your bucket so users can access and use the services on your website (upload, view, download, etc). More info can be read in the official documentation: https://aws.amazon.com/s3/
+
 ## Bugs
 
 ## Credits
 
-### Media
+### Copyrights
 
-### Content
+#### Media
+
+#### Content
+
+### Coding Tips and Tricks
 
 ### Acknowledgments
