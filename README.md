@@ -15,10 +15,13 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
 - [Project Overview](#project-overview)
 - [User Experience](#user-experience)
-  * [Strategy](#strategy)
+  <details>
+    <summary>* [Strategy](#strategy)</summary>
     + [Primary Goals](#primary-goals)
     + [Business Model](#business-model)
     + [Marketing](#marketing)
+</details>
+
   * [Structure](#structure)
     + [Pages](#pages)
     + [Pages provided by Django](#pages-provided-by-django)
@@ -68,6 +71,7 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
   * [Making a Local Clone](#making-a-local-clone)
   * [Heroku](#heroku)
   * [AWS S3](#aws-s3)
+- [Validation](#validation)
 - [Bugs](#bugs)
 - [Credits](#credits)
   * [Copyrights](#copyrights)
@@ -631,6 +635,8 @@ The steps to take are:
 3. Set the AmazonS3FullAccess for the user and copy the AWS ACCESS and SECRET keys as config vars to your workspace and deployment environment
 4. Create a new Bucket within the S3 application with an appropriate name.
 5. Enable public access for your bucket so users can access and use the services on your website (upload, view, download, etc). More info can be read in the official documentation: https://aws.amazon.com/s3/
+
+## Validation
 
 ## Bugs
 
