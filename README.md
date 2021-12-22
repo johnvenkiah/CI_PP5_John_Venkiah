@@ -15,13 +15,10 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
 - [Project Overview](#project-overview)
 - [User Experience](#user-experience)
-  <details>
-    <summary>* [Strategy](#strategy)</summary>
+  * [Strategy](#strategy)
     + [Primary Goals](#primary-goals)
     + [Business Model](#business-model)
     + [Marketing](#marketing)
-</details>
-
   * [Structure](#structure)
     + [Pages](#pages)
     + [Pages provided by Django](#pages-provided-by-django)
