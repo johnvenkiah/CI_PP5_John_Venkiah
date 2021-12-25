@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/stars.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: #5B84B1FF;
     font-family: 'Lato';
 }
 
@@ -17,6 +17,10 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+a {
+    color: white;
 }
 
 .logo-font {
@@ -61,9 +65,7 @@ body {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
-}
+
 
 .border-black {
     border: 1px solid black !important;
@@ -326,4 +328,25 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+}
+
+
+
+/* PERSONAL STYLES */
+
+.text-coral {
+    color: #FC766AFF !important;
+}
+
+.bg-trans-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bg-nav {
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.bg-nav:hover {
+    background-color: rgb(57, 102, 128);
 }
