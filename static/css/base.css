@@ -23,6 +23,10 @@ a {
     color: white;
 }
 
+a:hover {
+    color: #FC766AFF;
+}
+
 .logo-font {
     text-transform: uppercase;
 }
