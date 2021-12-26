@@ -16,7 +16,9 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=Average&family=Bad+Script&family=Bangers&family=Bungee+Hairline&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -57,10 +59,10 @@
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                     <form method="GET" action="">
                         <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q"
+                            <input class="form-control" type="text" name="q"
                                 placeholder="Search our site">
                             <div class="input-group-append">
-                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <button class="form-control bg-nav btn btn-black border border-white" type="submit">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -73,10 +75,9 @@
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                                aria-haspopup="true" aria-expanded="false" aria-label="My Account">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
-                                    <p class="my-0">My Account</p>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -84,11 +85,11 @@
                                 {% if request.user.is_superuser %}
                                 <a href="#" class="dropdown-item">Product Management</a>
                                 {% endif %}
-                                <a href="#" class="dropdown-item">My Profile</a>
-                                <a href="#" class="dropdown-item">Logout</a>
+                                <a href="#" class="dropdown-item">Profile</a>
+                                <a href="#" class="dropdown-item">Sign Out</a>
                                 {% else %}
-                                <a href="#" class="dropdown-item">Register</a>
-                                <a href="#" class="dropdown-item">Login</a>
+                                <a href="#" class="dropdown-item">Sign Up</a>
+                                <a href="#" class="dropdown-item">Sign In</a>
                                 {% endif %}
                             </div>
                         </li>
@@ -96,7 +97,7 @@
                             <a class="text-black nav-link" href="#">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                    <p class="my-0">$0.00
+                                    <!-- <p class="my-0">$0.00</p> -->
                                         <!-- 
                                     % if grand_total %
                                         $ grand_total|floatformat:2 
@@ -104,25 +105,25 @@
                                         $0.00
                                     % endif %
                                     -->
-                                    </p>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="row bg-nav">
+            <div class="row bg-trans-dark">
                 <nav class="navbar navbar-expand-lg navbar-dark w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     {% include 'includes/mobile-top-header.html' %}
+                    <h2 class="logo-font mx-auto my-auto hide-2">STEPUP <img class="shoe-icon" src="/media/shoe_icon.png"></h2>
                 </nav>
-            </div>
-            <div id="delivery-banner" class="row text-center">
-                <div class="col bg-trans-dark text-white">
-                    <h4 class="logo-font my-1">Free delivery on orders over $50!</h4>
+                <div class="row text-center mx-auto w-100">
+                    <div class="col text-white hide-items">
+                        <h2 class="logo-font">StepUp <img class="shoe-icon" src="/media/shoe_icon.png"></h2>
+                    </div>
                 </div>
             </div>
         </header>
@@ -142,6 +143,47 @@
 
         <script type="text/javascript">
             $('.toast').toast('show');
+
+            // Hide Header on on scroll down
+            var didScroll;
+            var lastScrollTop = 0;
+            var delta = 5;
+            var navbarHeight = $('.navbar').outerHeight();
+
+            $(window).scroll(function(event){
+                didScroll = true;
+            });
+
+            setInterval(function() {
+                if (didScroll) {
+                    hasScrolled();
+                    didScroll = false;
+                }
+            }, 250);
+
+            function hasScrolled() {
+                var st = $(this).scrollTop();
+                
+                // Make sure they scroll more than delta
+                if(Math.abs(lastScrollTop - st) <= delta)
+                    return;
+                
+                // If they scrolled down and are past the navbar, add class .nav-up.
+                // This is necessary so you never see what is "behind" the navbar.
+                if (st > lastScrollTop && st > navbarHeight){
+                    // Scroll Down
+                    $('.hide-items').addClass('hide').removeClass('hide-items').fadeIn(300);
+                    $('.hide-2').addClass('hide-items-2').removeClass('hide-2').fadeIn(300);
+                } else {
+                    // Scroll Up
+                    if(st + $(window).height() < $(document).height()) {
+                        $('.hide').addClass('hide-items').removeClass('hide').fadeIn(300);
+                        $('.hide-items-2').addClass('hide-2').removeClass('hide-items-2').fadeIn(300);
+                    }
+                }
+                
+                lastScrollTop = st;
+            }
         </script>
 
         {% endblock %}

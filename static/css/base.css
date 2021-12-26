@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #5B84B1FF;
-    font-family: 'Lato';
+    font-family: 'Alice', serif;
 }
 
 /* from Bulma */
@@ -19,8 +19,13 @@ body {
     width: 1.5rem;
 }
 
+h2 {
+    font-family: 'Bungee Hairline', cursive;
+}
+
 a {
-    color: white;
+    color: rgba(255,255,255,.5);;
+    transition: color, .3s;
 }
 
 a:hover {
@@ -302,16 +307,18 @@ input[name='q']::placeholder {
     }
 
     .nav-link {
-        padding: 0.15rem;
+        padding: 0.6rem;
     }
 
     .nav-link i.fa-lg {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .navbar-toggler {
         padding: .6rem .6rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        border: none;
+        transition: top 0.2s ease-in-out;
     }
 
     #delivery-banner h4 {
@@ -343,7 +350,7 @@ input[name='q']::placeholder {
 }
 
 .bg-trans-dark {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(57, 102, 128, .4);
 }
 
 .bg-nav {
@@ -352,5 +359,61 @@ input[name='q']::placeholder {
 }
 
 .bg-nav:hover {
-    background-color: rgb(57, 102, 128);
+    background-color: rgb(57, 102, 128, .4);
 }
+
+button:focus {
+    outline: 1px #FC766AFF auto;
+}
+
+.bg-trans-blue {
+    background-color: rgb(57, 102, 128, .4);
+    transition: all, .3s;
+}
+
+.carousel-indicators li {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: .5rem;
+}
+
+.logo {
+    margin-top: 114px;
+}
+
+.shoe-icon {
+    opacity: .5;
+    height: 40px;
+    width: 40px;
+    filter: invert(1);
+    margin: 0 4px 6px;
+}
+
+.hide {
+    opacity: 0;
+    display: none !important;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hide-items {
+    opacity: 1;
+    display: inline-block !important;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hide-items-2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+}
+
+.hide-2 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none !important;
+}
+
+/* .list-inline-item {
+    display: inline-block !important;
+  } */
