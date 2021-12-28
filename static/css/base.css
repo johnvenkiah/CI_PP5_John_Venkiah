@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #5B84B1FF;
-    font-family: 'Alice', serif;
+    font-family: 'Anaheim', sans-serif;
 }
 
 /* from Bulma */
@@ -197,14 +197,19 @@ input[name='q']::placeholder {
 
 /* Allauth form formatting */
 
+.allauth-form-inner-content {
+    /* margin: 25% auto; */
+    padding: 15px;
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
-    border-radius: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 8px;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -215,7 +220,10 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-.allauth-form-inner-content button,
+.allauth-form-inner-content button, .btn-coral {
+    background-color: rgba(252, 118, 106, 0.699);
+    transition: all .3s;
+}
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
 	display: inline-block;
@@ -232,21 +240,23 @@ input[name='q']::placeholder {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
+    border-radius: 8px;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
+.btn-coral:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
+	text-shadow: 0 0 15px black;
+    color: #fff;
+    background-color: rgba(61, 5, 0, 0.521);
+    border-color: rgb(255, 255, 255, .5);
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #FC766AFF; /* text-info */
 }
 
 /* Product Form */
@@ -267,14 +277,14 @@ input[name='q']::placeholder {
 }
 
 .custom-checkbox .custom-control-label::before {
-    border-radius: 0;
+    border-radius: 8px;
     border-color: #dc3545;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
-    border-radius: 0;
+    border-radius: 8px;
 }
 
 
@@ -326,13 +336,13 @@ input[name='q']::placeholder {
         font-size: .9rem;
     }
 
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
+    .btn.btn-outline-black.rounded,
+    .btn.btn-black.rounded {
         padding: .375rem .375rem;
     }
 
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
+    .btn.btn-outline-black.rounded.btn-lg,
+    .btn.btn-black.rounded.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
@@ -351,9 +361,15 @@ input[name='q']::placeholder {
     }
 }
 
-
-
 /* PERSONAL STYLES */
+
+.btn-black:hover {
+    border-color: rgba(255, 255, 255, .5);
+}
+
+.rounded {
+    border-radius: 8px !important;
+}
 
 .text-coral {
     color: #FC766AFF !important;
@@ -420,6 +436,3 @@ button:focus {
     display: none !important;
 }
 
-/* .list-inline-item {
-    display: inline-block !important;
-  } */

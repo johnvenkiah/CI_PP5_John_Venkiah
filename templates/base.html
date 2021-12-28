@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=Average&family=Bad+Script&family=Bangers&family=Bungee+Hairline&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=Average&family=Anaheim&family=Bad+Script&family=Bangers&family=Bungee+Hairline&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -137,6 +137,57 @@
 
         {% block content %}
         {% endblock %}
+        
+        <!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!--Grid row-->
+      <div class="row">
+  
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+  
+          <!-- Form -->
+            <p>Follow us on Facebook for an initial discount</p>
+            <a href="https://www.facebook.com">StepUp shoes on Facebook
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+            </a>
+          <!-- Form -->
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+            <p>Sign up for our weekly deals newsletter</p>
+          <form class="input-group">
+            <input type="text" class="form-control form-control-sm" placeholder="Your email address"
+              aria-label="Your email" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-sm btn-coral my-0" type="button">Sign up</button>
+            </div>
+          </form>
+  
+        </div>
+        <!--Grid column-->
+  
+      </div>
+      <!--Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright John Venkiah
+      <a href="https://johnvenkiah.com/"> johnvenkiah.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
 
         {% block postloadjs %}
 
