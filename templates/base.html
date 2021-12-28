@@ -118,10 +118,9 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     {% include 'includes/mobile-top-header.html' %}
-                    <h2 class="logo-font mx-auto my-auto hide-2">STEPUP <img class="shoe-icon" src="/media/shoe_icon.png"></h2>
                 </nav>
                 <div class="row text-center mx-auto w-100">
-                    <div class="col text-white hide-items">
+                    <div class="col text-white hide-items d-lg-none">
                         <h2 class="logo-font">StepUp <img class="shoe-icon" src="/media/shoe_icon.png"></h2>
                     </div>
                 </div>
@@ -177,8 +176,8 @@
                     } else {
                         // Scroll Up
                         if(st + $(window).height() < $(document).height()) {
-                            $('.hide').addClass('hide-items').removeClass('hide');
                             $('.hide-items-2').addClass('hide-2').removeClass('hide-items-2');
+                            $('.hide').addClass('hide-items').removeClass('hide');
                         }
                     }
                     
