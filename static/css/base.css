@@ -19,9 +19,22 @@ body {
     width: 1.5rem;
 }
 
-h1, h2 {
+h1 {
     font-family: 'Bungee Hairline', cursive;
     color: rgba(255, 255, 255);
+    transition: all .3s;
+}
+
+h1:hover {
+    color: #FC766AFF;
+}
+
+h2, .nav-link {
+    font-family: 'Abel', sans-serif;
+}
+
+.nav-link {
+    font-size: 1.5rem;
 }
 
 a {
@@ -40,6 +53,7 @@ a:hover {
 
 .main-logo-link {
     width: fit-content;
+    margin-left: -6%;
 }
 
 .shop-now-button {
@@ -305,6 +319,7 @@ input[name='q']::placeholder {
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
@@ -320,6 +335,7 @@ input[name='q']::placeholder {
 
     .nav-link {
         padding: 0.6rem;
+        font-size: 1.5rem;
     }
 
     .nav-link i.fa-lg {
@@ -331,6 +347,7 @@ input[name='q']::placeholder {
         font-size: 1.5rem;
         border: none;
         transition: top 0.2s ease-in-out;
+        color: #ffffffc7 !important;
     }
 
     #delivery-banner h4 {
@@ -359,6 +376,10 @@ input[name='q']::placeholder {
         font-size: 1.4rem;
     }
 
+    h2 {
+        font-size: 1.2rem;
+    }
+
     .hide-items {
         opacity: 1;
         display: inline-block !important;
@@ -380,6 +401,13 @@ input[name='q']::placeholder {
 
     .navbar-expand-lg > li, .navbar-expand-lg > h1 {
         width: 51.5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        margin: 0 auto 20px;
+        text-align: center;
     }
 }
 
@@ -422,8 +450,8 @@ button:focus {
     outline: 1px #FC766AFF auto;
 }
 
-.navbar-expand-lg > * {
-    text-shadow: 1px 1px 5px rgb(0, 26, 43), -1px -1px 6px rgb(0, 26, 43);
+nav a, #topnav a {
+    text-shadow: 1px 1px 3px rgb(0, 26, 43);
 }
 
 .navbar-expand-lg > li, .navbar-expand-lg > h1 {
@@ -475,6 +503,10 @@ button:focus {
 .input-group-append .btn, .input-group-prepend .btn {
     position: relative;
     z-index: 2;
+    border-radius: 8px;
+}
+
+input.form-control {
     border-radius: 8px;
 }
 

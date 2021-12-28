@@ -1,18 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
     <div class="container-fluid">
         <div class="row h-100">
-            <div class="col-12 mx-auto">
+            <div class="col-12 mx-auto px-0">
                 <div id="carouselIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -53,11 +45,11 @@
                   </div>
                 <div class="my-5">
                     <h4 class="text-center">
-                        <a href="" class="btn btn-coral btn-lg rounded text-uppercase py-3">Browse products</a>
+                        <a href="" class="btn btn-coral btn-lg rounded text-uppercase">Browse products</a>
                     </h4>
                 </div>
-                <section class="row">
-                <div class="col-8 mx-auto my-5">
+                <section class="row w-100 mx-auto">
+                <div class="col col-md-8 text-center mx-auto my-5">
                     <h4>Our Philosophy</h4>
                     <p>
                         We strive to offer the best possible selection of branded footwear on the market.
