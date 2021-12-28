@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/stars.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    /* height: calc(100vh - 164px); */
     color: #5B84B1FF;
     font-family: 'Anaheim', sans-serif;
 }
@@ -35,6 +35,7 @@ a:hover {
 
 .logo-font {
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .main-logo-link {
@@ -379,9 +380,17 @@ input[name='q']::placeholder {
     background-color: rgb(57, 102, 128, .4);
 }
 
+.bg-grad-trans-dark {
+    background-color: linear-gradient(
+        black,
+        rgba(0, 21, 48, 0.7),
+        transparent
+    );
+}
+
 .bg-nav {
     background-color: transparent;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s;
 }
 
 .bg-nav:hover {
@@ -422,8 +431,6 @@ button:focus {
     transition: opacity 0.3s ease-in-out;
 }
 
-
-
 .hide-items-2 {
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
@@ -436,3 +443,22 @@ button:focus {
     display: none !important;
 }
 
+.input-group-append .btn, .input-group-prepend .btn {
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+}
+
+.list-inline-item {
+    flex: 1;
+    text-align: center;
+}
+
+.input-group-append .btn:hover, .input-group-prepend .btn:hover {
+    background-color: #FC766AFF;
+    border: 1px solid #ffffff82 !important;
+}
+
+footer {
+    padding-bottom: 15px;
+}

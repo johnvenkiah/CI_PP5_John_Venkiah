@@ -43,26 +43,13 @@
     <body>
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row bg-nav pt-lg-2 d-none d-lg-flex">
-                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-black my-0"><strong>Step</strong> Up</h2>
-                    </a>
-                </div>
-                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
-                    <a href="#" class="nav-link">
-                        <span class="logo-font text-black my-0">Products</span>
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% include 'includes/main-nav.html' %}
-                    </div>
-                </div>
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                     <form method="GET" action="">
                         <div class="input-group w-100">
                             <input class="form-control" type="text" name="q"
                                 placeholder="Search our site">
                             <div class="input-group-append">
-                                <button class="form-control bg-nav btn btn-black border border-white" type="submit">
+                                <button class="form-control bg-nav btn btn-black" type="submit">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -71,8 +58,21 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="#" class="nav-link">
+                        <span class="logo-font text-black my-0">Products</span>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        {% include 'includes/main-nav.html' %}
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2 class="logo-font text-black my-0"><strong>Step</strong> Up</h2>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center d-flex my-0">
                         <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="My Account">
@@ -111,8 +111,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="row bg-trans-dark">
-                <nav class="navbar navbar-expand-lg navbar-dark w-100">
+            <div class="row bg-grad-trans-dark">
+                <nav class="navbar navbar-expand-lg d-lg-none navbar-dark w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -139,7 +139,7 @@
         {% endblock %}
         
         <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+<footer class="font-small pt-4 mt-md-5">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -151,7 +151,7 @@
         <div class="col-md-6 mb-4">
   
           <!-- Form -->
-            <p>Follow us on Facebook for an initial discount</p>
+            <p>Follow us to get our best deals</p>
             <a href="https://www.facebook.com">StepUp shoes on Facebook
                 <i class="fab fa-facebook" aria-hidden="true"></i>
             </a>
@@ -167,7 +167,7 @@
             <input type="text" class="form-control form-control-sm" placeholder="Your email address"
               aria-label="Your email" aria-describedby="basic-addon2">
             <div class="input-group-append">
-              <button class="btn btn-sm btn-coral my-0" type="button">Sign up</button>
+              <button class="btn btn-sm btn-black my-0" type="button">Sign up</button>
             </div>
           </form>
   
@@ -181,8 +181,9 @@
     <!-- Footer Elements -->
   
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright John Venkiah
-      <a href="https://johnvenkiah.com/"> johnvenkiah.com</a>
+    <div class="text-center">
+        <p>© 2021 Copyright John Venkiah</p>
+      <a href="https://johnvenkiah.com/">johnvenkiah.com</a>
     </div>
     <!-- Copyright -->
   
@@ -224,11 +225,13 @@
                         // Scroll Down
                         $('.hide-items').addClass('hide').removeClass('hide-items');
                         $('.hide-2').addClass('hide-items-2').removeClass('hide-2');
+                        $('#topnav').css({'background-color': 'transparent'})
                     } else {
                         // Scroll Up
                         if(st + $(window).height() < $(document).height()) {
                             $('.hide-items-2').addClass('hide-2').removeClass('hide-items-2');
                             $('.hide').addClass('hide-items').removeClass('hide');
+                            $('#topnav').css({'background-color': 'rgb(57, 102, 128, .7)'})
                         }
                     }
                     
