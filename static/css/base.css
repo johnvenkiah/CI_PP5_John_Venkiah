@@ -21,7 +21,7 @@ body {
 
 h2 {
     font-family: 'Bungee Hairline', cursive;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255);
 }
 
 a {
@@ -48,8 +48,8 @@ a:hover {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-trans {
+    background-color: transparent;
     color: white;
 }
 
@@ -69,10 +69,10 @@ a:hover {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
+.btn-trans:hover,
+.btn-trans:active,
+.btn-trans:focus {
+    background-color: rgba(252, 118, 106, 0.699);
     color: white;
 }
 
