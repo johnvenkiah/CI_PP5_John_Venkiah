@@ -19,7 +19,7 @@ body {
     width: 1.5rem;
 }
 
-h2 {
+h1, h2 {
     font-family: 'Bungee Hairline', cursive;
     color: rgba(255, 255, 255);
 }
@@ -353,12 +353,33 @@ input[name='q']::placeholder {
     }
 
 
-/* PERSONAL STYLES */
+/* PERSONAL STYLES, QUERIES */
+
+    h1 {
+        font-size: 1.4rem;
+    }
 
     .hide-items {
         opacity: 1;
         display: inline-block !important;
         transition: opacity 0.3s ease-in-out;
+    }
+
+    .list-inline-item {
+        display: inline-block !important;
+        flex: none;
+    }
+
+    .navbar {
+        padding: .5rem 0;
+    }
+
+    .navbar-expand-lg > li, .navbar-expand-lg > button {
+        width: 25%;
+    }
+
+    .navbar-expand-lg > li, .navbar-expand-lg > h1 {
+        width: 51.5%;
     }
 }
 

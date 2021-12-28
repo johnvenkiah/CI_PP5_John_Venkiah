@@ -68,7 +68,7 @@
                 </div>
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-font text-black my-0"><strong>Step</strong> Up</h2>
+                        <h1 class="logo-font text-black my-0">StepUp</h1>
                     </a>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -112,18 +112,17 @@
                 </div>
             </div>
             <div class="row bg-grad-trans-dark">
-                <nav class="navbar navbar-expand-lg d-lg-none navbar-dark w-100">
+                <!-- <nav class="navbar navbar-expand-lg d-lg-none navbar-dark w-100">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                         aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
+                    </button> -->
+                <nav class="navbar bg-nav navbar-expand-lg navbar-dark w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    {% include 'includes/mobile-top-header.html' %}
+                        {% include 'includes/mobile-top-header.html' %}
                 </nav>
-                <div class="row text-center mx-auto w-100">
-                    <div class="col text-white hide-items d-lg-none">
-                        <h2 class="logo-font">StepUp <img class="shoe-icon" src="/media/shoe_icon.png"></h2>
-                    </div>
-                </div>
             </div>
         </header>
 
@@ -143,26 +142,17 @@
 
     <!-- Footer Elements -->
     <div class="container">
-  
-      <!--Grid row-->
       <div class="row">
-  
-        <!--Grid column-->
-        <div class="col-md-6 mb-4">
-  
-          <!-- Form -->
-            <p>Follow us to get our best deals</p>
-            <a href="https://www.facebook.com">StepUp shoes on Facebook
-                <i class="fab fa-facebook" aria-hidden="true"></i>
-            </a>
-          <!-- Form -->
-  
+        <div class="col-md-6 mb-4 text-center">
+            <p class="text-center">Follow us to get our best deals
+                <hr>
+                <a class="" href="https://www.facebook.com">StepUp shoes on Facebook
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </p>
         </div>
-        <!--Grid column-->
-  
-        <!--Grid column-->
         <div class="col-md-6 mb-4">
-            <p>Sign up for our weekly deals newsletter</p>
+            <p class="text-center">Sign up for our weekly deals newsletter</p>
           <form class="input-group">
             <input type="text" class="form-control form-control-sm" placeholder="Your email address"
               aria-label="Your email" aria-describedby="basic-addon2">
@@ -170,10 +160,7 @@
               <button class="btn btn-sm btn-trans my-0" type="button">Sign up</button>
             </div>
           </form>
-  
         </div>
-        <!--Grid column-->
-  
       </div>
       <!--Grid row-->
   
@@ -225,13 +212,13 @@
                         // Scroll Down
                         $('.hide-items').addClass('hide').removeClass('hide-items');
                         $('.hide-2').addClass('hide-items-2').removeClass('hide-2');
-                        $('#topnav').css({'background-color': 'transparent'})
+                        $('.bg-nav').css({'background-color': 'transparent'})
                     } else {
                         // Scroll Up
                         if(st + $(window).height() < $(document).height()) {
                             $('.hide-items-2').addClass('hide-2').removeClass('hide-items-2');
                             $('.hide').addClass('hide-items').removeClass('hide');
-                            $('#topnav').css({'background-color': 'rgb(57, 102, 128, .7)'})
+                            $('.bg-nav').css({'background-color': 'rgb(57, 102, 128, .7)'})
                         }
                     }
                     
