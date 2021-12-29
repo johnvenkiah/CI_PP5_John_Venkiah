@@ -35,16 +35,23 @@ h2, .nav-link {
 
 .nav-link {
     font-size: 1.25rem;
+    font-weight: bold;
     letter-spacing: .1rem;
 }
 
 a {
-    color:#ffffffc7;
+    color:#fff;
     transition: color, .3s;
 }
 
 a:hover {
     color: #FC766AFF;
+}
+
+/* COLORS */
+
+.bg-orange {
+    background: linear-gradient(#e17c00b9, #e17c008c)
 }
 
 .logo-font {
@@ -66,6 +73,10 @@ a:hover {
 .btn-trans {
     background-color: transparent;
     color: white;
+}
+
+.btn-trans:hover {
+    color: #FC766AFF;
 }
 
 .btn-outline-black {
@@ -91,7 +102,14 @@ a:hover {
     color: white;
 }
 
-
+.btn-orange {
+    background: linear-gradient(#e17c00b9, #e17c008c);
+    color: white;
+    text-shadow: 0.4px 0.4px 3px black;
+    border-top: 2px solid #a56d00;
+    border-bottom: 2px solid #382500;
+    border-radius: 50px !important;
+}
 
 .border-black {
     border: 1px solid black !important;
@@ -236,8 +254,8 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-.allauth-form-inner-content button, .btn-coral {
-    background-color: rgba(252, 118, 106, 0.699);
+.allauth-form-inner-content button, .btn-oranges {
+    background-color: #e17c008c;
     transition: all .3s;
 }
 .allauth-form-inner-content input[type='submit'] {
@@ -263,7 +281,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content button:hover,
-.btn-coral:hover,
+.btn-orange:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	text-shadow: 0 0 15px black;
     color: #fff;
@@ -434,8 +452,8 @@ input[name='q']::placeholder {
     border-radius: 8px !important;
 }
 
-.text-coral {
-    color: #FC766AFF !important;
+.text-orange {
+    color: #e17c00 !important;
 }
 
 .bg-trans-dark {
@@ -452,20 +470,20 @@ input[name='q']::placeholder {
 
 .dropdown-menu.show {
     display: block;
-    background-color: #fc766a8c;
+    background-color: #e17c00ab;
+    border: 1px solid #df9c4b !important;
+    border-radius: 9px;
     color: rgba(255, 255, 255, 0.8);
-}
-
-.show > a:active {
-    color: #fc766a8c;
+    padding: 3px;
 }
 
 .dropdown-item {
     color: #fff;
 }
 
-.dropdown-item:hover {
-    background-color: #fc766ab0;
+.dropdown-item:hover, .dropdown-item:active {
+    background-color: #00507585;
+    border-radius: 6px;
     color: #fff;
 }
 
@@ -500,6 +518,8 @@ nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
     height: 7px;
     border-radius: 50%;
     margin: .5rem;
+    background-color: #fc766a;
+
 }
 
 .logo {
@@ -548,7 +568,7 @@ input.form-control {
 }
 
 .input-group-append .btn:hover, .input-group-prepend .btn:hover {
-    background-color: #FC766AFF;
+    background-color: #FC766AFF !important;
     border: 1px solid #ffffff82 !important;
 }
 
