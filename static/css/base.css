@@ -34,7 +34,8 @@ h2, .nav-link {
 }
 
 .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    letter-spacing: .1rem;
 }
 
 a {
@@ -437,6 +438,25 @@ input[name='q']::placeholder {
     );
 }
 
+.dropdown-menu.show {
+    display: block;
+    background-color: #fc766a8c;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.show > a:active {
+    color: #fc766a8c;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #fc766ab0;
+    color: #fff;
+}
+
 .bg-nav {
     background-color: transparent;
     transition: background-color 0.4s;
@@ -450,7 +470,7 @@ button:focus {
     outline: 1px #FC766AFF auto;
 }
 
-nav a, #topnav a {
+nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
     text-shadow: 1px 1px 3px rgb(0, 26, 43);
 }
 
