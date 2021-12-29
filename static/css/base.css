@@ -414,6 +414,18 @@ input[name='q']::placeholder {
 
 /* PERSONAL STYLES */
 
+.small-main-header {
+    position: absolute;
+    z-index: 2;
+    left: 5rem;
+}
+
+.subheading {
+    font-family: 'Bungee Hairline', cursive;
+    font-size: 1rem;
+    color: #fff;
+}
+
 .btn-black:hover {
     border-color: rgba(255, 255, 255, .5);
 }
@@ -542,4 +554,20 @@ input.form-control {
 
 footer {
     padding-bottom: 15px;
+}
+
+.feature-title, .feature-caption {
+    font-family: Average, sans-serif;
+}
+
+.feature-title {
+    font-size: 3.5rem;
+}
+
+.feature-caption {
+    font-size: 1.5rem;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 3px rgb(0, 26, 43);
 }
