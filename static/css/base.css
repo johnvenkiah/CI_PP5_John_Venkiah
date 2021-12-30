@@ -26,6 +26,7 @@ body {
 
 h1 {
     font-family: 'Bungee Hairline', cursive;
+    font-weight: bold;
     color: rgba(255, 255, 255);
     transition: all .3s;
 }
@@ -402,29 +403,16 @@ input[name='q']::placeholder {
     }
 }
 
-@media (max-width: 480px) {
-    .footer-content {
-        margin: 0 auto 20px;
-        text-align: center;
-    }
-
-    .sign-in-container {
-        height: 100vh;
-    }
-}
-
-@media (min-width: 700px) and (max-height: 1400px) and (max-width: 1024px) and (min-height: 1024px) {
-    .allauth-form-inner-content {
-        margin: 25% auto;
-    }
-}
-
 /* PERSONAL STYLES */
 
 .small-main-header {
     position: absolute;
     z-index: 2;
     left: 5rem;
+}
+
+.small-main-header p {
+    color: white;
 }
 
 .subheading {
@@ -556,7 +544,13 @@ nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
     text-align: center;
 }
 
-.input-group-append .btn:hover, .input-group-prepend .btn:hover {
+.input-group-append .btn:hover,
+.input-group-prepend .btn:hover,
+.input-group-append .btn:focus,
+.input-group-prepend .btn:focus,
+.input-group-append .btn:active,
+.input-group-prepend .btn:active,
+.input-group-append .btn:focus-visible {
     background-color: #e17c00b9 !important;
     text-shadow: 0.4px 0.4px 3px black;
     border: none;
@@ -581,6 +575,7 @@ footer a {
 
 .feature-caption {
     font-size: 1.5rem;
+    color: white;
 }
 
 .text-shadow {
@@ -589,4 +584,40 @@ footer a {
 
 input, input.form-control, .btn {
     border-radius: 50px;
+}
+
+
+@media (max-width: 480px) {
+    .footer-content {
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+    .small-main-header {
+        left: 2rem;
+        top: 1rem;
+    }
+
+    .sign-in-container {
+        height: 100vh;
+    }
+
+    #carouselIndicators {
+        margin-top: 71px;
+    }
+
+    .feature-title {
+        font-size: 1.5rem;
+    }
+    
+    .feature-caption {
+        font-size: 1rem;
+        color: white;
+    }
+}
+
+@media (min-width: 700px) and (max-height: 1400px) and (max-width: 1024px) and (min-height: 1024px) {
+    .allauth-form-inner-content {
+        margin: 25% auto;
+    }
 }
