@@ -117,16 +117,6 @@ p {
     background: #000 !important;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -361,7 +351,12 @@ input[name='q']::placeholder {
         font-size: 1.5rem;
         border: none;
         transition: top 0.2s ease-in-out;
-        color: #ffffffc7 !important;
+        color: #fff !important;
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        color: #ffab43 !important;
     }
 
     #delivery-banner h4 {
@@ -460,7 +455,7 @@ input[name='q']::placeholder {
 
 .dropdown-menu.show {
     opacity: 1;
-    display: block;
+    min-width: 9rem;
     background-color: #e17c00ab;
     border: 1px solid #df9c4b !important;
     border-radius: 9px;
