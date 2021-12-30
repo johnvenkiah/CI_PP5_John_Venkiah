@@ -25,8 +25,8 @@ h1 {
     transition: all .3s;
 }
 
-h1:hover {
-    color: #FC766AFF;
+h1:hover, a:hover {
+    color: #ffab43;
 }
 
 h2, .nav-link {
@@ -44,14 +44,10 @@ a {
     transition: color, .3s;
 }
 
-a:hover {
-    color: #FC766AFF;
-}
-
 /* COLORS */
 
 .bg-orange {
-    background: linear-gradient(#e17c00b9, #e17c008c)
+    background: linear-gradient(#ffaa42b9, #e17c008c);
 }
 
 .logo-font {
@@ -64,51 +60,35 @@ a:hover {
     margin-left: -6%;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
 .btn-trans {
     background-color: transparent;
     color: white;
 }
 
-.btn-trans:hover {
-    color: #FC766AFF;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
 .btn-trans:hover,
 .btn-trans:active,
 .btn-trans:focus {
-    background-color: rgba(252, 118, 106, 0.699);
-    color: white;
+    background: linear-gradient(#ffaa42b9, #e17c008c);
+    color: #fff;
 }
 
 .btn-orange {
-    background: linear-gradient(#e17c00b9, #e17c008c);
+    background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(165, 42, 42, 0.664), rgba(255, 255, 0, 0.589));
     color: white;
+    border: none;
     text-shadow: 0.4px 0.4px 3px black;
-    border-top: 2px solid #a56d00;
-    border-bottom: 2px solid #382500;
     border-radius: 50px !important;
+    transform: scale(1);
+}
+
+.btn {
+    transition: all .3s;
+}
+
+.btn-orange:hover {
+    color: #fff;
+    transform: scale(1.03);
+    background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589));
 }
 
 .border-black {
@@ -281,7 +261,6 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content button:hover,
-.btn-orange:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	text-shadow: 0 0 15px black;
     color: #fff;
@@ -468,6 +447,10 @@ input[name='q']::placeholder {
     );
 }
 
+.dropdown-menu {
+    background-color: none;
+}
+
 .dropdown-menu.show {
     display: block;
     background-color: #e17c00ab;
@@ -475,6 +458,7 @@ input[name='q']::placeholder {
     border-radius: 9px;
     color: rgba(255, 255, 255, 0.8);
     padding: 3px;
+    transition: all .3s;
 }
 
 .dropdown-item {
@@ -492,8 +476,10 @@ input[name='q']::placeholder {
     transition: background-color 0.4s;
 }
 
-.bg-nav:hover {
-    background-color: rgb(57, 102, 128, .4);
+div.dropdown-menu.mobile-search {
+    border-radius: 0 0 9px 9px;
+    background-color: rgba(57, 102, 128, 0.7);
+    border: none !important;
 }
 
 button:focus {
@@ -501,7 +487,7 @@ button:focus {
 }
 
 nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
-    text-shadow: 1px 1px 3px rgb(0, 26, 43);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
 }
 
 .navbar-expand-lg > li, .navbar-expand-lg > h1 {
@@ -568,7 +554,7 @@ input.form-control {
 }
 
 .input-group-append .btn:hover, .input-group-prepend .btn:hover {
-    background-color: #FC766AFF !important;
+    background-color: #e17c00b9 !important;
     border: 1px solid #ffffff82 !important;
 }
 
