@@ -41,10 +41,20 @@ h2, .nav-link {
     font-family: 'Abel', sans-serif;
 }
 
-.nav-link {
+nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
+    
+}
+
+.nav-link, .navbar-toggler {
     font-size: 1.25rem;
     font-weight: bold;
     letter-spacing: .1rem;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
+}
+
+.nav-link:hover, .navbar-toggler:hover {
+    color: #ffaa42 !important;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
 }
 
 a {
@@ -356,7 +366,7 @@ input[name='q']::placeholder {
         padding: .6rem 0;
         font-size: 1.5rem;
         border: none;
-        transition: top 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         color: #fff !important;
     }
 
@@ -482,10 +492,6 @@ button:focus {
     outline: 1px #df9c4b auto;
 }
 
-nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
-}
-
 .navbar-expand-lg > li, .navbar-expand-lg > h1 {
     width: 51.5%;
 }
@@ -500,7 +506,7 @@ nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
     height: 7px;
     border-radius: 50%;
     margin: .5rem;
-    background-color: #fc766a;
+    background-color: #ffab43;
 
 }
 
