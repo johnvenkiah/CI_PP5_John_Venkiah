@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container header-container">
+    <div class="container sign-in-container header-container">
         <div class="row">
             <div class="col-12 col-md-8 mt-4 mx-auto">
-                <div class="allauth-form-inner-content rounded bg-trans-dark">
+                {% include '../includes/main-logo-mobile.html' %}
+                <div class="allauth-form-inner-content dialog bg-trans-dark">
                     {% block inner_content %}
                     {% endblock %}
                 </div>
