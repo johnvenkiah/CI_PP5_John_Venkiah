@@ -32,7 +32,9 @@ h1 {
 }
 
 h1:hover, a:hover {
-    color: #ffab43;
+    color: #fff;
+    text-shadow: 0 0 8px #ffaa42b9, 0.5px 0.5px 2px black;
+    text-decoration: none;
 }
 
 h2, .nav-link {
@@ -109,9 +111,12 @@ p {
 }
 
 .btn-orange:hover {
+    font-weight: bold;
     color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px white;
     transform: scale(1.03);
-    background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589));
+    /* background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589)); */
 }
 
 .bg-black {
@@ -469,7 +474,7 @@ input[name='q']::placeholder {
 
 div.dropdown-menu.mobile-search {
     border-radius: 0 0 9px 9px;
-    background-color: rgba(57, 102, 128, 0.7);
+    background-color: #04142f80;
     border: none !important;
 }
 
