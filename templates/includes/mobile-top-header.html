@@ -1,3 +1,6 @@
+<!-- Mobile heading with navbar -->
+
+<!-- Searchbar -->
 <li class="list-inline-item hide-items">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search">
         <div class="text-center">
@@ -19,16 +22,18 @@
         </form>
     </div>
 </li>
+
+<!-- Account mav menu link -->
 <li class="list-inline-item hide-items dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My Account">
         <div class="text-center">
             <div><i class="fas fa-user-circle fa-lg"></i></div>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="#" class="dropdown-item">Product Management</a>
+                <a href="#" class="dropdown-item">Add Product</a>
             {% endif %}
             <a href="#" class="dropdown-item">Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
@@ -38,7 +43,11 @@
         {% endif %}
     </div>
 </li>
+
+<!-- Main logo that replaces icons when scrolling down -->
 <h1 class="logo-font mx-auto my-auto d-lg-none text-center hide-2">STEPUP</h1>
+
+<!-- Cart nav link -->
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="#">
         <div class="text-center">

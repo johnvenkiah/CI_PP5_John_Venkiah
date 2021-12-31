@@ -457,7 +457,6 @@ input[name='q']::placeholder {
 }
 
 .dropdown-menu.show {
-    opacity: 1;
     min-width: 9rem;
     background-color: #e17c00ab;
     border: 1px solid #df9c4b !important;
@@ -469,6 +468,7 @@ input[name='q']::placeholder {
 
 .dropdown-item {
     color: #fff;
+    text-shadow: 0 0 10px black;
 }
 
 .dropdown-item:hover, .dropdown-item:active {

@@ -42,7 +42,10 @@
 
     <body>
         <header class="container-fluid fixed-top">
+            <!-- Navbar -->
             <div id="topnav" class="row bg-nav pt-lg-2 d-none d-lg-flex">
+
+                <!-- Search bar -->
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                     <form method="GET" action="">
                         <div class="input-group w-100">
@@ -58,19 +61,30 @@
                         </div>
                     </form>
                 </div>
+
+                <!-- Products -->
                 <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" aria-label="My Account">
-                    <div class="text-center">
-                        <div>
-                            <i class="fas fa-meteor"></i>
+                    <li class="list-inline-item dropdown">
+                        <a class="nav-link" href="#" id="products-link" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" aria-label="Products">
+                            <div class="text-center">
+                                <div>
+                                    <i class="fas fa-meteor"></i>
+                                </div>
+                                <span class="my-0">Products</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="products-link">
+                            <a href="#" class="dropdown-item">Women's</a>
+                            <a href="#" class="dropdown-item">Men's</a>
+                            <hr>
+                            <a href="#" class="dropdown-item">Sneakers</a>
+                            <a href="#" class="dropdown-item">Fancy Shoes</a>
+                            <a href="#" class="dropdown-item">Sports</a>
+                            <a href="#" class="dropdown-item">Boots</a>
+                            <a href="#" class="dropdown-item">Socks</a>
                         </div>
-                        <span class="my-0">Products</span>
-                    </div>
-                </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% include 'includes/main-nav.html' %}
-                    </div>
+                    </li>
                 </div>
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -80,7 +94,7 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center d-flex my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" aria-label="My Account">
                                 <div class="text-center">
                                     <div>
@@ -127,6 +141,7 @@
                         <span><i class="fas fa-bars"></i></span>
                     </button>
                         {% include 'includes/mobile-top-header.html' %}
+                        {% include 'includes/products-nav.html' %}
                 </nav>
             </div>
         </header>
