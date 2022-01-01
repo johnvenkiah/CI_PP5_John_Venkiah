@@ -63,6 +63,17 @@ h2, .nav-link {
     font-weight: bold;
     letter-spacing: .1rem;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
+
+}
+
+.logo-font.nav-link {
+    color: #ffaa42 !important;
+}
+
+.logo-font.nav-link:hover,
+.logo-font.nav-link:focus {
+    color: #fff !important;
+    text-shadow: 0 0 8px #ffc107;
 }
 
 .nav-link:hover, .navbar-toggler:hover {
