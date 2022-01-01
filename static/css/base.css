@@ -41,8 +41,21 @@ h2, .nav-link {
     font-family: 'Abel', sans-serif;
 }
 
-nav li, nav h1, #topnav a, #topnav button, .navbar-toggler {
-    
+.navbar-nav {
+    background-color: #04142f80;
+}
+
+.nav-item {
+    padding-left: 15px;
+}
+
+.nav-item .dropdown-menu {
+    margin: 0 15px 0 0;
+    padding: 0;
+}
+
+.nav-item .dropdown-item {
+    padding: .25rem .6rem;
 }
 
 .nav-link, .navbar-toggler {
