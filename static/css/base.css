@@ -41,9 +41,9 @@ h2, .nav-link {
     font-family: 'Abel', sans-serif;
 }
 
-.navbar-nav {
+/* .navbar-nav {
     background-color: #04142f80;
-}
+} */
 
 .nav-item {
     padding-left: 15px;
@@ -386,8 +386,11 @@ input[name='q']::placeholder {
         font-size: 1.2rem;
     }
 
+    .fa-bars {
+        padding-top: .45rem;
+    }
+
     .navbar-toggler {
-        padding: .6rem 0;
         font-size: 1.5rem;
         border: none;
         transition: all 0.2s ease-in-out;
@@ -435,10 +438,6 @@ input[name='q']::placeholder {
 
     .navbar-expand-lg > li, .navbar-expand-lg > button {
         width: 25%;
-    }
-
-    .navbar-expand-lg > li, .navbar-expand-lg > h1 {
-        width: 51.5%;
     }
 }
 
@@ -503,7 +502,11 @@ input[name='q']::placeholder {
 
 .bg-nav {
     background-color: transparent;
-    transition: background-color 0.4s;
+    transition: all 0.4s;
+}
+
+.blur-filter {
+    backdrop-filter: blur(2px);
 }
 
 div.dropdown-menu.mobile-search {
@@ -648,6 +651,9 @@ input, input.form-control, .btn {
     .feature-caption {
         font-size: 1rem;
         color: white;
+    }
+    .nav-item {
+        line-height: 1.4rem;
     }
 }
 

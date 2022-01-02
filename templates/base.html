@@ -201,6 +201,13 @@
         <script type="text/javascript">
             $('.toast').toast('show');
 
+            // Change background color of navbar and menu if toggler is clicked on
+            $(".navbar-toggler").click(function() {
+                $(".bg-nav").css({
+                    'background-color': '#04142f80'
+                }).toggleClass('blur-filter');
+            })
+
             // Hide Header on on scroll down
             var didScroll;
             var lastScrollTop = 0;
@@ -231,13 +238,17 @@
                         // Scroll Down
                         $('.hide-items').addClass('hide').removeClass('hide-items');
                         $('.hide-2').addClass('hide-items-2').removeClass('hide-2');
-                        $('.bg-nav').css({'background-color': 'transparent'})
+                    
+                        // If nav menu is not showing, change the navbar to transparent
+                        if (!$('#main-nav').hasClass('show')) {
+                            $('.bg-nav').css({'background-color': 'transparent'});
+                        }
                     } else {
                         // Scroll Up
                         if(st + $(window).height() < $(document).height()) {
                             $('.hide-items-2').addClass('hide-2').removeClass('hide-items-2');
                             $('.hide').addClass('hide-items').removeClass('hide');
-                            $('.bg-nav').css({'background-color': '#04142f80'})
+                            $('.bg-nav').css({'background-color': '#04142f80'});
                         }
                     }
                     
