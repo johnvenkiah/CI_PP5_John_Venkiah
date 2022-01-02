@@ -360,6 +360,18 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .navbar {
+        margin: 0 auto !important;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -411,7 +423,7 @@ input[name='q']::placeholder {
     }
 
 
-/* PERSONAL STYLES, QUERIES */
+/* PERSONAL STYLES, max-width: 991px */
 
     h1 {
         font-size: 1.4rem;
@@ -427,8 +439,25 @@ input[name='q']::placeholder {
         transition: opacity 0.3s ease-in-out;
     }
 
+    .hide {
+        opacity: 0;
+        display: none !important;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .hide-items-2 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+        display: block;
+    }
+    
+    .hide-2 {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        display: none !important;
+    }
+
     .list-inline-item {
-        display: inline-block !important;
         flex: none;
     }
 
@@ -547,24 +576,6 @@ button:focus {
     width: 40px;
     filter: invert(1);
     margin: 0 4px 6px;
-}
-
-.hide {
-    opacity: 0;
-    display: none !important;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.hide-items-2 {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-    display: block;
-}
-
-.hide-2 {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    display: none !important;
 }
 
 .input-group-append .btn, .input-group-prepend .btn {

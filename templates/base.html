@@ -65,7 +65,11 @@
                 <!-- Products -->
                 <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <li class="list-inline-item dropdown">
-                        <a class="nav-link" href="#" id="products-link" data-toggle="dropdown"
+                        <a href="" id="products-link" class="nav-link collapsed" type="button" data-toggle="collapse" data-target="#products-nav" aria-controls="products-nav" aria-expanded="false" aria-label="Toggle products menu">
+                            <span><i class="fas fa-meteor"></i></span>
+                            <span class="my-0">Products</span>
+                        </a>
+                        <!-- <a class="nav-link" href="#" id="products-link" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false" aria-label="Products">
                             <div class="text-center">
                                 <div>
@@ -73,7 +77,7 @@
                                 </div>
                                 <span class="my-0">Products</span>
                             </div>
-                        </a>
+                        </a> -->
                         <div class="dropdown-menu border-0" aria-labelledby="products-link">
                             <a href="#" class="dropdown-item">Women's</a>
                             <a href="#" class="dropdown-item">Men's</a>
@@ -137,7 +141,7 @@
             </div>
             <div class="row">
                 <nav class="navbar bg-nav navbar-expand-lg navbar-dark w-100">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#products-nav" aria-controls="products-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span><i class="fas fa-bars"></i></span>
                     </button>
                         {% include 'includes/mobile-top-header.html' %}
@@ -208,11 +212,19 @@
                 }).toggleClass('blur-filter');
             })
 
+            // Make products menu visible if Products menu item is clicked on
+            $("#products-link").click(function() {
+                $(".bg-nav").css({
+                    'background-color': '#04142f80'
+                }).toggleClass('blur-filter');
+                $('.navbar-nav').toggleClass('d-lg-none');
+            })
+
             // Hide Header on on scroll down
-            var didScroll;
-            var lastScrollTop = 0;
-            var delta = 30;
-            var navbarHeight = $('.navbar').outerHeight();
+            let didScroll;
+            let lastScrollTop = 0;
+            let delta = 30;
+            let navbarHeight = $('.navbar').outerHeight();
             
             $(document).ready(function(){
                 $(window).scroll(function(event){
@@ -228,19 +240,18 @@
                 function hasScrolled() {
                     var st = $(this).scrollTop();
                     
-                    // Make sure they scroll more than delta
+                    // Do nothing if scroll is less than delta
                     if(Math.abs(lastScrollTop - st) <= delta)
                         return;
                     
-                    // If they scrolled down and are past the navbar, add class .nav-up.
-                    // This is necessary so you never see what is "behind" the navbar.
-                    if (st > lastScrollTop && st > navbarHeight){
+                    // If they scrolled passed navbar, hide relevant classes.
+                    if (st > lastScrollTop && st > navbarHeight) {
                         // Scroll Down
                         $('.hide-items').addClass('hide').removeClass('hide-items');
                         $('.hide-2').addClass('hide-items-2').removeClass('hide-2');
                     
                         // If nav menu is not showing, change the navbar to transparent
-                        if (!$('#main-nav').hasClass('show')) {
+                        if (!$('#products-nav').hasClass('show')) {
                             $('.bg-nav').css({'background-color': 'transparent'});
                         }
                     } else {
