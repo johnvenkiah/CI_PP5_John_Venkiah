@@ -32,13 +32,17 @@ h1 {
 }
 
 h1:hover, a:hover {
-    color: #fff;
-    text-shadow: 0 0 8px #ffaa42b9, 0.5px 0.5px 2px black;
+    color: #fff !important;
+    text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
     text-decoration: none;
 }
 
 h2, .nav-link {
     font-family: 'Abel', sans-serif;
+}
+
+h2.logo-font {
+    color: #ffaa42 !important;
 }
 
 /* .navbar-nav {
@@ -73,7 +77,7 @@ h2, .nav-link {
 .logo-font.nav-link:hover,
 .logo-font.nav-link:focus {
     color: #fff !important;
-    text-shadow: 1px 1px 3px black, 0 0 8px #ffc107;
+    text-shadow: 1px 1px 3px black, 0 0 11px #ffc107;
 }
 
 .nav-link:hover, .navbar-toggler:hover {
@@ -269,6 +273,8 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content input {
     border: 1px solid #adb5bd;
+    margin-top: 20px;
+    opacity: .9;
     /* border-radius: 8px; */
 }
 
@@ -314,8 +320,8 @@ input[name='q']::placeholder {
     border-color: rgb(255, 255, 255, .5);
 }
 
-.allauth-form-inner-content a {
-    color: #ff8d00;
+.allauth-form-inner-content a, footer a {
+    color: #ffaa42;
 }
 
 /* Product Form */
@@ -504,7 +510,7 @@ input[name='q']::placeholder {
 }
 
 .bg-trans-dark {
-    background-color: rgb(57, 102, 128, .4);
+    background-color: rgba(4, 20, 47, 0.5);
 }
 
 .bg-grad-trans-dark {
@@ -592,7 +598,10 @@ button:focus {
 .input-group-append .btn, .input-group-prepend .btn {
     position: relative;
     z-index: 2;
-    /* border-radius: 8px; */
+}
+
+.input-btn {
+    border: 1px solid #ced4da;
 }
 
 .dialog {
@@ -611,18 +620,13 @@ button:focus {
 .input-group-append .btn:active,
 .input-group-prepend .btn:active,
 .input-group-append .btn:focus-visible {
-    background-color: #e17c00b9 !important;
+    background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(165, 42, 42, 0.664), rgba(255, 255, 0, 0.589));
     text-shadow: 0.4px 0.4px 3px black;
-    border: none;
+    border: 1px solid #b969068c;
 }
 
 footer {
     padding-bottom: 15px;
-}
-
-footer a {
-    color: #ff8d00;
-
 }
 
 .feature-title, .feature-caption {
