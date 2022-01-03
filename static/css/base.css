@@ -73,7 +73,7 @@ h2, .nav-link {
 .logo-font.nav-link:hover,
 .logo-font.nav-link:focus {
     color: #fff !important;
-    text-shadow: 0 0 8px #ffc107;
+    text-shadow: 1px 1px 3px black, 0 0 8px #ffc107;
 }
 
 .nav-link:hover, .navbar-toggler:hover {
@@ -280,7 +280,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-.allauth-form-inner-content button, .btn-oranges {
+.allauth-form-inner-content button {
     background-color: #e17c008c;
     transition: all .3s;
 }
@@ -367,10 +367,21 @@ input[name='q']::placeholder {
 
     .navbar {
         margin: 0 auto !important;
+        padding: 0;
     }
 
     .navbar-nav .nav-item {
         text-align: center;
+    }
+
+    .navbar-collapse {
+        flex-flow: column;
+        opacity: 0;
+        transition: all .1s ease-in-out;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
     }
 }
 
@@ -405,7 +416,7 @@ input[name='q']::placeholder {
     .navbar-toggler {
         font-size: 1.5rem;
         border: none;
-        transition: all 0.2s ease-in-out;
+        transition: all .3s ease-in-out;
         color: #fff !important;
     }
 
@@ -436,25 +447,25 @@ input[name='q']::placeholder {
     .hide-items {
         opacity: 1;
         display: inline-block !important;
-        transition: opacity 0.3s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
     .hide {
         opacity: 0;
         display: none !important;
-        transition: opacity 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
     
     .hide-items-2 {
         opacity: 1;
-        transition: opacity 0.3s ease-in-out;
         display: block;
+        transition: all 0.3s ease-in-out;
     }
     
     .hide-2 {
         opacity: 0;
-        transition: opacity 0.3s ease-in-out;
         display: none !important;
+        transition: all 0.3s ease-in-out;
     }
 
     .list-inline-item {
@@ -531,7 +542,7 @@ input[name='q']::placeholder {
 
 .bg-nav {
     background-color: transparent;
-    transition: all 0.4s;
+    transition: all 0.3s ease-in-out;
 }
 
 .blur-filter {
@@ -549,7 +560,7 @@ button:focus {
 }
 
 .navbar-expand-lg > li, .navbar-expand-lg > h1 {
-    width: 51.5%;
+    width: 50%;
 }
 
 .bg-trans-blue {
