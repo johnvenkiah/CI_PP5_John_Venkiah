@@ -1,13 +1,15 @@
 """
-Choices for fields in product model
+Choices for fields in product and review models, products app
 """
 
+# Choices enabling user to filter products by gender
 GENDER_CHOICES = (
     ('W', 'Womens'),
     ('M', 'Mens'),
     ('U', 'Unisex'),
 )
 
+# All shoe sizes, displayed for unisex footware
 SIZES = (
     ('34', '34'),
     ('35', '35'),
@@ -28,6 +30,7 @@ SIZES = (
     ('50', '50'),
 )
 
+# All sock sizes, displayed for unisex socks
 SOCK_SIZES = (
     ('34-37', '34-37'),
     ('38-41', '38-41'),
@@ -35,12 +38,13 @@ SOCK_SIZES = (
     ('46-50', '46-50'),
 )
 
+# Varibles so products can display relevant size type
 WOMENS_SIZES = SIZES[:-7]
 WOMENS_SOCK_SIZES = SOCK_SIZES[:-1]
-
 MENS_SIZES = SIZES[5:]
 MENS_SOCK_SIZES = SOCK_SIZES[1:]
 
+# Add to Variable to be chosen from within the product instance
 SIZE_CHOICES = (
     ('Sizes', SIZES),
     ('Womens Sizes', WOMENS_SIZES),
@@ -51,6 +55,7 @@ SIZE_CHOICES = (
     ('N/A', 'N/A'),
 )
 
+# Choices for ratings made by users on the product detail page
 RATING_CHOICES = [
     (5, '5'),
     (4, '4'),
