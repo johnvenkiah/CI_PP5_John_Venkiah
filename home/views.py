@@ -8,6 +8,8 @@ from django.views.generic import TemplateView
 
 # - - - - - 3rd Party imports - - - - - - - - -
 
+# - - - - - Internal imports - - - - - - - - -
+
 
 class HomeView(TemplateView):
     """
