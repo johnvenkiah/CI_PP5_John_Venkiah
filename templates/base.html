@@ -66,28 +66,11 @@
                 <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <li class="list-inline-item dropdown">
                         <a href="" id="products-link" class="nav-link collapsed" type="button" data-toggle="collapse" data-target="#products-nav" aria-controls="products-nav" aria-expanded="false" aria-label="Toggle products menu">
-                            <span><i class="fas fa-meteor"></i></span>
+                            <div>
+                                <i class="fas fa-meteor"></i>
+                            </div>
                             <span class="my-0">Products</span>
                         </a>
-                        <!-- <a class="nav-link" href="#" id="products-link" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Products">
-                            <div class="text-center">
-                                <div>
-                                    <i class="fas fa-meteor"></i>
-                                </div>
-                                <span class="my-0">Products</span>
-                            </div>
-                        </a> -->
-                        <div class="dropdown-menu border-0" aria-labelledby="products-link">
-                            <a href="#" class="dropdown-item">Women's</a>
-                            <a href="#" class="dropdown-item">Men's</a>
-                            <hr>
-                            <a href="#" class="dropdown-item">Sneakers</a>
-                            <a href="#" class="dropdown-item">Fancy Shoes</a>
-                            <a href="#" class="dropdown-item">Sports</a>
-                            <a href="#" class="dropdown-item">Boots</a>
-                            <a href="#" class="dropdown-item">Socks</a>
-                        </div>
                     </li>
                 </div>
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
@@ -115,7 +98,7 @@
                                 <a href="#" class="dropdown-item">Profile</a>
                                 <a href="#" class="dropdown-item">Sign Out</a>
                                 {% else %}
-                                <a href="#" class="dropdown-item">Sign Up</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
                                 {% endif %}
                             </div>
