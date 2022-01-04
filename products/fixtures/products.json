@@ -45,25 +45,65 @@
         "description": "A comfortable, durable, and versatile cap toe boot handcrafted with the highest quality Tier 1 USA leather and featuring Goodyear welt construction. The Captain is built to last with a premium look that lets the quality of the materials do the talking.",
         "gender": "M",
         "brand": 3,
-        "details": ["* Brown Thursday Chrome Leather", "* Goodyear Welt Construction for Longevity", "* Fully Lined Supple Glove Leather Interior", "* Premium Flat Waxed Cotton Laces", "* Custom Developed Reinforced Eyelets"],
+        "details": ["Brown Thursday Chrome Leather", "Goodyear Welt Construction for Longevity", "Fully Lined Supple Glove Leather Interior", "Premium Flat Waxed Cotton Laces", "Custom Developed Reinforced Eyelets"],
         "size_type": "MENS_SIZES",
         "rating": 4.1,
         "discount": 0,
         "image_url": "media/ben-weber-W-bVagrvXfw-unsplash.jpg",
         "image": "ben-weber-W-bVagrvXfw-unsplash.jpg"
     }
-
 }, {
-    "pk": 174,
+    "pk": 4,
     "model": "products.product",
     "fields": {
-        "sku": "SU202200060",
-        "name": "St. John's Bay Ikat Sharkbite Tank Top",
-        "description": "Add our tank top to your warm-weather wardrobe, featuring a sharkbite hem and a flowy style that looks great with shorts or skinny jeans. roundneck sharkbite hem rayon washable imported petite: 30\" length misses: 32\" length",
-        "price": 36.99,
-        "category": 8,
-        "rating": 5.0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0429201617074742M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0429201617074742M.jpg"
+        "art_nr": "SU202200004",
+        "name": "New Balance 996 - Red Suede Sneakers",
+        "category": 3,
+        "price": 74.99,
+        "description": "Our 996 men's sneaker is a contemporary everyday kick that's inspired by signature NB design details. With a heritage-influenced suede and mesh upper atop unmatched underfoot cushioning, this shoe delivers classic comfort and athletic style. Dual-density C-CAP midsole technology helps ensure this sneaker offers both comfort and stability.",
+        "gender": "U",
+        "brand": 4,
+        "details": ["C-CAP midsole cushioning delivers durable support", "Suede and mesh upper", "Heritage-inspired design", "Lace-up closure for a secure fit"],
+        "size_type": "SHOE_SIZES",
+        "rating": null,
+        "discount": 10,
+        "image_url": "media/benjamin-sow-s5nV624t42U-unsplash.jpg",
+        "image": "benjamin-sow-s5nV624t42U-unsplash.jpg"
+    }
+}, {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+        "art_nr": "SU202200005",
+        "name": "MK Fly - Blue Sock Sneakers",
+        "category": 3,
+        "price": 69.99,
+        "description": "It is said that shoes speak lauder than words so why not choose our new orange Hexya sock sneakers crafted in a soft elastic mesh with chunky sole? Put them on and get ready for an active day!",
+        "gender": "U",
+        "brand": 5,
+        "details": ["Breathable", "Sweat-Absorbant", "Light build", "Hard-Wearing", "Mesh Lining"],
+        "size_type": "SHOE_SIZES",
+        "rating": null,
+        "discount": 0,
+        "image_url": "media/cj-dayrit-2reXfzCi0Kg-unsplash.jpg",
+        "image": "cj-dayrit-2reXfzCi0Kg-unsplash.jpg"
+    }
+}, {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+        "art_nr": "SU202200006",
+        "name": "Elegant Park Open Toe Open Strap Heels",
+        "category": 1,
+        "price": 129.99,
+        "description": "These gorgeous sexy high heels pumps offer adjustable buckle design make the shoes fits well. you can wear them to any wedding, party, prom, evening or formal Occasions.",
+        "gender": "W",
+        "brand": 6,
+        "details": ["Imported", "Heel Height 3.5 inches", "Peep Toe", "Asymmetric upper design"],
+        "size_type": "WOMENS_SIZES",
+        "rating": 3.9,
+        "discount": 0,
+        "image_url": "media/constantin-panagopoulos-DPTFlJ1HhAw-unsplash.jpg",
+        "image": "constantin-panagopoulos-DPTFlJ1HhAw-unsplash.jpg"
     }
 }]
