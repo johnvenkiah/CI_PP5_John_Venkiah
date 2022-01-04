@@ -54,6 +54,57 @@ class Category(models.Model):
         return self.friendly_name
 
 
+class Brand(models.Model):
+    """
+    The Brand model class, containing name and logo fields
+    """
+    class Meta:
+        """
+        Brand Meta class for returning plural name
+        """
+        verbose_name_plural = 'Brands'
+
+    name = models.CharField(
+        verbose_name=_('Name'),
+        max_length=254
+    )
+    friendly_name = models.CharField(
+        max_length=254,
+        null=True,
+        blank=True
+    )
+    logo_url = models.URLField(
+        verbose_name=_('Image URL'),
+        max_length=1024,
+        null=True,
+        blank=True
+    )
+    logo = models.ImageField(
+        verbose_name=_('Logo'),
+        null=True,
+        blank=True
+    )
+
+    def __str__(self):
+        """
+        Returns category name as a string
+        Args:
+            object: self
+        Returns:
+            Category name field as string
+        """
+        return f'{self.name}'
+
+    def get_friendly_name(self):
+        """
+        Returns the category friendly name string
+        Args:
+            self (object): self.
+        Returns:
+            The category friendly name string
+        """
+        return self.friendly_name
+
 class Product(models.Model):
     """
     The Product model class, used to generate an instance of a product

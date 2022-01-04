@@ -221,6 +221,8 @@ The following models have been used to populate the database and for the site to
 
 * **Category** - the category in which the product is placed
 
+* **Brand** - the brand of the product
+
 * **Product** - the model for the product itself and its details
 
 * **User** - the built in Django User model, facilitates the users basic information

@@ -1,0 +1,82 @@
+[{
+    "pk": 1,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 2,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 3,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 4,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 5,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 6,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 7,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 8,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}, {
+    "pk": 9,
+    "model": "products.brand",
+    "fields": {
+        "name": "nike",
+        "friendly_name": "Nike",
+        "logo_url": "media/brands/nike.jpg",
+        "logo": "nike.jpg"
+    }
+}]

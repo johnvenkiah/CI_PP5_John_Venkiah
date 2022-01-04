@@ -1,0 +1,64 @@
+[{
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+        "name": "dress_shoes",
+        "friendly_name": "Dress Shoes"
+    }
+}, {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+        "name": "boots",
+        "friendly_name": "Boots"
+    }
+}, {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+        "name": "sneakers",
+        "friendly_name": "Sneakers"
+    }
+}, {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+        "name": "sandals",
+        "friendly_name": "Sandals"
+    }
+}, {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+        "name": "casual",
+        "friendly_name": "Casual"
+    }
+}, {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+        "name": "socks",
+        "friendly_name": "Socks"
+    }
+}, {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+        "name": "shoe_care",
+        "friendly_name": "Shoe Care"
+    }
+}, {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+        "name": "new_arrivals",
+        "friendly_name": "New Arrivals"
+    }
+}, {
+    "pk": 9,
+    "model": "products.category",
+    "fields": {
+        "name": "on_sale",
+        "friendly_name": "On Sale"
+    }
+}]
