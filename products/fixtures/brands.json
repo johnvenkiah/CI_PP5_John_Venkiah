@@ -52,31 +52,4 @@
         "logo_url": "media/brands/elegant_park.jpg",
         "logo": "elegant_park.jpg"
     }
-}, {
-    "pk": 7,
-    "model": "products.brand",
-    "fields": {
-        "name": "nike",
-        "friendly_name": "Nike",
-        "logo_url": "media/brands/nike.jpg",
-        "logo": "nike.jpg"
-    }
-}, {
-    "pk": 8,
-    "model": "products.brand",
-    "fields": {
-        "name": "nike",
-        "friendly_name": "Nike",
-        "logo_url": "media/brands/nike.jpg",
-        "logo": "nike.jpg"
-    }
-}, {
-    "pk": 9,
-    "model": "products.brand",
-    "fields": {
-        "name": "nike",
-        "friendly_name": "Nike",
-        "logo_url": "media/brands/nike.jpg",
-        "logo": "nike.jpg"
-    }
 }]

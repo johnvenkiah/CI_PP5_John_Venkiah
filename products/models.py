@@ -151,12 +151,11 @@ class Product(models.Model):
         null=True,
         blank=True
     )
-    size_type = models.BooleanField(
+    size_type = models.CharField(
         verbose_name=_('Size Type'),
         choices=SIZE_CHOICES,
-        default='N/A',
-        null=True,
-        blank=True
+        max_length=24,
+        default='N/A'
     )
     rating = models.DecimalField(
         verbose_name=_('Rating'),
