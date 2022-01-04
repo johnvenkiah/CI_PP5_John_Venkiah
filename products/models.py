@@ -64,6 +64,10 @@ class Product(models.Model):
         """
         ordering = ['id']
 
+    art_nr = models.CharField(
+        verbose_name=_('Art. Nr'),
+        max_length=254
+    )
     name = models.CharField(
         verbose_name=_('Name'),
         max_length=254
@@ -78,10 +82,6 @@ class Product(models.Model):
         verbose_name=_('Price'),
         max_digits=6,
         decimal_places=2
-    )
-    art_nr = models.CharField(
-        verbose_name=_('Art. Nr'),
-        max_length=254
     )
     description = models.TextField(
         verbose_name=_('Description'),
@@ -117,10 +117,9 @@ class Product(models.Model):
     )
     discount = models.DecimalField(
         verbose_name=_('Discount'),
+        default=0,
         max_digits=6,
         decimal_places=2,
-        null=True,
-        blank=True
     )
     image_url = models.URLField(
         verbose_name=_('Image URL'),
