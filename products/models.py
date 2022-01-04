@@ -7,8 +7,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
-# - - - - - 3rd Party imports - - - - - - - - -
-
 # - - - - - Internal imports - - - - - - - - -
 from .products_choices import GENDER_CHOICES, SIZE_CHOICES, RATING_CHOICES
 
@@ -105,6 +103,7 @@ class Brand(models.Model):
         """
         return self.friendly_name
 
+
 class Product(models.Model):
     """
     The Product model class, used to generate an instance of a product
@@ -197,7 +196,7 @@ class Product(models.Model):
 
 class Review(models.Model):
     """
-    The Review model class, crating an instance of a review
+    The Review model class, creating an instance of a review
     """
     class Meta:
         """
