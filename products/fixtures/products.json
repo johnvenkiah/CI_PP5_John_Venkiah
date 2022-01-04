@@ -4,24 +4,60 @@
     "fields": {
         "art_nr": "SU202200001",
         "name": "Nike - Air Force 1 Low Black Leather Sneakers",
-        "category": 6,
-        "price": 53.99,
+        "category": 3,
+        "price": 109.99,
         "description": "Get the best of retro-inspired aesthetic with the Air Force 1 Low. Its OG features like stitched overlays and classic colorway pay tribute to the Air Force 1 heritage, while the Air-sole unit ensures cushiony comfort. Grab these iconic sneakers and own the streets.",
         "gender": "U",
-        "brand": "Nike",
-        "details": "This is the details field",
-        "size_type": "Womens Shoe Sizes",
+        "brand": 1,
+        "details": ["Leather Upper", "Low-cut design", "Padded ankle", "Foam midsole", "Rubber Outsole"],
+        "size_type": "SHOE_SIZES",
         "rating": 4.6,
         "discount": 0,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-        "image": "DP0709201205510679M.jpg"
+        "image_url": "media/andres-jasso-u4unYsXQHnE-unsplash.jpg",
+        "image": "andres-jasso-u4unYsXQHnE-unsplash.jpg"
+    }
+}, {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+        "art_nr": "SU202200002",
+        "name": "Parache Ladies Hign Ankle Pink Sneakers",
+        "category": 3,
+        "price": 79.99,
+        "description": "Lovely pink sneakers to brighten your day! Thick upper rubber soles with genuine Fairtrade marked fabrics. The high ankle support provides comfort and a comfy and snug fit.",
+        "gender": "W",
+        "brand": 2,
+        "details": ["Synthetic Upper", "Hign Ankle Support", "Lace-up closure", "Foam midsole", "Rubber Outsole"],
+        "size_type": "WOMENS_SIZES",
+        "rating": 3.2,
+        "discount": 20,
+        "image_url": "media/barbora-polednova-VRK4bIBHo1E-unsplash.jpg",
+        "image": "barbora-polednova-VRK4bIBHo1E-unsplash.jpg"
+    }
+}, {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+        "art_nr": "SU202200003",
+        "name": "Thursday Boots - Captain Lace-Up Boot Brown Leather Boots",
+        "category": 2,
+        "price": 79.99,
+        "description": "A comfortable, durable, and versatile cap toe boot handcrafted with the highest quality Tier 1 USA leather and featuring Goodyear welt construction. The Captain is built to last with a premium look that lets the quality of the materials do the talking.",
+        "gender": "M",
+        "brand": 3,
+        "details": ["* Brown Thursday Chrome Leather", "* Goodyear Welt Construction for Longevity", "* Fully Lined Supple Glove Leather Interior", "* Premium Flat Waxed Cotton Laces", "* Custom Developed Reinforced Eyelets"],
+        "size_type": "MENS_SIZES",
+        "rating": 4.1,
+        "discount": 0,
+        "image_url": "media/ben-weber-W-bVagrvXfw-unsplash.jpg",
+        "image": "ben-weber-W-bVagrvXfw-unsplash.jpg"
     }
 
 }, {
     "pk": 174,
     "model": "products.product",
     "fields": {
-        "sku": "pp5007320233",
+        "sku": "SU202200060",
         "name": "St. John's Bay Ikat Sharkbite Tank Top",
         "description": "Add our tank top to your warm-weather wardrobe, featuring a sharkbite hem and a flowy style that looks great with shorts or skinny jeans. roundneck sharkbite hem rayon washable imported petite: 30\" length misses: 32\" length",
         "price": 36.99,

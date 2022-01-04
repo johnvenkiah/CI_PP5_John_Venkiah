@@ -11,19 +11,19 @@
     "pk": 2,
     "model": "products.brand",
     "fields": {
-        "name": "nike",
-        "friendly_name": "Nike",
-        "logo_url": "media/brands/nike.jpg",
-        "logo": "nike.jpg"
+        "name": "parache",
+        "friendly_name": "Parache",
+        "logo_url": "media/brands/parache.jpg",
+        "logo": "parache.jpg"
     }
 }, {
     "pk": 3,
     "model": "products.brand",
     "fields": {
-        "name": "nike",
-        "friendly_name": "Nike",
-        "logo_url": "media/brands/nike.jpg",
-        "logo": "nike.jpg"
+        "name": "thursday_boots",
+        "friendly_name": "Thursday Boots",
+        "logo_url": "media/brands/thursday_boots.jpg",
+        "logo": "thursday_boots.jpg"
     }
 }, {
     "pk": 4,

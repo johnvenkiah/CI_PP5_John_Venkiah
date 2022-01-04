@@ -10,7 +10,7 @@ GENDER_CHOICES = (
 )
 
 # All shoe sizes, displayed for unisex footware
-SIZES = (
+SHOE_SIZES = (
     ('34', '34'),
     ('35', '35'),
     ('36', '36'),
@@ -39,14 +39,14 @@ SOCK_SIZES = (
 )
 
 # Varibles so products can display relevant size type
-WOMENS_SIZES = SIZES[:-7]
+WOMENS_SIZES = SHOE_SIZES[:-7]
 WOMENS_SOCK_SIZES = SOCK_SIZES[:-1]
-MENS_SIZES = SIZES[5:]
+MENS_SIZES = SHOE_SIZES[5:]
 MENS_SOCK_SIZES = SOCK_SIZES[1:]
 
 # Add to Variable to be chosen from within the product instance
 SIZE_CHOICES = (
-    ('Sizes', SIZES),
+    ('Shoe Sizes', SHOE_SIZES),
     ('Womens Sizes', WOMENS_SIZES),
     ('Mens Sizes', MENS_SIZES),
     ('Sock Sizes', SOCK_SIZES),
