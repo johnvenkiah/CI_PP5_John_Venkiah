@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Brand
 
 # Create your views here.
 
@@ -16,8 +16,13 @@ def all_products(request):
     query = None
     categories = None
     gender = None
+    brand = None
     sort = None
+    news = None
+    sale = None
     direction = None
+    initial_price = None
+    current_price = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -39,9 +44,21 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'brand' in request.GET:
+            brands = request.GET['brand'].split(',')
+            products = products.filter(brand__name__in=brands)
+            brands = Brand.objects.filter(name__in=brands)
+
         if 'gender' in request.GET:
             gender = request.GET['gender'].split(',')
             products = products.filter(gender__in=gender)
+
+        if 'news' in request.GET:
+            news = request.GET['news']
+            products = products.filter(is_new=True)
+
+        if 'on_sale' in request.GET:
+            products = products.filter(~Q(initial_price=current_price))
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -60,6 +77,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'gender': gender,
+        'brand': brand,
         'current_sorting': current_sorting,
     }
 

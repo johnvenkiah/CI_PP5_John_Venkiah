@@ -78,9 +78,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}?category=on_sale" class="dropdown-item">On Sale</a>
-                <a href="{% url 'products' %}?category=new_arrivals,on_sale" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?news=true" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?on_sale=true" class="dropdown-item">On Sale</a>
+                <a href="{% url 'products' %}?new,sale=true" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>

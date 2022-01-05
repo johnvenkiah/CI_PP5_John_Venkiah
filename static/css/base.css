@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    transition: all, .3s, ease-in-out;
 }
 
 body {
@@ -711,12 +712,8 @@ input, input.form-control, .btn, .custom-select {
     padding-right: 7.5px;
 }
 
-.products-link p, .products-link small.text-muted {
-    color: #ffaa42 !important;
-}
-
 .text-orange {
-    color: #ffaa42 !important;
+    color: #ffaa42;
 }
 
 .card {
@@ -769,4 +766,18 @@ input, input.form-control, .btn, .custom-select {
     color: #fff !important;
     border: 1px solid red;
     text-shadow: 0 0 8px red !important;
+}
+
+.sale-label {
+    color: #fff !important;
+    text-shadow: 1px 1px 3px black;
+    box-shadow: 0 0 10px black;
+    background: linear-gradient(24deg, #125012cc, #008000de, #70b970cc);
+    width: fit-content;
+    padding: 5px;
+    top: 50px;
+    border-radius: 9px;
+    right: 1px;
+    position: absolute;
+    z-index: 1;
 }
