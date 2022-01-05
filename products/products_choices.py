@@ -4,9 +4,9 @@ Choices for fields in product and review models, products app
 
 # Choices enabling user to filter products by gender
 GENDER_CHOICES = (
-    ('Womens', 'W'),
-    ('Mens', 'M'),
-    ('Unisex', 'U'),
+    ('w', 'Womens'),
+    ('m', 'Mens'),
+    ('u', 'Unisex'),
 )
 SIZE_CHOICES = (
     ('shoes', 'Shoes'),

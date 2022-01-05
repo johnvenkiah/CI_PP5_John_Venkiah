@@ -72,7 +72,7 @@
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    {{ product.gender }}
+                                                    {{ product.get_gender_display }}
                                                 </a> | 
                                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                                                     {{ product.category.friendly_name }}
