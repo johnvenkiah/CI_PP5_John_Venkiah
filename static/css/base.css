@@ -571,6 +571,12 @@ button:focus {
     transition: all, .3s;
 }
 
+.carousel-indicators {
+    width: 8%;
+    left: 50%;
+    margin-left: -4%;
+}
+
 .carousel-indicators li {
     width: 7px;
     height: 7px;
@@ -578,6 +584,15 @@ button:focus {
     margin: .5rem;
     background-color: #ffab43;
 
+}
+
+.carousel-item a {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.carousel-item a:hover {
+    opacity: .7;
 }
 
 .logo {
