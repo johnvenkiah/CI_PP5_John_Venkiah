@@ -23,6 +23,7 @@ def all_products(request):
     direction = None
     initial_price = None
     current_price = None
+    context = {}
 
     if request.GET:
         if 'sort' in request.GET:
@@ -69,6 +70,11 @@ def all_products(request):
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
+
+        if request.is_ajax():
+            NAME = request.GET.get('name')
+            product = products.get(name=NAME)  # So we send the product instance
+            context['product'] = product
 
     current_sorting = f'{sort}_{direction}'
 
