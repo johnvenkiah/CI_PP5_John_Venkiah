@@ -654,7 +654,7 @@ footer {
 }
 
 .text-shadow {
-    text-shadow: 1px 1px 3px rgb(0, 26, 43);
+    text-shadow: 1px 1px 3px black, 0 0 10px black;
 }
 
 input, input.form-control, .btn, .custom-select {
@@ -784,19 +784,17 @@ input, input.form-control, .btn, .custom-select {
 
 .sale-label {
     color: #fff !important;
-    text-shadow: 1px 1px 3px black;
     box-shadow: 0 0 10px black;
-    background: linear-gradient(24deg, #125012cc, #008000de, #70b970cc);
+    background: linear-gradient(24deg, #176a17, #70b970);
     width: fit-content;
-    padding: 5px;
+    padding: 5px 10px;
     top: 50px;
-    border-radius: 9px;
+    border-radius: 20px;
     right: 1px;
     position: absolute;
     z-index: 1;
 }
 
 .label-new {
-    padding: 5px 10px;
-    background: linear-gradient(24deg, #664108e0, #9b6400e6, #d39d4bd6);
+    background: linear-gradient(24deg, #a16b2a, #ffaa42);
 }
