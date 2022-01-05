@@ -1,6 +1,5 @@
 html {
     height: 100%;
-    transition: all, .3s, ease-in-out;
 }
 
 body {
@@ -734,8 +733,13 @@ input, input.form-control, .btn, .custom-select {
 
 .card, .card img {
     border-radius: 8px;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
     transform: scale(1);
+}
+
+.card p {
+    color: #ffaa42;
+    transition: all .3s ease-in-out;
 }
 
 .product-title {
@@ -751,8 +755,11 @@ input, input.form-control, .btn, .custom-select {
 .card:focus {
     background-color: rgba(4, 20, 47, 0.5);
     font-weight: bold;
-    color: #fff !important;
     transform: scale(1.01);
+}
+
+.card:hover p {
+    color: #fff;
 }
 
 .small {
