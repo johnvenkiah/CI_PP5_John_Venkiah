@@ -101,7 +101,9 @@
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="" class="product-edit-link">Edit</a> | 
-                                                    <a class="text-danger product-edit-link" href="">Delete</a>
+                                                    <a type="button" class="text-danger product-edit-link" data-toggle="modal" data-target="#productDeleteModal">
+                                                        Delete
+                                                    </a>
                                                 </small>
                                             {% endif %}
                                         </div>
@@ -129,6 +131,26 @@
                                 <hr>
                             </div>
                         {% endif %}
+                            <!-- Modal to delete product, based on bootstrap example modal -->
+                            <div class="modal fade" id="productDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title text-orange" id="exampleModalLongTitle">Delete Product</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span class="text-white" aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete {{ product.name }}?
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-black text-orange" data-dismiss="modal">Cancel</button>
+                                    <a type="button" href="" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                     {% endfor %}
                 </div>
             </div>

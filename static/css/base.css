@@ -707,6 +707,7 @@ input, input.form-control, .btn, .custom-select {
     height: 70%;
     max-height: 70%;
     max-width: 100%;
+    margin-bottom: 3rem;
 }
 
 .card-img-top {
@@ -797,4 +798,8 @@ input, input.form-control, .btn, .custom-select {
 
 .label-new {
     background: linear-gradient(24deg, #a16b2a, #ffaa42);
+}
+
+.modal-content {
+    background-color: #0a1734b0;
 }
