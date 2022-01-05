@@ -506,10 +506,6 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
-.text-orange {
-    color: #e17c00 !important;
-}
-
 .bg-trans-dark {
     background-color: rgba(4, 20, 47, 0.5);
 }
@@ -744,10 +740,6 @@ input, input.form-control, .btn, .custom-select {
     transform: scale(1.01);
 }
 
-.lead {
-    color: #ffaa42 !important;
-}
-
 .small {
     color: #fff !important;
 }
@@ -780,4 +772,9 @@ input, input.form-control, .btn, .custom-select {
     right: 1px;
     position: absolute;
     z-index: 1;
+}
+
+.label-new {
+    padding: 5px 10px;
+    background: linear-gradient(24deg, #664108e0, #9b6400e6, #d39d4bd6);
 }

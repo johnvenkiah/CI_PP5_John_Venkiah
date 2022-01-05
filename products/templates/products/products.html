@@ -57,8 +57,11 @@
                                 <a class="products-link" href="">
                                     <p class="mb-0 product-title text-orange">{{ product.name }}</p>
                                     {% if product.discount %}
-                                    <p class="sale-label">Save €{{ product.discount }}!</p>
-                                {% endif %}
+                                        <p class="sale-label">Save €{{ product.discount }}!</p>
+                                    {% endif %}
+                                    {% if product.is_new %}
+                                        <p class="sale-label label-new">NEW!</p>
+                                    {% endif %}
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
