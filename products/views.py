@@ -15,6 +15,7 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    gender = None
     sort = None
     direction = None
 
@@ -38,6 +39,10 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'gender' in request.GET:
+            gender = request.GET['gender'].split(',')
+            products = products.filter(gender__in=gender)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -54,6 +59,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'gender': gender,
         'current_sorting': current_sorting,
     }
 
