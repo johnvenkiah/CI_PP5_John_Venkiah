@@ -711,8 +711,12 @@ input, input.form-control, .btn, .custom-select {
     padding-right: 7.5px;
 }
 
-.products-link p {
-    color: #ffaa42;
+.products-link p, .products-link small.text-muted {
+    color: #ffaa42 !important;
+}
+
+.text-orange {
+    color: #ffaa42 !important;
 }
 
 .card {
@@ -722,7 +726,7 @@ input, input.form-control, .btn, .custom-select {
 
 .card, .card img {
     border-radius: 8px;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
     transform: scale(1);
 }
 
@@ -747,7 +751,7 @@ input, input.form-control, .btn, .custom-select {
     color: #ffaa42 !important;
 }
 
-.small, .text-muted {
+.small {
     color: #fff !important;
 }
 

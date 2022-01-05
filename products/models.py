@@ -128,7 +128,14 @@ class Product(models.Model):
         blank=True,
         on_delete=models.SET_NULL
     )
-    price = models.DecimalField(
+    initial_price = models.DecimalField(
+        verbose_name=_('Initial Price'),
+        max_digits=6,
+        decimal_places=2,
+        null=True,
+        blank=True
+    )
+    current_price = models.DecimalField(
         verbose_name=_('Price'),
         max_digits=6,
         decimal_places=2
@@ -160,15 +167,21 @@ class Product(models.Model):
     rating = models.DecimalField(
         verbose_name=_('Rating'),
         max_digits=6,
-        decimal_places=2,
+        decimal_places=1,
         null=True,
         blank=True
+    )
+    is_new = models.BooleanField(
+        verbose_name=('Is New'),
+        default=False,
     )
     discount = models.DecimalField(
         verbose_name=_('Discount'),
         default=0,
         max_digits=6,
         decimal_places=2,
+        null=True,
+        blank=True
     )
     image_url = models.URLField(
         verbose_name=_('Image URL'),

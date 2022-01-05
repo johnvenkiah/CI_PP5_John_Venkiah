@@ -19,7 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
         'art_nr',
         'name',
         'category',
-        'price',
+        'current_price',
         'gender',
         'brand',
         'size_type',
@@ -33,15 +33,14 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'brand',
         'gender',
-        'name',
-        'price',
+        'is_new'
     )
     search_fields = (
         'art_nr',
         'category',
         'brand',
         'name',
-        'price',
+        'current_price',
     )
 
     ordering = ('art_nr',)
