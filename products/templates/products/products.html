@@ -101,9 +101,10 @@
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="" class="product-edit-link">Edit</a> | 
-                                                    <button type="button" data-id="{{ product.name }}" class="text-danger product-edit-link delete-product">
-                                                        Delete
-                                                    </button>
+                                                <!-- Button triggers the delete product modal -->
+                                                <a type="button" class="product-edit-link text-danger" data-toggle="modal" data-target="#deleteProductModal{{ product.id }}">
+                                                    Delete
+                                                </a>
                                                 </small>
                                             {% endif %}
                                         </div>
@@ -131,6 +132,27 @@
                                 <hr>
                             </div>
                         {% endif %}
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="deleteProductModal{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title text-orange" id="exampleModalLongTitle">Delete Product</h5>
+                                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete <i>{{ product.name }}</i>?</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-black text-orange" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-danger">Delete Product</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                         {% endfor %}
                     </div>
                 </div>
@@ -139,26 +161,6 @@
                 <a class="btt-link d-flex h-100">
                     <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
                 </a>	
-            </div>
-            <!-- Modal to delete product, based on bootstrap example modal -->
-            <div class="modal fade" id="productDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title text-orange" id="exampleModalLongTitle">Delete Product</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span class="text-white" aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            Are you sure you want to delete {{ product.name }}?
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-black text-orange" data-dismiss="modal">Cancel</button>
-                        <button type="button" href="" class="btn btn-danger">Delete</button>
-                        </div>
-                    </div>
-                </div>
             </div>
 {% endblock %}
 
@@ -192,7 +194,7 @@
             }
         })
     </script>
-
+<!-- 
     <script>
         // Ajax for targetting product to delete
         $(document).on('click','.delete-product',function(){
@@ -213,5 +215,5 @@
                 },
             });
         });
-    </script>
+    </script> -->
 {% endblock %}
