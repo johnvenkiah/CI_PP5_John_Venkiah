@@ -148,9 +148,11 @@ class Product(models.Model):
         choices=GENDER_CHOICES,
         max_length=24
     )
-    brand = models.CharField(
-        verbose_name=_('Brand'),
-        max_length=254,
+    brand = models.ForeignKey(
+        'Brand',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
     )
     details = models.CharField(
         verbose_name=_('Product Details'),

@@ -19,9 +19,9 @@ class ProductAdmin(admin.ModelAdmin):
         'art_nr',
         'name',
         'category',
+        'brand',
         'current_price',
         'gender',
-        'brand',
         'size_type',
         'rating',
         'discount',
@@ -29,7 +29,6 @@ class ProductAdmin(admin.ModelAdmin):
         'image',
     )
     list_filter = (
-        'art_nr',
         'category',
         'brand',
         'gender',

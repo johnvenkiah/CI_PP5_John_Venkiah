@@ -23,7 +23,7 @@
     "model": "products.product",
     "fields": {
         "art_nr": "SU202200002",
-        "name": "Parache Ladies Hign Ankle Pink Sneakers",
+        "name": "Parache - Ladies Hign Ankle Pink Sneakers",
         "category": 3,
         "current_price": 79.99,
         "initial_price": 99.99,
