@@ -23,39 +23,46 @@
     "pk": 4,
     "model": "products.category",
     "fields": {
+        "name": "fitness",
+        "friendly_name": "Fitness"
+    }
+}, {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
         "name": "sandals",
         "friendly_name": "Sandals"
     }
 }, {
-    "pk": 5,
+    "pk": 6,
     "model": "products.category",
     "fields": {
         "name": "casual",
         "friendly_name": "Casual"
     }
 }, {
-    "pk": 6,
+    "pk": 7,
     "model": "products.category",
     "fields": {
         "name": "socks",
         "friendly_name": "Socks"
     }
 }, {
-    "pk": 7,
+    "pk": 8,
     "model": "products.category",
     "fields": {
         "name": "shoe_care",
         "friendly_name": "Shoe Care"
     }
 }, {
-    "pk": 8,
+    "pk": 9,
     "model": "products.category",
     "fields": {
         "name": "new_arrivals",
         "friendly_name": "New Arrivals"
     }
 }, {
-    "pk": 9,
+    "pk": 10,
     "model": "products.category",
     "fields": {
         "name": "on_sale",
