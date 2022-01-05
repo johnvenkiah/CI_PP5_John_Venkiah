@@ -181,7 +181,7 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: #aab7c4;
+    color: #738292;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -283,7 +283,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: #738292;
 }
 
 .allauth-form-inner-content button {
@@ -646,7 +646,7 @@ footer {
     text-shadow: 1px 1px 3px rgb(0, 26, 43);
 }
 
-input, input.form-control, .btn {
+input, input.form-control, .btn, .custom-select {
     border-radius: 50px;
 }
 
@@ -687,4 +687,82 @@ input, input.form-control, .btn {
     .allauth-form-inner-content {
         margin: 25% auto;
     }
+}
+
+
+/* PRODUCTS */
+
+.products-link {
+    height: 70%;
+    max-height: 70%;
+    max-width: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: inset 0 0 15px #000;
+}
+
+.product-height {
+    height: 400px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+.products-link p {
+    color: #ffaa42;
+}
+
+.card {
+    background-color: transparent;
+    padding: 10px;
+}
+
+.card, .card img {
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+}
+
+.product-title {
+    height: 48px;
+}
+
+.card-footer {
+    background-color: transparent;
+}
+
+.card:hover,
+.card:active,
+.card:focus {
+    background-color: rgba(4, 20, 47, 0.5);
+    font-weight: bold;
+    color: #fff !important;
+    transform: scale(1.01);
+}
+
+.lead {
+    color: #ffaa42 !important;
+}
+
+.small, .text-muted {
+    color: #fff !important;
+}
+
+.product-edit-link {
+    padding: 4px;
+    border: 1px solid #ffaa421f;
+    border-radius: 4px;
+}
+
+.product-edit-link:hover {
+    border: 1px solid #ffaa42;
+}
+
+.product-edit-link.text-danger:hover {
+    color: #fff !important;
+    border: 1px solid red;
+    text-shadow: 0 0 8px red !important;
 }

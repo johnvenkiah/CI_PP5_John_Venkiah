@@ -139,7 +139,7 @@ class Product(models.Model):
     gender = models.CharField(
         verbose_name=_('Gender'),
         choices=GENDER_CHOICES,
-        max_length=1
+        max_length=24
     )
     brand = models.CharField(
         verbose_name=_('Brand'),
