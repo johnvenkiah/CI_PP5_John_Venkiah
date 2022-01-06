@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
 
 # - - - - - Internal imports - - - - - - - - -
+from .products_choices import sizes
 from .products_choices import GENDER_CHOICES, SIZE_CHOICES, RATING_CHOICES
 
 
@@ -209,6 +210,25 @@ class Product(models.Model):
 
     def details_as_list(self):
         return self.details.split(',')
+
+    def _get_sizes(self):
+        if self.size_type == 'shoes':
+            if self.gender == 'w':
+                return sizes['w_shoes']
+            elif self.gender == 'm':
+                return sizes['m_shoes']
+            else:
+                return sizes['shoes']
+
+        elif self.size_type == 'socks':
+            if self.gender == 'w':
+                return sizes['w_socks']
+            elif self.gender == 'm':
+                return sizes['m_socks']
+            else:
+                return sizes['socks']
+        else:
+            return SIZE_CHOICES[2]
 
 
 class Review(models.Model):

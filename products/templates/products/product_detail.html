@@ -10,12 +10,13 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
+            <div class="col-12 offset-lg-2 mb-0">
+                <p class="text-orange mb-0 lead font-weight-bold">{{ product.name }}</p>
+            </div>
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    <p class="text-orange mb-0">{{ product.name }}</p>
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
