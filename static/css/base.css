@@ -139,7 +139,7 @@ p {
     background: linear-gradient(45deg, #020202b9, #5050508c);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #865d11;
-    border-radius: 50px !important;
+    /* border-radius: 50px !important; */
 }
 
 .btn-black:hover {
@@ -845,4 +845,10 @@ input, input.form-control, .btn, .custom-select {
 
 .modal-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.increment-qty:hover:disabled, .decrement-qty:hover:disabled {
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: initial;
 }
