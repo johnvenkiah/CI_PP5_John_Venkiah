@@ -207,6 +207,9 @@ class Product(models.Model):
         """
         return f'{self.name}'
 
+    def details_as_list(self):
+        return self.details.split(',')
+
 
 class Review(models.Model):
     """
