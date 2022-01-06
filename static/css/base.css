@@ -27,8 +27,6 @@ body {
 h1 {
     font-family: 'Bungee Hairline', cursive;
     font-weight: bold;
-    color: rgba(255, 255, 255);
-    transition: all .3s;
 }
 
 h1:hover, a:hover {
@@ -45,9 +43,9 @@ h2.logo-font {
     color: #ffaa42 !important;
 }
 
-/* .navbar-nav {
-    background-color: #04142f80;
-} */
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
 
 .nav-item {
     padding-left: 15px;
@@ -85,9 +83,9 @@ h2.logo-font {
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
 }
 
-a {
+a, h1 {
     color:#fff;
-    transition: color, .3s;
+    transition: all, .2s ease-in-out;
 }
 
 p {
@@ -118,12 +116,13 @@ p {
 .btn-trans:hover,
 .btn-trans:active,
 .btn-trans:focus {
-    background: linear-gradient(#ffaa42b9, #e17c008c);
+    background-color: linear-gradient(#ffaa42b9, #e17c008c);
     color: #fff;
 }
 
 .btn {
-    transition: all .3s;
+    border: 1px solid transparent;
+    transition: all .2s ease-in-out;
 }
 
 .btn-orange {
@@ -133,11 +132,11 @@ p {
     text-shadow: 0.4px 0.4px 3px black;
     border-radius: 50px !important;
     transform: scale(1);
+    transform-origin: center;
 }
 
 .btn-black {
     background: linear-gradient(#1d1d1db9, #0000008c), linear-gradient(150deg, rgba(165, 42, 42, 0.301), rgba(255, 217, 0, 0.288));
-    border: none;
     text-shadow: 0.4px 0.4px 3px black;
     border-radius: 50px !important;
     transform: scale(1);  
@@ -145,6 +144,8 @@ p {
 
 .btn-black:hover {
     color: #fff;
+    text-shadow: 0 0 8px #ffaa42, 1px 1px 3px black;
+    box-shadow: 0 0 5px #ffaa42;
     transform: scale(1.03);
 }
 
@@ -155,6 +156,18 @@ p {
     box-shadow: 0 0 5px white;
     transform: scale(1.03);
     /* background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589)); */
+}
+
+.btn-red {
+    background-color: darkred;
+    color: #fff;
+}
+
+.btn-red:hover {
+    background-color: rgb(92, 0, 0);
+    color: #fff;
+    text-shadow: 0 0 8px #d39191, 1px 1px 3px black;
+    box-shadow: 0 0 5px #d39191;
 }
 
 .bg-black {
@@ -275,7 +288,6 @@ input[name='q']::placeholder {
     border: 1px solid #adb5bd;
     margin-top: 20px;
     opacity: .9;
-    /* border-radius: 8px; */
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -288,7 +300,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button {
     background-color: #e17c008c;
-    transition: all .3s;
+    transition: all .2s ease-in-out;
 }
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
@@ -306,10 +318,7 @@ input[name='q']::placeholder {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    /* border-radius: 8px; */
-
-    /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
@@ -422,7 +431,7 @@ input[name='q']::placeholder {
     .navbar-toggler {
         font-size: 1.5rem;
         border: none;
-        transition: all .3s ease-in-out;
+        transition: all .2s ease-in-out;
         color: #fff !important;
     }
 
@@ -453,25 +462,23 @@ input[name='q']::placeholder {
     .hide-items {
         opacity: 1;
         display: inline-block !important;
-        transition: all .3s ease-in-out;
+        transition: all .2s ease-in-out;
     }
 
     .hide {
         opacity: 0;
         display: none !important;
-        transition: all 0.3s ease-in-out;
     }
     
     .hide-items-2 {
         opacity: 1;
         display: block;
-        transition: all 0.3s ease-in-out;
+        transition: all .2s ease-in-out;
     }
     
     .hide-2 {
         opacity: 0;
         display: none !important;
-        transition: all 0.3s ease-in-out;
     }
 
     .list-inline-item {
@@ -528,7 +535,7 @@ input[name='q']::placeholder {
     border-radius: 9px;
     color: rgba(255, 255, 255, 0.8);
     padding: 3px;
-    transition: all .3s;
+    transition: all .2s ease-in-out;
 }
 
 .dropdown-item {
@@ -544,7 +551,7 @@ input[name='q']::placeholder {
 
 .bg-nav {
     background-color: transparent;
-    transition: all 0.3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .blur-filter {
@@ -567,7 +574,7 @@ button:focus {
 
 .bg-trans-blue {
     background-color: rgb(57, 102, 128, .4);
-    transition: all, .3s;
+    transition: all, .2s ease-in-out;
 }
 
 .carousel-indicators {
@@ -587,7 +594,7 @@ button:focus {
 
 .carousel-item a {
     opacity: 1;
-    transition: opacity .3s ease-in-out;
+    transition: opacity .2s ease-in-out;
 }
 
 .carousel-item a:hover {
@@ -631,9 +638,10 @@ button:focus {
 .input-group-append .btn:active,
 .input-group-prepend .btn:active,
 .input-group-append .btn:focus-visible {
-    background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(165, 42, 42, 0.664), rgba(255, 255, 0, 0.589));
+    background-color: rgba(255, 166, 0, 0.7);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #b969068c;
+    transition: all .2s ease-in-out;
 }
 
 footer {
@@ -704,8 +712,8 @@ input, input.form-control, .btn, .custom-select {
 /* PRODUCTS */
 
 .products-link {
-    height: 70%;
-    max-height: 70%;
+    height: 67%;
+    max-height: 67%;
     max-width: 100%;
     margin-bottom: 3rem;
 }
@@ -713,8 +721,8 @@ input, input.form-control, .btn, .custom-select {
 .card-img-top {
     width: 100%;
     height: 100%;
+    align-items: center;
     object-fit: cover;
-    box-shadow: inset 0 0 15px #000;
 }
 
 .product-height {
@@ -729,18 +737,18 @@ input, input.form-control, .btn, .custom-select {
 
 .card {
     background-color: transparent;
-    padding: 10px;
+    padding: 4px;
 }
 
 .card, .card img {
     border-radius: 8px;
-    transition: all .3s ease-in-out;
-    transform: scale(1);
+    margin: 0 auto;
+    transition: all .2s ease-in-out;
 }
 
 .card p {
     color: #ffaa42;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .product-title {
@@ -754,13 +762,27 @@ input, input.form-control, .btn, .custom-select {
 .card:hover,
 .card:active,
 .card:focus {
+    margin: 0 auto !important;
     background-color: rgba(4, 20, 47, 0.5);
     font-weight: bold;
-    transform: scale(1.01);
+    margin-left: .5px;
+    margin-right: .5px;
+    box-shadow: 0 0 15px #000;
 }
 
 .card:hover p {
     color: #fff;
+    text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
+}
+
+.card:hover a {
+    text-shadow: none;
+    z-index: 2;
+}
+
+.card a:hover {
+    font-weight: bold;
+    text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
 }
 
 .small {
@@ -768,9 +790,12 @@ input, input.form-control, .btn, .custom-select {
 }
 
 .product-edit-link {
-    padding: 4px;
+    padding: 5px;
+    line-height: initial;
     border: 1px solid #ffaa421f;
     border-radius: 4px;
+    background: transparent;
+    transition: all .2s ease-in-out;
 }
 
 .product-edit-link:hover {
@@ -802,4 +827,15 @@ input, input.form-control, .btn, .custom-select {
 
 .modal-content {
     background-color: #0a1734b0;
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid #ffaa42;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
