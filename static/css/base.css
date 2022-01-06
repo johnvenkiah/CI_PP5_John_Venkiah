@@ -136,17 +136,16 @@ p {
 }
 
 .btn-black {
-    background: linear-gradient(#1d1d1db9, #0000008c), linear-gradient(150deg, rgba(165, 42, 42, 0.301), rgba(255, 217, 0, 0.288));
+    background: linear-gradient(45deg, #020202b9, #5050508c);
     text-shadow: 0.4px 0.4px 3px black;
+    border: 1px solid #865d11;
     border-radius: 50px !important;
-    transform: scale(1);  
 }
 
 .btn-black:hover {
     color: #fff;
     text-shadow: 0 0 8px #ffaa42, 1px 1px 3px black;
     box-shadow: 0 0 5px #ffaa42;
-    transform: scale(1.03);
 }
 
 .btn-orange:hover {
@@ -159,14 +158,15 @@ p {
 }
 
 .btn-red {
-    background-color: darkred;
+    background: linear-gradient(45deg, darkred, red);
     color: #fff;
+    border: 1px solid darkred;
 }
 
 .btn-red:hover {
     background-color: rgb(92, 0, 0);
     color: #fff;
-    text-shadow: 0 0 8px #d39191, 1px 1px 3px black;
+    text-shadow: 0 0 8px #d39191, 1px 1px 15px black;
     box-shadow: 0 0 5px #d39191;
 }
 
@@ -800,7 +800,7 @@ input, input.form-control, .btn, .custom-select {
     padding: 5px;
     line-height: initial;
     border: 1px solid #ffaa421f;
-    border-radius: 4px;
+    border-radius: 8px;
     background: transparent;
     transition: all .2s ease-in-out;
 }
@@ -840,9 +840,9 @@ input, input.form-control, .btn, .custom-select {
 }
 
 .modal-header {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .modal-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
