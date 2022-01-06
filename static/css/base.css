@@ -738,10 +738,11 @@ input, input.form-control, .btn, .custom-select {
 .card {
     background-color: transparent;
     padding: 8px;
+    border: 2px solid transparent;
 }
 
 .card, .card img {
-    border-radius: 8px;
+    border-radius: 15px;
     margin: 0 auto;
     transition: all .2s ease-in-out;
 }
@@ -768,6 +769,8 @@ input, input.form-control, .btn, .custom-select {
     margin-left: .5px;
     margin-right: .5px;
     box-shadow: 0 0 15px #000;
+    border: 2px solid #ffaa4283;
+
 }
 
 .card:hover p {
@@ -778,6 +781,10 @@ input, input.form-control, .btn, .custom-select {
 .card:hover a {
     text-shadow: none;
     z-index: 2;
+}
+
+.card:hover small a.text-white {
+    color: #ffaa42 !important;
 }
 
 .card a:hover {

@@ -52,8 +52,8 @@
                 <div class="row">
                     {% for product in products %}
                         <div class="product-height col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if product.image %}ß
+                            <div class="card h-100">
+                                {% if product.image %}
                                 <a class="products-link" href="{% url 'product_detail' product.id %}">
                                     <p class="mb-0 product-title text-orange">{{ product.name }}</p>
                                     {% if product.discount %}
@@ -74,7 +74,7 @@
                                 <div class="card-footer pt-0 border-0">
                                     <div class="row">
                                         <div class="col-6 px-0 text-left">
-                                            <p class="text-orange lead mb-0">{% if product.initial_price %}<small><del class="text-muted">€{{ product.current_price }} </del></small>{% endif %}<span class="font-weight-bold">€{{ product.current_price }}</span></p>
+                                            <p class="text-orange lead mb-0">{% if product.initial_price %}<small><del class="text-muted">€{{ product.initial_price }} </del></small>{% endif %}<span class="font-weight-bold">€{{ product.current_price }}</span></p>
                                         </div>
                                         <div class="col-6 px-0 text-right">
                                             {% if product.rating %}
@@ -85,16 +85,20 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-6 px-0 text-left">
-                                            {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-white" href="{% url 'products' %}?gender={{ product.gender }}">
-                                                    {{ product.get_gender_display }}
-                                                </a> | 
-                                                <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    {{ product.category.friendly_name }}
-                                                </a>
-                                            </p>
+                                        <div class="col-6 px-0 text-left align-self-end">
+                                            {% if product.gender or product.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    {% if product.gender %}
+                                                        <a class="text-orange" href="{% url 'products' %}?gender={{ product.gender }}">
+                                                            {{ product.get_gender_display }}
+                                                        </a> | 
+                                                    {% endif %}
+                                                    {% if product.category %}
+                                                        <a class="text-orange" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                            {{ product.category.friendly_name }}
+                                                        </a>
+                                                    {% endif %}
+                                                </p>
                                             {% endif %}
                                         </div>
                                         <div class="col-6 px-0 text-right">
