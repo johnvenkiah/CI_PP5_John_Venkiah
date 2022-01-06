@@ -211,7 +211,7 @@ class Product(models.Model):
     def details_as_list(self):
         return self.details.split(',')
 
-    def _get_sizes(self):
+    def get_sizes(self):
         if self.size_type == 'shoes':
             if self.gender == 'w':
                 return sizes['w_shoes']
