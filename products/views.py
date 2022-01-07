@@ -108,6 +108,12 @@ def product_detail(request, product_id):
             review.product = product
             review.save()
 
+            if product.rating:
+                product.rating = (product.rating + review.product_rating) / 2
+            else:
+                product.rating = review.product_rating
+            product.save()
+
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         review_form = ReviewForm()
