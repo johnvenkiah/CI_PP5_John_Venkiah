@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import get_list_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Brand
+from .models import Product, Category, Brand, Review
+from .forms import ReviewForm
 
 # Create your views here.
 
@@ -71,11 +73,6 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-        if request.is_ajax():
-            NAME = request.GET.get('name')
-            product = products.get(name=NAME)  # So we send the product instance
-            context['product'] = product
-
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -94,9 +91,21 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = get_list_or_404(Review, product=product)
+    review_form = ReviewForm(data=request.POST or None)
+
+    if review_form.is_valid():
+        review_form.instance.user = request.user
+        review = review_form.save(commit=False)
+        review.product = product  # So we know which post has been commented
+        review.save()
+    else:
+        review_form = ReviewForm()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': review_form,
     }
 
     return render(request, 'products/product_detail.html', context)

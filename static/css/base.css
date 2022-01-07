@@ -92,8 +92,6 @@ p {
     color: #c5c5c5;
 }
 
-/* COLORS */
-
 .bg-orange {
     background: linear-gradient(#ffaa42b9, #e17c008c);
 }
@@ -669,6 +667,9 @@ input, input.form-control, .btn, .custom-select {
     border-radius: 50px;
 }
 
+textarea.form-control {
+    border-radius: 15px;
+}
 
 @media (max-width: 480px) {
     .footer-content {
@@ -856,4 +857,8 @@ input, input.form-control, .btn, .custom-select {
 .fa-heart {
     color: red;
     text-shadow: inset 0 0 3px red;
+}
+
+.review-box {
+    overflow: scroll;
 }

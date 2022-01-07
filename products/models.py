@@ -254,7 +254,7 @@ class Review(models.Model):
         choices=RATING_CHOICES,
         default=5
     )
-    title = models.TextField(
+    title = models.CharField(
         verbose_name=_('Review Title'),
         max_length=25,
         null=False,
