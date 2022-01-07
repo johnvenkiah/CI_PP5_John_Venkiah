@@ -175,18 +175,20 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Script for Back to top button -->
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
-    
+
+    <!-- Script for sorting products -->
     <script type="text/javascript">
         $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
+            let selector = $(this);
+            let currentUrl = new URL(window.location);
 
-            var selectedVal = selector.val();
+            let selectedVal = selector.val();
             if(selectedVal != "reset"){
                 var sort = selectedVal.split("_")[0];
                 var direction = selectedVal.split("_")[1];
@@ -203,26 +205,4 @@
             }
         })
     </script>
-<!-- 
-    <script>
-        // Ajax for targetting product to delete
-        $(document).on('click','.delete-product',function(){
-            let name = $(this).data('name');
-
-            $.ajax({
-                url:'',
-                type:'GET',
-                data:{
-                    'name':name,
-                },
-                success:function(data){
-                    $('#productDeleteModal .modal-dialog').html($('#productDeleteModal .modal-dialog', data));
-                    $('#productDeleteModal').modal('show');
-                },
-                error:function(){
-                    console.log('error')
-                },
-            });
-        });
-    </script> -->
 {% endblock %}

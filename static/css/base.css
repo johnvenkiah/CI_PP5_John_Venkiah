@@ -126,18 +126,14 @@ p {
 .btn-orange {
     background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(165, 42, 42, 0.664), rgba(255, 255, 0, 0.589));
     color: white;
-    border: none;
+    border: 1px solid #865d11;
     text-shadow: 0.4px 0.4px 3px black;
-    border-radius: 50px !important;
-    transform: scale(1);
-    transform-origin: center;
 }
 
 .btn-black {
     background: linear-gradient(45deg, #020202b9, #5050508c);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #865d11;
-    /* border-radius: 50px !important; */
 }
 
 .btn-black:hover {
@@ -151,7 +147,6 @@ p {
     color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
     box-shadow: 0 0 5px white;
-    transform: scale(1.03);
     /* background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589)); */
 }
 
