@@ -20,10 +20,10 @@ def all_products(request):
     gender = None
     brand = None
     sort = None
-    news = None
-    sale = None
+    # news = None
+    # sale = None
     direction = None
-    initial_price = None
+    # initial_price = None
     current_price = None
     context = {}
 
