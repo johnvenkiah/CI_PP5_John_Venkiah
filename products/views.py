@@ -22,10 +22,7 @@ def all_products(request):
     gender_pretty = ""
     brands = None
     sort = None
-    # news = None
-    # sale = None
     direction = None
-    # initial_price = None
     current_price = None
     context = {}
 
@@ -64,7 +61,6 @@ def all_products(request):
                 gender_pretty = "Women's"
 
         if 'news' in request.GET:
-            # news = request.GET['news']
             products = products.filter(is_new=True)
 
         if 'on_sale' in request.GET:
