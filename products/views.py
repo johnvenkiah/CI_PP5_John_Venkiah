@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category, Brand, Review
 from .forms import ReviewForm
+from .products_choices import GENDER_CHOICES
 
 # Create your views here.
 
@@ -18,7 +19,8 @@ def all_products(request):
     query = None
     categories = None
     gender = None
-    brand = None
+    gender_pretty = ""
+    brands = None
     sort = None
     # news = None
     # sale = None
@@ -56,8 +58,13 @@ def all_products(request):
             gender = request.GET['gender'].split(',')
             products = products.filter(gender__in=gender)
 
+            if 'm' in gender:
+                gender_pretty = "Men's"
+            if 'w' in gender:
+                gender_pretty = "Women's"
+
         if 'news' in request.GET:
-            news = request.GET['news']
+            # news = request.GET['news']
             products = products.filter(is_new=True)
 
         if 'on_sale' in request.GET:
@@ -80,7 +87,8 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'gender': gender,
-        'brand': brand,
+        'gender_pretty': gender_pretty,
+        'brands': brands,
         'current_sorting': current_sorting,
     }
 
