@@ -136,7 +136,7 @@ class Product(models.Model):
         null=True,
         blank=True
     )
-    current_price = models.DecimalField(
+    price = models.DecimalField(
         verbose_name=_('Price'),
         max_digits=6,
         decimal_places=2

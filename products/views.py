@@ -23,7 +23,7 @@ def all_products(request):
     brands = None
     sort = None
     direction = None
-    current_price = None
+    price = None
     context = {}
 
     if request.GET:
@@ -64,7 +64,7 @@ def all_products(request):
             products = products.filter(is_new=True)
 
         if 'on_sale' in request.GET:
-            products = products.filter(~Q(initial_price=current_price))
+            products = products.filter(~Q(initial_price=price))
 
         if 'q' in request.GET:
             query = request.GET['q']

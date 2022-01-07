@@ -20,7 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'brand',
-        'current_price',
+        'price',
         'gender',
         'size_type',
         'rating',
@@ -39,7 +39,7 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'brand',
         'name',
-        'current_price',
+        'price',
     )
 
     ordering = ('art_nr',)
