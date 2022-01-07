@@ -860,5 +860,6 @@ textarea.form-control {
 }
 
 .review-box {
+    height: 50vh;
     overflow: scroll;
 }

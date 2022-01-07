@@ -92,13 +92,19 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = get_list_or_404(Review, product=product)
-    review_form = ReviewForm(data=request.POST or None)
 
-    if review_form.is_valid():
-        review_form.instance.user = request.user
-        review = review_form.save(commit=False)
-        review.product = product  # So we know which post has been commented
-        review.save()
+    if request.method == 'POST':
+
+        review_form = ReviewForm(data=request.POST or None)
+
+        if review_form.is_valid():
+
+            review_form.instance.user = request.user
+            review = review_form.save(commit=False)
+            review.product = product
+            review.save()
+
+            return redirect(reverse('product_detail', args=[product.id]))
     else:
         review_form = ReviewForm()
 
