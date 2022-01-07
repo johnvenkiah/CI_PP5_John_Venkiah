@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="col-6 px-0 text-right">
                                             {% if product.rating %}
-                                                <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ product.rating|floatformat:1 }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}

@@ -170,7 +170,7 @@ class Product(models.Model):
     rating = models.DecimalField(
         verbose_name=_('Rating'),
         max_digits=6,
-        decimal_places=1,
+        decimal_places=2,
         null=True,
         blank=True
     )

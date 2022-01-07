@@ -856,6 +856,18 @@ textarea.form-control {
 }
 
 .review-box {
-    height: 50vh;
+    height: 40vh;
     overflow: scroll;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: inset 0 -5px 5px black;
+    transition: all .3s ease-in-out;
+    border: 1px solid #ffaa4241;
+}
+
+.review-box:active,
+.review-box:focus,
+.review-box:hover {
+    box-shadow: inset 0 0 15px 7px black;
+    border: 1px solid #ffaa42;
 }
