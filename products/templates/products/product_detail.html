@@ -138,8 +138,8 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <h3 class="lead text-orange">Product Reviews</h3>
-                {% if reviews %}
-                    <section class="review-box">
+                <section class="review-box">
+                    {% if reviews %}
                         {% for review in reviews %}
                             <h4 class="lead">{{ review.title }}</h4>
                             <p class="lead"><i class="fas fa-star"></i> {{ review.product_rating }}/5</p>
@@ -147,19 +147,27 @@
                             <small class="text-muted">{{ review.date_created }}</small>
                             <p>{{ review.user_review }}</p>
                         {% endfor %}
-                    </section>
-                {% endif %}
+                    {% else %}
+                        <h4 class="lead">No reviews for this product yet.</h4>
+                    {% endif %}
+                </section>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 {% if request.user.is_authenticated %}
-                <section class="review-form">
+                    <section class="review-form">
+                        {% if reviews %}
                         <h3 class="lead text-orange">Review this product</h3>
+                        {% else %}
+                        <h3 class="lead text-orange">Be the first to review this product</h3>
+                        {% endif %}
                         <form method="POST" action="{% url 'product_detail' product.id %}">
                             {% csrf_token %}
                             {{ review_form|crispy }}
                             <button class="btn btn-orange" type="submit">Post Review</button>
                         </form>
                     </section>
+                {% else %}
+                    <h4 class="lead">Please <a href="{% url 'account_login' %}" class="font-weight-bold">sign in</a> to post a review.</h4>
                 {% endif %}
             </div>
         </div>

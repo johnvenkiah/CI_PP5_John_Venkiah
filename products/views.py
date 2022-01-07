@@ -91,7 +91,7 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews = get_list_or_404(Review, product=product)
+    reviews = Review.objects.filter(product=product)
 
     if request.method == 'POST':
 
