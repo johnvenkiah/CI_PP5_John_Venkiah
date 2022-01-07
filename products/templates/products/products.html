@@ -102,7 +102,7 @@
                                             {% if product.gender or product.category %}
                                                 <p class="small mt-1 mb-0">
                                                     {% if product.gender %}
-                                                        <a class="text-orange" href="{% url 'products' %}?gender={{ product.gender }}">
+                                                        <a class="text-orange" href="{% url 'products' %}?gender={{ product.gender }},u">
                                                             {{ product.get_gender_display }}
                                                         </a> | 
                                                     {% endif %}
