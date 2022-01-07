@@ -390,6 +390,7 @@ input[name='q']::placeholder {
 
     .navbar-collapse.show {
         opacity: 1;
+        width: 100%;
     }
 }
 
