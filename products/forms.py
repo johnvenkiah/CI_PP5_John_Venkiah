@@ -99,7 +99,7 @@ class BrandForm(ModelForm):
         model = Brand
         fields = '__all__'
 
-    image = ImageField(
+    logo = ImageField(
         label='Image',
         required=False,
         widget=BrandClearableFileInput
@@ -111,4 +111,4 @@ class BrandForm(ModelForm):
         friendly_names = [(b.id, b.get_friendly_name()) for b in brands]
 
         self.fields['name'].choices = friendly_names
-        self.fields['image'].widget.attrs['id'] = 'new-brand-image'
+        self.fields['logo'].widget.attrs['id'] = 'new-brand-image'
