@@ -23,7 +23,7 @@
     </div>
 </li>
 
-<!-- Account mav menu link -->
+<!-- Account nav menu link -->
 <li class="list-inline-item hide-items dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My Account">
         <div class="text-center">
@@ -33,9 +33,9 @@
     <div class="dropdown-menu" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="#" class="dropdown-item">Add Product</a>
+                <a href="#" class="dropdown-item">Add New Product</a>
             {% endif %}
-            <a href="#" class="dropdown-item">Profile</a>
+            <a href="#" class="dropdown-item">My StepUp</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
         {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>

@@ -52,7 +52,7 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
   * [Feature 6: The Checkout Page](#feature-6-the-checkout-page)
   * [Feature 7: The Order Successful Page](#feature-7-the-order-successful-page)
   * [Feature 8: The Sign Up/In/Out Pages](#feature-8-the-sign-upinout-pages)
-  * [Feature 9: The Profile](#feature-9-the-profile)
+  * [Feature 9: MyStepUp](#feature-9-my-stepup)
   * [Feature 10: The Wish List](#feature-10-the-wish-list)
   * [Feature 11: The Contact Page](#feature-11-the-contact-page)
   * [Feature 12: The Admin Features](#feature-12-the-admin-features)
@@ -148,7 +148,7 @@ This website has 9 custom pages, with a dynamic navigation bar at the top of the
 
 * Edit Product - The page for admins to edit or delete products
 
-* Profile - The users order history, billing and shipping info is here, as well as the users saved items, editable here in the profile page.
+* My StepUp - The users order history, billing and shipping info is here, as well as the users wish list, editable here in the My StepUp page.
 
 * Cart - A user purchases an item by adding it to the cart; clicking on it will show all cart items
 
@@ -178,7 +178,7 @@ I have devided the code into apps as per the Django best practice, for the diffe
 
 * Products - all functionality related to the products on the site
 
-* Profile - functionality regarding the users profile and order data
+* Profile - functionality regarding the users profile and order data (My StepUp)
 
 * Cart - functionality for the users shopping cart
 
@@ -237,7 +237,7 @@ The following models have been used to populate the database and for the site to
 
 * **LineItem** - a model holding the product information for a single product, binding the product model together with the order
 
-* **WishListAdd** - the customer has the option to save an item, which will then appear in their profile wish list
+* **WishListAdd** - the customer has the option to save an item, which will then appear in their wish list on the My StepUp page
 
 ### Scope - Epics and User Stories
 
@@ -245,7 +245,7 @@ The following models have been used to populate the database and for the site to
 
 1. As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
 
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
 3. As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns
 
@@ -285,7 +285,7 @@ The following models have been used to populate the database and for the site to
 
 18. As a user, I can click on Proceed to Checkout, so that I can purchase the items in my cart
 
-19. As a logged in user, on the Checkout page, I can choose to save my delivery address to my profile, so that I can retain it for future orders
+19. As a logged in user, on the Checkout page, I can choose to save my delivery address to My StepUp, so that I can retain it for future orders
 
 20. As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
 
@@ -299,9 +299,9 @@ The following models have been used to populate the database and for the site to
 
 24. As a user, I have to confirm my email address to complete my account registration
 
-25. As a logged in user, i can view a profile page, so that I can view my previous orders, and view, update or remove my delivery and contact details
+25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view, update or remove my delivery and contact details
 
-26. As a logged in user, I can add my delivery details to my profile, so that it is my default delivery address for my order on the checkout page
+26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
 
 27. As a logged in user, I can choose to inactivate my account, so that I can cancel my account should I wish to
 
@@ -359,13 +359,13 @@ I have chosen the combination "Living Coral" and "Pacific Coast", as published o
 
 ### Feature 1: The Navbar
 
-The navbar allows users to easily navigate the website, no matter which page they are on. From here they can navigate to all pages of relevance, Home, Products, Profile, Cart, Contact, and Sign In/Sign Up.
+The navbar allows users to easily navigate the website, no matter which page they are on. From here they can navigate to all pages of relevance, Home, Products, My StepUp, Cart, Contact, and Sign In/Sign Up.
 
 The navbar is also dynamic, showing the current total of the shopping cart, as well as showing relevant information for that page, for example the checkout button on the cart page.
 
 **User stories covered**
 
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
 5. As a user, it is visible if I am signed in or not, so that I am made aware of this
 
@@ -390,7 +390,7 @@ The user is presented with, apart from the navbar, a two hero image carousel at 
 
 1. As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page
 
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
 6. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
 
@@ -400,7 +400,7 @@ The footer is dynamic, and will on most pages display a signup form for a newsle
 
 **User stories covered:**
 
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and profile by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
+2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
 3. As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns
 
@@ -463,7 +463,7 @@ The checkout page features a form for the user to fill in, with delivery address
 
 18. As a user, I can click on Proceed to Checkout, so that I can purchase the items in my cart
 
-19. As a logged in user, on the Checkout page, I can choose to save my delivery address to my profile, so that I can retain it for future orders
+19. As a logged in user, on the Checkout page, I can choose to save my delivery address to My StepUp, so that I can retain it for future orders
 
 20. As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
 
@@ -487,15 +487,15 @@ Signing up, in and out are vital parts of this site, allowing users to save cust
 
 24. As a user, I have to confirm my email address to complete my account registration
 
-### Feature 9: The Profile
+### Feature 9: My StepUp
 
 Each user can access their own personal profile where they can enter their delivery information, subscribe or unsubscribe to the newsletter and keep track of their orders.
 
 **User stories covered:**
 
-25. As a logged in user, i can view a profile page, so that I can view my previous orders, and view, update or remove my delivery and contact details
+25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view, update or remove my delivery and contact details
 
-26. As a logged in user, I can add my delivery details to my profile, so that it is my default delivery address for my order on the checkout page
+26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
 
 27. As a logged in user, I can choose to inactivate my account, so that I can cancel my account should I wish to
 

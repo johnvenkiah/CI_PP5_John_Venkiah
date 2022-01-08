@@ -92,14 +92,14 @@
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <a href="#" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="#" class="dropdown-item">Profile</a>
-                                <a href="#" class="dropdown-item">Sign Out</a>
+                                    {% if request.user.is_superuser %}
+                                        <a href="{% url 'add_product' %}" class="dropdown-item">Add New Product</a>
+                                    {% endif %}
+                                    <a href="#" class="dropdown-item">My StepUp</a>
+                                    <a href="#" class="dropdown-item">Sign Out</a>
                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
                                 {% endif %}
                             </div>
                         </li>
