@@ -11,7 +11,7 @@ from django.db.models.functions import Lower
 
 # - - - - - Internal imports - - - - - - - - -
 from .models import Product, Category, Brand, Review
-from .forms import ReviewForm, ProductForm
+from .forms import ReviewForm, ProductForm, BrandForm
 
 
 def all_products(request):
@@ -94,7 +94,9 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """
+    A view to show details for a specific product.
+    """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
@@ -133,24 +135,36 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you are not authorised to access that page.')
+        messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save()
+        product_form = ProductForm(
+            request.POST, request.FILES, prefix='product'
+        )
+        if product_form.is_valid():
+            product_form.save()
             messages.success(request, f'Successfully added {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Add Product failed. \
                     please check if the form is valid and try again.')
     else:
-        form = ProductForm
+        product_form = ProductForm(prefix='product')
+
+    if request.method == 'POST' and not product_form.is_valid():
+        brand_form = BrandForm(request.POST, prefix='brand')
+        product_form = ProductForm(prefix='product')
+        if brand_form.is_valid():
+            brand_form.save()
+
+    else:
+        brand_form = BrandForm(prefix='brand')
 
     template = 'products/add_product.html'
     context = {
-        'form': form,
+        'product_form': product_form,
+        'brand_form': brand_form,
     }
 
     return render(request, template, context)

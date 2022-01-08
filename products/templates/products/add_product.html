@@ -15,16 +15,18 @@
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="logo-font mb-4">Manage Products</h2>
-                <h5 class="text-muted">Add New Product</h5>
-                <hr>
             </div>
         </div>
-
+        <div class="row">
+            <p class="mx-auto">If product brand is not in the list of brands, add it first in the form on the right.</p>
+        </div>
         <div class="row">
             <div class="col-12 col-md-6">
+                <h5 class="text-muted">Add New Product</h5>
+                <hr>
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% for field in form %}
+                    {% for field in product_form %}
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
                         {% else %}
@@ -37,6 +39,24 @@
                     </div>
                 </form>
             </div>
+            <div class="col-12 col-md-6">
+                <h5 class="text-muted">Add New Brand</h5>
+                <hr>
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in brand_form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                        {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn btn-black" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-orange" type="submit">Add Brand</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -45,9 +65,13 @@
 {% block postloadjs %}
     {{ block.super}}
     <script type="text/javascript">
-        $('#new-image').change(function() {
-            let file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`)
+        $('#new-product-image').change(function() {
+            let file = $('#new-product-image')[0].files[0];
+            $('#filename-product').text(`Set new image to: ${file.name}`)
+        })
+        $('#new-brand-image').change(function() {
+            let file = $('#new-brand-image')[0].files[0];
+            $('#filename-brand').text(`Set new image to: ${file.name}`)
         })
     </script>
 {% endblock %}

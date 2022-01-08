@@ -14,11 +14,11 @@ from .products_choices import GENDER_CHOICES, SIZE_CHOICES, RATING_CHOICES
 
 class Category(models.Model):
     """
-    The Category model class, with fields for the category name
+    The Category model class, with fields for the category name.
     """
     class Meta:
         """
-        Category Meta class for returning plural name
+        Category Meta class for returning plural name.
         """
         verbose_name_plural = 'Categories'
 
@@ -34,19 +34,19 @@ class Category(models.Model):
 
     def __str__(self):
         """
-        Returns category name as a string
+        Returns the category name as string.
         Args:
-            object: self
+            self (object)
         Returns:
-            Category name field as string
+            The category name field as string
         """
         return f'{self.name}'
 
     def get_friendly_name(self):
         """
-        Returns the category friendly name string
+        Returns the user readable category name as string.
         Args:
-            self (object): self.
+            self (object)
         Returns:
             The category friendly name string
         """
@@ -86,21 +86,21 @@ class Brand(models.Model):
 
     def __str__(self):
         """
-        Returns category name as a string
+        Returns brand name as a string
         Args:
-            object: self
+            self (object)
         Returns:
-            Category name field as string
+            Brand name field as string
         """
         return f'{self.name}'
 
     def get_friendly_name(self):
         """
-        Returns the category friendly name string
+        Returns the user readable brand name
         Args:
-            self (object): self.
+            self (object)
         Returns:
-            The category friendly name string
+            The brand friendly name string
         """
         return self.friendly_name
 
@@ -147,7 +147,8 @@ class Product(models.Model):
     gender = models.CharField(
         verbose_name=_('Gender'),
         choices=GENDER_CHOICES,
-        max_length=24
+        max_length=24,
+        default='u'
     )
     brand = models.ForeignKey(
         'Brand',
@@ -180,7 +181,6 @@ class Product(models.Model):
     )
     discount = models.DecimalField(
         verbose_name=_('Discount'),
-        default=0,
         max_digits=6,
         decimal_places=2,
         null=True,
@@ -200,18 +200,34 @@ class Product(models.Model):
 
     def __str__(self):
         """
-        Returns Product name field
+        Returns the product name
         Args:
-            object: self
+            self (object)
         Returns:
-            Product name as a string
+            The product name field as string
         """
         return f'{self.name}'
 
     def details_as_list(self):
-        return self.details.split(',')
+        """
+        Returns the product details as seperate strings
+        Args:
+            self (object)
+        Returns:
+            The product details as seperate strings
+        """
+
+        return self.details.split(',')  # noqa
 
     def get_sizes(self):
+        """
+        Returns the size type depending on the product type and gender
+        Args:
+            self (object)
+        Returns:
+            The product size choices
+        """
+
         if self.size_type == 'shoes':
             if self.gender == 'w':
                 return sizes['w_shoes']
@@ -235,10 +251,12 @@ class Review(models.Model):
     """
     The Review model class, creating an instance of a review
     """
+
     class Meta:
         """
         Meta class enables ordering by id
         """
+
         ordering = ['id']
 
     user = models.ForeignKey(
@@ -274,8 +292,8 @@ class Review(models.Model):
         """
         Returns review title field as a string
         Args:
-            self (object): self.
+            self (object)
         Returns:
-            The review text string
+            The review title
         """
         return f'{self.title}'

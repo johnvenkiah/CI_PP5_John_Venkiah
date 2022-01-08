@@ -6,8 +6,8 @@ products/forms.py: forms to be used with the product app of the application
 from django.forms import Textarea, Select, ModelForm, CharField, ImageField
 
 # - - - - - Internal Imports - - - - - - - - -
-from .widgets import CustomClearableFileInput
-from .models import Product, Category, Review
+from .widgets import ProductClearableFileInput, BrandClearableFileInput
+from .models import Product, Category, Review, Brand
 
 # - - - - - 3rd Party Imports - - - - - - - - -
 from crispy_forms.helper import FormHelper
@@ -51,23 +51,22 @@ class ProductForm(ModelForm):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        exclude = ('rating', 'discount',)
 
     image = ImageField(
         label='Image',
         required=False,
-        widget=CustomClearableFileInput
+        widget=ProductClearableFileInput
     )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.helper = FormHelper()
+        # self.helper = FormHelper()
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
-        # for field_name, field in self.fields.items():
-        #     field.widget.attrs['class'] = 'border-black rounded-0'
+        self.fields['image'].widget.attrs['id'] = 'new-product-image'
 
         self.fields['price'].widget.attrs['placeholder'] = '€0.00'
         self.fields['initial_price'].widget.attrs['placeholder'] = '€0.00'
@@ -88,3 +87,28 @@ class ProductForm(ModelForm):
             }
         )
     )
+
+
+class BrandForm(ModelForm):
+    """
+    Form for admins to create an instance of the brand model,
+    aka add a new brand to the site.
+    """
+
+    class Meta:
+        model = Brand
+        fields = '__all__'
+
+    image = ImageField(
+        label='Image',
+        required=False,
+        widget=BrandClearableFileInput
+    )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        brands = Brand.objects.all()
+        friendly_names = [(b.id, b.get_friendly_name()) for b in brands]
+
+        self.fields['name'].choices = friendly_names
+        self.fields['image'].widget.attrs['id'] = 'new-brand-image'
