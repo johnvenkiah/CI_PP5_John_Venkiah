@@ -833,6 +833,10 @@ textarea.form-control {
     background: linear-gradient(24deg, #a16b2a, #ffaa42);
 }
 
+.lower-label {
+    top: 92px;
+}
+
 .modal-content {
     background-color: #0a1734b0;
     border-radius: 15px;

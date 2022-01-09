@@ -147,6 +147,7 @@ def add_product(request):
             product = product_form.save()
             product.art_nr = f'SU202200{str(product.id)}'
             product.discount = product.initial_price - product.price
+            product.save()
 
             messages.success(request, f'Successfully added {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
