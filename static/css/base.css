@@ -16,6 +16,21 @@ body {
     height: 72vh;
 }
 
+.login li {
+    list-style-type: none;
+}
+
+.login ul {
+    padding: 0;
+}
+
+.login .alert-danger {
+    color: #ffacac;
+    text-shadow: 0 0 10px red;
+    background: linear-gradient(45deg, #0d152878 50%, #ff00001a 50%);
+    border-color: #feabab;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -281,6 +296,8 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content {
     padding: 15px;
+    box-shadow: 0 0 7px black;
+    border: 1px solid #ffa500a1;
 }
 
 .allauth-form-inner-content p {
