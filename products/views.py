@@ -149,9 +149,6 @@ def add_product(request):
             product = product_form.save()
             product.art_nr = f'SU202200{str(product.id)}'
 
-            # if product.initial_price is not None:
-            #     if product.price <= product.initial_price:
-            #         product.save()
             if product.discount and product.discount > 0:
                 product.discount = product.initial_price - product.price
                 product.initial_price = None

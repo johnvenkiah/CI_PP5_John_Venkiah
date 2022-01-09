@@ -70,6 +70,7 @@ class ProductForm(ModelForm):
 
         self.fields['category'].choices = friendly_names
         self.fields['image'].widget.attrs['id'] = 'new-product-image'
+        self.fields['brand'].empty_label = "Select a Brand:"
         self.fields['details'].label = (
             'Product Details (Seperate details with comma)'
         )

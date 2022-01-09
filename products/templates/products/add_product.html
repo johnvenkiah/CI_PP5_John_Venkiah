@@ -12,13 +12,14 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mx-auto">
+                <h2 class="logo-font mb-4 text-center">Add brand or product</h2>
                 <hr>
-                <h2 class="logo-font mb-4">Manage Products</h2>
             </div>
         </div>
         <div class="row">
-            <p class="mx-auto">If product brand is not in the list of brands, add it first in the form on the right.</p>
+            <p class="mx-auto d-none d-md-block">If product brand is not in the list of brands, add it first in the form on the right.</p>
+            <p class="text-center mx-auto d-md-none px-3">If product brand is not in the list of brands, add it first in the <a href="#add-brand-section" class="text-orange">'Add New Brand'</a> form below.</p>
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
@@ -33,14 +34,23 @@
                         {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-black" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-orange" type="submit">Add Product</button>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="mb-0">or</p>
+                        </div>
+                        <div class="col-6">
+                            <hr class="mt-0">
+                            <a class="d-block btn btn-black" href="{% url 'products' %}">Cancel</a>
+                        </div>
+                        <div class="col-6">
+                            <hr class="mt-0">
+                            <button class="w-100 btn btn-orange" type="submit">Add Product</button>
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <h5 class="text-muted">Add New Brand</h5>
+                <h5 class="text-muted" id="add-brand-section">Add New Brand</h5>
                 <hr>
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
@@ -51,9 +61,18 @@
                         {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-black" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-orange" type="submit">Add Brand</button>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="mb-0">or</p>
+                        </div>
+                        <div class="col-6">
+                            <hr class="mt-0">
+                            <a class="d-block btn btn-black" href="{% url 'products' %}">Cancel</a>
+                        </div>
+                        <div class="col-6">
+                            <hr class="mt-0">
+                            <button class="w-100 btn btn-orange" type="submit">Add Brand</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -86,4 +105,4 @@
         })
 
     </script>
-{% endblock %}ß
+{% endblock %}

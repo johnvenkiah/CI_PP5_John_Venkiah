@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -123,16 +124,17 @@ p {
 }
 
 .btn-orange {
-    background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(165, 42, 42, 0.664), rgba(255, 255, 0, 0.589));
+    background: linear-gradient(45deg, #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
     color: white;
     border: 1px solid #865d11;
     text-shadow: 0.4px 0.4px 3px black;
 }
 
 .btn-black {
-    background: linear-gradient(45deg, #020202b9, #5050508c);
+    background: linear-gradient(45deg, #020202b9 50%, #5050508c 50%);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #865d11;
+    color: #fff;
 }
 
 .btn-black:hover {
@@ -658,7 +660,7 @@ footer {
     text-shadow: 1px 1px 3px black, 0 0 10px black;
 }
 
-input, input.form-control, .btn, .custom-select {
+input, input.form-control, .btn, .custom-select, select.form-control {
     border-radius: 50px;
 }
 
