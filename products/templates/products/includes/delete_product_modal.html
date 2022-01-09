@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-black text-orange text-shadow" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-red text-shadow">Delete Product</button>
+                <a type="button" href="{% url 'delete_product' product.id %}" class="btn btn-red text-shadow">Delete Product</a>
             </div>
         </div>
     </div>

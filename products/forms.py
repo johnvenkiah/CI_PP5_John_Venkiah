@@ -51,7 +51,7 @@ class ProductForm(ModelForm):
 
     class Meta:
         model = Product
-        exclude = ('rating', 'discount',)
+        exclude = ('rating', 'discount', 'art_nr',)
 
     image = ImageField(
         label='Image',
@@ -67,7 +67,9 @@ class ProductForm(ModelForm):
 
         self.fields['category'].choices = friendly_names
         self.fields['image'].widget.attrs['id'] = 'new-product-image'
-
+        self.fields['details'].widget.attrs['label'] = (
+            'Product Details (Seperate details with comma)'
+        )
         self.fields['price'].widget.attrs['placeholder'] = '€0.00'
         self.fields['initial_price'].widget.attrs['placeholder'] = '€0.00'
 

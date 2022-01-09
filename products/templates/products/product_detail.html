@@ -12,20 +12,29 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 offset-lg-2 mb-0">
+            <div class="ccol-12 col-md-6 col-lg-4 offset-lg-2">
                 <p class="text-orange mb-0 lead font-weight-bold">{{ product.name }}</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                {% if product.brand.logo_url %}
+                    <img class="turn-white" src="{{ product.brand.logo_url }}" alt="">
+                {% endif %}
             </div>
             <!-- Product image -->
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
+                    {% if product.is_new %}
+                        <p class="mr-2 mb-2 sale-label text-shadow label-new">NEW!</p>
+                    {% endif %}
+                    {% if product.discount %}
+                        <p class="mr-2 mb-2 sale-label text-shadow">Save €{{ product.discount }}!</p>
+                    {% endif %}
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
+                    {% else %}
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     {% endif %}
                 </div>
             </div>

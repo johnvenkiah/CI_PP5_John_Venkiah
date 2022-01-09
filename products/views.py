@@ -143,7 +143,9 @@ def add_product(request):
             request.POST, request.FILES, prefix='product'
         )
         if product_form.is_valid():
-            product_form.save()
+            product = product_form.save(commit=False)
+            product.art_nr = f'SU202200{product.id}'
+            product = product_form.save(commit=True)
             messages.success(request, f'Successfully added {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -156,7 +158,14 @@ def add_product(request):
         brand_form = BrandForm(request.POST, prefix='brand')
         product_form = ProductForm(prefix='product')
         if brand_form.is_valid():
-            brand_form.save()
+            brand = brand_form.save()
+            messages.success(
+                request, f'Successfully added {brand.friendly_name}'
+            )
+            return redirect(reverse('products'))
+        else:
+            messages.error(request, 'Add Brand failed. \
+                    please check if the form is valid and try again.')
 
     else:
         brand_form = BrandForm(prefix='brand')

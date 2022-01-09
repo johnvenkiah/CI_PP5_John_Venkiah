@@ -19,7 +19,11 @@
                     </a>
                 {% for b in brands %}
                     <a class="category-badge text-decoration-none" href="{% url 'products' %}?brand={{ b }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ b.friendly_name }}</span>
+                        {% if b.logo_url %}
+                            <img class="turn-white" src="{{ b.logo_url }}" alt="Image of {{ b.friendly_name }}">
+                        {% else %}
+                            <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ b.friendly_name }}</span>
+                        {% endif %}
                     </a>
                 {% endfor %}
                 {% for c in current_categories %}
