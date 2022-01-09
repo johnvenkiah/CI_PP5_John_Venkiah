@@ -143,9 +143,11 @@ def add_product(request):
             request.POST, request.FILES, prefix='product'
         )
         if product_form.is_valid():
-            product = product_form.save(commit=False)
-            product.art_nr = f'SU202200{product.id}'
-            product = product_form.save(commit=True)
+
+            product = product_form.save()
+            product.art_nr = f'SU202200{str(product.id)}'
+            product.discount = product.initial_price - product.price
+
             messages.success(request, f'Successfully added {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
