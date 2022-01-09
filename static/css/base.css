@@ -107,7 +107,7 @@ p {
 }
 
 .btn-trans {
-    background-color: transparent;
+    background: linear-gradient(45deg, #00000080 50%, rgb(21 93 171 / 44%) 50%);
     color: white;
 }
 
@@ -174,11 +174,19 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-button {
-    height: 42px;
-    width: 42px;
+    height: 50px;
+    width: 50px;
     position: fixed;
     bottom: 10px;
     right: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 40px 3px 3px 3px;
+}
+
+.btt-button:hover {
+    background: linear-gradient(45deg, #e17c00 50%, #ffa73a 50%);
 }
 
 .btt-link,
@@ -633,7 +641,7 @@ button:focus {
 .input-group-append .btn:active,
 .input-group-prepend .btn:active,
 .input-group-append .btn:focus-visible {
-    background-color: rgba(255, 166, 0, 0.7);
+    background: linear-gradient(45deg, #e17c00 50%, #ffa73a 50%);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #b969068c;
     transition: all .2s ease-in-out;
@@ -776,6 +784,11 @@ textarea.form-control {
 
 }
 
+.card a, .card p {
+    font-weight: 100;
+    transition: all .3s ease-in-out;
+}
+
 .card:hover p {
     color: #fff;
     text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
@@ -821,7 +834,7 @@ textarea.form-control {
 .sale-label {
     color: #fff !important;
     box-shadow: 0 0 10px black;
-    background: linear-gradient(24deg, #176a17, #70b970);
+    background: linear-gradient(24deg, #176a17 50%, #fff 30%, #168516 20%);
     width: fit-content;
     padding: 5px 10px;
     top: 50px;
@@ -832,7 +845,7 @@ textarea.form-control {
 }
 
 .label-new {
-    background: linear-gradient(24deg, #a16b2a, #ffaa42);
+    background: linear-gradient(45deg, #e17c00 50%, #ffa73a 50%);
 }
 
 .lower-label {
