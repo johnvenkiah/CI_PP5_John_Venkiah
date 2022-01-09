@@ -106,8 +106,9 @@ p {
     width: fit-content;
 }
 
-.btn-trans {
-    background: linear-gradient(45deg, #00000080 50%, rgb(21 93 171 / 44%) 50%);
+.btn-trans, .input-btn {
+    background: linear-gradient(45deg, #2125294a 50%, rgb(21 93 171 / 25%) 50%);
+    border: 1px solid #ced4da !important;
     color: white;
 }
 
@@ -621,10 +622,6 @@ button:focus {
     z-index: 2;
 }
 
-.input-btn {
-    border: 1px solid #ced4da;
-}
-
 .dialog {
     border-radius: 10px;
 }
@@ -641,7 +638,7 @@ button:focus {
 .input-group-append .btn:active,
 .input-group-prepend .btn:active,
 .input-group-append .btn:focus-visible {
-    background: linear-gradient(45deg, #e17c00 50%, #ffa73a 50%);
+    background: linear-gradient(45deg, #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #b969068c;
     transition: all .2s ease-in-out;
