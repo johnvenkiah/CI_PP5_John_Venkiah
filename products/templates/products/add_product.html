@@ -58,6 +58,7 @@
                 </form>
             </div>
         </div>
+        {% include 'products/includes/wrong_price_modal.html' %}
     </div>
 
 {% endblock %}
@@ -66,12 +67,23 @@
     {{ block.super}}
     <script type="text/javascript">
         $('#new-product-image').change(function() {
-            let file = $('#new-product-image')[0].files[0];
-            $('#filename-product').text(`Set new image to: ${file.name}`)
+            let prodUpload = $('#new-product-image')[0].files[0];
+            $('#filename-product').text(`Set new image to: ${prodUpload.name}`)
         })
         $('#new-brand-image').change(function() {
-            let file = $('#new-brand-image')[0].files[0];
-            $('#filename-brand').text(`Set new image to: ${file.name}`)
+            let brandUpload = $('#new-brand-image')[0].files[0];
+            $('#filename-brand').text(`Set new image to: ${brandUpload.name}`)
         })
+
+        $("#id_product-price").change(function(){
+            let prodPrice = parseInt($('#id_product-price').val())
+            let initPrice = parseInt($('#id_product-initial_price').val())
+            if((initPrice !== null) && (prodPrice >= initPrice)) {
+                $('#wrongPriceModal').modal('show');
+                $(prodPrice).val(null);
+                $(initPrice).val(null);
+            }
+        })
+
     </script>
-{% endblock %}
+{% endblock %}ß

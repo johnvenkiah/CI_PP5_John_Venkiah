@@ -14,7 +14,6 @@
         <div class="row">
             <div class="ccol-12 col-md-6 col-lg-4 offset-lg-2">
                 <p class="text-orange mb-0 lead font-weight-bold">{{ product.name }}</p>
-                <p class="text-orange mb-0 lead font-weight-bold">{{ product.art_nr }}</p>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 {% if product.brand.logo_url %}
@@ -94,7 +93,7 @@
                     {% if product.details %}
                         <ul>
                             {% for d in product.details_as_list %}
-                            <li class="">{{ d }}</li>
+                            <li class="">{{ d|title }}</li>
                             {% endfor %}
                         </ul>
                     {% endif %}

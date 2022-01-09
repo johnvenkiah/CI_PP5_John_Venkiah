@@ -100,6 +100,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
+    print(type(product.price), type(product.initial_price))
 
     if request.method == 'POST':
 
@@ -142,11 +143,19 @@ def add_product(request):
         product_form = ProductForm(
             request.POST, request.FILES, prefix='product'
         )
+
         if product_form.is_valid():
 
             product = product_form.save()
             product.art_nr = f'SU202200{str(product.id)}'
-            product.discount = product.initial_price - product.price
+
+            # if product.initial_price is not None:
+            #     if product.price <= product.initial_price:
+            #         product.save()
+            if product.discount and product.discount > 0:
+                product.discount = product.initial_price - product.price
+                product.initial_price = None
+            product_form.validate_initial_price()
             product.save()
 
             messages.success(request, f'Successfully added {product.name}')

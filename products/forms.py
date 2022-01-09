@@ -3,7 +3,10 @@ products/forms.py: forms to be used with the product app of the application
 """
 
 # - - - - - Django Imports - - - - - - - - -
-from django.forms import Textarea, Select, ModelForm, CharField, ImageField
+from django.forms import (
+    Textarea, Select, ModelForm, CharField, ImageField, DecimalField
+)
+from django.core.exceptions import ValidationError
 
 # - - - - - Internal Imports - - - - - - - - -
 from .widgets import ProductClearableFileInput, BrandClearableFileInput
@@ -60,18 +63,20 @@ class ProductForm(ModelForm):
     )
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(ProductForm, self).__init__(*args, **kwargs)
         # self.helper = FormHelper()
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
         self.fields['image'].widget.attrs['id'] = 'new-product-image'
-        self.fields['details'].widget.attrs['label'] = (
+        self.fields['details'].label = (
             'Product Details (Seperate details with comma)'
         )
         self.fields['price'].widget.attrs['placeholder'] = '€0.00'
-        self.fields['initial_price'].widget.attrs['placeholder'] = '€0.00'
+        self.fields['initial_price'].widget.attrs = {
+            'placeholder': '€0.00',
+        }
 
         # self.helper.layout = Layout(
         #     Row(
@@ -81,6 +86,9 @@ class ProductForm(ModelForm):
         #     ),
         # )
 
+    # initial_price = DecimalField(validators=[MaxValueValidator(
+    #     self.price - 1
+    # )])
     description = CharField(
         widget=Textarea(
             {
@@ -89,6 +97,15 @@ class ProductForm(ModelForm):
             }
         )
     )
+
+    def validate_initial_price(self):
+        price = self.cleaned_data['price']
+        initial_price = self.cleaned_data['initial_price']
+        if initial_price and initial_price <= price:
+            raise ValidationError(
+                "Add an initial price only if the product is on sale" +
+                "and has a lower current price."
+            )
 
 
 class BrandForm(ModelForm):
