@@ -189,7 +189,9 @@
         $(".bg-nav").css({
             'background-color': '#04142f80'
         }).toggleClass('blur-filter');
-        $('.navbar-nav').toggleClass('d-flex, show');
+        if (!$('.navbar-nav').hasClass('show')) {
+            $('#products-nav, .navbar-nav').collapse('show');
+        }
     })
 
     // Hide Header on on scroll down
@@ -246,20 +248,20 @@
             }
         })
 
-        // function closeNavOnWindowEvents(elem , action){
-        //     $(document).on('click',function(e){
-        //         if (!$(elem).is(e.target) // if the target of the click isn't the container...
-        //             && $(elem).has(e.target).length === 0) // ... nor a descendant of the container
-        //         {
-        //             action();
-        //         }
-        //     });
-        // }
+        function closeNavOnWindowEvents(elem , action){
+            $(document).on('click',function(e){
+                if (!$(elem).is(e.target) // if the target of the click isn't the container...
+                    && $(elem).has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    action();
+                }
+            });
+        }
 
-        // // OnwindowClick(elem , action) add the prevent elements in `elem` something like this
-        // closeNavOnWindowEvents('#products-nav , .navbar-nav', function(){
-        //     $('.navbar-collapse , .navbar-nav').addClass('collapse');
-        // });
+        // OnwindowClick(elem , action) add the prevent elements in `elem` something like this
+        closeNavOnWindowEvents('#products-nav', function() {
+            $('.navbar-nav, .navbar-collapse').collapse('hide');
+        });
     });
 </script>
 

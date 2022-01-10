@@ -444,7 +444,7 @@ input[name='q']::placeholder {
     .navbar-collapse {
         flex-flow: column;
         opacity: 0;
-        transition: all .1s ease-in-out;
+        /* transition: all .2s ease-in-out; */
     }
 
     .navbar-collapse.show {
@@ -961,4 +961,10 @@ textarea.form-control {
 
 .turn-white {
     filter: invert(1);
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .logo-font.nav-link {
+        font-size: .8rem;
+    }
 }
