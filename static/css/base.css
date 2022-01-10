@@ -146,25 +146,39 @@ p {
     text-shadow: 0.4px 0.4px 3px black;
 }
 
-.btn-black {
-    background: linear-gradient(45deg, #020202b9 50%, #5050508c 50%);
+.btn-grey {
+    background: linear-gradient(45deg, #646464b9 50%, #b1b1b18c 50%);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #282621;
     color: #fff;
 }
 
-.btn-black:hover {
+.btn-grey:hover {
     color: #fff;
     text-shadow: 0 0 8px #ffaa42, 1px 1px 3px black;
     box-shadow: 0 0 5px #ffaa42;
 }
 
-.btn-orange:hover {
+.btn-orange:hover, .btn-blue:hover {
     font-weight: bold;
     color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
     box-shadow: 0 0 5px white;
     /* background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589)); */
+}
+
+.btn-purple {
+    color: #fff;
+    text-shadow: 0.4px 0.4px 3px black;
+    background: linear-gradient(45deg, #540093b8, #972be98c 50%, #bd65ff8c 50%, #d69fff9c);
+    border: 1px solid #3e006c;
+}
+
+.btn-blue {
+    color: #fff;
+    text-shadow: 0.4px 0.4px 3px black;
+    background: linear-gradient(45deg, #005693b8, #2b65e98c 50%, #657eff8c 50%, #9fb6ff9c);
+    border: 1px solid #00306c;
 }
 
 .btn-red {
@@ -570,6 +584,7 @@ input[name='q']::placeholder {
     border-radius: 9px;
     color: rgba(255, 255, 255, 0.8);
     padding: 3px;
+    backdrop-filter: blur(3px);
     transition: all .2s ease-in-out;
 }
 
