@@ -217,7 +217,7 @@ class Product(models.Model):
             The product details as seperate strings
         """
 
-        return self.details.split(',')  # noqa
+        return self.details.split(',')  # pylint: disable=no-member
 
     def get_sizes(self):
         """

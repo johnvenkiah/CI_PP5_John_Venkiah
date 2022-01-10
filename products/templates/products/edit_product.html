@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 mx-auto">
+                <h2 class="logo-font mb-4 text-center">Edit product</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <p class="mx-auto">If product brand is not in the list of brands, add it <a href="{% url 'add_product' %}" class="text-orange">here</a>.</p>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h5 class="text-orange">Edit Product</h5>
+                <hr>
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in product_form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                        {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="mb-0">or</p>
+                            <hr class="mt-0">
+                        </div>
+                        <div class="col-6">
+                            <a class="d-block btn btn-black" href="{% url 'products' %}">Cancel</a>
+                        </div>
+                        <div class="col-6">
+                            <hr class="mt-0">
+                            <button class="w-100 btn btn-orange" type="submit">Add Product</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% include 'products/includes/wrong_price_modal.html' %}
+    </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super}}
+<script src="{% static 'products/js/products.js' %}"></script>
+{% endblock %}

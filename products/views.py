@@ -17,7 +17,7 @@ from .forms import ReviewForm, ProductForm, BrandForm
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.all()  # pylint: disable=no-member
     query = None
     categories = None
     gender = None
@@ -46,11 +46,13 @@ def all_products(request):
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
+            # pylint: disable=no-member
             categories = Category.objects.filter(name__in=categories)
 
         if 'brand' in request.GET:
             brands = request.GET['brand'].split(',')
             products = products.filter(brand__name__in=brands)
+            # pylint: disable=no-member
             brands = Brand.objects.filter(name__in=brands)
 
         if 'gender' in request.GET:
@@ -99,6 +101,7 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    # pylint: disable=no-member
     reviews = Review.objects.filter(product=product)
     print(type(product.price), type(product.initial_price))
 
@@ -134,7 +137,14 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """
+    Adds a product to the site
+    Args:
+        request (object)
+    Returns:
+        the delete product page with the form and context.
+    """
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
@@ -190,30 +200,46 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store"""
+    """
+    Edit a product on the site
+    Args:
+        request (object)
+        product_id (to get instance of the product to edit)
+    Returns:
+        the product edit page with the form and context.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated product!')
+        product_form = ProductForm(
+            request.POST, request.FILES, instance=product
+        )
+
+        if product_form.is_valid():
+
+            product_form.save()
+
+            if product.discount and product.discount > 0:
+                product.discount = product.initial_price - product.price
+                product.initial_price = None
+            product_form.validate_initial_price()
+            product.save()
+
+            messages.success(request, f'Successfully updated {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(
-                request, 'Update Product failed, \
-                    please check if the form is valid and try again.'
-                )
+            messages.error(request, 'Updating Product failed. \
+                    please check if the form is valid and try again.')
     else:
-        form = ProductForm(instance=product)
-        messages.info(request, f'Editing "{product.name}".')
+        product_form = ProductForm(instance='product')
+        messages.info(request, f'Currently editing {product.name}')
 
     template = 'products/edit_product.html'
     context = {
-        'form': form,
+        'product_form': product_form,
         'product': product,
     }
 
@@ -222,7 +248,14 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Edit a product in the store"""
+    """
+    Removes a product on the site
+    Args:
+        request (object)
+        product_id (to get instance of the product to edit)
+    Returns:
+        the delete product page with the form and context.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
