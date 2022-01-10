@@ -238,6 +238,14 @@
             lastScrollTop = st;
         }
 
+        $(window).resize(function() {
+            if (window.innerWidth > 992) {
+                $('.navbar-nav').addClass('collapse');
+            } else {
+                $('.navbar-nav').removeClass('collapse');
+            }
+        })
+
         // function closeNavOnWindowEvents(elem , action){
         //     $(document).on('click',function(e){
         //         if (!$(elem).is(e.target) // if the target of the click isn't the container...

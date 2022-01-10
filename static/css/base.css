@@ -579,7 +579,7 @@ input[name='q']::placeholder {
 
 .dropdown-menu.show {
     min-width: 9rem;
-    background-color: #e17c00ab;
+    background: linear-gradient(45deg, #04274cbf 50%, #334f6ce6 50%);
     border: 1px solid #df9c4b !important;
     border-radius: 9px;
     color: rgba(255, 255, 255, 0.8);
@@ -594,7 +594,7 @@ input[name='q']::placeholder {
 }
 
 .dropdown-item:hover, .dropdown-item:active {
-    background-color: #00507585;
+    background-color: #ffab2ea6;
     border-radius: 6px;
     color: #fff;
 }
