@@ -968,3 +968,19 @@ textarea.form-control {
         font-size: .8rem;
     }
 }
+
+@media (max-height: 480px) {
+    .logo-font.nav-link {
+        font-size: .8rem;
+    }
+
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-height: 58vh;
+    }
+
+    .nav-item.dropdown {
+        width: 50%;
+    }
+}
