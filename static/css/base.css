@@ -149,7 +149,7 @@ p {
 .btn-black {
     background: linear-gradient(45deg, #020202b9 50%, #5050508c 50%);
     text-shadow: 0.4px 0.4px 3px black;
-    border: 1px solid #865d11;
+    border: 1px solid #282621;
     color: #fff;
 }
 
@@ -370,17 +370,35 @@ input[name='q']::placeholder {
     cursor: pointer;
 }
 
+.custom-checkbox .custom-control-label.text-danger {
+    margin-top: 2.25rem !important;
+}
+
 .custom-checkbox .custom-control-label::before {
-    border-radius: 8px;
+    border-radius: 3px !important;
     border-color: #dc3545;
+    display: inline;
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
-    border-radius: 8px;
+    border-radius: 3px !important;
 }
 
+
+.custom-control {
+    display: inline;
+    margin: 0 0 0 50px;
+}
+
+#filename-product, #filename-brand {
+    padding-top: 20px;
+}
+
+.form img.rounded {
+    object-fit: cover;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -430,10 +448,6 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
-    }
-
-    .display-4.logo-font.text-black {
-        font-size: 2rem;
     }
 
     .nav-link {
@@ -684,6 +698,10 @@ footer {
 
 input, input.form-control, .btn, .custom-select, select.form-control {
     border-radius: 50px;
+}
+
+input[type=checkbox] {
+
 }
 
 textarea.form-control {

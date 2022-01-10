@@ -21,10 +21,10 @@
             <p class="mx-auto">If product brand is not in the list of brands, add it <a href="{% url 'add_product' %}" class="text-orange">here</a>.</p>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col col-lg-8 mx-auto">
                 <h5 class="text-orange">Edit Product</h5>
                 <hr>
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in product_form %}
                         {% if field.name != 'image' %}
@@ -35,14 +35,12 @@
                     {% endfor %}
                     <div class="row">
                         <div class="col-12 text-center">
-                            <p class="mb-0">or</p>
-                            <hr class="mt-0">
+                            <hr class="my-4">
                         </div>
                         <div class="col-6">
                             <a class="d-block btn btn-black" href="{% url 'products' %}">Cancel</a>
                         </div>
                         <div class="col-6">
-                            <hr class="mt-0">
                             <button class="w-100 btn btn-orange" type="submit">Add Product</button>
                         </div>
                     </div>
@@ -57,4 +55,10 @@
 {% block postloadjs %}
     {{ block.super}}
 <script src="{% static 'products/js/products.js' %}"></script>
+<script type="text/javascript">
+    // Use Vanilla JS to target windows so scrollbar is included in width
+    if (window.innerWidth > 480) {
+        $('.btn-file').addClass('w-50').removeClass('d-block')
+    }
+</script>
 {% endblock %}
