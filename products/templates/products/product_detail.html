@@ -16,9 +16,13 @@
                 <p class="text-orange mb-0 lead font-weight-bold">{{ product.name }}</p>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                {% if product.brand.logo_url %}
-                    <img class="turn-white" src="{{ product.brand.logo_url }}" alt="">
-                {% endif %}
+                <a href="{% url 'products' %}?brand={{ product.brand.name }}">
+                    {% if product.brand.logo_url %}
+                        <img class="turn-white" src="{{ product.brand.logo_url }}" alt="{{product.brand.friendly_name}}-logo">
+                    {% else %}
+                        <small class="p-2 mt-2 product-edit-link">{{ product.brand.friendly_name }}</small>
+                    {% endif %}
+                </a>
             </div>
             <!-- Product image -->
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">

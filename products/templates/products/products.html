@@ -14,21 +14,23 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Products</h2>
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?gender={% for g in gender %}{{ g }}{% if not forloop.last %},{% endif %}{% endfor %}">
-                        <span class="p-2 mt-2 badge badge-white border border-dark">{{ gender_pretty }}</span>
+                {% if gender and 'u' not in gender %}
+                    <a href="{% url 'products' %}?gender={% for g in gender %}{{ g }}{% if not forloop.last %},{% endif %}{% endfor %}">
+                        <small class="p-2 mt-2 product-edit-link">{{ gender_pretty }}</small>
                     </a>
+                {% endif%}
                 {% for b in brands %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?brand={{ b }}">
+                    <a href="{% url 'products' %}?brand={{ b }}">
                         {% if b.logo_url %}
                             <img class="turn-white" src="{{ b.logo_url }}" alt="Image of {{ b.friendly_name }}">
                         {% else %}
-                            <span class="p-2 mt-2 badge badge-white border border-dark">{{ b.friendly_name }}</span>
+                            <small class="p-2 mt-2 product-edit-link">{{ b.friendly_name }}</small>
                         {% endif %}
                     </a>
                 {% endfor %}
                 {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-white border border-dark">{{ c.friendly_name }}</span>
+                    <a href="{% url 'products' %}?category={{ c.name }}">
+                        <small class="p-2 mt-2 product-edit-link">{{ c.friendly_name }}</small>
                     </a>
                 {% endfor %}
                 <hr class="w-50 mb-1">
