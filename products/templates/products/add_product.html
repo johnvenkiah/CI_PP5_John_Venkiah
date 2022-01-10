@@ -84,24 +84,5 @@
 
 {% block postloadjs %}
     {{ block.super}}
-    <script type="text/javascript">
-        $('#new-product-image').change(function() {
-        let prodUpload = $('#new-product-image')[0].files[0];
-        $('#filename-product').text(`Set new image to: ${prodUpload.name}`);
-        });
-        $('#new-brand-image').change(function() {
-        let brandUpload = $('#new-brand-image')[0].files[0];
-        $('#filename-brand').text(`Set new image to: ${brandUpload.name}`);
-        });
-
-        $("#id_product-price").change(function() {
-        if (
-            (parseInt($('#id_product-initial_price').val()) !== null) &&
-            (parseInt($('#id_product-price').val()) >= parseInt($('#id_product-initial_price').val()))
-        ) {
-            $('#wrongPriceModal').modal('show');
-            $('#id_product-price').val(null);
-            $('#id_product-initial_price').val(null);
-        }});
-    </script>
+<script src="{% static 'products/js/products.js' %}"></script>
 {% endblock %}
