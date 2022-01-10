@@ -193,21 +193,6 @@
                     }).toggleClass('blur-filter');
                     $('.navbar-nav').toggleClass('d-lg-none');
                 })
-
-                $(window).resize(function() {
-                    if (window.innerWidth > 992) {
-                        $('#products-nav, .navbar-nav').collapse('hide');
-                    }
-                })
-
-                $(document).on('click', function(e) {
-                    if (!$('header').is(e.target) // It target is not header, navbar will close
-                        && $('header').has(e.target).length === 0) // adding descendants to the equasion
-                    {
-                        $('#products-nav').collapse('hide');
-                        $('.navbar-nav').addClass('d-lg-none');
-                    }
-                });
             
                 // Hide Header on on scroll down
                 let didScroll;
