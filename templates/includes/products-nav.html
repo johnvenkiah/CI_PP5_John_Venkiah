@@ -1,15 +1,15 @@
 <div class="collapse navbar-collapse" id="products-nav">
-    <ul class="navbar-nav w-auto mx-auto d-lg-none">
+    <ul class="navbar-nav collapse w-auto mx-auto">
         <li class="nav-item d-block d-md-none">
             <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="collapse" data-target="#products-nav" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
@@ -22,7 +22,7 @@
             <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="brands-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Brands
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="brands-link">
+            <div class="dropdown-menu" aria-labelledby="brands-link">
                 {% for brand in all_brands %}
                 <a href="{% url 'products' %}?brand={{ brand.name }}" class="dropdown-item">{{ brand.friendly_name }}</a>
                 {% endfor %}
@@ -33,7 +33,7 @@
             <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-footwear-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Footwear
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-footwear-link">
+            <div class="dropdown-menu blur-filter" aria-labelledby="all-footwear-link">
                 <a href="{% url 'products' %}?category=dress_shoes" class="dropdown-item">Dress Shoes</a>
                 <a href="{% url 'products' %}?category=boots" class="dropdown-item">Boots</a>
                 <a href="{% url 'products' %}?category=sneakers" class="dropdown-item">Sneakers</a>
@@ -48,7 +48,7 @@
             <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="womens-footwear-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Womens Footwear
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="womens-footwear-link">
+            <div class="dropdown-menu blur-filter" aria-labelledby="womens-footwear-link">
                 <a href="{% url 'products' %}?gender=w,u&category=dress_shoes" class="dropdown-item">Dress Shoes</a>
                 <a href="{% url 'products' %}?gender=w,u&category=boots" class="dropdown-item">Boots</a>
                 <a href="{% url 'products' %}?gender=w,u&category=sneakers" class="dropdown-item">Sneakers</a>
@@ -63,7 +63,7 @@
             <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="mens-footwear-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Mens Footwear
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="mens-footwear-link">
+            <div class="dropdown-menu blur-filter" aria-labelledby="mens-footwear-link">
                 <a href="{% url 'products' %}?gender=m,u&category=dress_shoes" class="dropdown-item">Dress shoes</a>
                 <a href="{% url 'products' %}?gender=m,u&category=boots" class="dropdown-item">Boots</a>
                 <a href="{% url 'products' %}?gender=m,u&category=sneakers" class="dropdown-item">Sneakers</a>
@@ -77,7 +77,7 @@
             <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
+            <div class="dropdown-menu blur-filter" aria-labelledby="accessories-link">
                 <a href="{% url 'products' %}?category=socks" class="dropdown-item">Socks</a>
                 <a href="{% url 'products' %}?category=shoe_care" class="dropdown-item">Shoe Care</a>
                 <a href="{% url 'products' %}?category=socks,shoe_care" class="dropdown-item">All Accessories</a>
@@ -88,7 +88,7 @@
             <a class="logo-font font-weight-bold nav-link" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu blur-filter" aria-labelledby="specials-link">
                 <a href="{% url 'products' %}?news=true" class="dropdown-item">New Arrivals</a>
                 <a href="{% url 'products' %}?on_sale=true" class="dropdown-item">On Sale</a>
                 <a href="{% url 'products' %}?new,sale=true" class="dropdown-item">All Specials</a>
