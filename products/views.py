@@ -263,3 +263,21 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, f'Product "{product.name}" deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def manage_brands(request):
+    brands = Brand.objects.all()
+    form = BrandForm(request.POST)
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form = form.save()
+
+    template = 'products/manage_brands.html'
+    context = {
+        'brands': brands,
+        'form': form,
+    }
+
+    return render(request, template, context)

@@ -90,10 +90,12 @@
                                     <span class="my-0">Account</span>
                                 </div>
                             </a>
+                            <!-- Admin Operations -->
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product' %}" class="dropdown-item">Add Brand or Product</a>
+                                        <a href="{% url 'manage_brands' %}" class="dropdown-item">Manage Brands</a>
                                     {% endif %}
                                     <a href="#" class="dropdown-item">My StepUp</a>
                                     <a href="#" class="dropdown-item">Sign Out</a>

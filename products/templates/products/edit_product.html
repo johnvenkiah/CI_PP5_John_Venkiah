@@ -54,11 +54,11 @@
 
 {% block postloadjs %}
     {{ block.super}}
-<script src="{% static 'products/js/products.js' %}"></script>
+<script src="{% static 'products/js/products_form.js' %}"></script>
 <script type="text/javascript">
     // Use Vanilla JS to target windows so scrollbar is included in width
     if (window.innerWidth > 480) {
         $('.btn-file').addClass('w-50').removeClass('d-block')
     }
 </script>
-{% endblock %}
+{% endblock %}s

@@ -710,10 +710,6 @@ input, input.form-control, .btn, .custom-select, select.form-control {
     border-radius: 50px;
 }
 
-input[type=checkbox] {
-
-}
-
 textarea.form-control {
     border-radius: 15px;
 }
