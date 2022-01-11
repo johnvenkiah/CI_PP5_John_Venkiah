@@ -4,8 +4,8 @@
     "fields": {
         "name": "nike",
         "friendly_name": "Nike",
-        "logo_url": "media/brands/nike.jpg",
-        "logo": "nike.jpg"
+        "image_url": "media/brands/nike.jpg",
+        "image": "nike.jpg"
     }
 }, {
     "pk": 2,
@@ -13,8 +13,8 @@
     "fields": {
         "name": "parache",
         "friendly_name": "Parache",
-        "logo_url": "media/brands/parache.jpg",
-        "logo": "parache.jpg"
+        "image_url": "media/brands/parache.jpg",
+        "image": "parache.jpg"
     }
 }, {
     "pk": 3,
@@ -22,8 +22,8 @@
     "fields": {
         "name": "thursday_boots",
         "friendly_name": "Thursday Boots",
-        "logo_url": "media/brands/thursday_boots.jpg",
-        "logo": "thursday_boots.jpg"
+        "image_url": "media/brands/thursday_boots.jpg",
+        "image": "thursday_boots.jpg"
     }
 }, {
     "pk": 4,
@@ -31,8 +31,8 @@
     "fields": {
         "name": "new_balance",
         "friendly_name": "New Balance",
-        "logo_url": "media/brands/new_balance.jpg",
-        "logo": "new_balance.jpg"
+        "image_url": "media/brands/new_balance.jpg",
+        "image": "new_balance.jpg"
     }
 }, {
     "pk": 5,
@@ -40,8 +40,8 @@
     "fields": {
         "name": "mk",
         "friendly_name": "MK",
-        "logo_url": "media/brands/mk.jpg",
-        "logo": "mk.jpg"
+        "image_url": "media/brands/mk.jpg",
+        "image": "mk.jpg"
     }
 }, {
     "pk": 6,
@@ -49,7 +49,7 @@
     "fields": {
         "name": "elegant_park",
         "friendly_name": "Elegant Park",
-        "logo_url": "media/brands/elegant_park.jpg",
-        "logo": "elegant_park.jpg"
+        "image_url": "media/brands/elegant_park.jpg",
+        "image": "elegant_park.jpg"
     }
 }]

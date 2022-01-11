@@ -17,8 +17,8 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <a href="{% url 'products' %}?brand={{ product.brand.name }}">
-                    {% if product.brand.logo_url %}
-                        <img class="turn-white" src="{{ product.brand.logo_url }}" alt="{{product.brand.friendly_name}}-logo">
+                    {% if product.brand.image_url or product.brand.image.url %}
+                        <img class="turn-white" src="{% product.brand.image.url %}{{ product.brand.image.url }}{% else %}{{ product.brand.image_url }}{% endif %}" alt="{{product.brand.friendly_name}}-logo">
                     {% else %}
                         <small class="p-2 mt-2 product-edit-link">{{ product.brand.friendly_name }}</small>
                     {% endif %}

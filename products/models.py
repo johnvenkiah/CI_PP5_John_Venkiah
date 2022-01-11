@@ -55,7 +55,7 @@ class Category(models.Model):
 
 class Brand(models.Model):
     """
-    The Brand model class, containing name and logo fields
+    The Brand model class, containing name and image fields
     """
     class Meta:
         """
@@ -72,14 +72,14 @@ class Brand(models.Model):
         null=True,
         blank=True
     )
-    logo_url = models.URLField(
+    image_url = models.URLField(
         verbose_name=_('Image URL'),
         max_length=1024,
         null=True,
         blank=True
     )
-    logo = models.ImageField(
-        verbose_name=_('Logo'),
+    image = models.ImageField(
+        verbose_name=_('Image'),
         null=True,
         blank=True
     )

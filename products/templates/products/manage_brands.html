@@ -40,10 +40,10 @@
                             <div class="card h-100">
                                 <div class="products-link">
                                     <p class="mb-0 product-title text-orange">{{ brand.friendly_name }}</p>
-                                    {% if brand.logo_url %}
-                                        <img class="card-img-top img-fluid" src="{{ brand.logo_url }}" alt="{{ brand.friendly_name }}">
+                                    {% if brand.image_url or brand.image.url %}
+                                        <img class="card-img-top img-fluid" src="{% if brand.image.url %}{{ brand.image.url }}{% else %}{{ brand.image_url }}{% endif %}" alt="{{ brand.friendly_name }}">
                                     {% else %}
-                                        <div class="card-img-top bg-white rounded" src="{{ MEDIA_URL }}noimage.jpg" alt="No Image Available">
+                                        <div class="card-img-top bg-white rounded">
                                             <p class="text-center text-muted pt-5">
                                                 <i class="fas fa-exclamation-circle py-4"></i>
                                                 <br>

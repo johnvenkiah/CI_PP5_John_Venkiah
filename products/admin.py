@@ -62,8 +62,8 @@ class BrandAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
-        'logo_url',
-        'logo',
+        'image_url',
+        'image',
     )
 
 

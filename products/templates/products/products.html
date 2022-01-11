@@ -21,8 +21,8 @@
                 {% endif%}
                 {% for b in brands %}
                     <a href="{% url 'products' %}?brand={{ b }}">
-                        {% if b.logo_url %}
-                            <img class="turn-white" src="{{ b.logo_url }}" alt="Image of {{ b.friendly_name }}">
+                        {% if b.image or b.image_url %}
+                            <img class="turn-white" src="{{ b.image.url }}" alt="Image of {{ b.friendly_name }}">
                         {% else %}
                             <small class="p-2 mt-2 product-edit-link">{{ b.friendly_name }}</small>
                         {% endif %}
