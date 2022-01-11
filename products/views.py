@@ -267,8 +267,12 @@ def delete_product(request, product_id):
 
 @login_required
 def manage_brands(request):
-    brands = Brand.objects.all()
+    brands = list(Brand.objects.all())
     form = BrandForm(request.POST)
+    form_set = []
+    for brand in brands:
+        form = BrandForm(request.POST or None, instance=brand)
+        form_set.append(form)
 
     if request.method == 'POST':
         if form.is_valid():
@@ -276,8 +280,26 @@ def manage_brands(request):
 
     template = 'products/manage_brands.html'
     context = {
-        'brands': brands,
-        'form': form,
+        'brand_context': zip(brands, form_set),
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_brand(request, brand_id):
+    """
+    Removes a product on the site
+    Args:
+        request (object)
+        product_id (to get instance of the product to edit)
+    Returns:
+        the delete product page with the form and context.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access to that page is denied.')
+        return redirect(reverse('home'))
+    brand = get_object_or_404(Product, pk=brand_id)
+    brand.delete()
+    messages.success(request, f'Brand "{brand.friendly_name}" deleted!')
+    return redirect(reverse('manage_brands'))

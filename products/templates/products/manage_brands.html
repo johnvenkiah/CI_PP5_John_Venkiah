@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    {% for brand in brands %}
+                    {% for brand, form in brand_context %}
                         <div class="product-height col-3 col-lg-2">
                             <div class="card h-100">
                                 <div class="products-link">
@@ -43,25 +43,30 @@
                                     {% if brand.logo_url %}
                                         <img class="card-img-top img-fluid" src="{{ brand.logo_url }}" alt="{{ brand.friendly_name }}">
                                     {% else %}
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ brand.friendly_name }}">
+                                        <div class="card-img-top bg-white rounded" src="{{ MEDIA_URL }}noimage.jpg" alt="No Image Available">
+                                            <p class="text-center text-muted pt-5">
+                                                <i class="fas fa-exclamation-circle py-4"></i>
+                                                <br>
+                                                No Image Available
+                                            </p>
+                                        </div>
                                         {% endif %}
                                     </a>
-                                    <div class="card-body pb-0 pt-2">
-                                    </div>
-                                    <div class="card-footer pt-0 border-0">
-                                        <div class="row">
-                                            <div class="col-6 px-0 text-right">
-                                            {% if request.user.is_superuser %}
-                                                <small class="ml-3">
-                                                    <a href="{# url 'edit_brand' brand.id #}" class="btn text-orange product-edit-link">Edit</a>
-                                                    <!-- Button triggers the delete product modal -->
-                                                    <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#deleteBrandModal{{ product.id }}">
-                                                        Delete
-                                                    </button>
-                                                </small>
-                                            {% endif %}
-                                            </div>
+                                    <div class="row no-gutters card-footer p-0 border-0">
+                                        {% if request.user.is_superuser %}
+                                        <div class="col p-1">
+                                            <!-- Button triggers the edit product modal -->
+                                            <button class="w-100 btn text-orange product-edit-link" data-toggle="modal" data-target="#editBrandModal{{ brand.id }}">
+                                                Edit
+                                            </button>
                                         </div>
+                                        <div class="col p-1">
+                                            <!-- Button triggers the delete product modal -->
+                                            <button type="button" class="w-100 btn product-edit-link text-danger" data-toggle="modal" data-target="#deleteBrandModal{{ brand.id }}">
+                                                Delete
+                                            </button>
+                                        </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -69,6 +74,7 @@
                         
                             <!-- Delete brand modal -->
                             {% include 'products/includes/delete_brand_modal.html' %}
+                            {% include 'products/includes/edit_brand_modal.html' %}
                         </div>
                     {% endfor %}
                 </div>

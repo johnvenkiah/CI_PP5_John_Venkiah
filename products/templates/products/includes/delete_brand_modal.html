@@ -1,4 +1,4 @@
-<div class="modal fade" id="deleteBrandModal{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="deleteBrandModal{{ brand.id }}" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-grey text-orange text-shadow" data-dismiss="modal">Cancel</button>
-                <a type="button" href="{# url 'delete_product' product.id #}" class="btn btn-red text-shadow">Delete Brand</a>
+                <a type="button" href="{% url 'delete_brand' brand.id %}" class="btn btn-red text-shadow">Delete Brand</a>
             </div>
         </div>
     </div>

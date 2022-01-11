@@ -1,0 +1,38 @@
+<div class="modal fade" id="editBrandModal{{ brand.id }}" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-orange font-weight-bold" id="modalTitle">Edit Brand: {{ brand.friendly_name }}</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{% url 'manage_brands' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'logo' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                        {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <hr class="my-4">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-6">
+                    <a class="d-block btn btn-grey" href="{% url 'manage_brands' %}">Cancel</a>
+                </div>
+                <div class="col-6">
+                    <button class="w-100 btn btn-orange" type="submit">Save Brand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

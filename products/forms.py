@@ -56,12 +56,6 @@ class ProductForm(ModelForm):
         model = Product
         exclude = ('rating', 'discount', 'art_nr',)
 
-    image = ImageField(
-        label='Image',
-        required=False,
-        widget=ProductClearableFileInput
-    )
-
     def __init__(self, *args, **kwargs):
         super(ProductForm, self).__init__(*args, **kwargs)
         # self.helper = FormHelper()
@@ -79,17 +73,13 @@ class ProductForm(ModelForm):
             'placeholder': '€0.00',
         }
 
-        # self.helper.layout = Layout(
-        #     Row(
-        #         Column('field1', css_class='form-group col-md-2 mb-0'),
-        #         Column('field2', css_class='form-group col-md-2 mb-0'),
-        #         css_class='form-row'
-        #     ),
-        # )
+    image = ImageField(
+        label='Image',
+        required=False,
+        widget=ProductClearableFileInput
+    )
 
-    # initial_price = DecimalField(validators=[MaxValueValidator(
-    #     self.price - 1
-    # )])
+
     description = CharField(
         widget=Textarea(
             {
