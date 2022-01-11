@@ -281,26 +281,26 @@ def manage_brands(request):
 
     brands = list(Brand.objects.all())
     form = BrandForm(request.POST)
-    form_set = []
+    form_set = {}
     for brand in brands:
         form = BrandForm(request.POST or None, instance=brand)
-        form_set.append(form)
+        form_set[brand.id] = form
 
-        if request.method == 'POST':
-            if form.is_valid():
-                form = form.save()
-                messages.success(
-                    request, f'Successfully edited {brand.friendly_name}'
-                )
-                return redirect(reverse('manage_brands'))
-            else:
-                form = BrandForm(request.POST or None, instance=brand)
+    if request.method == 'POST':
+        if form.has_changed() and form.is_valid():
+            brand = form.save()
+            messages.success(
+                request, f'Successfully edited {brand.friendly_name}'
+            )
+            return redirect(reverse('manage_brands'))
+        else:
+            form = BrandForm(request.POST)
 
     template = 'products/manage_brands.html'
     context = {
-        'brand_context': zip(brands, form_set),
+        'brand_context': list(zip(brands, form_set)),
     }
-
+    print(context['brand_context'])
     return render(request, template, context)
 
 
@@ -317,7 +317,7 @@ def delete_brand(request, brand_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
-    brand = get_object_or_404(Product, pk=brand_id)
+    brand = get_object_or_404(Brand, pk=brand_id)
     brand.delete()
     messages.success(request, f'Brand "{brand.friendly_name}" deleted!')
     return redirect(reverse('manage_brands'))
