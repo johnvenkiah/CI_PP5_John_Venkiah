@@ -279,29 +279,47 @@ def manage_brands(request):
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
 
-    brands = list(Brand.objects.all())
+    brands = list(Brand.objects.all())  # pylint: disable=maybe-no-member
     form = BrandForm(request.POST)
-    form_set = {}
+    form_set = []
     for brand in brands:
         form = BrandForm(request.POST or None, instance=brand)
-        form_set[brand.id] = form
+        form_set.append(form)
 
     if request.method == 'POST':
-        if form.has_changed() and form.is_valid():
-            brand = form.save()
-            messages.success(
-                request, f'Successfully edited {brand.friendly_name}'
-            )
-            return redirect(reverse('manage_brands'))
-        else:
-            form = BrandForm(request.POST)
+        form = BrandForm(request.POST)
 
     template = 'products/manage_brands.html'
     context = {
-        'brand_context': list(zip(brands, form_set)),
+        'brand_context': (zip(brands, form_set)),
     }
-    print(context['brand_context'])
     return render(request, template, context)
+
+
+@login_required
+def update_brand(request, brand_id):
+    """
+    Removes a product on the site
+    Args:
+        request (object)
+        product_id (to get instance of the product to edit)
+    Returns:
+        the delete product page with the form and context.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access to that page is denied.')
+        return redirect(reverse('home'))
+    brand = get_object_or_404(Brand, pk=brand_id)
+    form = BrandForm(request.POST, instance=brand)
+    if form.is_valid():
+        form.save()
+        messages.success(request, f'Brand "{brand.friendly_name}" deleted!')
+    else:
+        form = BrandForm(request.POST, instance=brand)
+        messages.error(
+            request, f'Brand "{brand.friendly_name}" failed to be updated!'
+        )
+    return redirect(reverse('manage_brands'))
 
 
 @login_required

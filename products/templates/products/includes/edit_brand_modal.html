@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="{% url 'manage_brands' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'update_brand' brand.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
