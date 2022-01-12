@@ -7,8 +7,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <form method="POST" action="{% url 'update_brand' brand.id %}" class="form mb-2" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'update_brand' brand.id %}" class="form mb-2" enctype="multipart/form-data">
+                <div class="modal-body">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -17,21 +17,16 @@
                         {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <hr class="my-4">
-                        </div>
+                </div>
+                <div class="modal-footer row">
+                    <div class="col">
+                        <button type="button" class="btn-block btn btn-grey" href="{% url 'manage_brands' %}">Cancel</a>
                     </div>
+                    <div class="col">
+                        <button type="button" class="btn-block btn btn-orange" type="submit">Save Brand</button>
                     </div>
-                    <div class="modal-footer">
-                        <div class="col-6">
-                            <a class="d-block btn btn-grey" href="{% url 'manage_brands' %}">Cancel</a>
-                        </div>
-                        <div class="col-6">
-                            <button class="w-100 btn btn-orange" type="submit">Save Brand</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
+            </form>
         </div>
     </div>
 </div>
