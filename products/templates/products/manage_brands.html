@@ -22,7 +22,7 @@
                 <div class="row mt-1 mb-2 justify-content-between">
                     <div class="col-12 col-md-6 col-lg-3 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-100">
-                            <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <select id="sort-selector-brand" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
                             </select>
@@ -70,9 +70,8 @@
                                     </div>
                                 </div>
                             </div>
-
                         
-                            <!-- Delete brand modal -->
+                            <!-- Delete and edit brand modals -->
                             {% include 'products/includes/delete_brand_modal.html' %}
                             {% include 'products/includes/edit_brand_modal.html' %}
                         </div>
@@ -91,6 +90,12 @@
 {% block postloadjs %}
     <script src="{% static 'products/js/result_sorting.js' %}"></script>
     <script type="text/javascript">
+        /**
+        * Script so that changes image filename is visible on each brands modal
+        * window. As the corresponding functionality on the add/edit product page
+        * uses the element id, I gave the elements a new class and loop through
+        * each of them to apply the new file name to.
+        */
         $(document).ready(function() {
             const brandImges = $('.brand-img-class')
             brandImges.each(function(_, item) {

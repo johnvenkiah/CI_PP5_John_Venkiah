@@ -6,7 +6,7 @@ $('.btt-link').click(function(e) {
 
 //Script for sorting products
 
-$('#sort-selector').change(function() {
+$('#sort-selector, #sort-selector-brand').change(function() {
     let selector = $(this);
     let currentUrl = new URL(window.location);
 

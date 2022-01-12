@@ -274,17 +274,32 @@ def manage_brands(request):
     Returns:
         the manage_brands page with the form and context.
     """
-
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
 
-    brands = list(Brand.objects.all())  # pylint: disable=maybe-no-member
+    sort = None
+    direction = None
+    brands = Brand.objects.all()  # pylint: disable=maybe-no-member
     form = BrandForm(request.POST)
     form_set = []
     for brand in brands:
         form = BrandForm(request.POST or None, instance=brand)
         form_set.append(form)
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                brands = brands.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            brands = brands.order_by(sortkey)
+    current_sorting = f'{sort}_{direction}'
 
     if request.method == 'POST':
         form = BrandForm(request.POST)
@@ -292,6 +307,7 @@ def manage_brands(request):
     template = 'products/manage_brands.html'
     context = {
         'brand_context': (zip(brands, form_set)),
+        'current_sorting': current_sorting,
     }
     return render(request, template, context)
 
