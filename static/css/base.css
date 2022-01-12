@@ -954,6 +954,13 @@ textarea.form-control {
     filter: invert(1);
 }
 
+.brand-img {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    object-fit: cover;
+  }
+
 @media (min-width: 992px) and (max-width: 1200px) {
     .logo-font.nav-link {
         font-size: .8rem;

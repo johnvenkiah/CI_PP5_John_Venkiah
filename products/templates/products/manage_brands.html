@@ -36,14 +36,14 @@
                 </div>
                 <div class="row">
                     {% for brand, form in brand_context %}
-                        <div class="product-height col-3 col-lg-2">
-                            <div class="card h-100">
+                        <div class="col-4 col-md-3 col-lg-2">
+                            <div class="card">
                                 <div class="products-link">
                                     <p class="mb-0 product-title text-orange">{{ brand.friendly_name }}</p>
                                     {% if brand.image_url or brand.image.url %}
-                                        <img class="card-img-top img-fluid" src="{% if brand.image.url %}{{ brand.image.url }}{% else %}{{ brand.image_url }}{% endif %}" alt="{{ brand.friendly_name }}">
+                                        <img class="brand-img img-fluid" src="{% if brand.image.url %}{{ brand.image.url }}{% else %}{{ brand.image_url }}{% endif %}" alt="{{ brand.friendly_name }}">
                                     {% else %}
-                                        <div class="card-img-top bg-white rounded">
+                                        <div class="brand-img bg-white rounded">
                                             <p class="text-center text-muted pt-5">
                                                 <i class="fas fa-exclamation-circle py-4"></i>
                                                 <br>
