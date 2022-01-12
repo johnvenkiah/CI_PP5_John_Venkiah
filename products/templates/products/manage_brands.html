@@ -89,7 +89,24 @@
 {% endblock %}
 
 {% block postloadjs %}
+    <script src="{% static 'products/js/result_sorting.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            const brandImges = $('.brand-img-class')
+            brandImges.each(function(_, item) {
+                const brandImg = "." + item.classList[0]
+                $(brandImg).change(function(e) {
+                    const {target} = e
+                    const {name} = target.files[0]
+                    const allFileName = $('.filename-for-brand')
+                    allFileName.each(function(_, item) {
+                        item.innerHTML =`Set new image to: ${name}`
+                    })
+                });
+            })
+        })
+        
+    </script>
     {{ block.super }}
     
-    <script src="{% static 'products/js/result_sorting.js' %}"></script>
 {% endblock %}

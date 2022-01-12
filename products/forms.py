@@ -122,3 +122,4 @@ class BrandForm(ModelForm):
 
         self.fields['name'].choices = friendly_names
         self.fields['image'].widget.attrs['id'] = 'new-brand-image'
+        self.fields['image'].widget.attrs['class'] = 'brand-img-class'

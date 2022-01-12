@@ -11,8 +11,10 @@ product or brand image is customizeable.
 $('#new-product-image').change(function() {
     let prodUpload = $('#new-product-image')[0].files[0];
     $('#filename-product').text(`Set new image to: ${prodUpload.name}`);
-});
+}); 
+
 $('#new-brand-image').change(function() {
+    console.log('tjene')
     let brandUpload = $('#new-brand-image')[0].files[0];
     $('#filename-brand').text(`Set new image to: ${brandUpload.name}`);
 });

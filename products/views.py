@@ -310,7 +310,7 @@ def update_brand(request, brand_id):
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
     brand = get_object_or_404(Brand, pk=brand_id)
-    form = BrandForm(request.POST, instance=brand)
+    form = BrandForm(request.POST, request.FILES, instance=brand)
     if form.is_valid():
         form.save()
         messages.success(request, f'Brand "{brand.friendly_name}" deleted!')
