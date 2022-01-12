@@ -965,6 +965,21 @@ textarea.form-control {
     background: linear-gradient(45deg, #fecf94 50%, #ffe9d0e3 50%);
   }
 
+.grand-total {
+    position: absolute;
+    right: .5rem;
+    top: 5rem !important;
+    border-radius: 20px;
+    padding: 3px 6px 1px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.nav-link.btn-orange {
+    color: #fff !important;
+    margin-bottom: 9px;
+}
+
 @media (min-width: 992px) and (max-width: 1200px) {
     .logo-font.nav-link {
         font-size: .8rem;

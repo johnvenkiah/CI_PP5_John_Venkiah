@@ -11,7 +11,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
             <div class="col">
@@ -27,13 +26,7 @@
                     <div class="d-block d-md-none">
                         <div class="row">
                             <div class="col">
-                                {% include "cart/cart-total.html" %}
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                {% include "cart/checkout-buttons.html" %}
-                                <p class="text-muted mb-5">Cart Summary</p>
+                                <p class="mb-5">Cart Summary</p>
                             </div>
                         </div>
                         {% for item in cart_items %}
@@ -54,9 +47,15 @@
                             </div>
                             <div class="row"><div class="col"><hr></div></div>
                         {% endfor %}
-                        <div class="btt-button shadow-sm rounded-0 border border-black">
+                        <div class="row">
+                            <div class="col">
+                                {% include "cart/cart-total.html" %}
+                                {% include "cart/checkout-buttons.html" %}
+                            </div>
+                        </div>
+                        <div class="btt-button shadow-sm btn-trans">
                             <a class="btt-link d-flex h-100">
-                                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                                <i class="fas fa-arrow-up mx-auto my-auto"></i>
                             </a>	
                         </div>
                     </div>

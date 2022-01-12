@@ -97,7 +97,7 @@
                     {% if product.details %}
                         <ul>
                             {% for d in product.details_as_list %}
-                            <li class="">{{ d|title }}</li>
+                            <li>{{ d|title }}</li>
                             {% endfor %}
                         </ul>
                     {% endif %}
@@ -106,9 +106,9 @@
                             <button class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i> Add to Wishlist</button>
                         </div>
                     </div>
-                    <form class="form" action="{# url 'add_to_bag' product.id #}" method="POST">
+                    <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
-                        <div class="form-row">
+                        <div class="row">
                             <div class="col-6 text-center">
                                 <p class="mt-3 text-orange"><strong>Quantity:</strong></p>
                                 <div class="input-group input-group-{{ product.id }}">
@@ -135,7 +135,7 @@
                             </div>
                             <div class="col-6 text-center">
                                 <p class="mt-3 text-orange"><strong>Size:</strong></p>
-                                <select class="custom-select form-control w-50 mx-auto" name="product_size" id='id_product_size'>
+                                <select class="custom-select form-control mx-auto" name="product_size" id='id_product_size'>
                                     {% for s, v in product.get_sizes %}
                                         <option value="{{ s }}">{{ v }}</option>
                                     {% endfor %}
