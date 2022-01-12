@@ -494,6 +494,10 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 
+    .increment-qty {
+        border-top-right-radius: 50px !important;
+        border-bottom-right-radius: 50px !important;
+    }
 
 /* PERSONAL STYLES, max-width: 991px */
 
@@ -783,7 +787,7 @@ textarea.form-control {
 }
 
 .text-orange {
-    color: #ffaa42;
+    color: #ffaa42 !important;
 }
 
 .card {
