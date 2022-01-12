@@ -1,3 +1,8 @@
-<p class="my-0"><strong>{{ item.product.name }}</strong></p>
-<p class="my-0"><strong>Size: </strong>{% if item.product.size_type != 'N/A' %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-<p class="my-0 small">Art Nr: {{ item.product.art_nr|upper }}</p>
+<p class="my-0 text-orange"><strong>{{ item.product.name|truncatechars:38 }}</strong></p>
+<p class="my-0">
+    <strong>Size: </strong>
+    <span class="d-block float-right">
+        {% if item.product.size_type != 'N/A' %}{{ item.size|upper }}{% else %}N/A{% endif %}
+    </span>
+</p>
+<p class="my-0 small">Art Nr: <span class="d-block float-right">{{ item.product.art_nr|upper }}</span></p>
