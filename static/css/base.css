@@ -790,7 +790,7 @@ textarea.form-control {
     border: 2px solid transparent;
 }
 
-.card, .card img {
+.card, .card img, .card .brand-img {
     border-radius: 15px;
     margin: 0 auto;
     transition: all .2s ease-in-out;
@@ -841,7 +841,7 @@ textarea.form-control {
     color: #ffaa42 !important;
 }
 
-.card a:hover {
+.card a:hover, .card button:hover {
     font-weight: bold;
     text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
 }
@@ -861,6 +861,7 @@ textarea.form-control {
 
 .product-edit-link:hover {
     border: 1px solid #ffaa42;
+    color: #fff;
 }
 
 .product-edit-link.text-danger:hover {
@@ -958,7 +959,8 @@ textarea.form-control {
     width: 100%;
     height: 100px;
     align-items: center;
-    object-fit: cover;
+    object-fit: contain;
+    background: linear-gradient(45deg, #fecf94 50%, #ffe9d0e3 50%);
   }
 
 @media (min-width: 992px) and (max-width: 1200px) {

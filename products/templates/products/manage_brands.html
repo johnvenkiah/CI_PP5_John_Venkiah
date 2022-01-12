@@ -37,17 +37,17 @@
                 <div class="row">
                     {% for brand, form in brand_context %}
                         <div class="col-4 col-md-3 col-lg-2">
-                            <div class="card">
-                                <div class="products-link">
+                            <div class="card mb-2">
+                                <div class="mb-2">
                                     <p class="mb-0 product-title text-orange">{{ brand.friendly_name }}</p>
                                     {% if brand.image_url or brand.image.url %}
-                                        <img class="brand-img img-fluid" src="{% if brand.image.url %}{{ brand.image.url }}{% else %}{{ brand.image_url }}{% endif %}" alt="{{ brand.friendly_name }}">
+                                        <img class="brand-img img-fluid mb-1" src="{% if brand.image.url %}{{ brand.image.url }}{% else %}{{ brand.image_url }}{% endif %}" alt="{{ brand.friendly_name }}">
                                     {% else %}
-                                        <div class="brand-img bg-white rounded">
-                                            <p class="text-center text-muted pt-5">
-                                                <i class="fas fa-exclamation-circle py-4"></i>
+                                        <div class="brand-img bg-white mb-1">
+                                            <p class="text-center text-muted">
+                                                <i class="fas fa-exclamation-circle py-2 py-md-4"></i>
                                                 <br>
-                                                No Image Available
+                                                <small>No Image Available</small>
                                             </p>
                                         </div>
                                         {% endif %}
