@@ -23,15 +23,10 @@
             <div class="col">
                 {% if cart_items %}
                     <div class="d-block d-md-none">
-                        <div class="row">
-                            <div class="col">
-                                <p class="mb-5 lead text-orange">Cart Summary</p>
-                            </div>
-                        </div>
                         {% for item in cart_items %}
                             <div class="row">
                                 <div class="col-6 mb-2">
-                                    {% include "cart/product-image.html" %}
+                                        {% include "cart/product-image.html" %}
                                 </div>
                                 <div class="col-6 mb-2">
                                     {% include "cart/product-info.html" %}

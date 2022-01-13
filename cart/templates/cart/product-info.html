@@ -1,4 +1,4 @@
-<p class="my-0 text-orange"><strong>{{ item.product.name|truncatechars:38 }}</strong></p>
+<a class="my-0 text-orange" href="{% url 'product_detail' item.product.id %}"><strong>{{ item.product.name|truncatechars:38 }}</strong></a>
 <p class="my-0">
     <strong>Size: </strong>
     <span class="d-block float-right">
