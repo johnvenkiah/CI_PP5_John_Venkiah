@@ -28,21 +28,17 @@
                                 <div class="col-6 mb-2">
                                         {% include "cart/product-image.html" %}
                                 </div>
-                                <div class="col-6 mb-2">
+                                <div class="col-6">
                                     {% include "cart/product-info.html" %}
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6 mt-2">
                                     {% include "cart/quantity-form.html" %}
+                                    <button class="btn-block update-link btn product-edit-link text-orange" aria-label="Update cart"><small>Update</small></button>
                                 </div>
                                 <div class="col-6 order-sm-last">
                                     <p class="my-0 text-orange">Price Each: <span class="d-block float-right">${{ item.product.price }}</span></p>
-                                    <p class="text-orange"><strong>Subtotal: </strong><span class="d-block float-right">${{ item.product.price | calc_subtotal:item.quantity }}</span></p>
-                                </div>
-                                <div class="col-6">
-                                    <a class="btn-block update-link btn product-edit-link text-orange" aria-label="Update cart"><small>Update</small></a>
-                                </div>
-                                <div class="col-6 text-right">
-                                    <a class="remove-item btn product-edit-link text-danger" aria-label="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></a>
+                                    <p class="text-orange mb-o8"><strong>Subtotal: </strong><span class="d-block float-right">${{ item.product.price | calc_subtotal:item.quantity }}</span></p>
+                                    <button class="remove-item btn product-edit-link text-danger float-right my-0" aria-label="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></button>
                                 </div>
                             </div>
                             <div class="row"><div class="col"><hr></div></div>
@@ -73,10 +69,10 @@
 
                             {% for item in cart_items %}
                                 <tr>
-                                    <td class="py-3 w-25">
+                                    <td class="py-3">
                                         {% include "cart/product-image.html" %}
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-3 w-25">
                                         {% include "cart/product-info.html" %}
                                     </td>
                                     <td class="py-3">
@@ -86,7 +82,7 @@
                                         {% include "cart/quantity-form.html" %}
                                             <button class="btn-block update-link btn product-edit-link text-orange" aria-label="Update cart"><small>Update</small></button>
                                     </td>
-                                    <td class="py-3 text-right w-25">
+                                    <td class="py-3 text-right">
                                         <p class="my-0 text-orange">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                         <button class="remove-item btn product-edit-link text-danger" aria-label="Remove item from cart" title="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></button>
                                     </td>

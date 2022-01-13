@@ -25,10 +25,13 @@
                         </div>
                         <div class="col-9 text-white">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small">Size: {% if item.product.size == 'N/A' %}N/A{% else %}{{ item.size }}{% endif %}</p>
-                            <p class="my-0 small">Qty: {{ item.quantity }}</p>
+                                <p class="my-0 small">
+                                    <span class="d-inline-block">Size: {% if item.product.size == 'N/A' %}N/A{% else %}{{ item.size }}{% endif %}</span>
+                                    <span class="d-inline-block float-right pr-2">Qty: {{ item.quantity }}</span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                        <hr>
                 {% endfor %}
             </div>
             <div class="row">
