@@ -967,7 +967,14 @@ textarea.form-control {
     align-items: center;
     object-fit: contain;
     background: linear-gradient(45deg, #fecf94 50%, #ffe9d0e3 50%);
-  }
+}
+
+.cart-img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
 
 .grand-total {
     position: absolute;
