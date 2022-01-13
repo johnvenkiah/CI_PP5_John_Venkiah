@@ -232,7 +232,7 @@ input[name='q']::placeholder {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 100px;
     right: 15px;
     z-index: 99999999999;
 }
@@ -740,6 +740,12 @@ textarea.form-control {
     .label-new, .sale-label {
         margin-right: .5rem !important;
         top: 45px !important;
+    }
+
+    .message-container {
+        top: 72px;
+        right: 15px;
+        z-index: 99999999999;
     }
 }
 
