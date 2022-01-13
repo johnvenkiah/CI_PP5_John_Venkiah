@@ -228,7 +228,7 @@ input[name='q']::placeholder {
     color: #738292;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- Bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -241,44 +241,25 @@ input[name='q']::placeholder {
     overflow: visible;
 }
 
-.toast-capper {
-    height: 2px;
+/* Classes for messages colors */
+
+.border-success {
+    border-color: #2db300 !important;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
+.text--success {
+    color: #2db300 !important;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
+.border-danger {
     border-bottom-color: #dc3545 !important;
 }
 
-.arrow-warning {
+.border-warning {
     border-bottom-color: #ffc107 !important;
 }
 
-.arrow-info {
+.border-info {
     border-bottom-color: #17a2b8 !important;
 }
 
@@ -904,10 +885,13 @@ textarea.form-control {
     top: 92px;
 }
 
-.modal-content {
+.modal-content, .custom-toast {
     background-color: #0a1734b0;
     border-radius: 15px;
     padding: 15px;
+}
+
+.modal-content {
     border: 2px solid #ffaa42;
 }
 
@@ -919,7 +903,7 @@ textarea.form-control {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.modal-header .close {
+.modal-header .close, .toast .close {
     padding: 0;
     margin: 0;
     width: 30px;
