@@ -220,6 +220,10 @@ p {
     cursor: pointer;
 }
 
+.remove-item {
+    padding: 4px 8px 2px !important;
+}
+
 input[name='q']::placeholder {
     color: #738292;
 }
@@ -413,7 +417,7 @@ input[name='q']::placeholder {
 
 @media (min-width: 768px) {
     .remove-item {
-        margin-top: 1.9rem
+        margin-top: 1.8rem
     }
 }
 
