@@ -1,22 +1,40 @@
-from django.shortcuts import render
-
-# Create your views here.
+"""
+cart/views.py: views to display the shopping cart page and add/update/remove
+functionality for it. Most of the code is derived from the Code Institute
+Boutique Ado project.
+"""
+# - - - - - Django Imports - - - - - - - - -
 from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404
 )
 from django.contrib import messages
 
+# - - - - - Internal imports - - - - - - - - -
 from products.models import Product
 
 
 def view_cart(request):
-    """ A view that renders the cart contents page """
+    """
+    The view to display the shopping cart page to the user.
+    Args:
+        request (object)
+    Returns:
+        the shopping cart page.
+    """
 
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
-    """ Add a quantity of the specified product to the shopping cart """
+    """
+    The view to a product to the shopping cart
+    Args:
+        request (object)
+        item_id (instance of the item being added)
+    Returns:
+        the redirect_url (request.path) from the browsers current
+        location on the site
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -59,7 +77,15 @@ def add_to_cart(request, item_id):
 
 
 def update_cart(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """
+    This view enables adjusting the cart contents to the
+    given quantity and updates it.
+    Args:
+        request (object)
+        item_id (instance of the item being updated)
+    Returns:
+        a redirect to the view_cart page after updating.
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -99,7 +125,14 @@ def update_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """Remove the item from the shopping cart"""
+    """
+    Enables removing an item from the shopping cart.
+    Args:
+        request (object)
+        item_id (instance of the item being removed)
+    Returns:
+        a 200 status OK HTTP-response.
+    """
 
     try:
         product = get_object_or_404(Product, pk=item_id)
@@ -112,9 +145,9 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
-            messages.success(request,
-                             (f'Removed size {size.upper()} '
-                              f'{product.name} from your cart'))
+            messages.success(
+                request, f'Removed {product.name} (size {size}) from your cart'
+            )
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {product.name} from your cart')
@@ -122,6 +155,6 @@ def remove_from_cart(request, item_id):
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
-    except Exception as e:
+    except Exception as e:  # pylint: disable=broad-except, invalid-name
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)

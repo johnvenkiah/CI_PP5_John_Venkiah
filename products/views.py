@@ -3,7 +3,9 @@ products/views.py: views to display all pages in the products app.
 """
 
 # - - - - - Django Imports - - - - - - - - -
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -12,11 +14,18 @@ from django.db.models.functions import Lower
 # - - - - - Internal imports - - - - - - - - -
 from .models import Product, Category, Brand, Review
 from .forms import ReviewForm, ProductForm, BrandForm
-from .products_choices import SIZE_CHOICES
+# from .products_choices import SIZE_CHOICES
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """
+    Enables displaying products on the products page,
+    depending on the users sorting or queries.
+    Args:
+        request (object)
+    Returns:
+        The products page and its context.
+    """
 
     products = Product.objects.all()  # pylint: disable=no-member
     query = None
@@ -74,11 +83,16 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request,
-                               ("You didn't enter any search criteria!"))
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                )
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                    name__icontains=query
+            ) | Q(
+                description__icontains=query
+            )
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -352,6 +366,13 @@ def delete_brand(request, brand_id):
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
     brand = get_object_or_404(Brand, pk=brand_id)
-    brand.delete()
-    messages.success(request, f'Brand "{brand.friendly_name}" deleted!')
+
+    try:
+        brand.delete()
+        messages.success(request, f'Brand "{brand.friendly_name}" deleted')
+
+    except Exception as e:  # pylint: disable=broad-except, invalid-name
+        messages.error(request, f'Error removing brand: {e}')
+        return HttpResponse(status=500)
+
     return redirect(reverse('manage_brands'))
