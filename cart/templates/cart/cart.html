@@ -70,32 +70,30 @@
                                 <tr>
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
+                                    <th scope="col" class="text-center">Price</th>
                                     <th scope="col" class="text-center">Quantity</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th scope="col" class="text-right">Subtotal</th>
                                 </tr>
                             </thead>
 
                             {% for item in cart_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
+                                    <td class="py-3 w-25">
                                         {% include "cart/product-image.html" %}
                                     </td>
                                     <td class="py-3">
                                         {% include "cart/product-info.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 text-orange">${{ item.product.price }}</p>
+                                        <p class="my-0 text-orange text-center">${{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3 w-25">
+                                    <td class="py-3">
                                         {% include "cart/quantity-form.html" %}
                                             <button class="btn-block update-link btn product-edit-link text-orange" aria-label="Update cart"><small>Update</small></button>
                                     </td>
-                                    <td class="py-3">
+                                    <td class="py-3 text-right w-25">
                                         <p class="my-0 text-orange">${{ item.product.price | calc_subtotal:item.quantity }}</p>
-                                        <div class="col-6">
-                                            <button class="remove-item btn product-edit-link text-danger px-2" aria-label="Remove item from cart" title="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></button>
-                                        </div>
+                                        <button class="remove-item btn product-edit-link text-danger px-2" aria-label="Remove item from cart" title="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></button>
                                     </td>
                                 </tr>
                             {% endfor %}
