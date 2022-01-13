@@ -1,4 +1,11 @@
+"""
+products/urls.py: All urls for the products app.
+"""
+
+# - - - - - Django Imports - - - - - - - - - - - - -
 from django.urls import path
+
+# - - - - - Internal Party imports - - - - - - - - -
 from . import views
 
 urlpatterns = [

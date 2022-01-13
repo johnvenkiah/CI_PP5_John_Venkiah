@@ -14,7 +14,6 @@ $('#new-product-image').change(function() {
 }); 
 
 $('#new-brand-image').change(function() {
-    console.log('tjene')
     let brandUpload = $('#new-brand-image')[0].files[0];
     $('#filename-brand').text(`Set new image to: ${brandUpload.name}`);
 });

@@ -1,11 +1,26 @@
+"""
+cart/contexts.py: enables the cart contents to be accessed throughout the site.
+"""
+
+# - - - - - Python Imports - - - - - - - - -
 from decimal import Decimal
+
+# - - - - - Django Imports - - - - - - - - -
 from django.conf import settings
 from django.shortcuts import get_object_or_404
+
+# - - - - - Internal Imports - - - - - - - - -
 from products.models import Product
 
 
 def cart_contents(request):
-
+    """
+    Accesses the cart contents.
+    Args:
+        request (object)
+    Returns:
+        the cart contents as its context.
+    """
     cart_items = []
     total = 0
     product_count = 0

@@ -112,7 +112,11 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """
-    A view to show details for a specific product.
+    Displays a dedicated page for a specific product.
+    Args:
+        request (object)
+    Returns:
+        the product detail page and its context
     """
 
     product = get_object_or_404(Product, pk=product_id)
@@ -343,7 +347,7 @@ def update_brand(request, brand_id):
     form = BrandForm(request.POST, request.FILES, instance=brand)
     if form.is_valid():
         form.save()
-        messages.success(request, f'Brand "{brand.friendly_name}" deleted!')
+        messages.success(request, f'Brand "{brand.friendly_name}" updated')
     else:
         form = BrandForm(request.POST, instance=brand)
         messages.error(

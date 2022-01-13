@@ -4,17 +4,13 @@ products/forms.py: forms to be used with the product app of the application
 
 # - - - - - Django Imports - - - - - - - - -
 from django.forms import (
-    Textarea, Select, ModelForm, CharField, ImageField, DecimalField
+    Textarea, Select, ModelForm, CharField, ImageField
 )
 from django.core.exceptions import ValidationError
 
 # - - - - - Internal Imports - - - - - - - - -
 from .widgets import ProductClearableFileInput, BrandClearableFileInput
 from .models import Product, Category, Review, Brand
-
-# - - - - - 3rd Party Imports - - - - - - - - -
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Row, Column
 
 
 class ReviewForm(ModelForm):
@@ -53,13 +49,22 @@ class ProductForm(ModelForm):
     """
 
     class Meta:
+        """
+        The defines the Product model and which fields to exclude.
+        """
         model = Product
         exclude = ('rating', 'discount', 'art_nr',)
 
     def __init__(self, *args, **kwargs):
+        """
+        The defines the Product model and which fields to exclude.
+        Args:
+            self (object)
+            args (arguments)
+            kwargs (keyword arguments)
+        """
         super(ProductForm, self).__init__(*args, **kwargs)
-        # self.helper = FormHelper()
-        categories = Category.objects.all()
+        categories = Category.objects.all()  # pylint: disable=no-member
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
@@ -79,7 +84,6 @@ class ProductForm(ModelForm):
         widget=ProductClearableFileInput
     )
 
-
     description = CharField(
         widget=Textarea(
             {
@@ -90,6 +94,13 @@ class ProductForm(ModelForm):
     )
 
     def validate_initial_price(self):
+        """
+        This function makes sure that the price is never higher
+        than the initial one.
+
+        Args:
+            self (object)
+        """
         price = self.cleaned_data['price']
         initial_price = self.cleaned_data['initial_price']
         if initial_price and initial_price <= price:
@@ -106,6 +117,9 @@ class BrandForm(ModelForm):
     """
 
     class Meta:
+        """
+        Defines the Brand model and that all model fields are included.
+        """
         model = Brand
         fields = '__all__'
 
@@ -116,10 +130,15 @@ class BrandForm(ModelForm):
     )
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        brands = Brand.objects.all()
-        friendly_names = [(b.id, b.get_friendly_name()) for b in brands]
+        """
+        This calls the super method on the form and
+        sets attributes for the image field.
+        Args:
+            self (object)
+            args (arguments)
+            kwargs (keyword arguments)
+        """
+        super(BrandForm, self).__init__(*args, **kwargs)
 
-        self.fields['name'].choices = friendly_names
         self.fields['image'].widget.attrs['id'] = 'new-brand-image'
         self.fields['image'].widget.attrs['class'] = 'brand-img-class'

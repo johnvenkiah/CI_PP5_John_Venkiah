@@ -6,7 +6,7 @@ Category, Product and Review
 # - - - - - Django Imports - - - - - - - - -
 from django.contrib import admin
 
-# - - - - - Internal imports - - - - - - - - 
+# - - - - - Internal imports - - - - - - - -
 from .models import Product, Category, Brand, Review
 #  - - - - - - - - - - - - - - - - - - - - -
 

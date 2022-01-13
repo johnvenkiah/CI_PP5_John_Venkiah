@@ -3,7 +3,6 @@ home/views.py: Views for home app, rendering the landing page of the site.
 """
 
 # - - - - - Django Imports - - - - - - - - -
-from django.shortcuts import render
 from django.views.generic import TemplateView
 
 # - - - - - 3rd Party imports - - - - - - - - -
