@@ -411,6 +411,12 @@ input[name='q']::placeholder {
     border-radius: 7px;
 }
 
+@media (min-width: 768px) {
+    .remove-item {
+        margin-top: 1.9rem
+    }
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
