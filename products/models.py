@@ -244,7 +244,7 @@ class Product(models.Model):
             else:
                 return sizes['socks']
         else:
-            return SIZE_CHOICES[2]
+            return sizes['n_a']
 
 
 class Review(models.Model):

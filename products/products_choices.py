@@ -11,7 +11,11 @@ GENDER_CHOICES = (
 SIZE_CHOICES = (
     ('shoes', 'Shoes'),
     ('socks', 'Socks'),
-    ('N/A', 'N/A'),
+    ('n_a', 'N/A'),
+)
+
+SIZE_NA = (
+    ('n_a', 'N/A'),
 )
 
 # All shoe sizes, displayed for unisex footware
@@ -56,6 +60,7 @@ sizes = {
     'socks': SOCK_SIZES,
     'w_socks': WOMENS_SOCK_SIZES,
     'm_socks': MENS_SOCK_SIZES,
+    'n_a': SIZE_NA,
 }
 
 # SIZES = (

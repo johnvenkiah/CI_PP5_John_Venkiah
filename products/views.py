@@ -12,6 +12,7 @@ from django.db.models.functions import Lower
 # - - - - - Internal imports - - - - - - - - -
 from .models import Product, Category, Brand, Review
 from .forms import ReviewForm, ProductForm, BrandForm
+from .products_choices import SIZE_CHOICES
 
 
 def all_products(request):
@@ -103,7 +104,6 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     # pylint: disable=no-member
     reviews = Review.objects.filter(product=product)
-    print(type(product.price), type(product.initial_price))
 
     if request.method == 'POST':
 
