@@ -500,11 +500,6 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 
-    .increment-qty {
-        border-top-right-radius: 50px !important;
-        border-bottom-right-radius: 50px !important;
-    }
-
 /* PERSONAL STYLES, max-width: 991px */
 
     h1 {
@@ -871,7 +866,9 @@ textarea.form-control {
     transition: all .2s ease-in-out;
 }
 
-.product-edit-link:hover {
+.product-edit-link:hover,
+.product-edit-link:active,
+.product-edit-link:focus {
     border: 1px solid #ffaa42;
     color: #fff;
 }
@@ -933,6 +930,11 @@ textarea.form-control {
 .modal-header .close:focus {
     border: 2px solid #ffaa42;
     text-shadow: 0 0 8px #ffaa42, 1px 1px 3px black;
+}
+
+.increment-qty {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
 }
 
 .increment-qty:hover:disabled, .decrement-qty:hover:disabled {
