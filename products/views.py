@@ -175,11 +175,12 @@ def add_product(request):
         if product_form.is_valid():
 
             product = product_form.save()
-            product.art_nr = f'SU202200{str(product.id)}'
 
-            if product.discount and product.discount > 0:
+            if product.initial_price and product.initial_price > 0:
                 product.discount = product.initial_price - product.price
+            else:
                 product.initial_price = None
+
             product_form.validate_initial_price()
             product.save()
 
@@ -238,11 +239,13 @@ def edit_product(request, product_id):
 
         if product_form.is_valid():
 
-            product_form.save()
+            product = product_form.save()
 
-            if product.discount and product.discount > 0:
+            if product.initial_price and product.initial_price > 0:
                 product.discount = product.initial_price - product.price
+            else:
                 product.initial_price = None
+
             product_form.validate_initial_price()
             product.save()
 

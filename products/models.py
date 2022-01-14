@@ -6,6 +6,7 @@ products/models.py: Contains the models Category, Product and Review
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
+from django.core.validators import MinValueValidator
 
 # - - - - - Internal imports - - - - - - - - -
 from .products_choices import sizes
@@ -133,13 +134,19 @@ class Product(models.Model):
         verbose_name=_('Initial Price'),
         max_digits=6,
         decimal_places=2,
+        validators=[
+            MinValueValidator(0)
+        ],
         null=True,
         blank=True
     )
     price = models.DecimalField(
         verbose_name=_('Price'),
         max_digits=6,
-        decimal_places=2
+        decimal_places=2,
+        validators=[
+            MinValueValidator(0)
+        ],
     )
     description = models.TextField(
         verbose_name=_('Description'),
