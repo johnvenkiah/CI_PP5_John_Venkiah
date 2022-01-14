@@ -50,7 +50,7 @@
 
 <!-- Cart nav link -->
 <li class="list-inline-item">
-    <a class="{% if grand_total %}text-orange font-weight-bold{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
+    <a class="nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
         <div class="text-center">
             <small class="my-0 grand-total btn-orange">
                 {% if grand_total %}

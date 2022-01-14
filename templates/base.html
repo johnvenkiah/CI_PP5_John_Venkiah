@@ -105,18 +105,19 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="nav-link {% if grand_total %}btn btn-orange font-weight-bold{% endif %}" href="{% url 'view_cart' %}">
+                            <a class="nav-link" href="{% url 'view_cart' %}">
                                 <div class="text-center">
                                     <div>
                                         <i class="fas fa-shopping-cart"></i>
                                     </div>
-                                    <span class="my-0">
-                                        Cart {% if grand_total %}
-                                            (€{{ grand_total|floatformat:2 }})
+                                    <p class="my-0">
+                                        Cart
+                                    </p>
+                                        {% if grand_total %}
+                                            <span class="btn-orange grand-total">€{{ grand_total|floatformat:2 }}</span>
                                         {% else %}
                                             (€0.00)
                                         {% endif %}
-                                    </span>
                                 </div>
                             </a>
                         </li>
