@@ -218,7 +218,7 @@ def add_brand(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        brand_form = BrandForm(request.POST, prefix='brand')
+        brand_form = BrandForm(request.POST, request.FILES, prefix='brand')
         product_form = ProductForm(prefix='product')
 
         if brand_form.is_valid():
