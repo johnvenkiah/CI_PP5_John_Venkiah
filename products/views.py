@@ -154,13 +154,13 @@ def product_detail(request, product_id):
 
 
 @login_required
-def add_product(request):
+def add_product_brand(request):
     """
-    Adds a product to the site
+    Add a product or brand to the site
     Args:
         request (object)
     Returns:
-        the delete product page with the form and context.
+        the add product or brand page with the form and context.
     """
 
     if not request.user.is_superuser:
@@ -171,6 +171,7 @@ def add_product(request):
         product_form = ProductForm(
             request.POST, request.FILES, prefix='product'
         )
+        brand_form = BrandForm(request.POST, prefix='brand')
 
         if product_form.is_valid():
 
@@ -180,38 +181,63 @@ def add_product(request):
                 product.discount = product.initial_price - product.price
             else:
                 product.initial_price = None
+            product.art_nr = f'SU202200{product.id}'
 
             product_form.validate_initial_price()
             product.save()
-
             messages.success(request, f'Successfully added {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Add Product failed. \
-                    please check if the form is valid and try again.')
+                    Please check if the form is valid and try again.')
     else:
         product_form = ProductForm(prefix='product')
+        brand_form = BrandForm(prefix='brand')
 
-    if request.method == 'POST' and not product_form.is_valid():
+    template = 'products/add_product_brand.html'
+    context = {
+        'product_form': product_form,
+        'brand_form': brand_form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def add_brand(request):
+    """
+    Adds a brand to the site
+    Args:
+        request (object)
+    Returns:
+        the manage_brands page if the form is valid, otherwise returns
+        the add_product_brand page
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, access to that page is denied.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
         brand_form = BrandForm(request.POST, prefix='brand')
         product_form = ProductForm(prefix='product')
+
         if brand_form.is_valid():
             brand = brand_form.save()
             messages.success(
                 request, f'Successfully added {brand.friendly_name}'
             )
-            return redirect(reverse('products'))
+            return redirect(reverse('manage_brands'))
         else:
             messages.error(request, 'Add Brand failed. \
-                    please check if the form is valid and try again.')
+                    Please check if the form is valid and try again.')
 
     else:
-        brand_form = BrandForm(prefix='brand')
+        brand_form = BrandForm()
 
-    template = 'products/add_product.html'
+    template = 'products/manage_brands.html'
     context = {
-        'product_form': product_form,
         'brand_form': brand_form,
+        'product_form': product_form,
     }
 
     return render(request, template, context)

@@ -66,23 +66,24 @@ class Brand(models.Model):
 
     name = models.CharField(
         verbose_name=_('Name'),
-        max_length=254
+        max_length=254,
+        unique=True,
     )
     friendly_name = models.CharField(
         max_length=254,
         null=True,
-        blank=True
+        blank=True,
     )
     image_url = models.URLField(
         verbose_name=_('Image URL'),
         max_length=1024,
         null=True,
-        blank=True
+        blank=True,
     )
     image = models.ImageField(
         verbose_name=_('Image'),
         null=True,
-        blank=True
+        blank=True,
     )
 
     def __str__(self):
@@ -118,11 +119,12 @@ class Product(models.Model):
 
     art_nr = models.CharField(
         verbose_name=_('Art. Nr'),
-        max_length=254
+        max_length=254,
     )
     name = models.CharField(
         verbose_name=_('Name'),
-        max_length=254
+        max_length=254,
+        unique=True
     )
     category = models.ForeignKey(
         'Category',
@@ -146,7 +148,7 @@ class Product(models.Model):
         decimal_places=2,
         validators=[
             MinValueValidator(0)
-        ],
+        ]
     )
     description = models.TextField(
         verbose_name=_('Description'),
@@ -184,7 +186,7 @@ class Product(models.Model):
     )
     is_new = models.BooleanField(
         verbose_name=('Is New'),
-        default=False,
+        default=False
     )
     discount = models.DecimalField(
         verbose_name=_('Discount'),

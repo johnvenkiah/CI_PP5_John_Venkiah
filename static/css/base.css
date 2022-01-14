@@ -390,7 +390,7 @@ input[name='q']::placeholder {
     margin: 0 0 0 50px;
 }
 
-#filename-product, #filename-brand, .filename-brand {
+#filename-brand, .filename-brand {
     padding-top: 20px;
 }
 
@@ -803,6 +803,7 @@ textarea.form-control {
 
 .max-100 {
     max-height: 100px;
+    max-width: 100px;
 }
 
 .increment-qty {
