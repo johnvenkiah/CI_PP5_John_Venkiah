@@ -50,17 +50,17 @@
 
 <!-- Cart nav link -->
 <li class="list-inline-item">
-    <a class="nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
+    <a class="nav-link d-block d-lg-none" href="{% url 'view_cart' %}" title="{% if grand_total %}Your cart grand total is {{ grand_total }}{% else %}Your cart is empty{% endif %}">
         <div class="text-center">
-            <small class="my-0 grand-total btn-orange">
+            <div><i class="fas fa-shopping-cart fa-lg"></i>
+            </div>
+            <small class="my-0 grand-total {% if grand_total %}btn-orange{% else %}btn-trans{% endif %}">
                 {% if grand_total %}
                     €{{ grand_total|floatformat:2 }}
                 {% else %}
                     €0.00
                 {% endif %}
             </small>
-            <div><i class="fas fa-shopping-cart fa-lg"></i>
-            </div>
         </div>
     </a>
 </li>

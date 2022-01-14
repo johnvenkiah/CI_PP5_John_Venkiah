@@ -901,7 +901,8 @@ textarea.form-control {
     }
 
     .grand-total {
-        right: 3.8rem;
+        right: 3rem;
+        padding: 5px 12px 2px;
     }
 }
 
@@ -1037,5 +1038,6 @@ textarea.form-control {
 
     .navbar-expand-lg > li, .navbar-expand-lg > button {
         width: 25%;
+        margin-right: 0 !important;
     }
 }
