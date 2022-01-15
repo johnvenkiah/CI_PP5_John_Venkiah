@@ -64,3 +64,11 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+.checkout-col {
+    background: #091a3870;
+    border: 1px solid orange;
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+    margin: 0 .8rem;
+}
