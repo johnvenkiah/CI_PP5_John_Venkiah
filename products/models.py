@@ -2,6 +2,9 @@
 products/models.py: Contains the models Category, Product and Review
 """
 
+# - - - - - Native Python Imports - - - - - -
+import re
+
 # - - - - - Django Imports - - - - - - - - -
 from django.db import models
 from django.contrib.auth.models import User
@@ -105,6 +108,19 @@ class Brand(models.Model):
             The brand friendly name string
         """
         return self.friendly_name
+
+    def generate_name(self):
+        """
+        This generates the brand name as a computer-readable string
+        without the user having to add this too.
+
+        Args:
+            self (object)
+        Returns:
+            name (string) - with computer-adapted syntax
+        """
+        name = re.sub('[^0-9a-zA-Z]+', '_', self.friendly_name)
+        return name.lower()
 
 
 class Product(models.Model):

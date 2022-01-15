@@ -223,6 +223,8 @@ def add_brand(request):
 
         if brand_form.is_valid():
             brand = brand_form.save()
+            brand.name = brand.generate_name()
+            brand.save()
             messages.success(
                 request, f'Successfully added {brand.friendly_name}'
             )
@@ -376,6 +378,8 @@ def update_brand(request, brand_id):
     form = BrandForm(request.POST, request.FILES, instance=brand)
     if form.is_valid():
         form.save()
+        brand.name = brand.generate_name()
+        brand.save()
         messages.success(request, f'Brand "{brand.friendly_name}" updated')
     else:
         form = BrandForm(request.POST, instance=brand)
