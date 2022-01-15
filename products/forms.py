@@ -4,7 +4,7 @@ products/forms.py: forms to be used with the product app of the application
 
 # - - - - - Django Imports - - - - - - - - -
 from django.forms import (
-    Textarea, Select, ModelForm, CharField, ImageField
+    Textarea, Select, ModelForm, CharField, ImageField, ChoiceField
 )
 from django.core.exceptions import ValidationError
 
@@ -72,17 +72,17 @@ class ProductForm(ModelForm):
             'details': 'Product Details (Seperate each with a comma)',
             'image_url': 'Image URL',
         }
-        empty_labels = {
+        labels = {
             'category': 'Select a category:',
             'brand': 'Select a brand:',
             'gender': 'Select a gender:',
             'size_type': 'Select size type for the product:',
         }
+
         categories = Category.objects.all()  # pylint: disable=no-member
         brands = Brand.objects.all()  # pylint: disable=no-member
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
         brand_friendly_names = [(b.id, b.get_friendly_name()) for b in brands]
-
         self.fields['category'].choices = friendly_names
         self.fields['brand'].choices = brand_friendly_names
         self.fields['image'].widget.attrs['id'] = 'new-product-image'
@@ -97,14 +97,10 @@ class ProductForm(ModelForm):
                 self.fields[field].widget.attrs['aria-label'] = placeholder
                 self.fields[field].label = False
 
-            if field in empty_labels:
-                if self.fields[field].required:
-                    empty_label = f'{empty_labels[field]} *'
-                else:
-                    empty_label = empty_labels[field]
-                self.fields[field].empty_label = empty_label
-                self.fields[field].widget.attrs['aria-label'] = empty_label
-                self.fields[field].label = False
+            if field in labels:
+                label = labels[field]
+                self.fields[field].label = label
+                self.fields[field].widget.attrs['aria-label'] = label
 
     image = ImageField(
         label='Image',
