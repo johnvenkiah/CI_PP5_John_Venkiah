@@ -66,6 +66,7 @@ select option[value=""] {
 }
 
 .checkout-col {
+    width: 100%;
     background: #091a3870;
     border: 1px solid orange;
     backdrop-filter: blur(2px);
