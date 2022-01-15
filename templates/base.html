@@ -96,7 +96,7 @@
                                         <a href="{% url 'add_product_brand' %}" class="dropdown-item">Add Brand or Product</a>
                                         <a href="{% url 'manage_brands' %}" class="dropdown-item">Manage Brands</a>
                                     {% endif %}
-                                    <a href="#" class="dropdown-item">My StepUp</a>
+                                    <a href="{% url 'profile' %}" class="dropdown-item">My StepUp</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
                                 {% else %}
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
