@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import UserProfile
+from .models import UserProfile, WishListAdd
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -11,6 +11,16 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
+
+    try:
+        wishlist = WishListAdd.objects.filter(user=request.user)
+    except IndexError:
+        messages.error(
+            'Sorry, we were not able to retrieve your wishlist at the moment'
+        )
+        wishlist = None
+    else:
+        wishlist_items = wishlist.products.all()
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -29,6 +39,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'wishlist': wishlist,
         'on_profile_page': True
     }
 
