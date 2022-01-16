@@ -181,7 +181,13 @@
                                 </div>
                             </div>
                             <p>{{ review.user_review }}</p>
+                            {% if request.user == review.user or request.user.is_superuser %}
+                            <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#deleteReviewModal{{ review.id }}">
+                                Delete Review
+                            </button>
+                            {% endif %}
                             <hr>
+                            {% include 'products/includes/delete_review_modal.html' %}
                         {% endfor %}
                 {% else %}
                         <p>No reviews for this product yet.</p>

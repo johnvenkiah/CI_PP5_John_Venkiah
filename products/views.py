@@ -123,6 +123,9 @@ def product_detail(request, product_id):
     # pylint: disable=no-member
     reviews = Review.objects.filter(product=product)
 
+    for review in reviews:
+        print(review.id)
+
     if request.method == 'POST':
 
         review_form = ReviewForm(data=request.POST or None)
@@ -367,9 +370,9 @@ def update_brand(request, brand_id):
     Removes a product on the site
     Args:
         request (object)
-        product_id (to get instance of the product to edit)
+        product_id (to get instance of the product to delete)
     Returns:
-        the delete product page with the form and context.
+        the manage_brands page.
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, access to that page is denied.')
@@ -392,12 +395,12 @@ def update_brand(request, brand_id):
 @login_required
 def delete_brand(request, brand_id):
     """
-    Removes a product on the site
+    Removes a brand on the site
     Args:
         request (object)
-        product_id (to get instance of the product to edit)
+        brand_id (to get instance of the brand to delete)
     Returns:
-        the delete product page with the form and context.
+        the manage_brands page.
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, access to that page is denied.')
@@ -413,3 +416,32 @@ def delete_brand(request, brand_id):
         return HttpResponse(status=500)
 
     return redirect(reverse('manage_brands'))
+
+
+def delete_review(request, review_id):
+    """
+    Removes a product on the site
+    Args:
+        request (object)
+        product_id (to get instance of the product to edit)
+    Returns:
+        the delete product page with the form and context.
+    """
+
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+
+    try:
+        review.delete()
+        messages.success(
+            request, (
+                f'Your review "{review.title}" of {review.product} '
+                'is now deleted'
+            )
+        )
+
+    except Exception as e:  # pylint: disable=broad-except, invalid-name
+        messages.error(request, f'Error removing review: {e}')
+        return HttpResponse(status=500)
+
+    return redirect(reverse('product_detail', args=[product.id]))

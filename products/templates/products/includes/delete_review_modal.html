@@ -1,0 +1,20 @@
+<div class="modal fade" id="deleteReviewModal{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-orange font-weight-bold" id="modalTitle">Delete Review</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-shadow">Are you sure you want to delete your review<strong><i class="text-orange">{{ brand.friendly_name }}</i></strong>?</p>
+                <p class="text-shadow">Your rating of the product will still be counted.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-grey text-white text-shadow" data-dismiss="modal">Cancel</button>
+                <a type="button" href="{% url 'delete_review' review.id %}" class="btn btn-red text-shadow">Delete Review</a>
+            </div>
+        </div>
+    </div>
+</div>
