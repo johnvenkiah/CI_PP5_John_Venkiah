@@ -136,6 +136,12 @@ def product_detail(request, product_id):
             review = review_form.save(commit=False)
             review.product = product
             review.save()
+            messages.success(
+                request, (
+                    f'Thank yo for reviewing "{product.name[:25]}.."! '
+                    'You can now view and remove it in the list below.'
+                )
+            )
 
             if product.rating:
                 product.rating = (product.rating + review.product_rating) / 2
