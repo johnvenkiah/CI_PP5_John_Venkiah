@@ -22,7 +22,110 @@
             </div>
         </div>
         <div class="row">
-            
+            <div class="col-12">
+                <h3 class="text-orange my-4">My Wishlist</h3>
+                {% if not wishlist_items %}
+                    <p class="text-white">No items in your Wishlist</p>
+                {% else %}
+                    {% for product in wishlist_items %}
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="product-height col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="card h-100">
+                                    <a class="products-link" href="{% url 'product_detail' product.id %}">
+                                        <p class="mb-0 product-title text-orange">{{ product.name }}</p>
+                                        {% if product.discount %}
+                                            <p class="sale-label text-shadow">Save €{{ product.discount }}!</p>
+                                        {% endif %}
+                                        {% if product.is_new %}
+                                            <p class="sale-label text-shadow label-new{% if product.discount %} lower-label{% endif %}">NEW!</p>
+                                        {% endif %}
+                                    {% if product.image %}
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    {% else %}
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                        {% endif %}
+                                    </a>
+                                    <div class="card-body pb-0 pt-2">
+                                    </div>
+                                    <div class="card-footer pt-0 border-0">
+                                        <div class="row">
+                                            <div class="col-6 px-0 text-left">
+                                                <p class="text-orange lead mb-0">
+                                                    {% if product.initial_price %}
+                                                        <small><del class="text-muted">€{{ product.initial_price }} </del></small>
+                                                    {% endif %}
+                                                    <span class="font-weight-bold">€{{ product.price }}</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-6 px-0 text-right">
+                                                {% if product.rating %}
+                                                    <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ product.rating|floatformat:1 }} / 5</small>
+                                                {% else %}
+                                                    <small class="text-muted">No Rating</small>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6 px-0 text-left align-self-end">
+                                                {% if product.gender or product.category %}
+                                                    <p class="small mt-1 mb-0">
+                                                        {% if product.gender %}
+                                                            <a class="text-orange" href="{% if product.gender == 'u' %}{% url 'products' %}{% else %}{% url 'products' %}?gender={{ product.gender }},u{% endif %}">
+                                                                {{ product.get_gender_display }}
+                                                            </a> | 
+                                                        {% endif %}
+                                                        {% if product.category %}
+                                                            <a class="text-orange" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                                {{ product.category.friendly_name }}
+                                                            </a>
+                                                        {% endif %}
+                                                    </p>
+                                                {% endif %}
+                                            </div>
+                                            <div class="col-6 px-0 text-right">
+                                                {% if request.user.is_superuser %}
+                                                    <small class="ml-3">
+                                                        <a href="{% url 'edit_product' product.id %}" class="btn text-orange product-edit-link">Edit</a>
+                                                    <!-- Button triggers the delete product modal -->
+                                                    <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#deleteProductModal{{ product.id }}">
+                                                        Delete
+                                                    </button>
+                                                    </small>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if forloop.counter|divisibleby:1 %}
+                                <div class="col-12 d-sm-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}                        
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:3 %}
+                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 d-none d-xl-block mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            
+                            <!-- Delete product modal -->
+                            {% include 'products/includes/delete_product_modal.html' %}
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
             <div class="col-12 col-lg-6 mt-4">
                 <p class="text-orange my-3">Default Delivery Information</p>
                 <form class="mt-3" action="{% url 'my_stepup' %}" method="POST" id="profile-update-form">

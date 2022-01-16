@@ -2,21 +2,13 @@
 
 {% load i18n %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
-{% block content %}
+{% block inner_content %}
 <div class="modal--overlay"></div>
 
-<div class="row align-items-center mt-5">
-    <div class="p-4 mt-5 mx-auto col col-md-8 col-lg-6 modal-content hi-z">
+<div class="row">
+    <div class="p-4 col col-lg-10 mx-auto modal-content hi-z">
         <div class="wrapper">
             <h2 class="text-orange font-weight-bold">{% trans "Sign Out" %}</h2>
             <hr>
@@ -33,7 +25,7 @@
                     <div class="col-6">
                         <!-- Get to the previous viewed page with request.META.HTTP_REFERER, credits below. -->
                         <!-- https://stackoverflow.com/questions/27325505/django-getting-previous-url -->
-                        <a class="btn btn-orange btn-block" href="{{ request.META.HTTP_REFERER }}">Go Back</a>
+                        <a class="btn btn-orange text-white btn-block" href="{{ request.META.HTTP_REFERER }}">Go Back</a>
                     </div>
                     <div class="col-6">
                         <button type="submit" class="btn btn-blue btn-block">{% trans 'Sign Out' %}</button>

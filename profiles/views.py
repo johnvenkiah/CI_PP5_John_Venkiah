@@ -39,7 +39,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'wishlist': wishlist,
+        'wishlist_items': wishlist_items,
         'on_profile_page': True
     }
 

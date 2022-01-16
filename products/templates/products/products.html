@@ -19,7 +19,7 @@
                         <small class="p-2 mt-2 product-edit-link">{{ gender_pretty }}</small>
                     </a>
                 {% endif%}
-                {% for b in brands %}
+                {% for b in brands if brands %}
                     <a href="{% url 'products' %}?brand={{ b }}">
                         {% if b.image or b.image_url %}
                             <img class="max-100" src="{{ b.image.url }}" alt="{{ b.friendly_name }}-logo">
