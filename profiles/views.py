@@ -25,7 +25,7 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
-    template = 'profiles/profile.html'
+    template = 'profiles/my_stepup.html'
     context = {
         'form': form,
         'orders': orders,
@@ -43,7 +43,7 @@ def order_history(request, order_number):
         'A confirmation email was sent on the order date.'
     ))
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/order_confirmation.html'
     context = {
         'order': order,
         'from_profile': True,
