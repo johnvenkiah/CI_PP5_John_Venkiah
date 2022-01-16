@@ -175,10 +175,9 @@ p {
 }
 
 .btn-blue {
+    background: linear-gradient(45deg, #0500b6 50%, #2134c9 50%);
     color: #fff;
-    text-shadow: 0.4px 0.4px 3px black;
-    background: linear-gradient(45deg, #005693b8, #2b65e98c 50%, #657eff8c 50%, #9fb6ff9c);
-    border: 1px solid #00306c;
+    border: 1px solid #002f9f;
 }
 
 .btn-red {
@@ -871,6 +870,21 @@ textarea.form-control {
 .nav-link.btn-orange {
     color: #fff !important;
     margin-bottom: 9px;
+}
+
+.modal--overlay {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.459);
+        z-index: 9000;
+        backdrop-filter: blur(3px);
+}
+
+.hi-z {
+    z-index: 10000;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
