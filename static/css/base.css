@@ -686,7 +686,7 @@ textarea.form-control {
     border: 2px solid transparent;
 }
 
-.card, .card img, .card .brand-img {
+.card, .card img, .card .brand-img, .card .card-img-top {
     border-radius: 15px;
     margin: 0 auto;
     transition: all .2s ease-in-out;

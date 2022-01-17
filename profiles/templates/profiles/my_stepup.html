@@ -41,9 +41,15 @@
                                         {% endif %}
                                     {% if item.image %}
                                         <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
-                                    {% else %}
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.name }}">
-                                        {% endif %}
+                                        {% else %}
+                                        <div class="card-img-top img-fluid bg-white mb-1 py-3">
+                                            <p class="text-center text-muted py-2">
+                                                <i class="fas fa-exclamation-circle py-2 py-md-4"></i>
+                                                <br>
+                                                <small>No Image Available</small>
+                                            </p>
+                                        </div>
+                                    {% endif %}
                                     </a>
                                     <div class="card-body pb-0 pt-2">
                                     </div>
