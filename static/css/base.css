@@ -63,6 +63,12 @@ hr {
     border-top: 1px solid rgba(255, 166, 71, 0.5);
 }
 
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
 .nav-item {
     padding-left: 15px;
 }
@@ -892,6 +898,10 @@ textarea.form-control {
     z-index: 10000;
 }
 
+.h-0 {
+    height: 0 !important;
+}
+
 @media (min-width: 992px) and (max-width: 1200px) {
     .logo-font.nav-link {
         font-size: .8rem;
@@ -956,7 +966,6 @@ textarea.form-control {
     .navbar-collapse {
         flex-flow: column;
         opacity: 0;
-        /* transition: all .2s ease-in-out; */
     }
 
     .navbar-collapse.show {

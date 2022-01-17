@@ -189,6 +189,7 @@
                     $(".bg-nav").css({
                         'background-color': '#04142f80'
                     }).toggleClass('blur-filter');
+                    $('.navbar-nav').toggleClass('d-md-none');
                 })
 
                 // Make products menu visible if Products menu item is clicked on
@@ -196,8 +197,22 @@
                     $(".bg-nav").css({
                         'background-color': '#04142f80'
                     }).toggleClass('blur-filter');
-                    $('.navbar-nav').toggleClass('d-lg-none');
+                    $('.navbar-nav').toggleClass('d-md-none');
                 })
+
+                $(window).resize(function() {
+                    $('.navbar-nav').addClass('d-md-none');
+                    $('.navbar-collapse').removeClass('show');
+                });
+
+                $(document).click(function (event) {
+                    var clickover = $(event.target);
+                    var _opened = $(".navbar-collapse").hasClass("show");
+                    if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+                        $(".navbar-toggler").click()
+                        $('.navbar-nav').addClass('d-md-none');
+                    }
+                });
             
                 // Hide Header on on scroll down
                 let didScroll;
@@ -228,6 +243,7 @@
                         // Scroll Down
                         $('.hide-items').addClass('hide').removeClass('hide-items');
                         $('.hide-2').addClass('hide-items-2').removeClass('hide-2');
+                        $('.btt-button').fadeOut();
                     
                         // If nav menu is not showing, change the navbar to transparent
                         if (!$('#products-nav').hasClass('show')) {
@@ -241,6 +257,7 @@
                             $('.hide').addClass('hide-items').removeClass('hide');
                             $('.bg-nav').css({'background-color': '#04142f80'});
                             $('.grand-total, .nav-link.btn-orange').css({'opacity': '1'});
+                            $('.btt-button').fadeIn();
                         }
                     }
                     
