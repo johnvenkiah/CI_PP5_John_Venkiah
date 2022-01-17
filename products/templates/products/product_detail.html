@@ -105,11 +105,15 @@
                     {% endif %}
                     <div class="row">
                         <div class="col-12 col-lg-6">
-
-                            {% if product in wishlist %}
-                                <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="fas fa-heart"></i> Remove from Wishlist</a>
+                            {% if request.user.is_authenticated %}
+                                {% if product in wishlist %}
+                                    <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="fas fa-heart"></i> Remove from Wishlist</a>
+                                {% else %}
+                                    <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i> Add to Wishlist</a>
+                                {% endif %}
                             {% else %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i> Add to Wishlist</a>
+                                <a href="{% url 'account_login' %}" aria-label="Sign In" class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i> Sign In</a>
+                                <p class="text-center py-2">to add item to Wishlist.</p>
                             {% endif %}
 
                         </div>

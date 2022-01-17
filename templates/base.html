@@ -65,7 +65,7 @@
                 <!-- Products -->
                 <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <li class="list-inline-item dropdown">
-                        <a href="" id="products-link" class="nav-link collapsed" type="button" data-toggle="collapse" data-target="#products-nav" aria-controls="products-nav" aria-expanded="false" aria-label="Toggle products menu">
+                        <a href="#" id="products-link" class="nav-link collapsed" data-toggle="collapse" data-target="#products-nav" aria-controls="products-nav" aria-expanded="false" aria-label="Toggle products menu">
                             <div>
                                 <i class="fas fa-meteor"></i>
                             </div>
@@ -73,12 +73,12 @@
                         </a>
                     </li>
                 </div>
-                <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-center">
-                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h1 class="logo-font my-0">StepUp</h1>
+                <div class="col-12 col-lg-2">
+                    <a href="{% url 'home' %}" class="text-center nav-link main-logo-link">
+                        <h1 class="logo-font mx-auto">StepUp</h1>
                     </a>
                 </div>
-                <div class="col-12 col-lg-5 my-auto py-1 py-lg-0">
+                <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center d-flex my-0">
                         <li class="list-inline-item dropdown">
                             <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My Account">
@@ -104,6 +104,11 @@
                                 {% endif %}
                             </div>
                         </li>
+
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center d-flex my-0">
                         <li class="list-inline-item">
                             <a class="nav-link" href="{% url 'view_cart' %}">
                                 <div class="text-center">

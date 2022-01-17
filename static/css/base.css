@@ -41,7 +41,6 @@ body {
 }
 
 h1 {
-    font-family: 'Bungee Hairline', cursive;
     font-weight: bold;
 }
 
@@ -125,8 +124,23 @@ p {
 
 .main-logo-link {
     width: fit-content;
+    padding: 7px 7px 0;
+    text-shadow: 0 0 5px black;
+    background: linear-gradient(
+        45deg
+        , #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
+    box-shadow: 0 0 5px black;
+    border-radius: 15px;
+    border: 2px solid white;
 }
 
+.main-logo-link:hover,
+.main-logo-link:active,
+.main-logo-link:focus {
+    background-color: #ca76107c;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7) !important;
+}
+s
 .btn-trans, .input-btn {
     background: linear-gradient(45deg, #2125294a 50%, rgb(21 93 171 / 25%) 50%);
     border: 1px solid #ced4da !important;

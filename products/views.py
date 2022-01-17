@@ -129,6 +129,7 @@ def product_detail(request, product_id):
         wishlistitem = get_object_or_404(WishListItem, user=request.user.id)
     except Http404:
         wishlistitem = {}
+        wishlist = None
     else:
         wishlist = wishlistitem.product.all()
     # pylint: disable=no-member
