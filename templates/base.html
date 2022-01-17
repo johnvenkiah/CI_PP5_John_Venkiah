@@ -81,12 +81,12 @@
                 <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center d-flex my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My Account">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="{% if request.user.is_authenticated %}My Account{% else %}Sign in or sign up{% endif %}">
                                 <div class="text-center">
                                     <div>
                                         <i class="fas fa-user-circle"></i>
                                     </div>
-                                    <span class="my-0">Account</span>
+                                    <span class="my-0">{% if request.user.is_authenticated %}Account{% else %}Sign In/Up{% endif %}</span>
                                 </div>
                             </a>
                             <!-- Admin Operations -->

@@ -25,7 +25,7 @@
 
 <!-- Account nav menu link -->
 <li class="list-inline-item hide-items dropdown">
-    <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My Account">
+    <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="{% if request.user.is_authenticated %}My Account{% else %}Sign in or sign up{% endif %}">
         <div class="text-center">
             <div><i class="fas fa-user-circle fa-lg"></i></div>
         </div>

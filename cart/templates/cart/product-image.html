@@ -2,6 +2,12 @@
     {% if item.product.image %}
         <img class="img-fluid cart-img rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
     {% else %}
-        <img class="img-fluid cart-img rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-    {% endif %}
+    <div class="img-fluid cart-img rounded bg-white mb-1">
+        <p class="text-center text-muted py-2">
+            <i class="fas fa-exclamation-circle py-2 py-md-4"></i>
+            <br>
+            <small>No Image Available</small>
+        </p>
+    </div>
+{% endif %}
 </a>
