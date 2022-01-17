@@ -107,9 +107,9 @@
                         <div class="col-12 col-lg-6">
 
                             {% if product in wishlist %}
-                                <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="fas fa-heart"></i>Remove from Wishlist</a>
+                                <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="fas fa-heart"></i> Remove from Wishlist</a>
                             {% else %}
-                                <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i>Add to Wishlist</a>
+                                <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i> Add to Wishlist</a>
                             {% endif %}
 
                         </div>
