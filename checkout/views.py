@@ -1,3 +1,5 @@
+import re
+
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
 )
@@ -15,6 +17,21 @@ from cart.contexts import cart_contents
 
 import stripe
 import json
+
+
+def mobile(request):
+    """
+    Return True if the request comes from a mobile device.
+    """
+
+    MOBILE_AGENT_RE=re.compile(
+        r".*(iphone|mobile|androidtouch)", re.IGNORECASE
+    )
+
+    if MOBILE_AGENT_RE.match(request.META['HTTP_USER_AGENT']):
+        return True
+    else:
+        return False
 
 
 @require_POST
@@ -38,6 +55,11 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    if mobile(request):
+        is_mobile = True
+    else:
+        is_mobile = False
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -140,6 +162,7 @@ def checkout(request):
 
     template = 'checkout/checkout.html'
     context = {
+        'is_mobile': is_mobile,
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
