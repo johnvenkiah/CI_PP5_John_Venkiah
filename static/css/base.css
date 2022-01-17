@@ -548,7 +548,12 @@ button:focus {
 
 footer {
     padding-bottom: 15px;
-}
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 240px; */
+  }
 
 .feature-title, .feature-caption {
     font-family: Average, sans-serif;
