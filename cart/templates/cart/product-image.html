@@ -1,4 +1,4 @@
-<a href="{% url 'product_detail' item.product.id %}">
+<a href="{% url 'product_detail' item.product.id %}" aria-label="Product Details">
     {% if item.product.image %}
         <img class="img-fluid cart-img rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
     {% else %}

@@ -710,7 +710,7 @@ textarea.form-control {
     transition: all .3s ease-in-out;
 }
 
-.card:hover p {
+.card:hover .text-orange {
     color: #fff;
     text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
 }
@@ -724,7 +724,7 @@ textarea.form-control {
     color: #ffaa42 !important;
 }
 
-.card a:hover, .card button:hover {
+.card a.text-orange:hover, .card .product-edit-link:hover {
     font-weight: bold;
     text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
 }
