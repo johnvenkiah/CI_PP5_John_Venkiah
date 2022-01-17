@@ -4,7 +4,7 @@
   height: 40px;
   padding: 10px 12px;
   border: 1px solid transparent;
-  border-radius: 0px;
+  border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
@@ -22,7 +22,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #7a838b;
 }
 
 .fieldset-label {
@@ -62,7 +62,7 @@ select option[value=""] {
     align-items: center;
     justify-content: center;
     margin: 0;
-    height: 100%;
+    height: 50%;
 }
 
 .checkout-col {
@@ -72,4 +72,15 @@ select option[value=""] {
     backdrop-filter: blur(2px);
     border-radius: 15px;
     margin: 0 .8rem;
+}
+
+.fa-angle-down {
+    display: inline-block;
+    transition: all .3s;
+}
+
+.rotate {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
 }

@@ -62,7 +62,7 @@ hr {
     border-top: 1px solid rgba(255, 166, 71, 0.5);
 }
 
-.collapsing {
+.collapsing:not(#order-summary) {
     -webkit-transition: none;
     transition: none;
     display: none;
@@ -567,11 +567,6 @@ button:focus {
 
 footer {
     padding-bottom: 15px;
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 240px; */
   }
 
 .feature-title, .feature-caption {
@@ -591,12 +586,19 @@ footer {
     text-shadow: 1px 1px 3px black, 0 0 10px black;
 }
 
-input, input.form-control, .btn, .custom-select, select.form-control {
+input,
+input.form-control,
+.btn,
+.custom-select,
+select.form-control {
     border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px !important;
 }
 
 textarea.form-control {
     border-radius: 15px;
+
 }
 
 @media (max-width: 480px) {
