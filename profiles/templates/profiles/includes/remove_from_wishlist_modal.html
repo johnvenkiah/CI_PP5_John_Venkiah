@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p class="text-shadow">Are you sure you want to remove <strong><i class="text-orange">{{ item.name.truncatechars:38 }}</i></strong> from your Wishlist?</p>
+                <p class="text-shadow">Are you sure you want to remove <strong><i class="text-orange">{{ item.name|truncatechars:38 }}</i></strong> from your Wishlist?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-grey text-white text-shadow" data-dismiss="modal">Cancel</button>

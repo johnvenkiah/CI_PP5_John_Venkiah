@@ -6,6 +6,7 @@ products/views.py: views to display all pages in the products app.
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
 )
+from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -14,6 +15,8 @@ from django.db.models.functions import Lower
 # - - - - - Internal imports - - - - - - - - -
 from .models import Product, Category, Brand, Review
 from .forms import ReviewForm, ProductForm, BrandForm
+from profiles.models import WishListItem
+
 # from .products_choices import SIZE_CHOICES
 
 
@@ -28,6 +31,7 @@ def all_products(request):
     """
 
     products = Product.objects.all()  # pylint: disable=no-member
+    wishlist = WishListItem.objects.filter(user=request.user.id)
     query = None
     categories = None
     gender = None
@@ -104,6 +108,7 @@ def all_products(request):
         'gender': gender,
         'gender_pretty': gender_pretty,
         'brands': brands,
+        'wishlist': wishlist,
         'current_sorting': current_sorting,
     }
 
@@ -120,6 +125,12 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    try:
+        wishlistitem = get_object_or_404(WishListItem, user=request.user.id)
+    except Http404:
+        wishlistitem = {}
+    else:
+        wishlist = wishlistitem.product.all()
     # pylint: disable=no-member
     reviews = Review.objects.filter(product=product)
 
@@ -155,6 +166,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'wishlist': wishlist,
         'reviews': reviews,
         'review_form': review_form,
     }

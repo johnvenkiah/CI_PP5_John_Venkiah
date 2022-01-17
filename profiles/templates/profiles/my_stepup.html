@@ -27,9 +27,8 @@
                 {% if not wishlist_items %}
                     <p class="text-white">No items in your Wishlist</p>
                 {% else %}
-                    {% for item in wishlist_items %}
                     <div class="row">
-                        {% for item in products %}
+                        {% for item in wishlist_items %}
                             <div class="product-height col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="card h-100">
                                     <a class="products-link" href="{% url 'product_detail' item.id %}">
@@ -120,7 +119,6 @@
                             {% include 'profiles/includes/remove_from_wishlist_modal.html' %}
                         {% endfor %}
                     </div>
-                    {% endfor %}
                 {% endif %}
             </div>
             <div class="col-12 col-lg-6 mt-4">

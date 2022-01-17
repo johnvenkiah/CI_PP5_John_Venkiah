@@ -1,9 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
 from .models import UserProfile, WishListItem
 from .forms import UserProfileForm
-
+from products.models import Product
 from checkout.models import Order
 
 
@@ -21,16 +23,13 @@ def profile(request):
 
     try:
         wishlist = WishListItem.objects.filter(user=request.user.id)[0]
-        if not wishlist:
-            wishlist_items = None
     except IndexError:
-        messages.error(
-            request,
-            'Sorry, we were not able to retrieve your wishlist at the moment'
-        )
         wishlist_items = None
     else:
-        wishlist_items = wishlist.products.all()
+        wishlist_items = wishlist.product.all()
+
+    if not wishlist_items:
+        messages.info(request, 'Your Wishlist is empty!')
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -68,16 +67,17 @@ def add_to_wishlist(request, product_id):
         the MyStepUp profile page
     """
     product = get_object_or_404(Product, pk=product_id)
-    wishlist = WishListItem.objects.filter(user=request.user.id)
+    try:
+        wishlistitem = get_object_or_404(WishListItem, user=request.user.id)
 
-    if product in wishlist.product.all():
-        messages.error(request, 'This item is already in your Wishlist')
-
+    except Http404:
+        wishlistitem = WishListItem.objects.create(user=request.user)
+    if product in wishlistitem.product.all():
+        messages.info(request, 'Your Wishlist contains this product already,')
     else:
-        new_add = WishListItem.objects.create(user=request.user)
-        new_add.products.add(product)
-        messages.success(
-            request, f'Added {product.name[:30]}.. to your favourites'
+        wishlistitem.product.add(product)
+        messages.info(
+            request, f'Added {product.name[:30]}.. to your Wishlist.'
         )
     return redirect(reverse('product_detail', args=[product_id]))
 
@@ -85,16 +85,17 @@ def add_to_wishlist(request, product_id):
 @login_required
 def remove_from_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    wishlist = WishListItem.objects.filter(user=request.user.id)
-
-    if product not in wishlist.product.all():
-        messages.error(request, 'This item is not in your Wishlist')
-    else:
-        wishlist.product.remove(product)
-        messages.success(
-            request, f'Removed {product.name[:30]}.. from your Wishlist'
+    wishlistitem = get_object_or_404(WishListItem, user=request.user.id)
+    if product in wishlistitem.product.all():
+        wishlistitem.product.remove(product)
+        messages.info(
+            request, f'Removed {product.name[:30]} from your Wishlist'
         )
-        return render(request.path)
+    else:
+        messages.error(request, f'{product.name[:30]}.. is '
+                                'not in your Wishlist.')
+
+    return redirect(request.META.get('HTTP_REFERER'))
 
 
 def order_history(request, order_number):
