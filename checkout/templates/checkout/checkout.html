@@ -19,20 +19,18 @@
         <div class="row">
             <div class="col">
                 <h2 class="logo-font mb-4">Checkout</h2>
-                {% if is_mobile %}
-                <h1>PANT!</h1>
-                {% endif %}
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-
+            {% if is_mobile %}
                 <a href="#" role="button" id="order-s-toggler" class="text-orange" data-toggle="collapse" data-target="#order-summary" aria-expanded="false" aria-controls="orderSummary">Order Summary ({{ product_count }}) <i class="fas fa-angle-down"></i></a>
                 <div id="order-summary" class="collapse">
-
-                    <p class="text-white">Order Summary ({{ product_count }})</p>
+            {% else %}
+                <p class="text-white">Order Summary ({{ product_count }})</p>
+            {% endif %}
                     <div class="row">
                         <div class="col-7 offset-2">
                             <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -75,7 +73,9 @@
                             <p class="my-0 text-orange lead font-weight-bold"><strong>${{ grand_total | floatformat:2 }}</strong></p>
                         </div>
                     </div>
+                    {% if is_mobile %}
                 </div>
+                {% endif %}
             </div>
             <div class="col-12 col-lg-6">
                 <p class="text-white">Please fill out the form below to complete your order</p>

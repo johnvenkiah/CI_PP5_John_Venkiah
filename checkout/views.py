@@ -21,7 +21,11 @@ import json
 
 def mobile(request):
     """
-    Return True if the request comes from a mobile device.
+    Function returns True if the request comes from a mobile device.
+    Credits: https://stackoverflow.com/questions/42273319/'
+        'detect-mobile-devices-with-django-and-python-3
+
+    Args: request (the request object)
     """
 
     MOBILE_AGENT_RE=re.compile(
