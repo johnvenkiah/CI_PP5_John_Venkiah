@@ -27,23 +27,23 @@
                 {% if not wishlist_items %}
                     <p class="text-white">No items in your Wishlist</p>
                 {% else %}
-                    {% for product in wishlist_items %}
+                    {% for item in wishlist_items %}
                     <div class="row">
-                        {% for product in products %}
+                        {% for item in products %}
                             <div class="product-height col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="card h-100">
-                                    <a class="products-link" href="{% url 'product_detail' product.id %}">
-                                        <p class="mb-0 product-title text-orange">{{ product.name }}</p>
-                                        {% if product.discount %}
-                                            <p class="sale-label text-shadow">Save €{{ product.discount }}!</p>
+                                    <a class="products-link" href="{% url 'product_detail' item.id %}">
+                                        <p class="mb-0 product-title text-orange">{{ item.name }}</p>
+                                        {% if item.discount %}
+                                            <p class="sale-label text-shadow">Save €{{ item.discount }}!</p>
                                         {% endif %}
-                                        {% if product.is_new %}
-                                            <p class="sale-label text-shadow label-new{% if product.discount %} lower-label{% endif %}">NEW!</p>
+                                        {% if item.is_new %}
+                                            <p class="sale-label text-shadow label-new{% if item.discount %} lower-label{% endif %}">NEW!</p>
                                         {% endif %}
-                                    {% if product.image %}
-                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    {% if item.image %}
+                                        <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
                                     {% else %}
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.name }}">
                                         {% endif %}
                                     </a>
                                     <div class="card-body pb-0 pt-2">
@@ -52,15 +52,15 @@
                                         <div class="row">
                                             <div class="col-6 px-0 text-left">
                                                 <p class="text-orange lead mb-0">
-                                                    {% if product.initial_price %}
-                                                        <small><del class="text-muted">€{{ product.initial_price }} </del></small>
+                                                    {% if item.initial_price %}
+                                                        <small><del class="text-muted">€{{ item.initial_price }} </del></small>
                                                     {% endif %}
-                                                    <span class="font-weight-bold">€{{ product.price }}</span>
+                                                    <span class="font-weight-bold">€{{ item.price }}</span>
                                                 </p>
                                             </div>
                                             <div class="col-6 px-0 text-right">
-                                                {% if product.rating %}
-                                                    <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ product.rating|floatformat:1 }} / 5</small>
+                                                {% if item.rating %}
+                                                    <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ item.rating|floatformat:1 }} / 5</small>
                                                 {% else %}
                                                     <small class="text-muted">No Rating</small>
                                                 {% endif %}
@@ -68,31 +68,28 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-6 px-0 text-left align-self-end">
-                                                {% if product.gender or product.category %}
+                                                {% if item.gender or item.category %}
                                                     <p class="small mt-1 mb-0">
-                                                        {% if product.gender %}
-                                                            <a class="text-orange" href="{% if product.gender == 'u' %}{% url 'products' %}{% else %}{% url 'products' %}?gender={{ product.gender }},u{% endif %}">
-                                                                {{ product.get_gender_display }}
+                                                        {% if item.gender %}
+                                                            <a class="text-orange" href="{% if item.gender == 'u' %}{% url 'products' %}{% else %}{% url 'products' %}?gender={{ item.gender }},u{% endif %}">
+                                                                {{ item.get_gender_display }}
                                                             </a> | 
                                                         {% endif %}
-                                                        {% if product.category %}
-                                                            <a class="text-orange" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                                {{ product.category.friendly_name }}
+                                                        {% if item.category %}
+                                                            <a class="text-orange" href="{% url 'products' %}?category={{ item.category.name }}">
+                                                                {{ item.category.friendly_name }}
                                                             </a>
                                                         {% endif %}
                                                     </p>
                                                 {% endif %}
                                             </div>
                                             <div class="col-6 px-0 text-right">
-                                                {% if request.user.is_superuser %}
                                                     <small class="ml-3">
-                                                        <a href="{% url 'edit_product' product.id %}" class="btn text-orange product-edit-link">Edit</a>
-                                                    <!-- Button triggers the delete product modal -->
-                                                    <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#deleteProductModal{{ product.id }}">
-                                                        Delete
-                                                    </button>
+                                                        <!-- Button triggers the remove from wishlist product modal -->
+                                                        <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#removeFromWishListModal{{ item.id }}">
+                                                            Remove from Wishlist
+                                                        </button>
                                                     </small>
-                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>
@@ -120,14 +117,14 @@
                             {% endif %}
                             
                             <!-- Delete product modal -->
-                            {% include 'products/includes/delete_product_modal.html' %}
+                            {% include 'profiles/includes/remove_from_wishlist_modal.html' %}
                         {% endfor %}
                     </div>
                     {% endfor %}
                 {% endif %}
             </div>
             <div class="col-12 col-lg-6 mt-4">
-                <p class="text-orange my-3">Default Delivery Information</p>
+                <h4 class="text-orange my-3">Default Delivery Information</h4>
                 <form class="mt-3" action="{% url 'my_stepup' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -135,7 +132,7 @@
                 </form>
             </div>
             <div class="col-12 col-lg-6 mt-4">
-                <p class="text-orange my-3">Order History</p>
+                <h4 class="text-orange my-3">Order History</h4>
                 <div class="order-history table-responsive">
                     <table class="table table-sm table-borderless">
                         <thead>
@@ -160,9 +157,9 @@
                                         <ul class="list-unstyled text-white">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small text-white">
-                                                    {% if item.product.has_sizes %}
-                                                        Size {{ item.product.size }}
-                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                    {% if item.item.has_sizes %}
+                                                        Size {{ item.item.size }}
+                                                    {% endif %}{{ item.item.name }} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}
                                         </ul>

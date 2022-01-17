@@ -237,7 +237,7 @@ The following models have been used to populate the database and for the site to
 
 * **LineItem** - a model holding the product information for a single product, binding the product model together with the order
 
-* **WishListAdd** - the customer has the option to save an item, which will then appear in their wish list on the My StepUp page
+* **WishListItem** - the customer has the option to save an item, which will then appear in their wish list on the My StepUp page
 
 ### Scope - Epics and User Stories
 

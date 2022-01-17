@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import UserProfile, WishListAdd
+from .models import UserProfile, WishListItem
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -9,16 +9,26 @@ from checkout.models import Order
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """
+    Allows users to view and edit their info and Wishlist,
+    as well as viewing their order history.
+    Args:
+        request (the request object)
+    Returns:
+        the MyStepUp profile page
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     try:
-        wishlist = WishListAdd.objects.filter(user=request.user)
+        wishlist = WishListItem.objects.filter(user=request.user.id)[0]
+        if not wishlist:
+            wishlist_items = None
     except IndexError:
         messages.error(
+            request,
             'Sorry, we were not able to retrieve your wishlist at the moment'
         )
-        wishlist = None
+        wishlist_items = None
     else:
         wishlist_items = wishlist.products.all()
 
@@ -28,9 +38,10 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request,
-                           ('Update failed. Please ensure '
-                            'the form is valid.'))
+            messages.error(
+                request,
+                'Update failed. Please ensure the form is valid.'
+            )
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -44,6 +55,46 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def add_to_wishlist(request, product_id):
+    """
+    Adds the product to the users Wishlist.
+    Args:
+        request (the request object)
+        product_id (the product in question)
+    Returns:
+        the MyStepUp profile page
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist = WishListItem.objects.filter(user=request.user.id)
+
+    if product in wishlist.product.all():
+        messages.error(request, 'This item is already in your Wishlist')
+
+    else:
+        new_add = WishListItem.objects.create(user=request.user)
+        new_add.products.add(product)
+        messages.success(
+            request, f'Added {product.name[:30]}.. to your favourites'
+        )
+    return redirect(reverse('product_detail', args=[product_id]))
+
+
+@login_required
+def remove_from_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist = WishListItem.objects.filter(user=request.user.id)
+
+    if product not in wishlist.product.all():
+        messages.error(request, 'This item is not in your Wishlist')
+    else:
+        wishlist.product.remove(product)
+        messages.success(
+            request, f'Removed {product.name[:30]}.. from your Wishlist'
+        )
+        return render(request.path)
 
 
 def order_history(request, order_number):
