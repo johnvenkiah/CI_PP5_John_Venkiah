@@ -376,6 +376,7 @@ def manage_brands(request):
 
     template = 'products/manage_brands.html'
     context = {
+        'brands': brands,
         'brand_context': (zip(brands, form_set)),
         'current_sorting': current_sorting,
     }
