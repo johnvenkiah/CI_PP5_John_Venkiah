@@ -593,7 +593,6 @@ input.form-control,
 select.form-control {
     border-radius: 50px;
     -moz-border-radius: 50px;
-    -webkit-border-radius: 50px !important;
 }
 
 textarea.form-control {
@@ -746,6 +745,11 @@ textarea.form-control {
 
 .small {
     color: #fff !important;
+}
+
+.txt-red {
+    color: #f74c5c;
+    text-shadow: 0 0 5px black;
 }
 
 .product-edit-link {

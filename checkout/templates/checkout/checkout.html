@@ -26,10 +26,10 @@
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
             {% if is_mobile %}
-                <a href="#" role="button" id="order-s-toggler" class="text-orange" data-toggle="collapse" data-target="#order-summary" aria-expanded="false" aria-controls="orderSummary">Order Summary ({{ product_count }}) <i class="fas fa-angle-down"></i></a>
+                <a href="#" role="button" id="order-s-toggler" class="text-orange" data-toggle="collapse" data-target="#order-summary" aria-expanded="false" aria-controls="orderSummary">Order Summary ({{ product_count }}) <i class="fas fa-angle-down"></i><span class="float-right">Grand Total: €{{ grand_total }}</span></a>
                 <div id="order-summary" class="collapse">
             {% else %}
-                <p class="text-white">Order Summary ({{ product_count }})</p>
+                <p class="text-orange">Order Summary ({{ product_count }})</p>
             {% endif %}
                     <div class="row">
                         <div class="col-7 offset-2">
@@ -61,16 +61,14 @@
                     </a>
                     {% endfor %}
                     <hr class="my-3">
-                    <div class="row text-black text-right">
-                        <div class="col-7 offset-2">
-                            <p class="my-0">Order Total:</p>
-                            <p class="my-0">Delivery:</p>
-                            <p class="my-0 lead font-weight-bold">Grand Total:</p>
-                        </div>
-                        <div class="col-3">
-                            <p class="my-0">${{ total | floatformat:2 }}</p>
-                            <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                            <p class="my-0 text-orange lead font-weight-bold"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    <div class="row text-black">
+                        <div class="col-4">
+                            <a href="{% url 'view_cart' %}" class="btn btn-blue">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="font-weight-bold">Adjust Cart</span>
+                            </a>
                         </div>
                     </div>
                     {% if is_mobile %}
@@ -108,6 +106,18 @@
 							{% endif %}
 						</div>
                     </fieldset>
+                    <div class="row text-right mr-2">
+                        <div class="col">
+                            <p class="my-0">Order Total:</p>
+                            <p class="my-0">Delivery:</p>
+                            <p class="my-0 lead font-weight-bold">Grand Total:</p>
+                        </div>
+                        <div class="col-auto">
+                            <p class="my-0">${{ total | floatformat:2 }}</p>
+                            <p class="my-0">${{ delivery | floatformat:2 }}</p>
+                            <p class="my-0 text-orange lead font-weight-bold"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        </div>
+                    </div>
                     <fieldset class="px-3">
                         <legend class="fieldset-label text-orange px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
@@ -118,20 +128,14 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_cart' %}" class="btn btn-blue">
-							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
-							</span>
-							<span class="font-weight-bold">Update Cart</span>
-						</a>
-						<button id="submit-button" class="btn btn-orange">
+                    <div class="submit-button text-right mt-5 mb-2 mr-3">                    
+						<button id="submit-button" class="btn btn-orange btn-lg">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
 						</button>
-						<p class="small text-danger my-0">
+						<p class="txt-red m-2">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
