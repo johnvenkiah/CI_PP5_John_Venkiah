@@ -139,7 +139,7 @@ p {
     background-color: #ca76107c;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7) !important;
 }
-s
+
 .btn-trans, .input-btn {
     background: linear-gradient(45deg, #2125294a 50%, rgb(21 93 171 / 25%) 50%);
     border: 1px solid #ced4da !important;
@@ -147,8 +147,7 @@ s
 }
 
 .btn-trans:hover,
-.btn-trans:active,
-.btn-trans:focus {
+.btn-trans:active {
     background-color: linear-gradient(#ffaa42b9, #e17c008c);
     color: #fff;
 }
@@ -552,16 +551,14 @@ button:focus {
     text-align: center;
 }
 
-.input-group-append .btn:hover,
-.input-group-prepend .btn:hover,
-.input-group-append .btn:focus,
-.input-group-prepend .btn:focus,
-.input-group-append .btn:active,
-.input-group-prepend .btn:active,
-.input-group-append .btn:focus-visible {
-    background: linear-gradient(45deg, #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
+.input-group-append .btn:hover:not([disabled]),
+.input-group-prepend .btn:hover:not([disabled]),
+.input-group-append .btn:active:not([disabled]),
+.input-group-prepend .btn:active:not([disabled]),
+.input-group-append .btn:focus-visible:not([disabled]) {
+    background-color: #ff9c00 !important;
     text-shadow: 0.4px 0.4px 3px black;
-    border: 1px solid #b969068c;
+    border: 1px solid #b969068c !important;
     transition: all .2s ease-in-out;
 }
 
