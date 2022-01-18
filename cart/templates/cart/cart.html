@@ -36,8 +36,8 @@
                                     <button class="btn-block update-link btn product-edit-link text-orange" aria-label="Update cart"><small>Update</small></button>
                                 </div>
                                 <div class="col-6 order-sm-last">
-                                    <p class="my-0 text-orange">Price Each: <span class="d-block float-right">${{ item.product.price }}</span></p>
-                                    <p class="text-orange mb-o8"><strong>Subtotal: </strong><span class="d-block float-right">${{ item.product.price | calc_subtotal:item.quantity }}</span></p>
+                                    <p class="my-0 text-orange">Price Each: <span class="d-block float-right">€{{ item.product.price }}</span></p>
+                                    <p class="text-orange mb-o8"><strong>Subtotal: </strong><span class="d-block float-right">€{{ item.product.price | calc_subtotal:item.quantity }}</span></p>
                                     <button class="remove-item btn product-edit-link text-danger float-right my-0" aria-label="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></button>
                                 </div>
                             </div>
@@ -76,14 +76,14 @@
                                         {% include "cart/product-info.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0 text-orange text-center">${{ item.product.price }}</p>
+                                        <p class="my-0 text-orange text-center">€{{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3">
                                         {% include "cart/quantity-form.html" %}
                                             <button class="btn-block update-link btn product-edit-link text-orange" aria-label="Update cart"><small>Update</small></button>
                                     </td>
                                     <td class="py-3 text-right">
-                                        <p class="my-0 text-orange">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0 text-orange">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                         <button class="remove-item btn product-edit-link text-danger" aria-label="Remove item from cart" title="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></button>
                                     </td>
                                 </tr>
