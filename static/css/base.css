@@ -193,13 +193,14 @@ p {
 }
 
 .btn-blue {
-    background: linear-gradient(45deg, #0500b6 50%, #2134c9 50%);
-    color: #fff;
-    border: 1px solid #002f9f;
+    background: linear-gradient(
+        45deg, #001f698c, #0058e18c 50%, #276eddb9 50%, #68a1ff);
+    color: white;
+    border: 1px solid #003d8b;
 }
 
 .btn-red {
-    background: linear-gradient(45deg, darkred 50%, #af2800 50%);
+    background: linear-gradient(45deg, #6400008c, #e100008c 50%, #dd2727b9 50%, #ff6868);
     color: #fff;
     border: 1px solid darkred;
 }
@@ -333,10 +334,6 @@ input[name='q']::placeholder {
     color: #738292;
 }
 
-.allauth-form-inner-content button {
-    background-color: #e17c008c;
-    transition: all .2s ease-in-out;
-}
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
 	display: inline-block;
@@ -912,6 +909,7 @@ textarea.form-control {
 
 .hi-z {
     z-index: 10000;
+    position: relative;
 }
 
 .h-0 {

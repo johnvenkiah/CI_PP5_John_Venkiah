@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div class="modal--overlay"></div>
     <div class="container sign-in-container header-container">
         <div class="row">
             <div class="col-12 col-md-8 mt-4 mx-auto">
-                {% include '../includes/main-logo-mobile.html' %}
-                <div class="allauth-form-inner-content dialog bg-trans-dark">
+                <div class="allauth-form-inner-content hi-z dialog bg-trans-dark">
                     {% block inner_content %}
                     {% endblock %}
                 </div>
