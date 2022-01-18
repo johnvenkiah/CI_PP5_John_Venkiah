@@ -85,7 +85,7 @@ hr {
     font-size: 1.25rem;
     font-weight: bold;
     letter-spacing: .1rem;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
+    text-shadow: 0 0 10px rgb(0 0 0), 0.5px 0.5px 3px black;
 
 }
 
@@ -493,7 +493,7 @@ button:focus {
     outline: 1px #df9c4b auto;
 }
 
-.navbar-expand-lg > li, .navbar-expand-lg > h1 {
+.navbar-expand-lg > li {
     width: 50%;
 }
 
@@ -1009,6 +1009,10 @@ textarea.form-control {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .main-logo-link {
+        padding: 0.4em;
     }
 
     .nav-link {
