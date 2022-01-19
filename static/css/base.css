@@ -331,14 +331,6 @@ input[name='q']::placeholder {
     border-color: rgb(255, 255, 255, .5);
 }
 
-.allauth-form-inner-content a, footer a {
-    color: #ffaa42;
-}
-
-.sign-in-container {
-    width: 50vw;
-}
-
 .login li {
     list-style-type: none;
 }
@@ -865,6 +857,19 @@ textarea.form-control {
 /* MAIL CHIMP SIGNUP FORM */
 #mc_embed_signup form {
     padding: 0 !important;
+}
+
+/* POLICIES MODALS */
+
+.modal-body.bg-white {
+    max-height: 60vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+    color: black;
+}
+
+.modal-body.bg-white p {
+    color: black;
 }
 
 /* MEDIA QUERIES: SMALLER MOBILE DEVICES */
