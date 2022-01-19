@@ -24,7 +24,6 @@ class HomeView(TemplateView):
     Class to display the landing page of the site, index.html.
     """
     template_name = 'home/index.html'
-    form = ContactForm
 
 
 class CustomPasswordChangeView(PasswordChangeView):
@@ -47,7 +46,7 @@ class ContactView(FormView):
     """
     View for contact page
     """
-
+    template_name = 'contact.html'
     model = User
     form_class = ContactForm
     success_url = '/'

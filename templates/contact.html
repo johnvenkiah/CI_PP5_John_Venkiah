@@ -1,0 +1,38 @@
+{% extends "account/base.html" %}
+
+{% block content %}
+<div class="modal--overlay"></div>
+<div class="modal-dialog modal-dialog-centered hi-z">
+    <div class="modal-content m-2">
+        <div class="modal-header">
+            <h2 class="modal-title text-orange font-weight-bold">Contact</h2>
+            <a href="{{ request.META.HTTP_REFERER }}" class="close text-white" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </a>
+        </div>
+        <form method="POST" action="{% url 'contact' %}" class="form mb-2">
+            <div class="modal-body">
+                {% csrf_token %}
+                {{ contact_form|crispy }}
+            </div>
+            <div class="row px-3">
+                <div class="col-6">
+                    {% url 'contact' as contact_url %}
+                    {% if not contact_url in request.META.HTTP_REFERER %}
+                    <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-block btn-grey text-white">
+                        Cancel
+                    </a>
+                    {% else %}
+                    <a href="{% url 'home' %}" class="btn btn-block btn-grey text-white">
+                        Home
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-block btn btn-orange" type="submit">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
