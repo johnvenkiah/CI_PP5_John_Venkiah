@@ -29,14 +29,15 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
+                        <p class="text-white mt-3">
                             {{ brands|length }} Brands
+                            <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" aria-label="Add new brand"><i class="fas fa-plus"></i></a>
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     {% for brand, form in brand_context %}
-                        <div class="col-4 col-md-3 col-lg-2">
+                        <div class="col-6 col-md-3 col-lg-2">
                             <div class="card mb-2">
                                 <div class="mb-2">
                                     <p class="mb-0 product-title text-orange">{{ brand.friendly_name }}</p>
