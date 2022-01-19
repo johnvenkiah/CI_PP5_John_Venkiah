@@ -130,11 +130,14 @@ p {
     background: linear-gradient(45deg, #2125294a 50%, rgb(21 93 171 / 25%) 50%);
     border: 1px solid #ced4da !important;
     color: white;
+    transition: all .3s;
 }
 
 .btn-trans:hover,
-.btn-trans:active {
-    background-color: linear-gradient(#ffaa42b9, #e17c008c);
+.btn-trans:active,
+#mc-embedded-subscribe:hover,
+#mc-embedded-subscribe:active {
+    background-color: #f0a345e7;
     color: #fff;
 }
 
@@ -870,6 +873,23 @@ textarea.form-control {
 
 .modal-body.bg-white p {
     color: black;
+}
+
+#mc-embedded-subscribe {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding: 3px 10px;
+    margin-left: -7px;
+}
+
+#mc_embed_signup input.email {
+    border-top-left-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    -webkit-border-top-left-radius: 25px !important;
+    -webkit-border-bottom-left-radius: 25px !important;
+    font-family: Anaheim, sans-serif !important;
+    padding-left: .8em !important;
+    margin-bottom: 10px;
 }
 
 /* MEDIA QUERIES: SMALLER MOBILE DEVICES */
