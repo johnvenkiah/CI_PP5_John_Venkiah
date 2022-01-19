@@ -116,17 +116,17 @@
                                         <i class="fas fa-shopping-cart"></i>
                                     </div>
                                     <span class="my-0">
-                                        Cart
+                                        Cart {% if not grand_total %}(€0.00){% endif %}
                                     </span>
-                                        {% if grand_total %}
-                                            <span class="btn-orange grand-total">€{{ grand_total|floatformat:2 }}</span>
-                                        {% else %}
-                                            (€0.00)
-                                        {% endif %}
                                 </div>
                             </a>
                         </li>
                     </ul>
+                    {% if grand_total %}
+                    <a href="{% url 'view_cart' %}" class="ml-auto btn-orange btn grand-total">
+                        €{{ grand_total|floatformat:2 }}
+                    </a>
+                    {% endif %}
                 </div>
             </div>
             <div class="row">
@@ -186,92 +186,7 @@
 
         {% block postloadjs %}
 
-        <script type="text/javascript">
-            
-            $(document).ready(function(){
-                $('.toast').toast('show');
-            
-                // Change background color of navbar and menu if toggler is clicked on
-                $(".navbar-toggler").click(function() {
-                    $(".bg-nav").css({
-                        'background-color': '#04142f80'
-                    }).toggleClass('blur-filter');
-                    $('.navbar-nav').toggleClass('d-md-none');
-                })
-
-                // Make products menu visible if Products menu item is clicked on
-                $("#products-link").click(function() {
-                    $(".bg-nav").css({
-                        'background-color': '#04142f80'
-                    }).toggleClass('blur-filter');
-                    $('.navbar-nav').toggleClass('d-md-none');
-                })
-
-                $(window).resize(function() {
-                    $('.navbar-nav').addClass('d-md-none');
-                    $('.navbar-collapse').removeClass('show');
-                });
-
-                $(document).click(function (event) {
-                    var clickover = $(event.target);
-                    var _opened = $(".navbar-collapse").hasClass("show");
-                    if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-                        $(".navbar-toggler").click()
-                        $('.navbar-nav').addClass('d-md-none');
-                    }
-                });
-            
-                // Hide Header on on scroll down
-                let didScroll;
-                let lastScrollTop = 0;
-                let delta = 30;
-                let navbarHeight = $('.navbar').outerHeight();
-
-                $(window).scroll(function(event){
-                    didScroll = true;
-                });
-        
-                setInterval(function() {
-                    if (didScroll) {
-                        hasScrolled();
-                        didScroll = false;
-                    }
-                }, 250);
-
-                function hasScrolled() {
-                    var st = $(this).scrollTop();
-                    
-                    // Do nothing if scroll is less than delta
-                    if(Math.abs(lastScrollTop - st) <= delta)
-                        return;
-                    
-                    // If they scrolled passed navbar, hide relevant classes.
-                    if (st > lastScrollTop && st > navbarHeight) {
-                        // Scroll Down
-                        $('.hide-items').addClass('hide').removeClass('hide-items');
-                        $('.hide-2').addClass('hide-items-2').removeClass('hide-2');
-                        $('.btt-button').fadeOut();
-                    
-                        // If nav menu is not showing, change the navbar to transparent
-                        if (!$('#products-nav').hasClass('show')) {
-                            $('.bg-nav').css({'background-color': 'transparent'});
-                            $('.grand-total, .nav-link.btn-orange').css({'opacity': '0'});
-                        }
-                    } else {
-                        // Scroll Up
-                        if(st + $(window).height() < $(document).height()) {
-                            $('.hide-items-2').addClass('hide-2').removeClass('hide-items-2');
-                            $('.hide').addClass('hide-items').removeClass('hide');
-                            $('.bg-nav').css({'background-color': '#04142f80'});
-                            $('.grand-total, .nav-link.btn-orange').css({'opacity': '1'});
-                            $('.btt-button').fadeIn();
-                        }
-                    }
-                    
-                    lastScrollTop = st;
-                }
-            });
-        </script>
+        <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
 
         {% endblock %}
     </body>

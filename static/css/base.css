@@ -226,10 +226,11 @@ p {
     padding-left: 5px;
     border: 1px solid #ced4da;
     border-radius: 40px 3px 3px 3px;
+    transition: all .2s ease-in-out;
 }
 
 .btt-button:hover {
-    background: linear-gradient(45deg, #e17c00 50%, #ffa73a 50%);
+    background-color: #ed9b36;
 }
 
 .btt-link,
@@ -946,7 +947,7 @@ textarea.form-control {
 
     .grand-total {
         right: 3rem;
-        padding: 5px 12px 2px;
+        /* padding: 5px 12px 2px; */
     }
 }
 
@@ -988,10 +989,9 @@ textarea.form-control {
     }
 
     .grand-total {
-        position: relative;
-        right: 0;
-        padding: 5px 10px;
-        top: 3rem !important;
+        right: 1.2rem;
+        /* padding 5px 10px; */
+        top: 1.2rem !important;
     }
 }
 
