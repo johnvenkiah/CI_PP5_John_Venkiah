@@ -53,6 +53,7 @@ h1:hover, a:hover {
 
 h2, .nav-link {
     font-family: 'Abel', sans-serif;
+    text-transform: uppercase;
 }
 
 h2.logo-font {
@@ -131,7 +132,7 @@ p {
         , #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
     box-shadow: 0 0 5px black;
     border-radius: 15px;
-    border: 2px solid white;
+    border: 1px solid white;
 }
 
 .main-logo-link:hover,
@@ -275,24 +276,16 @@ input[name='q']::placeholder {
     color: #2db300 !important;
 }
 
-.border-danger {
-    border-bottom-color: #dc3545 !important;
+.border-error {
+    border-color: #dc3545 !important;
 }
 
 .border-warning {
-    border-bottom-color: #ffc107 !important;
+    border-color: #ffc107 !important;
 }
 
 .border-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
+    border-color: #17a2b8 !important;
 }
 
 .cart-notification-wrapper {
@@ -654,10 +647,9 @@ textarea.form-control {
 /* PRODUCTS */
 
 .products-link {
-    height: 67%;
-    max-height: 67%;
+    height: 100%;
+    overflow: hidden;
     max-width: 100%;
-    margin-bottom: 3rem;
 }
 
 .card-img-top {

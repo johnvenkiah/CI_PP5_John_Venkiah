@@ -10,9 +10,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col text-center mt-3">
+            <div class="col mt-3">
                 <h2 class="logo-font">Products</h2>
                 {% if gender and 'u' not in gender %}
                     <a href="{% url 'products' %}?gender={% for g in gender %}{{ g }}{% if not forloop.last %},{% endif %}{% endfor %}">
@@ -22,7 +22,7 @@
                 {% if brands %}
                     {% for b in brands %}
                         <a href="{% url 'products' %}?brand={{ b }}">
-                            {% if b.image or b.image_url %}
+                            {% if b.image %}
                                 <img class="max-100" src="{{ b.image.url }}" alt="{{ b.friendly_name }}-logo">
                             {% else %}
                                 <small class="p-2 mt-2 product-edit-link">{{ b.friendly_name }}</small>
@@ -35,7 +35,7 @@
                         <small class="p-2 mt-2 product-edit-link">{{ c.friendly_name }}</small>
                     </a>
                 {% endfor %}
-                <hr class="w-50 mb-1">
+                <hr class="mb-1">
             </div>
         </div>
         <div class="row">

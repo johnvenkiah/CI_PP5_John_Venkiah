@@ -10,11 +10,11 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col text-center mt-3">
+            <div class="col mt-3">
                 <h2 class="logo-font">Manage Brands</h2>
-                <hr class="w-50 mb-1">
+                <hr class="mb-1">
             </div>
         </div>
         <div class="row">
@@ -31,7 +31,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-white mt-3">
                             {{ brands|length }} Brands
-                            <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" aria-label="Add new brand"><i class="fas fa-plus"></i></a>
+                            <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" title="Add New Brand" aria-label="Add new brand"><i class="fas fa-plus"></i></a>
                         </p>
                     </div>
                 </div>
@@ -41,8 +41,8 @@
                             <div class="card mb-2">
                                 <div class="mb-2">
                                     <p class="mb-0 product-title text-orange">{{ brand.friendly_name }}</p>
-                                    {% if brand.image_url or brand.image.url %}
-                                        <img class="brand-img img-fluid mb-1" src="{% if brand.image.url %}{{ brand.image.url }}{% else %}{{ brand.image_url }}{% endif %}" alt="{{ brand.friendly_name }}">
+                                    {% if brand.image %}
+                                        <img class="brand-img img-fluid mb-1" src="{{ brand.image.url }}" alt="{{ brand.friendly_name }}">
                                     {% else %}
                                         <div class="brand-img bg-white mb-1">
                                             <p class="text-center text-muted">

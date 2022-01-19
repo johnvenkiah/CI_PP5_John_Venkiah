@@ -23,6 +23,7 @@ class HomeView(TemplateView):
     """
     Class to display the landing page of the site, index.html.
     """
+
     template_name = 'home/index.html'
 
 
@@ -39,7 +40,7 @@ class CustomPasswordChangeView(PasswordChangeView):
     -override-of-success-url-with-logged-out-user
     """
 
-    success_url = reverse_lazy('home')  # <- choose your URL
+    success_url = reverse_lazy('home')
 
 
 class ContactView(FormView):

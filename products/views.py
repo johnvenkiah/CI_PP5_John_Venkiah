@@ -150,8 +150,8 @@ def product_detail(request, product_id):
             review.save()
             messages.success(
                 request, (
-                    f'Thank yo for reviewing "{product.name[:25]}.."! '
-                    'You can now view and remove it in the list below.'
+                    f'Thank you for reviewing "{product.name[:25]}.."! '
+                    'You can now view and remove it below.'
                 )
             )
 
