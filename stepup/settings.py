@@ -81,6 +81,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'products.contexts.get_brands',
                 'cart.contexts.cart_contents',
+                'home.contexts.contact_form',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -205,6 +206,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True

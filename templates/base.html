@@ -179,10 +179,15 @@
     </div>
     <div class="col-12 text-center">
         <p class="pb-2 pb-md-0">
-            © 2021 Copyright John Venkiah | <a href="https://johnvenkiah.com/">johnvenkiah.com</a>
+            © 2021 Copyright John Venkiah | <a href="https://johnvenkiah.com/">johnvenkiah.com</a> |
+            <a href="{% url 'contact' %}"></a>
+            <a href="#" type="link" class="text-orange font-weight-bold" data-toggle="modal" data-target="#contactModal">
+                Contact
         </p>
     </div>
-  </footer>
+</footer>
+{% include 'includes/toasts/toast_success.html' %}
+{% include 'includes/contact-modal.html' %}
 
         {% block postloadjs %}
 
