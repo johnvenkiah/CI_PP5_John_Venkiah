@@ -163,7 +163,7 @@ p {
 .btn-orange {
     background: linear-gradient(45deg, #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
     color: white;
-    border: 1px solid #865d11;
+    border: 1px solid #865d11 !important;
     text-shadow: 0.4px 0.4px 3px black;
 }
 
@@ -577,12 +577,14 @@ footer {
 }
 
 input,
+input[type=email]
 input.form-control,
 .btn,
 .custom-select,
 select.form-control {
-    border-radius: 50px;
-    -moz-border-radius: 50px;
+    border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    -webkit-border-radius: 50px !important;
 }
 
 textarea.form-control {
@@ -914,6 +916,10 @@ textarea.form-control {
 .h-0 {
     height: 0 !important;
 }
+
+#mc_embed_signup form {
+    padding: 0 !important;
+  }
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .logo-font.nav-link {
