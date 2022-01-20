@@ -111,7 +111,7 @@ p {
 
 .main-logo-link {
     width: fit-content;
-    padding: 10px 14px;
+    padding: 10px 16px;
     text-shadow: 0 0 5px black;
     background: linear-gradient(
         45deg
@@ -544,7 +544,7 @@ footer {
 input,
 input[type=email]
 input.form-control,
-.btn:not(.increment-qty, .decrement-qty),
+.btn:not(.increment-qty, .decrement-qty, .product-edit-link),
 .custom-select,
 select.form-control {
     border-radius: 50px !important;
