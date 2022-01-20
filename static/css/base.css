@@ -34,7 +34,7 @@ h1:hover, a:hover {
     text-decoration: none;
 }
 
-h2, .nav-link {
+h2, .nav-link :not(h1) :not(i), #products-link {
     font-family: 'Abel', sans-serif;
     text-transform: uppercase;
 }
@@ -109,14 +109,14 @@ p {
 }
 
 .main-logo-link {
-    padding: 7px 0px 0px;
+    width: fit-content;
+    padding: 10px 14px;
     text-shadow: 0 0 5px black;
     background: linear-gradient(
         45deg
         , #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
     box-shadow: 0 0 5px black;
-    border-radius: 15px;
-    border: 1px solid white;
+    border-radius: 50px;
 }
 
 .main-logo-link:hover,

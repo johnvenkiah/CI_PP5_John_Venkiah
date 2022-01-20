@@ -10,9 +10,9 @@
     <div class="dropdown-menu w-100 p-3 mobile-search bg-nav my-0" aria-labelledby="mobile-search">
         <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100 input-left">
-                <input class="form-control" type="text" name="q" placeholder="Search our site">
+                <input class="form-control" type="text" name="q" placeholder="Search our site" aria-label="Enter search criteria here">
                 <div class="input-group-append">
-                    <button class="input-btn form-control form-control btn btn-trans" type="submit">
+                    <button class="input-btn form-control form-control btn btn-trans" type="submit" aria-label="Search our site">
                         <span class="icon">
                             <i class="fas fa-search"></i>
                         </span>
@@ -52,7 +52,7 @@
 
 <!-- Cart nav link -->
 <li class="list-inline-item">
-    <a class="nav-link d-block d-lg-none" href="{% url 'view_cart' %}" title="{% if grand_total %}Your cart grand total is {{ grand_total }}{% else %}Your cart is empty{% endif %}">
+    <a class="nav-link d-block d-lg-none" href="{% url 'view_cart' %}" title="{% if grand_total %}Your cart grand total is {{ grand_total }}{% else %}Your cart is empty{% endif %}" aria-labelledby="title">
         <div class="text-center">
             <div><i class="fas fa-shopping-cart fa-lg"></i>
             </div>
