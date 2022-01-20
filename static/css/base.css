@@ -511,12 +511,8 @@ button:focus {
     margin-top: 114px;
 }
 
-.shoe-icon {
-    opacity: .5;
-    height: 40px;
-    width: 40px;
-    filter: invert(1);
-    margin: 0 4px 6px;
+.input-left input {
+    border-radius: 20px 0 0 20px;
 }
 
 .input-group-append .btn, .input-group-prepend .btn {
