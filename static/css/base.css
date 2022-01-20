@@ -87,7 +87,7 @@ hr {
 
 .nav-link:hover, .navbar-toggler:hover {
     color: #ffaa42 !important;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 2px black;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0.5px 0.5px 7px black;
 }
 
 a, h1 {
@@ -129,26 +129,22 @@ p {
 .btn-trans, .input-btn {
     background: linear-gradient(45deg, #2125294a 50%, rgb(21 93 171 / 25%) 50%);
     border: 1px solid #ced4da !important;
-    color: white;
     transition: all .3s;
 }
 
 .btn-trans:hover,
-.btn-trans:active,
-#mc-embedded-subscribe:hover,
-#mc-embedded-subscribe:active {
+.btn-trans:active {
     background-color: #f0a345e7;
-    color: #fff;
 }
 
 .btn {
     border: 1px solid transparent;
     transition: all .2s ease-in-out;
+    color: white !important;
 }
 
 .btn-orange {
     background: linear-gradient(45deg, #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
-    color: white;
     border: 1px solid #865d11 !important;
     text-shadow: 0.4px 0.4px 3px black;
 }
@@ -157,25 +153,21 @@ p {
     background: linear-gradient(45deg, #646464b9 50%, #b1b1b18c 50%);
     text-shadow: 0.4px 0.4px 3px black;
     border: 1px solid #282621;
-    color: #fff;
 }
 
 .btn-grey:hover {
-    color: #fff;
     text-shadow: 0 0 8px #ffaa42, 1px 1px 3px black;
     box-shadow: 0 0 5px #ffaa42;
 }
 
 .btn-orange:hover, .btn-blue:hover {
     font-weight: bold;
-    color: #fff;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
     box-shadow: 0 0 5px white;
     /* background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589)); */
 }
 
 .btn-purple {
-    color: #fff;
     text-shadow: 0.4px 0.4px 3px black;
     background: linear-gradient(45deg, #540093b8, #972be98c 50%, #bd65ff8c 50%, #d69fff9c);
     border: 1px solid #3e006c;
@@ -184,19 +176,16 @@ p {
 .btn-blue {
     background: linear-gradient(
         45deg, #001f698c, #0058e18c 50%, #276eddb9 50%, #68a1ff);
-    color: white;
     border: 1px solid #003d8b;
 }
 
 .btn-red {
     background: linear-gradient(45deg, #6400008c, #e100008c 50%, #dd2727b9 50%, #ff6868);
-    color: #fff;
     border: 1px solid darkred;
 }
 
 .btn-red:hover {
     background-color: rgb(92, 0, 0);
-    color: #fff;
     text-shadow: 0 0 8px #d39191, 1px 1px 15px black;
     box-shadow: 0 0 5px #d39191;
 }
@@ -216,10 +205,6 @@ p {
     border: 1px solid #ced4da;
     border-radius: 40px 3px 3px 3px;
     transition: all .2s ease-in-out;
-}
-
-.btt-button:hover {
-    background-color: #ed9b36;
 }
 
 .btt-link,
@@ -329,7 +314,6 @@ input[name='q']::placeholder {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
     text-shadow: 0 0 5px black;
-    color: #fff;
     background-color: rgba(61, 5, 0, 0.521);
     border-color: rgb(255, 255, 255, .5);
 }
