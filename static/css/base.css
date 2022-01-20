@@ -26,6 +26,7 @@ body {
 
 h1 {
     font-weight: bold;
+    text-transform: none;
 }
 
 h1:hover, a:hover {
@@ -34,7 +35,7 @@ h1:hover, a:hover {
     text-decoration: none;
 }
 
-h2, .nav-link, .nav-link :not(h1) :not(i) {
+h2, .nav-link, .nav-link:not(i) {
     font-family: 'Abel', sans-serif !important;
     text-transform: uppercase;
 }
@@ -140,6 +141,9 @@ p {
 .btn {
     border: 1px solid transparent;
     transition: all .2s ease-in-out;
+}
+
+.btn:not(.product-edit-link) {
     color: white !important;
 }
 
@@ -540,7 +544,7 @@ footer {
 input,
 input[type=email]
 input.form-control,
-.btn,
+.btn:not(.increment-qty, .decrement-qty),
 .custom-select,
 select.form-control {
     border-radius: 50px !important;
@@ -745,6 +749,15 @@ textarea.form-control {
 .increment-qty {
     border-top-right-radius: 50px !important;
     border-bottom-right-radius: 50px !important;
+}
+
+.decrement-qty {
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+}
+
+.qty_input {
+    border-radius: 0 !important;
 }
 
 .increment-qty:hover:disabled, .decrement-qty:hover:disabled {
