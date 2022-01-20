@@ -518,6 +518,7 @@ button:focus {
 .input-group-append .btn, .input-group-prepend .btn {
     position: relative;
     z-index: 2;
+    padding: 0 .75rem;
 }
 
 .dialog {
