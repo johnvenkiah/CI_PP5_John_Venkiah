@@ -150,9 +150,8 @@ p {
 }
 
 .btn-grey {
-    background: linear-gradient(45deg, #646464b9 50%, #b1b1b18c 50%);
-    text-shadow: 0.4px 0.4px 3px black;
-    border: 1px solid #282621;
+    background: linear-gradient(45deg, #4b4b4b8c, #6d6d6d8c 50%, #706f84b9 50%, #a2a2a2);
+    border: 1px solid #484848;
 }
 
 .btn-grey:hover {
