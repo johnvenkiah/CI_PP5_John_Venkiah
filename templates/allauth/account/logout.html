@@ -13,8 +13,8 @@
             <h2 class="text-orange font-weight-bold">{% trans "Sign Out" %}</h2>
             <hr>
 
-            <p class="text-shadow pt-4">{% trans 'Thanks for your visit, we hope you found what you were looking for.' %}</p>
-            <p class="text-shadow pb-4">{% trans 'To proceed with signing out, click below.' %}</p>
+            <p class="text-shadow pt-4">{% trans 'Thank you for visiting StepUp!' %}</p>
+            <p class="text-shadow pb-4">{% trans 'Click below to proceed.' %}</p>
 
             <form method="post" action="{% url 'account_logout' %}">
                 {% csrf_token %}
@@ -25,7 +25,11 @@
                     <div class="col-6">
                         <!-- Get to the previous viewed page with request.META.HTTP_REFERER, credits below. -->
                         <!-- https://stackoverflow.com/questions/27325505/django-getting-previous-url -->
+                        {% if not request.path in request.META.HTTP_REFERER %}
                         <a class="btn btn-orange text-white btn-block" href="{{ request.META.HTTP_REFERER }}">Go Back</a>
+                        {% else %}
+                        <a class="btn btn-orange text-white btn-block" href="{% url 'home' %}">Home</a>
+                        {% endif %}
                     </div>
                     <div class="col-6">
                         <button type="submit" class="btn btn-blue btn-block">{% trans 'Sign Out' %}</button>

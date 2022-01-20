@@ -95,6 +95,7 @@ def remove_from_wishlist(request, product_id):
         messages.error(request, f'{product.name[:30]}.. is '
                                 'not in your Wishlist.')
 
+    # Return the previously viewed page
     return redirect(request.META.get('HTTP_REFERER'))
 
 
