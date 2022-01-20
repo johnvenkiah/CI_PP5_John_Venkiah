@@ -23,21 +23,21 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <h3 class="text-orange my-4">My Wishlist</h3>
+                <h3 class="text-orange my-4">My Wishlist ({{ wishlist_items|length}})</h3>
                 {% if not wishlist_items %}
                     <p class="text-white">No items in your Wishlist</p>
                 {% else %}
-                    <div class="row">
+                    <div class="row wishlist">
                         {% for item in wishlist_items %}
-                            <div class="product-height col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="card h-100">
+                            <div class="product-height col-6 col-md-4 col-lg-3 col-xl-2">
+                                <div class="card h-lg-100">
                                     <a class="products-link" href="{% url 'product_detail' item.id %}">
                                         <p class="mb-0 product-title text-orange">{{ item.name }}</p>
                                         {% if item.discount %}
-                                            <p class="sale-label text-shadow">Save €{{ item.discount }}!</p>
+                                            <small class="sale-label text-shadow mt-3">Save €{{ item.discount }}!</small>
                                         {% endif %}
                                         {% if item.is_new %}
-                                            <p class="sale-label text-shadow label-new{% if item.discount %} lower-label{% endif %}">NEW!</p>
+                                            <small class="sale-label text-shadow label-new{% if item.discount %} lower-label{% else %} mt-3{% endif %}">NEW!</small>
                                         {% endif %}
                                     {% if item.image %}
                                         <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
@@ -57,69 +57,21 @@
                                         <div class="row">
                                             <div class="col-6 px-0 text-left">
                                                 <p class="text-orange lead mb-0">
-                                                    {% if item.initial_price %}
-                                                        <small><del class="text-muted">€{{ item.initial_price }} </del></small>
-                                                    {% endif %}
                                                     <span class="font-weight-bold">€{{ item.price }}</span>
                                                 </p>
                                             </div>
                                             <div class="col-6 px-0 text-right">
-                                                {% if item.rating %}
-                                                    <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ item.rating|floatformat:1 }} / 5</small>
-                                                {% else %}
-                                                    <small class="text-muted">No Rating</small>
-                                                {% endif %}
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 px-0 text-left align-self-end">
-                                                {% if item.gender or item.category %}
-                                                    <p class="small mt-1 mb-0">
-                                                        {% if item.gender %}
-                                                            <a class="text-orange" href="{% if item.gender == 'u' %}{% url 'products' %}{% else %}{% url 'products' %}?gender={{ item.gender }},u{% endif %}">
-                                                                {{ item.get_gender_display }}
-                                                            </a> | 
-                                                        {% endif %}
-                                                        {% if item.category %}
-                                                            <a class="text-orange" href="{% url 'products' %}?category={{ item.category.name }}">
-                                                                {{ item.category.friendly_name }}
-                                                            </a>
-                                                        {% endif %}
-                                                    </p>
-                                                {% endif %}
-                                            </div>
-                                            <div class="col-6 px-0 text-right">
-                                                    <small class="ml-3">
-                                                        <!-- Button triggers the remove from wishlist product modal -->
-                                                        <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#removeFromWishListModal{{ item.id }}">
-                                                            Remove
-                                                        </button>
-                                                    </small>
+                                                <small class="ml-3">
+                                                    <!-- Button triggers the remove from wishlist product modal -->
+                                                    <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#removeFromWishListModal{{ item.id }}">
+                                                        Remove
+                                                    </button>
+                                                </small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {% if forloop.counter|divisibleby:1 %}
-                                <div class="col-12 d-sm-none mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}                        
-                            {% if forloop.counter|divisibleby:2 %}
-                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}
-                            {% if forloop.counter|divisibleby:3 %}
-                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}
-                            {% if forloop.counter|divisibleby:4 %}
-                                <div class="col-12 d-none d-xl-block mb-5">
-                                    <hr>
-                                </div>
-                            {% endif %}
                             
                             <!-- Delete product modal -->
                             {% include 'profiles/includes/remove_from_wishlist_modal.html' %}

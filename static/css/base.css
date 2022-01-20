@@ -511,10 +511,6 @@ button:focus {
     margin-top: 114px;
 }
 
-.input-left input {
-    border-radius: 20px 0 0 20px;
-}
-
 .input-group-append .btn, .input-group-prepend .btn {
     position: relative;
     z-index: 2;
@@ -568,14 +564,21 @@ input.form-control,
 .btn,
 .custom-select,
 select.form-control {
-    border-radius: 50px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
+    border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    -webkit-border-radius: 50px !important;
+}
+
+.input-left input {
+    border-radius: 20px 0 0 20px !important;
+}
+
+.input-left .btn {
+    border-radius: 0 20px 20px 0 !important;
 }
 
 textarea.form-control {
     border-radius: 15px;
-
 }
 
 /* PRODUCTS */
@@ -678,7 +681,7 @@ textarea.form-control {
     padding: 5px;
     line-height: initial;
     border: 1px solid #ffaa421f;
-    border-radius: 8px;
+    border-radius: 8px !important;
     background: transparent;
     transition: all .2s ease-in-out;
 }
@@ -830,6 +833,11 @@ textarea.form-control {
 .nav-link.btn-orange {
     color: #fff !important;
     margin-bottom: 9px;
+}
+
+.wishlist {
+    max-height: 45vh;
+    overflow-y: scroll;
 }
 
 /* A SIMULATED MODAL WITH OVERLAY.. */
@@ -1065,6 +1073,14 @@ textarea.form-control {
         width: 25%;
         margin-right: 0 !important;
     }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .product-height {
+        height: 320px;
+    }
 }
 
 /* MEDIA QUERIES: LARGE TABLETS */
@@ -1085,6 +1101,10 @@ textarea.form-control {
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+
+    .h-lg-100 {
+        height: 100% !important;
     }
 
     .header-container {
