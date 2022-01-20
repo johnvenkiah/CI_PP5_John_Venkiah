@@ -207,7 +207,9 @@ def add_product_brand(request):
 
             product_form.validate_initial_price()
             product.save()
-            messages.success(request, f'Successfully added {product.name}')
+            messages.success(
+                request, f'Successfully added {product.name} to Products'
+            )
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Add Product failed. \
@@ -248,7 +250,7 @@ def add_brand(request):
             brand.name = brand.generate_name()
             brand.save()
             messages.success(
-                request, f'Successfully added {brand.friendly_name}'
+                request, f'Successfully added {brand.friendly_name} to Brands'
             )
             return redirect(reverse('manage_brands'))
         else:
@@ -332,7 +334,7 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, f'Product "{product.name}" deleted!')
+    messages.success(request, f'Product "{product.name}" successfully deleted')
     return redirect(reverse('products'))
 
 
@@ -403,7 +405,9 @@ def update_brand(request, brand_id):
         form.save()
         brand.name = brand.generate_name()
         brand.save()
-        messages.success(request, f'Brand "{brand.friendly_name}" updated')
+        messages.success(
+            request, f'Brand "{brand.friendly_name}" successfully updated'
+        )
     else:
         form = BrandForm(request.POST, instance=brand)
         messages.error(
@@ -429,7 +433,9 @@ def delete_brand(request, brand_id):
 
     try:
         brand.delete()
-        messages.success(request, f'Brand "{brand.friendly_name}" deleted')
+        messages.success(
+            request, f'Brand "{brand.friendly_name}" successfully deleted'
+        )
 
     except Exception as e:  # pylint: disable=broad-except, invalid-name
         messages.error(request, f'Error removing brand: {e}')
