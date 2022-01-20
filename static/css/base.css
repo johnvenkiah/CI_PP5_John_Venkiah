@@ -34,8 +34,8 @@ h1:hover, a:hover {
     text-decoration: none;
 }
 
-h2, .nav-link :not(h1) :not(i), #products-link {
-    font-family: 'Abel', sans-serif;
+h2, .nav-link, .nav-link :not(h1) :not(i) {
+    font-family: 'Abel', sans-serif !important;
     text-transform: uppercase;
 }
 
@@ -393,12 +393,6 @@ input[name='q']::placeholder {
 
 .small-main-header p {
     color: white;
-}
-
-.subheading {
-    font-family: 'Bungee Hairline', cursive;
-    font-size: 1rem;
-    color: #fff;
 }
 
 .bg-trans-dark {
@@ -846,9 +840,9 @@ textarea.form-control {
     height: 0 !important;
 }
 
-/* MAIL CHIMP SIGNUP FORM */
-#mc_embed_signup form {
-    padding: 0 !important;
+.mw-lg {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 /* POLICIES MODALS */
