@@ -5,8 +5,8 @@
     </a>
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
-            <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="brand-{{ widget.checkbox_id }}">
-            <label class="custom-control-label text-danger" for="brand-{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
+            <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="brand-{{ widget.checkbox_id }}_{{ widget.value }}">
+            <label class="custom-control-label text-danger" for="brand-{{ widget.checkbox_id }}_{{ widget.value }}">{{ widget.clear_checkbox_label }} {{ widget.value|truncatechars:20 }}</label>
         </div>
     {% endif %}<br>
     {{ widget.input_text }}

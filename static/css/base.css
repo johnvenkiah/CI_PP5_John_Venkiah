@@ -384,8 +384,6 @@ input[name='q']::placeholder {
 
 .thmbnl {
     object-fit: contain;
-    background: linear-gradient(45deg, #fecf94 50%, #ffe9d0e3 50%);
-    border-radius: 7px;
 }
 
 /* PERSONAL STYLES */
@@ -736,7 +734,10 @@ textarea.form-control {
 
 .modal-header .close:hover,
 .modal-header .close:active,
-.modal-header .close:focus {
+.modal-header .close:focus,
+.toast .close:hover,
+.toast .close:active,
+.toast .close:focus {
     border: 2px solid #ffaa42;
     text-shadow: 0 0 8px #ffaa42, 1px 1px 3px black;
 }
@@ -801,7 +802,7 @@ textarea.form-control {
     align-items: center;
     object-fit: contain;
     padding: 10px;
-    background: linear-gradient(45deg, #fecf94 50%, #ffe9d0e3 50%);
+    background: #ffc97f21;
 }
 
 .cart-img {
