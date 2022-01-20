@@ -671,7 +671,7 @@ textarea.form-control {
 .product-edit-link:active,
 .product-edit-link:focus {
     border: 1px solid #ffaa42;
-    color: #fff;
+    color: #fff !important;
 }
 
 .product-edit-link.text-danger:hover {
