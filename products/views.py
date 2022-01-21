@@ -135,9 +135,6 @@ def product_detail(request, product_id):
     # pylint: disable=no-member
     reviews = Review.objects.filter(product=product)
 
-    for review in reviews:
-        print(review.id)
-
     if request.method == 'POST':
 
         review_form = ReviewForm(data=request.POST or None)
