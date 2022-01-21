@@ -14,29 +14,33 @@
         <div class="row">
             <div class="col mt-3">
                 <h2 class="logo-font">Products</h2>
-                {% if gender and 'u' not in gender %}
-                    <a href="{% url 'products' %}?gender={% for g in gender %}{{ g }}{% if not forloop.last %},{% endif %}{% endfor %}">
-                        <small class="p-2 mt-2 product-edit-link">{{ gender_pretty }}</small>
-                    </a>
+                <hr class="mb-1">
+                {% if gender and gender|length <= 2 %}
+                <div class="col text-center">
+                    <p class="text-white">Showing results in</p>
+                    {% for g in gender %}
+                        <p class="p-2 mt-2 text-orange logo-font">{{ gender_pretty }}</p>
+                        {% endfor%}
+                    </div>
                 {% endif%}
                 {% if brands %}
-                    {% for b in brands %}
-                        <a href="{% url 'products' %}?brand={{ b }}">
-                            {% if b.image %}
-                                <img class="max-100" src="{{ b.image.url }}" alt="{{ b.friendly_name }}-logo">
-                                <p class="text-orange">{{ b.friendly_name }}</p>
-                            {% else %}
-                                <small class="p-2 mt-2 product-edit-link">{{ b.friendly_name }}</small>
-                            {% endif %}
-                        </a>
-                    {% endfor %}
+                    <div class="col text-center">
+                        <p class="text-white mx-auto">Showing results from</p>
+                            {% for b in brands %}
+                                    {% if b.image %}
+                                        <img class="max-100" src="{{ b.image.url }}" alt="{{ b.friendly_name }}-logo">
+                                            <p class="p-2 mt-2 text-orange logo-font">{{ b.friendly_name }}</p>
+                                    {% else %}
+                                        <p class="p-2 mt-2 text-orange logo-font">{{ b.friendly_name }}</p>
+                                    {% endif %}
+                            {% endfor %}
+                    </div>
                 {% endif %}
                 {% for c in current_categories %}
                     <a href="{% url 'products' %}?category={{ c.name }}">
                         <small class="p-2 mt-2 product-edit-link">{{ c.friendly_name }}</small>
                     </a>
                 {% endfor %}
-                <hr class="mb-1">
             </div>
         </div>
         <div class="row">
@@ -175,6 +179,7 @@
                 <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
             </a>	
         </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
