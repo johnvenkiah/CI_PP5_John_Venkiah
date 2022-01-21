@@ -36,11 +36,14 @@
                             {% endfor %}
                     </div>
                 {% endif %}
-                {% for c in current_categories %}
-                    <a href="{% url 'products' %}?category={{ c.name }}">
-                        <small class="p-2 mt-2 product-edit-link">{{ c.friendly_name }}</small>
-                    </a>
-                {% endfor %}
+                {% if current_categories %}
+                    <div class="col text-center">
+                        <p class="text-white">Showing results in</p>
+                        {% for c in current_categories %}
+                            <p class="p-2 mt-2 text-orange logo-font">{{ c.friendly_name }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
         </div>
         <div class="row">
@@ -64,7 +67,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-white mt-3">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                                <span><a href="{% url 'products' %}" class="text-orange">Products Home</a> | </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                             <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" title="Add New Brand" aria-label="Add new brand"><i class="fas fa-plus"></i></a>
