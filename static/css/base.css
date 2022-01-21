@@ -163,7 +163,9 @@ p {
     box-shadow: 0 0 5px #ffaa42;
 }
 
-.btn-orange:hover, .btn-blue:hover {
+.btn-orange:hover,
+.btn-green:hover,
+.btn-blue:hover {
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 0, 0, .5);
     box-shadow: 0 0 5px white;
@@ -180,6 +182,15 @@ p {
     background: linear-gradient(
         45deg, #001f698c, #0058e18c 50%, #276eddb9 50%, #68a1ff);
     border: 1px solid #003d8b;
+}
+
+.btn-green {
+    background: linear-gradient(45deg, #146e008c, #4bad008c 50%, #27bf1cb9 50%, #99ff3acc);
+    border: 1px solid #3f8611 !important;
+}
+
+.btn-green:hover {
+    background-color: #0b350b;
 }
 
 .btn-red {
@@ -920,6 +931,10 @@ textarea.form-control {
 
     .custom-toast {
         margin: 0 auto;
+    }
+
+    .checkout-col {
+        width: 93%;
     }
 }
 

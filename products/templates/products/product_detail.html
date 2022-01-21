@@ -12,14 +12,15 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="col-12 offset-lg-2 mt-3">
                 <p class="text-orange mb-0 lead font-weight-bold">{{ product.name }}</p>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 text-center">
                 <a href="{% url 'products' %}?brand={{ product.brand.name }}">
                     {% if product.brand %}
                         {% if product.brand.image %}
                             <img class="max-100" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
+                            <p class="text-orange">{{ product.brand.friendly_name }}</p>
                         {% else %}
                             <small class="p-2 mt-2 product-edit-link">{{ product.brand.friendly_name }}</small>
                         {% endif %}

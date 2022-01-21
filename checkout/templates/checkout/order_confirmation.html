@@ -16,7 +16,7 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col mt-3">
+            <div class="col mt-3 mw-lg">
                 <h2 class="logo-font">Order Confirmation</h2>
                 <hr>
                 <p class="my-4">Thank you for your order at StepUp. You will recieve an email confirmation to <strong>{{ order.email }}</strong>.</p>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="row my-5">
-            <div class="checkout-col row">
+            <div class="checkout-col mx-auto mw-lg row">
                 <div class="col-12 col-md-6">
                     <div class="order-confirmation-wrapper">
                         <div class="row my-3">
@@ -112,6 +112,12 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="mb-0 text-black font-weight-bold">Town/City: <span class="float-right">{{ order.town_or_city }}</span></p>
+                            </div>
+                        </div>
+
                         {% if order.county %}
                         <div class="row">
                             <div class="col-12">
@@ -119,12 +125,6 @@
                             </div>
                         </div>
                         {% endif %}
-
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="mb-0 text-black font-weight-bold">Town/City: <span class="float-right">{{ order.town_or_city }}</span></p>
-                            </div>
-                        </div>
 
                         {% if order.postcode %}
                         <div class="row">
@@ -149,17 +149,17 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-end">
-			<div class="col-12 col-md-6 col-lg-4">
+        <div class="row mw-lg">
+			<div class="ml-auto col-12 col-md-6 col-lg-4">
                 {% if from_profile %}
-                    <a href="{% url 'my_stepup' %}" class="btn btn-block btn-orange my-2">
+                    <a href="{% url 'my_stepup' %}" class="btn btn-block btn-orange">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-block btn-grey my-2">
+                    <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-block btn-orange my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-meteor"></i>
                         </span>
