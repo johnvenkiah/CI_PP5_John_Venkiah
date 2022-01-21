@@ -65,17 +65,16 @@ class ProductForm(ModelForm):
         """
         super(ProductForm, self).__init__(*args, **kwargs)
         placeholders = {
-            'name': 'Name',
-            'initial_price': 'Initial Price if on sale (€)',
-            'price': 'Price (€)',
-            'description': 'Description',
-            'details': 'Product Details (Seperate each with a comma)',
-            'image_url': 'Image URL',
+
         }
         labels = {
             'category': 'Select a category:',
-            'brand': 'Select a brand:',
             'gender': 'Select a gender:',
+            'brand': 'Select a brand:',
+            'initial_price': 'Initial Price if on sale (€)',
+            'price': 'Current Price (€)',
+            'details': 'Product Details (Seperate each with a comma)',
+            'is_new': 'This is a new product',
             'size_type': 'Select size type for the product:',
         }
 
@@ -88,19 +87,9 @@ class ProductForm(ModelForm):
         self.fields['image'].widget.attrs['id'] = 'new-product-image'
 
         for field in self.fields:
-            if field in placeholders:
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-                self.fields[field].widget.attrs['placeholder'] = placeholder
-                self.fields[field].widget.attrs['aria-label'] = placeholder
-                self.fields[field].label = False
-
             if field in labels:
                 label = labels[field]
                 self.fields[field].label = label
-                self.fields[field].widget.attrs['aria-label'] = label
 
     image = ImageField(
         label='Image',
@@ -175,18 +164,4 @@ class BrandForm(ModelForm):
 
         self.fields['image'].widget.attrs['id'] = 'new-brand-image'
         self.fields['image'].widget.attrs['class'] = 'brand-img-class'
-
-        placeholders = {
-            'friendly_name': 'User-friendly name:',
-            'image_url': 'Image URL',
-        }
-
-        for field in self.fields:
-            if field in placeholders:
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-                self.fields[field].widget.attrs['placeholder'] = placeholder
-                self.fields[field].widget.attrs['aria-label'] = placeholder
-                self.fields[field].label = False
+        self.fields['friendly_name'].label = 'User-friendly name:'

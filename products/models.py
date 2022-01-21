@@ -148,6 +148,18 @@ class Product(models.Model):
         blank=True,
         on_delete=models.SET_NULL
     )
+    gender = models.CharField(
+        verbose_name=_('Gender'),
+        choices=GENDER_CHOICES,
+        max_length=24,
+        default='u'
+    )
+    brand = models.ForeignKey(
+        'Brand',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
+    )
     initial_price = models.DecimalField(
         verbose_name=_('Initial Price'),
         max_digits=6,
@@ -169,23 +181,15 @@ class Product(models.Model):
     description = models.TextField(
         verbose_name=_('Description'),
     )
-    gender = models.CharField(
-        verbose_name=_('Gender'),
-        choices=GENDER_CHOICES,
-        max_length=24,
-        default='u'
-    )
-    brand = models.ForeignKey(
-        'Brand',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL
-    )
     details = models.CharField(
         verbose_name=_('Product Details'),
         max_length=254,
         null=True,
         blank=True
+    )
+    is_new = models.BooleanField(
+        verbose_name=('Is New'),
+        default=False
     )
     size_type = models.CharField(
         verbose_name=_('Size Type'),
@@ -199,10 +203,6 @@ class Product(models.Model):
         decimal_places=2,
         null=True,
         blank=True
-    )
-    is_new = models.BooleanField(
-        verbose_name=('Is New'),
-        default=False
     )
     discount = models.DecimalField(
         verbose_name=_('Discount'),
