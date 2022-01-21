@@ -18,8 +18,8 @@
                 {% if gender and gender|length <= 2 %}
                 <div class="col text-center">
                     <p class="text-white">Showing results in</p>
-                    {% for g in gender %}
-                        <p class="p-2 mt-2 text-orange logo-font">{{ gender_pretty }}</p>
+                    {% for g in gender_pretty %}
+                        <span class="p-2 mt-2 text-orange logo-font">{{ g }}</span>
                         {% endfor%}
                     </div>
                 {% endif%}

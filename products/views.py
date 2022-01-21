@@ -35,7 +35,7 @@ def all_products(request):
     query = None
     categories = None
     gender = None
-    gender_pretty = ""
+    gender_pretty = []
     brands = None
     sort = None
     direction = None
@@ -74,9 +74,9 @@ def all_products(request):
             products = products.filter(gender__in=gender)
 
             if 'm' in gender:
-                gender_pretty = "Men's"
+                gender_pretty.append("Men's")
             if 'w' in gender:
-                gender_pretty = "Women's"
+                gender_pretty.append("Women's")
 
         if 'news' in request.GET:
             products = products.filter(is_new=True)
