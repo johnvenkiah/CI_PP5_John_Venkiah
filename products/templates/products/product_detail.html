@@ -20,9 +20,9 @@
                     {% if product.brand %}
                         {% if product.brand.image %}
                             <img class="max-100" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
-                            <p class="text-orange">{{ product.brand.friendly_name }}</p>
+                            <p class="text-orange">Check out more from {{ product.brand.friendly_name }}</p>
                         {% else %}
-                            <small class="p-2 mt-2 product-edit-link">{{ product.brand.friendly_name }}</small>
+                            <p class="p-2 mt-2 text-white"><span class="text-orange">{{ product.brand.friendly_name }}</span></p>
                         {% endif %}
                     {% endif %}
                 </a>
