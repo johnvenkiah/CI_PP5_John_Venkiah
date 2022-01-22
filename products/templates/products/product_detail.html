@@ -12,8 +12,8 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 offset-lg-2 mt-3">
-                <p class="text-orange mb-0 lead font-weight-bold">{{ product.name }}</p>
+            <div class="col offset-lg-2 mt-3">
+                <p class="h2 text-orange mb-0">{{ product.name }}</p>
             </div>
             <div class="col-12 text-center">
                 <a href="{% url 'products' %}?brand={{ product.brand.name }}">
