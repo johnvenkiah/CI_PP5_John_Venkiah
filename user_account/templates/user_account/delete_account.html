@@ -1,0 +1,22 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Delete Account" %}{% endblock %}
+
+{% block inner_content %}
+<h1>{% trans "Delete Account" %}</h1>
+
+<form method="post" action="{% url 'delete_account' %}">
+  {% csrf_token %}
+  <div class="row">
+      <div class="col">
+          {{ form|crispy }}
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-lg btn-red">{% trans 'Delete Account' %}</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

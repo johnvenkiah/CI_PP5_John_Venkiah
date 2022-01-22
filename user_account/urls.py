@@ -1,5 +1,5 @@
 """
-home/urls.py: all urls for the home app.
+user_account/urls.py: contains the user delete url.
 """
 
 # - - - - - Django Imports - - - - - - - - - - - - -
@@ -10,6 +10,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.HomeView.as_view(), name='home'),
-    path('contact/', views.ContactView.as_view(), name='contact'),
+    path('', views.DeleteAccountView.as_view(), name='delete_account'),
 ]
