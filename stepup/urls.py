@@ -31,10 +31,10 @@ urlpatterns = [
         name="account_change_password",
     ),
     path('accounts/', include('allauth.urls')),
+    path('user_account/', include('user_account.urls')),
     path('', include('home.urls')),
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
     path('my_stepup/', include('profiles.urls')),
-    path('user_account/', include('user_account.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

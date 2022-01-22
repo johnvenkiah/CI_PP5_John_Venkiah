@@ -13,9 +13,9 @@ class DeleteUserForm(forms.Form):
     """
     delete_checkbox = forms.BooleanField(
         label=mark_safe(
-            'Are you sure you want to delete your account?'
+            'Tick this box and click Delete Account below to confirm'
         ), required=True
     )
 
     def __init__(self, *args, **kwargs):
-        super(DeleteUser, self).__init__(*args, **kwargs)
+        super(DeleteUserForm, self).__init__(*args, **kwargs)

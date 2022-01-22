@@ -10,5 +10,9 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.DeleteAccountView.as_view(), name='delete_account'),
+    path(
+        'delete/<int:pk>',
+        views.DeleteAccountView.as_view(),
+        name='delete_account'
+    ),
 ]

@@ -5,18 +5,21 @@
 {% block head_title %}{% trans "Delete Account" %}{% endblock %}
 
 {% block inner_content %}
-<h1>{% trans "Delete Account" %}</h1>
+<h2 class="text-orange">{% trans "Delete Account?" %}</h2>
 
-<form method="post" action="{% url 'delete_account' %}">
+<form method="post" action="{% url 'delete_account' request.user.id %}" class="p-2">
   {% csrf_token %}
-  <div class="row">
-      <div class="col">
-          {{ form|crispy }}
-        </div>
-        <div class="col">
-            <button type="submit" class="btn btn-lg btn-red">{% trans 'Delete Account' %}</button>
-        </div>
+<div class="row">
+    <div class="col-12">
+        <p>{{ form.delete_checkbox }} <span class="ml-3">{{ form.delete_checkbox.label }}</span></p>
     </div>
+    <div class="col-12 col-md-6 mb-2">
+        <a href="{% url 'my_stepup' %}" class="btn btn-lg btn-grey btn-block">{% trans 'Cancel' %}</a>
+    </div>
+    <div class="col-12 col-md-6 mb-2">
+        <button type="submit" class="btn btn-lg btn-red btn-block">{% trans 'Delete Account' %}</button>
+    </div>
+</div>
 </form>
 
 {% endblock %}

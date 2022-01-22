@@ -1,20 +1,27 @@
 from django.contrib import messages
-from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import DeleteView
 from django.contrib.auth.models import User
 from .forms import DeleteUserForm
 
 
-class DeleteAccountView(DeleteView):
+class DeleteAccountView(LoginRequiredMixin, DeleteView):
     """
     Removes a user instance using Django's generic DeleteView
     """
 
     model = User
-    form = DeleteUserForm
-    success_url = reverse_lazy('home')
-    template_name = 'delete_account.html'
+    form = DeleteUserForm()
+    success_url = '/'
+    template_name = 'user_account/delete_account.html'
     success_message = 'Account deleted successfully.'
+
+    def get_context_data(self, **kwargs):
+        form = DeleteUserForm()
+        context = super().get_context_data(**kwargs)
+        context["form"] = form
+
+        return context
 
     def delete(self, request, *args, **kwargs):
         """
