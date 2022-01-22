@@ -29,7 +29,7 @@
                         <p class="text-white mx-auto">Showing results from</p>
                             {% for b in brands %}
                                     {% if b.image %}
-                                        <img class="max-100" src="{{ b.image.url }}" alt="{{ b.friendly_name }}-logo">
+                                        <img class="max-150" src="{{ b.image.url }}" alt="{{ b.friendly_name }}-logo">
                                             <p class="p-2 mt-2 text-orange logo-font">{{ b.friendly_name }}</p>
                                     {% else %}
                                         <p class="p-2 mt-2 text-orange logo-font">{{ b.friendly_name }}</p>

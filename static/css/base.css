@@ -754,9 +754,9 @@ textarea.form-control {
     text-shadow: 0 0 8px #ffaa42, 1px 1px 3px black;
 }
 
-.max-100 {
+.max-150 {
     max-height: 100px;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .increment-qty {

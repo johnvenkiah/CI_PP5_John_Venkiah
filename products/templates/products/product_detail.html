@@ -19,7 +19,7 @@
                 <a href="{% url 'products' %}?brand={{ product.brand.name }}">
                     {% if product.brand %}
                         {% if product.brand.image %}
-                            <img class="max-100" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
+                            <img class="max-150" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
                             <p class="text-orange">Check out more from {{ product.brand.friendly_name }}</p>
                         {% else %}
                             <p class="p-2 mt-2 text-white"><span class="text-orange">{{ product.brand.friendly_name }}</span></p>
