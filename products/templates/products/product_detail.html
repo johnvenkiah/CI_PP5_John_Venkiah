@@ -12,21 +12,26 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col offset-lg-2 mt-3">
-                <p class="h2 text-orange mb-0">{{ product.name }}</p>
-            </div>
-            <div class="col-12 text-center">
-                <a href="{% url 'products' %}?brand={{ product.brand.name }}">
+            <div class="col-8 offset-lg-2 mt-3">
+                <p class="lead text-orange mb-0">{{ product.name }}
                     {% if product.brand %}
-                        {% if product.brand.image %}
-                            <img class="max-150" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
-                            <p class="text-orange">Check out more from {{ product.brand.friendly_name }}</p>
-                        {% else %}
-                            <p class="p-2 mt-2 text-white"><span class="text-orange">{{ product.brand.friendly_name }}</span></p>
-                        {% endif %}
+                    <small class="float-right text-white small">
+                        Check out more from 
+                        <a href="{% url 'products' %}?brand={{ product.brand.name }}" class="text-orange">
+                            {{ product.brand.friendly_name }}
+                        </a>
+                    </small>
+                </p> 
+                <a href="{% url 'products' %}?brand={{ product.brand.name }}">
+                    {% if product.brand.image %}
+                    <img class="max-150 float-right" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
                     {% endif %}
                 </a>
+                {% endif %}
             </div>
+            <!-- <div class="col-12 text-center">
+
+            </div> -->
             <!-- Product image -->
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
