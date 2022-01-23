@@ -1,4 +1,4 @@
-<div class="toast border-success custom-toast" data-autohide="true" data-delay="3000">
+<div class="toast border-success custom-toast" data-autohide="true" data-delay="3300">
     <div class="text-orange">
         <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -12,7 +12,7 @@
         </div>
         <hr class="mt-2 mb-0">
         {% url 'cart' as cart %}
-        {% if grand_total and not on_profile_page and cart not in request.path %}
+        {% if grand_total and not on_profile_page %}
             <p class="logo-font text-orange py-1 mt-3">Your Cart ({{ product_count }})</p>
             <div class="cart-notification-wrapper">
                 {% for item in cart_items %}

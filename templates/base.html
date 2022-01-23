@@ -126,7 +126,7 @@
                     </ul>
                     {% if grand_total %}
                     <a href="{% url 'view_cart' %}" class="ml-auto btn-orange btn grand-total" aria-label="Grand Total in your cart: {{ grand_total }}">
-                        €{{ grand_total|floatformat:2 }}
+                        €{{ grand_total|floatformat:2 }} ({{ product_count }})
                     </a>
                     {% endif %}
                 </div>
