@@ -119,12 +119,12 @@
                         <div class="col-12 col-lg-6">
                             {% if request.user.is_authenticated %}
                                 {% if product in wishlist %}
-                                    <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="fas fa-heart"></i> Remove from Wishlist</a>
+                                    <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist" class="w-100 btn inline btn-grey"><i class="fas fa-heart"></i> Remove from Wishlist</a>
                                 {% else %}
-                                    <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i> Add to Wishlist</a>
+                                    <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="w-100 btn inline btn-grey"><i class="far fa-heart"></i> Add to Wishlist</a>
                                 {% endif %}
                             {% else %}
-                                <a href="{% url 'account_login' %}" aria-label="Sign In" class="w-100 btn inline btn-grey text-uppercase"><i class="far fa-heart"></i> Sign In</a>
+                                <a href="{% url 'account_login' %}" aria-label="Sign In" class="w-100 btn inline btn-grey"><i class="far fa-heart"></i> Sign In</a>
                                 <p class="text-center py-2">to add item to Wishlist.</p>
                             {% endif %}
 
@@ -169,14 +169,14 @@
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6">
-                                <input type="submit" class="w-100 btn btn-orange text-white text-uppercase mt-5" value="Add to Cart">
+                                <input type="submit" class="w-100 btn btn-orange mt-5" value="Add to Cart">
                             </div>
                             <div class="col-12 col-md-6">
                                 <a href="{% url 'products' %}" class="w-100 btn btn-grey mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Browse More</span>
+                                    <span>Browse More</span>
                                 </a>
                             </div>
                         </div>

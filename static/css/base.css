@@ -144,6 +144,10 @@ p {
     transition: all .2s ease-in-out;
 }
 
+.btn, button, a.btn {
+    text-transform: uppercase;
+}
+
 .btn:not(.product-edit-link) {
     color: white !important;
 }

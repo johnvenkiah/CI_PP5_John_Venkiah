@@ -57,9 +57,9 @@
                                 <p class="small mb-0 text-orange font-weight-bold">{{ item.product.name }}</p>
                             </div>
                             <div class="col-12 col-md-5 text-md-right">
-                                <p class="small mb-0">{{ item.quantity }} @ €{{ item.product.price }} each
+                                <p class="small mb-0 mr-2">{{ item.quantity }} @ €{{ item.product.price }} each 
                                     {% if item.product_size %}
-                                    <span class="float-right">Size {{ item.product_size }}</span>
+                                    <span class="ml-2 float-right">Size {{ item.product_size }}</span>
                                 {% endif %}
                                 </p>
                             </div>
@@ -156,14 +156,14 @@
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
-                        <span class="text-uppercase">Back to Profile</span>
+                        <span>Back to Profile</span>
                     </a>
                 {% else %}
                     <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-block btn-orange my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-meteor"></i>
                         </span>
-                        <span class="text-uppercase">Find more deals!</span>
+                        <span>Find more deals!</span>
                     </a>
                 {% endif %}
 			</div>
