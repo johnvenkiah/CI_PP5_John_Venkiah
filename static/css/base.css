@@ -442,7 +442,9 @@ input[name='q']::placeholder {
     text-shadow: 0 0 10px black;
 }
 
-.dropdown-item:hover, .dropdown-item:active {
+.dropdown-item:hover,
+.dropdown-item:active,
+.dropdown-item:click {
     background-color: #ffab2ea6;
     border-radius: 6px;
     color: #fff;
@@ -1078,6 +1080,17 @@ textarea.form-control {
 /* MEDIA QUERIES: SMALLER MOBILE DEVICES */
 
 @media (max-width: 480px) {
+
+    .dropdown-menu.show {
+        overflow: scroll;
+        max-height: 370px;
+    }
+
+    .nav-item .dropdown-item {
+        font-size: 1.2rem;
+        padding: .5rem;
+    }
+
     .footer-content {
         margin: 0 auto 20px;
         text-align: center;
@@ -1106,11 +1119,12 @@ textarea.form-control {
     }
 
     .navbar-nav {
-        padding-left: 1.2rem;
+        padding: 0 1.2rem;
     }
 
     .nav-item {
         line-height: 1.4rem;
+
     }
 
     .label-new, .sale-label {
