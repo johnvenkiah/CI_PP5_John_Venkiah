@@ -406,9 +406,12 @@ def update_brand(request, brand_id):
             request, f'Brand "{brand.friendly_name}" successfully updated'
         )
     else:
-        form = BrandForm(request.POST, instance=brand)
+        form = BrandForm(request.POST, request.FILES, instance=brand)
         messages.error(
-            request, f'Brand "{brand.friendly_name}" failed to be updated!'
+            request, (
+                f'Brand "{brand.friendly_name}" failed to be updated. '
+                f'Check that the filetype is valid and try again.'
+            )
         )
     return redirect(reverse('manage_brands'))
 
