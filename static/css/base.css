@@ -114,9 +114,7 @@ p {
     width: fit-content;
     padding: 10px 16px;
     text-shadow: 0 0 5px black;
-    background: linear-gradient(
-        45deg
-        , #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
+    background: linear-gradient(45deg, #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
     box-shadow: 0 0 5px black;
     border-radius: 50px;
 }
@@ -447,8 +445,8 @@ input[name='q']::placeholder {
 }
 
 .dropdown-item:hover,
-.dropdown-item:active,
-.dropdown-item:click {
+.dropdown-item:focus,
+.dropdown-item:active {
     background-color: #ffab2ea6;
     border-radius: 6px;
     color: #fff;
