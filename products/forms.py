@@ -143,7 +143,7 @@ class BrandForm(ModelForm):
         Defines the Brand model and that all model fields are included.
         """
         model = Brand
-        exclude = ('name',)
+        fields = '__all__'
 
     image = ImageField(
         label='Image',

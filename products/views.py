@@ -244,15 +244,19 @@ def add_brand(request):
 
         if brand_form.is_valid():
             brand = brand_form.save()
-            brand.name = brand.generate_name()
-            brand.save()
             messages.success(
                 request, f'Successfully added {brand.friendly_name} to Brands'
             )
             return redirect(reverse('manage_brands'))
         else:
-            messages.error(request, 'Add Brand failed. \
-                    Please check if the form is valid and try again.')
+            messages.error(
+                request, (
+                    'Add Brand failed. '
+                    'Please check if the form is valid and try again.'
+                )
+            )
+            brand_form = BrandForm(prefix='brand')
+            return redirect(reverse('add_product_brand'))
 
     else:
         brand_form = BrandForm()
@@ -399,9 +403,7 @@ def update_brand(request, brand_id):
     brand = get_object_or_404(Brand, pk=brand_id)
     form = BrandForm(request.POST, request.FILES, instance=brand)
     if form.is_valid():
-        form.save()
-        brand.name = brand.generate_name()
-        brand.save()
+        brand = form.save()
         messages.success(
             request, f'Brand "{brand.friendly_name}" successfully updated'
         )
@@ -409,8 +411,8 @@ def update_brand(request, brand_id):
         form = BrandForm(request.POST, request.FILES, instance=brand)
         messages.error(
             request, (
-                f'Brand "{brand.friendly_name}" failed to be updated. '
-                f'Check that the filetype is valid and try again.'
+                'Brand failed to be updated. Check that the name is unique, '
+                'that the filetype is valid and try again.'
             )
         )
     return redirect(reverse('manage_brands'))

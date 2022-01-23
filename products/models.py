@@ -74,8 +74,7 @@ class Brand(models.Model):
     )
     friendly_name = models.CharField(
         max_length=254,
-        null=True,
-        blank=True,
+        unique=True,
     )
     image_url = models.URLField(
         verbose_name=_('Image URL'),
@@ -108,19 +107,6 @@ class Brand(models.Model):
             The brand friendly name string
         """
         return self.friendly_name
-
-    def generate_name(self):
-        """
-        This generates the brand name as a computer-readable string
-        without the user having to add this too.
-
-        Args:
-            self (object)
-        Returns:
-            name (string) - with computer-adapted syntax
-        """
-        name = re.sub('[^0-9a-zA-Z]+', '_', self.friendly_name)
-        return name.lower()
 
 
 class Product(models.Model):
