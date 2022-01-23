@@ -70,12 +70,20 @@
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span><a href="{% url 'products' %}" class="text-orange">Products Home</a> | </span>
                             {% endif %}
-                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {{ products|length }} {% if products|length == 1 %}Product{% else %}Products{% endif %}{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                             <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" title="Add New Brand" aria-label="Add new brand"><i class="fas fa-plus"></i></a>
                         </p>
                     </div>
                 </div>
                 <div class="row">
+                    {% if not products %}
+                    <div class="col-12 col-md-7 mt-4">
+                        <p class="lead text-white">Sorry, that didn't give any results we're afraid.</p>
+                    </div>
+                        <div class="col-12 col-md-5">
+                        <a href="{% url 'products' %}" class="btn btn-block btn-orange btn-lg my-2">Go To All Products</a>
+                    </div>
+                    {% endif %}
                     {% for product in products %}
                         <div class="product-height col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100">
@@ -120,7 +128,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-6 px-0 text-left align-self-end">
+                                        <div class="col-5 px-0 text-left align-self-end">
                                             {% if product.gender or product.category %}
                                                 <p class="small mt-1 mb-0">
                                                     {% if product.gender %}
@@ -136,7 +144,7 @@
                                                 </p>
                                             {% endif %}
                                         </div>
-                                        <div class="col-6 px-0 text-right">
+                                        <div class="col px-0 text-right">
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}" class="btn text-orange product-edit-link">Edit</a>

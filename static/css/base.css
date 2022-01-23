@@ -674,12 +674,13 @@ textarea.form-control {
     text-shadow: 0 0 5px black;
 }
 
-.product-edit-link {
+.product-edit-link, a.product-edit-link {
     padding: 5px;
     line-height: initial;
     border: 1px solid #ffaa421f;
     border-radius: 8px !important;
     background: transparent;
+    text-transform: none;
     transition: all .2s ease-in-out;
 }
 
