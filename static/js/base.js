@@ -2,19 +2,17 @@
             $(document).ready(function(){
                 $('.toast').toast('show');
             
-                // Change background color of navbar and menu if toggler is clicked on
-                $(".navbar-toggler").click(function() {
+                // Change background color of navbar and menu if toggler
+                // or Products menu is clicked on
+                $('.navbar-toggler, #products-link').click(function() {
                     $(".bg-nav").css({
                         'background-color': '#04142f80'
                     }).toggleClass('blur-filter');
                     $('.navbar-nav').toggleClass('d-md-none');
                 })
 
-                // Make products menu visible if Products menu item is clicked on
-                $("#products-link").click(function() {
-                    $(".bg-nav").css({
-                        'background-color': '#04142f80'
-                    }).toggleClass('blur-filter');
+                // Make products menu visible if  item is clicked on
+                $('#user-options').click(function() {
                     $('.navbar-nav').toggleClass('d-md-none');
                 })
 
@@ -25,9 +23,9 @@
 
                 $(document).click(function (event) {
                     var clickover = $(event.target);
-                    var _opened = $(".navbar-collapse").hasClass("show");
-                    if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-                        $(".navbar-toggler").click()
+                    var _opened = $('.navbar-collapse').hasClass('show');
+                    if (_opened === true && !clickover.hasClass('navbar-toggler')) {
+                        $('.navbar-toggler').click()
                         $('.navbar-nav').addClass('d-md-none');
                     }
                 });
