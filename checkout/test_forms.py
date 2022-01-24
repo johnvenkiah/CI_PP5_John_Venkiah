@@ -5,10 +5,8 @@ checkout/test_forms.py: Contains testing of the Orderform in checkout app.
 # - - - - - Django Imports - - - - - - - - -
 from django.test import TestCase
 
-# Internal:
+# - - - - - Internal Imports - - - - - - - - -
 from .forms import OrderForm
-
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class TestCheckoutForm(TestCase):

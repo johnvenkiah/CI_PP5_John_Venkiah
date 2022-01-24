@@ -118,9 +118,8 @@
                                             <ul class="list-unstyled text-white">
                                                 {% for item in order.lineitems.all %}
                                                     <li class="small text-white">
-                                                        {% if item.item.has_sizes %}
-                                                            Size {{ item.item.size }}
-                                                        {% endif %}{{ item.item.name }} x{{ item.quantity }}
+                                                        {{ item.product.name|truncatechars:20 }} 
+                                                        <span class="float-right">{% if item.product_size != 'N/A' %}Size {{ item.product_size }} {% endif %}x {{ item.quantity }}</span>
                                                     </li>
                                                 {% endfor %}
                                             </ul>
