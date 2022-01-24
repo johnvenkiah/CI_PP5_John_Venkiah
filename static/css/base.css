@@ -824,6 +824,7 @@ textarea.form-control {
 
 .cart-img {
     width: 100%;
+    max-width: 280px;
     height: 150px;
     object-fit: cover;
     object-position: center;

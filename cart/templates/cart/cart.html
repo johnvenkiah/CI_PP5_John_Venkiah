@@ -13,14 +13,14 @@
 {% block content %}
     <div class="container mb-2">
         <div class="row">
-            <div class="col mt-3">
+            <div class="col-12 col-lg-10 offset-lg-1 mt-3">
                 <h2 class="logo-font">Shopping Cart{% if cart_items %} ({{ cart_items|length }}){% endif %}</h2>
                 <hr>
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-lg-10 offset-lg-1">
                 {% if cart_items %}
                     <div class="d-block d-md-none">
                         {% for item in cart_items %}

@@ -1,7 +1,7 @@
 """
 checkout/test_forms.py: Contains testing of the Orderform in checkout app.
 """
-
+# pylint: disable=no-member
 # - - - - - Django Imports - - - - - - - - -
 from django.test import TestCase
 from django.contrib.messages import get_messages
