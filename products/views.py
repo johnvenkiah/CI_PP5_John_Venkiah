@@ -13,11 +13,11 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 # - - - - - Internal imports - - - - - - - - -
+from profiles.models import WishListItem
 from .models import Product, Category, Brand, Review
 from .forms import ReviewForm, ProductForm, BrandForm
-from profiles.models import WishListItem
 
-# from .products_choices import SIZE_CHOICES
+# pylint: disable=no-member
 
 
 def all_products(request):
@@ -30,7 +30,7 @@ def all_products(request):
         The products page and its context.
     """
 
-    products = Product.objects.all()  # pylint: disable=no-member
+    products = Product.objects.all()
     wishlist = WishListItem.objects.filter(user=request.user.id)
     query = None
     categories = None

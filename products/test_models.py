@@ -9,6 +9,7 @@ from django.test import TestCase
 from products.models import Category, Product, Review, Brand
 # pylint: disable=no-member
 
+
 class TestProductModels(TestCase):
     """
     A class for testing product models
@@ -55,6 +56,7 @@ class TestProductModels(TestCase):
         """
         User.objects.all().delete()
         Category.objects.all().delete()
+        Brand.objects.all().delete()
         Product.objects.all().delete()
         Review.objects.all().delete()
 
