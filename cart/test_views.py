@@ -9,7 +9,6 @@ from django.test import TestCase
 
 # Internal:
 from products.models import Product
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 class TestCartViews(TestCase):
