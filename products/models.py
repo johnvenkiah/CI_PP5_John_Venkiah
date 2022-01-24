@@ -2,9 +2,6 @@
 products/models.py: Contains the models Category, Product and Review
 """
 
-# - - - - - Native Python Imports - - - - - -
-import re
-
 # - - - - - Django Imports - - - - - - - - -
 from django.db import models
 from django.contrib.auth.models import User
