@@ -1,4 +1,6 @@
-
+"""
+profiles/models.py: models for profiles app
+"""
 
 # - - - - - Django Imports - - - - - - - - -
 from django.db import models
@@ -9,6 +11,9 @@ from django_countries.fields import CountryField
 
 # - - - - - Internal imports - - - - - - - - -
 from products.models import Product
+
+# pylint: disable=no-member
+
 
 class UserProfile(models.Model):
     """
@@ -58,6 +63,7 @@ class UserProfile(models.Model):
 
 
 @receiver(post_save, sender=User)
+# pylint: disable=unused-argument
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile.

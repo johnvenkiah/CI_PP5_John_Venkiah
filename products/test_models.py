@@ -1,5 +1,6 @@
 """
 products/test_models.py: Tests for models in products app
+Credit: https://github.com/pmeeny/CI-MS4-LoveRugby
 """
 # - - - - - Django Imports - - - - - - - - -
 from django.contrib.auth.models import User

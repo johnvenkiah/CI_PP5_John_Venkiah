@@ -1,5 +1,6 @@
 """
-checkout/test_forms.py: Contains testing of the Orderform in checkout app.
+checkout/test_views.py: Contains testing checkout views.
+Credit: https://github.com/pmeeny/CI-MS4-LoveRugby
 """
 # pylint: disable=no-member
 # - - - - - Django Imports - - - - - - - - -

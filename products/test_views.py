@@ -1,5 +1,6 @@
 """
 products/test_views.py: testing of product app views
+Credit: https://github.com/pmeeny/CI-MS4-LoveRugby
 """
 
 # - - - - - Django Imports - - - - - - - - -
@@ -8,7 +9,7 @@ from django.contrib.messages import get_messages
 from django.test import TestCase
 
 # - - - - - Internal imports - - - - - - - - -
-from products.models import Category, Product, Review, Brand
+from .models import Category, Product, Review, Brand
 # pylint: disable=no-member
 
 

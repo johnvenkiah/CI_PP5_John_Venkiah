@@ -1,5 +1,6 @@
 """
-checkout/test_forms.py: Contains testing of the Orderform in checkout app.
+checkout/test_models.py: Contains testing of the models in the checkout app.
+Credit: https://github.com/pmeeny/CI-MS4-LoveRugby
 """
 # pylint: disable=maybe-no-member
 
@@ -8,9 +9,7 @@ from django.test import TestCase
 
 # - - - - - Internal Imports - - - - - - - - -
 from products.models import Product
-from stepup import settings
 from .models import Order
-from .models import OrderLineItem
 
 
 class TestCheckoutModels(TestCase):

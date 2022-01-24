@@ -1,5 +1,6 @@
 """
 products/test_forms.py: Contains testing of the forms in the products app.
+Credit: https://github.com/pmeeny/CI-MS4-LoveRugby
 """
 
 # - - - - - Django Imports - - - - - - - - -

@@ -1,5 +1,6 @@
 """
 checkout/test_forms.py: Contains testing of the Orderform in checkout app.
+Credit: https://github.com/pmeeny/CI-MS4-LoveRugby
 """
 
 # - - - - - Django Imports - - - - - - - - -
