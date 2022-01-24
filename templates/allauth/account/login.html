@@ -44,7 +44,15 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
             <button class="mb-4 btn-orange w-100 btn primaryAction" type="submit">{% trans "Sign In" %}</button>
         </div>
         <div class="col-md-6">
-            <a class="btn w-100 btn-grey" href="{% url 'home' %}">Back Home</a>
+            {% if not request.path in request.META.HTTP_REFERER %}
+            <a href="{{ request.META.HTTP_REFERER }}" class="btn w-100 btn-grey">
+                Cancel
+            </a>
+            {% else %}
+            <a href="{% url 'home' %}" class="btn w-100 btn-grey">
+                Home
+            </a>
+            {% endif %}
         </div>
     </div>
     <p class="mt-2">

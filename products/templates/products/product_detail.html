@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-8 offset-lg-2 mt-5">
-                <p class="lead text-orange mb-0">{{ product.name }}
+                <h2 class="lead text-orange mb-0">{{ product.name }}
                     {% if product.brand %}
                     <small class="float-right text-white small">
                         Check out more from 
@@ -21,7 +21,7 @@
                             {{ product.brand.friendly_name }}
                         </a>
                     </small>
-                </p> 
+                </h2> 
                 <a href="{% url 'products' %}?brand={{ product.brand.name }}">
                     {% if product.brand.image %}
                     <img class="max-150 float-right" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
@@ -47,7 +47,7 @@
                         </a>
                     {% else %}
                         <div class="card-img-top img-fluid bg-white mb-1 py-3">
-                            <p class="text-center text-muted py-2">
+                            <p class="text-center text-dark py-2">
                                 <i class="fas fa-exclamation-circle py-2 py-md-4"></i>
                                 <br>
                                 <small>No Image Available</small>
@@ -130,6 +130,7 @@
 
                         </div>
                     </div>
+                    <!-- Product Quantity form -->
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="row">
@@ -137,19 +138,16 @@
                                 <p class="mt-3 text-orange"><strong>Quantity:</strong></p>
                                 <div class="input-group input-group-{{ product.id }}">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-trans text-white decrement-qty_{{ product.id }}" 
-                                            data-item_id="{{ product.id }}">
+                                        <button class="decrement-qty btn btn-trans text-white decrement-qty_{{ product.id }}" data-item_id="{{ product.id }}" aria-label="Decrement quantity">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                        name="quantity" value="1" min="1" max="99"
-                                        data-item_id="{{ product.id }}">
+                                    <label for="qty_input" hidden>Quantity</label>
+                                    <input class="form-control qty_input id_qty_{{ product.id }}" id="qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-trans text-white increment-qty_{{ product.id }}"
-                                            data-item_id="{{ product.id }}">
+                                        <button class="increment-qty btn btn-trans text-white increment-qty_{{ product.id }}" data-item_id="{{ product.id }}" aria-label="Increment quantity">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
@@ -159,6 +157,7 @@
                             </div>
                             <div class="col-6 text-center">
                                 <p class="mt-3 text-orange"><strong>Size:</strong></p>
+                                <label for="id_product_size" hidden>Pick size</label>
                                 <select {% if product.get_sizes.0.0 == 'n_a' %}disabled{% endif %} class="custom-select form-control mx-auto" name="product_size" id='id_product_size'>
                                     {% for s, v in product.get_sizes %}
                                         <option value="{{ s }}">{{ v }}</option>

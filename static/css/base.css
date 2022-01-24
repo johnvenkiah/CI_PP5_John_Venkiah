@@ -49,6 +49,10 @@ hr {
     border-top: 1px solid rgba(255, 166, 71, 0.5);
 }
 
+.text-muted {
+    color: #a6a6a6 !important;
+}
+
 /* Disable buggy animation for some collapsing elements */
 .collapsing:not(#order-summary) {
     -webkit-transition: none;

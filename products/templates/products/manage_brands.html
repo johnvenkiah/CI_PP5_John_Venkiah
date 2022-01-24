@@ -22,6 +22,7 @@
                 <div class="row mt-1 mb-2 justify-content-between">
                     <div class="col-12 col-md-6 col-lg-3 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-100">
+                            <label for="sort-selector-brand" hidden>Sort results</label>
                             <select id="sort-selector-brand" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
@@ -45,7 +46,7 @@
                                         <img class="brand-img img-fluid mb-1" src="{{ brand.image.url }}" alt="{{ brand.friendly_name }}">
                                     {% else %}
                                         <div class="brand-img bg-white mb-1 p-2 p-md-0">
-                                            <p class="text-center text-muted">
+                                            <p class="text-center text-dark">
                                                 <i class="fas fa-exclamation-circle py-2 py-md-4"></i>
                                                 <br>
                                                 <small>No Image Available</small>
