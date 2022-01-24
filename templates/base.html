@@ -51,9 +51,10 @@
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100 input-left">
-                            <input class="form-control" type="text" name="q" placeholder="Search for products" aria-labelledby="search_products">
+                            <label for="search_products" hidden>Search</label>
+                            <input class="form-control" type="text" name="q" placeholder="Search for products" id="search_products">
                             <div class="input-group-append">
-                                <button class="input-btn form-control bg-nav btn btn-trans" type="submit" id="search_products" value="Search for products">
+                                <button class="input-btn form-control bg-nav btn btn-trans" type="submit" aria-labelledby="search_products" title="Search for products">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -123,7 +124,7 @@
                         </li>
                     </ul>
                     {% if grand_total %}
-                    <a href="{% url 'view_cart' %}" class="ml-auto btn-orange btn grand-total" value="Grand Total in your cart: {{ grand_total }} ({{ product_count }} items)">
+                    <a href="{% url 'view_cart' %}" class="ml-auto btn-orange btn grand-total" value="view cart">
                         €{{ grand_total|floatformat:2 }} ({{ product_count }})
                     </a>
                     {% endif %}
@@ -195,7 +196,8 @@
                 </div>
             
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="b_e5b424993e29ce6be7320595a_dcba1d7b60" tabindex="-1" value="" aria-hidden="true">
+                    <label for="hidden_input">Hidden Element</label>
+                    <input type="text" name="b_e5b424993e29ce6be7320595a_dcba1d7b60" tabindex="-1" value="" id="hidden_input">
                 </div>
             </form>
             <!--End mc_embed_signup-->
