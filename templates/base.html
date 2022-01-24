@@ -51,10 +51,9 @@
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100 input-left">
-                            <input class="form-control" type="text" name="q"
-                                placeholder="Search for products" aria-label="Search for products">
+                            <input class="form-control" type="text" name="q" placeholder="Search for products" aria-labelledby="search_products">
                             <div class="input-group-append">
-                                <button class="input-btn form-control bg-nav btn btn-trans" type="submit">
+                                <button class="input-btn form-control bg-nav btn btn-trans" type="submit" id="search_products" name="Search for products">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -91,7 +90,7 @@
                                     <span class="my-0">{% if request.user.is_authenticated %}Account{% else %}Sign In/Up{% endif %}</span>
                                 </div>
                             </a>
-                            <!-- Admin Operations -->
+                            <!-- Account Operations -->
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
@@ -106,7 +105,6 @@
                                 {% endif %}
                             </div>
                         </li>
-
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
@@ -183,16 +181,16 @@
                     <p>Signup for our newsletter</p>
                 </div>
                 <div class="col ml-auto">
-                        <a href="http://eepurl.com/hSCqlb" target="_blank" title="Mailchimp link"><img class="img-fluid pb-2" src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a>
+                        <a href="http://eepurl.com/hSCqlb" target="_blank" title="Mailchimp link"><img class="img-fluid pb-2" src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="Mailchimp logo"></a>
                 </div>
             </div>
 
             <!-- Mailchimp Signup Form - followed tutorial for adapted layout from here: https://bootstrapious.com/p/mailchimp-signup-form -->
             <form action="https://herokuapp.us20.list-manage.com/subscribe/post?u=e5b424993e29ce6be7320595a&amp;id=dcba1d7b60" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div class="input-group input-left">
-                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" required="required" class="form-control">
+                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" required="required" class="form-control" placeholder="Enter your email" aria-labelledby="subscribe">
                     <span class="input-group-append">
-                        <button class="btn btn-trans" type="submit">Subscribe</button>
+                        <button class="btn btn-trans" type="submit" id="subscribe">Subscribe</button>
                     </span>
                 </div>
             
