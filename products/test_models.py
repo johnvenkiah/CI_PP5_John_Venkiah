@@ -28,7 +28,7 @@ class TestProductModels(TestCase):
             friendly_name='Test Category'
         )
 
-        Brand.objects.create(
+        test_brand = Brand.objects.create(
             name='test-brand',
             friendly_name='Test Brand'
         )
@@ -36,6 +36,7 @@ class TestProductModels(TestCase):
         product = Product.objects.create(
             name='Test Name',
             price=100,
+            brand=test_brand,
             art_nr='999',
             description='Test Description',
             details='Test Details',
@@ -65,16 +66,24 @@ class TestProductModels(TestCase):
         self.assertEqual((category.__str__()), category.name)
         self.assertEqual(category.get_friendly_name(), category.friendly_name)
 
+    def test_brand_str_method(self):
+        """
+        This test tests the categories str method and verifies
+        """
+        brand = Brand.objects.get(name='test-brand')
+        self.assertEqual((brand.__str__()), brand.name)
+        self.assertEqual(brand.get_friendly_name(), brand.friendly_name)
+
     def test_product_str_method(self):
         """
         This test tests the products str method and verifies
         """
-        product = Product.objects.get(code='123456')
+        product = Product.objects.get(art_nr='999')
         self.assertEqual((product.__str__()), product.name)
 
     def test_review_str_method(self):
         """
         This test tests the reviews str method and verifies
         """
-        review = Review.objects.get(review_text='Test Review Text')
-        self.assertEqual((review.__str__()), review.review_text)
+        review = Review.objects.get(title='Test Title')
+        self.assertEqual((review.__str__()), review.title)
