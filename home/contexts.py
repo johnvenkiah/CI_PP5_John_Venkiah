@@ -1,9 +1,21 @@
+"""
+home/contexts.py: contains functions to be accessed in templates
+throughout the site: contact form and mobile.
+"""
+# - - - - - Native Python imports - - - - - - - - -
 import re
 
+# - - - - - Internal imports - - - - - - - - -
 from home.forms import ContactForm
+# pylint: disable=unused-argument, invalid-name
 
 
 def contact_form(request):
+    """
+    Function returns the contact form throughout the site.
+
+    Args: request (the request object)
+    """
     return {'contact_form': ContactForm}
 
 
@@ -16,14 +28,18 @@ def mobile(request):
     Args: request (the request object)
     """
 
-    MOBILE_AGENT_RE = re.compile(
+    mobile_agent_re = re.compile(
         r".*(iphone|mobile|androidtouch)", re.IGNORECASE
     )
+    try:
 
-    if MOBILE_AGENT_RE.match(request.META['HTTP_USER_AGENT']):
-        is_mobile = True
+        if mobile_agent_re.match(request.META['HTTP_USER_AGENT']):
+            is_mobile = True
 
-    else:
+        else:
+            is_mobile = False
+            # pylint: disable=broad-except
+    except Exception:
         is_mobile = False
 
     return {'is_mobile': is_mobile}

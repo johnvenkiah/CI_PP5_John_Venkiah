@@ -5,18 +5,17 @@ home/views.py: Views for home app, rendering the landing page of the site.
 # - - - - - Django Imports - - - - - - - - -
 from django.views.generic import TemplateView
 from django.views.generic import FormView
-from allauth.account.views import PasswordChangeView
 from django.urls import reverse_lazy
-
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
 
 # - - - - - 3rd Party imports - - - - - - - - -
+from allauth.account.views import PasswordChangeView
 
 # - - - - - Internal imports - - - - - - - - -
-from .forms import ContactForm
 from stepup.settings import EMAIL_HOST_USER
+from .forms import ContactForm
 
 
 class HomeView(TemplateView):

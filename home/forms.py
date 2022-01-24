@@ -1,3 +1,8 @@
+"""
+home/forms.py: contains the contact form accessible through contexts.py
+in the home directory.
+"""
+# - - - - - Django Imports - - - - - - - - -
 from django import forms
 
 

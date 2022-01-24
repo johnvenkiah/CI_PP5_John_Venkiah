@@ -1,24 +1,51 @@
+"""
+cart/views.py: views to display the shopping cart page and add/update/remove
+functionality for it. Most of the code is derived from the Code Institute
+Boutique Ado project.
+"""
+
+# - - - - - Native Python imports - - - - - - - - -
+import json
+
+# - - - - - Django Imports - - - - - - - - - - - - -
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
 )
 from django.views.decorators.http import require_POST
 from django.contrib import messages
+# - - - - - Django Imports - - - - - - - - -
 from django.conf import settings
 
+# - - - - - 3rd party imports - - - - - - - - - - - -
 import stripe
-import json
 
+# - - - - - Internal imports - - - - - - - - - - - -
 from cart.contexts import cart_contents
-from .forms import OrderForm
-from .models import Order, OrderLineItem
-
-from products.models import Product
 from profiles.models import UserProfile, WishListItem
 from profiles.forms import UserProfileForm
+from products.models import Product
+from .models import Order, OrderLineItem
+from .forms import OrderForm
+
+# pylint: disable=broad-except, invalid-name
+# pylint: disable=pointless-string-statement, no-member
+
+"""
+checkout/views.py: views to render the functionality and pages in the
+checkout app.
+"""
 
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    This function caches the cart, order and user data if and catches an error
+    if it doesn't go through. Credit: Boutique Ado project, Code Institute.
+    Args:
+        request (object)
+    Returns:
+        A HTTP response with the relevant status and a message.
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -28,6 +55,7 @@ def cache_checkout_data(request):
             'username': request.user,
         })
         return HttpResponse(status=200)
+
     except Exception as e:
         messages.error(request, ('Sorry, your payment cannot be '
                                  'processed right now. Please try '
@@ -36,6 +64,15 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    This function processes the checkout: the cart contents, user info and
+    the payment, validating it in the process.
+    Credit: Boutique Ado project, Code Institute.
+    Args:
+        request (object)
+    Returns:
+        The request object, the checkout template and the context.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -72,11 +109,11 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, qty in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=quantity,
+                                quantity=qty,
                                 product_size=size,
                             )
                             order_line_item.save()
@@ -150,7 +187,13 @@ def checkout(request):
 
 def order_confirmation(request, order_number):
     """
-    Handle successful checkouts
+    Handles the checkout if successful, saves the order to the users profile.
+    Credit: Boutique Ado project, Code Institute.
+    Args:
+        request (object)
+        order_number (string)
+    Returns:
+        The request object, the template and the context.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
