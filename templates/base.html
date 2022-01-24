@@ -53,7 +53,7 @@
                         <div class="input-group w-100 input-left">
                             <input class="form-control" type="text" name="q" placeholder="Search for products" aria-labelledby="search_products">
                             <div class="input-group-append">
-                                <button class="input-btn form-control bg-nav btn btn-trans" type="submit" id="search_products" name="Search for products">
+                                <button class="input-btn form-control bg-nav btn btn-trans" type="submit" id="search_products" value="Search for products">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -123,7 +123,7 @@
                         </li>
                     </ul>
                     {% if grand_total %}
-                    <a href="{% url 'view_cart' %}" class="ml-auto btn-orange btn grand-total" aria-label="Grand Total in your cart: {{ grand_total }}">
+                    <a href="{% url 'view_cart' %}" class="ml-auto btn-orange btn grand-total" value="Grand Total in your cart: {{ grand_total }} ({{ product_count }} items)">
                         €{{ grand_total|floatformat:2 }} ({{ product_count }})
                     </a>
                     {% endif %}
@@ -194,7 +194,9 @@
                     </span>
                 </div>
             
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e5b424993e29ce6be7320595a_dcba1d7b60" tabindex="-1" value=""></div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_e5b424993e29ce6be7320595a_dcba1d7b60" tabindex="-1" value="" aria-hidden="true">
+                </div>
             </form>
             <!--End mc_embed_signup-->
 
