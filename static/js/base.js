@@ -1,6 +1,15 @@
             
             $(document).ready(function(){
                 $('.toast').toast('show');
+
+                // Fix error where toast is invisible but
+                // blocking the elements behind it 
+                $('.toast').on('show.bs.toast', function() {
+                    $(this).removeClass('d-none');
+                })
+                $('.toast').on('hidden.bs.toast', function() {
+                    $(this).addClass("d-none");
+                })
             
                 // Change background color of navbar and menu if toggler
                 // or Products menu is clicked on
