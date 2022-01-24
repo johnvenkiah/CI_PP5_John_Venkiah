@@ -51,6 +51,7 @@ class TestCheckoutViews(TestCase):
         """
         This test test an empty cart for checkout and verifies
         """
+
         response = self.client.get('/checkout/')
         self.assertRedirects(response, '/products/')
         messages = list(get_messages(response.wsgi_request))
