@@ -1,5 +1,3 @@
-import re
-
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
 )
@@ -7,35 +5,16 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
+import stripe
+import json
+
+from cart.contexts import cart_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
 from products.models import Product
 from profiles.models import UserProfile, WishListItem
 from profiles.forms import UserProfileForm
-from cart.contexts import cart_contents
-
-import stripe
-import json
-
-
-def mobile(request):
-    """
-    Function returns True if the request comes from a mobile device.
-    Credits: https://stackoverflow.com/questions/42273319/'
-        'detect-mobile-devices-with-django-and-python-3
-
-    Args: request (the request object)
-    """
-
-    MOBILE_AGENT_RE = re.compile(
-        r".*(iphone|mobile|androidtouch)", re.IGNORECASE
-    )
-
-    if MOBILE_AGENT_RE.match(request.META['HTTP_USER_AGENT']):
-        return True
-
-    return False
 
 
 @require_POST
@@ -59,11 +38,6 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-
-    if mobile(request):
-        is_mobile = True
-    else:
-        is_mobile = False
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -166,7 +140,6 @@ def checkout(request):
 
     template = 'checkout/checkout.html'
     context = {
-        'is_mobile': is_mobile,
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,

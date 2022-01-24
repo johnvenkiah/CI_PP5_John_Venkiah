@@ -83,6 +83,7 @@ TEMPLATES = [
                 'products.contexts.get_brands',
                 'cart.contexts.cart_contents',
                 'home.contexts.contact_form',
+                'home.contexts.mobile',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
