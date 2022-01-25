@@ -9,10 +9,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 # - - - - - Internal Imports - - - - - - - - -
-from .models import UserProfile, WishListItem
-from .forms import UserProfileForm
 from products.models import Product
 from checkout.models import Order
+from .models import UserProfile, WishListItem
+from .forms import UserProfileForm
+
+# pylint: disable=no-member
 
 
 @login_required
