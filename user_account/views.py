@@ -1,3 +1,8 @@
+"""
+user_account/views.py: views for the user_account app
+"""
+
+# - - - - - Django Imports - - - - - - - - -
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import DeleteView

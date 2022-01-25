@@ -1,14 +1,23 @@
+"""
+checkout/webhook_handler.py: Contains the class StripeWH_Handler
+that takes care of sending a webhook to stripe, making sure that the
+process is done safely. Credit: Code Institute Boutique Ado, Stripe
+"""
+import json
+import time
+
+# - - - - - Django Imports - - - - - - - - -
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 
-from .models import Order, OrderLineItem
+# - - - - - Internal Imports - - - - - - - - -
 from products.models import Product
 from profiles.models import UserProfile
+from .models import Order, OrderLineItem
 
-import json
-import time
+# pylint: disable=no-member, invalid-name
 
 
 class StripeWH_Handler:
@@ -61,19 +70,20 @@ class StripeWH_Handler:
                 shipping_details.address[field] = None
 
         # Update profile information if save_info was checked
-        profile = None
+        # prfl used as profile variable below so lines don't get too long
+        prfl = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
-            profile = UserProfile.objects.get(user__username=username)
+            prfl = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_phone_number = shipping_details.phone
-                profile.default_country = shipping_details.address.country
-                profile.default_postcode = shipping_details.address.postal_code
-                profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
-                profile.default_county = shipping_details.address.state
-                profile.save()
+                prfl.default_phone_number = shipping_details.phone
+                prfl.default_country = shipping_details.address.country
+                prfl.default_postcode = shipping_details.address.postal_code
+                prfl.default_town_or_city = shipping_details.address.city
+                prfl.default_street_address1 = shipping_details.address.line1
+                prfl.default_street_address2 = shipping_details.address.line2
+                prfl.default_county = shipping_details.address.state
+                prfl.save()
 
         order_exists = False
         attempt = 1
@@ -109,7 +119,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
-                    user_profile=profile,
+                    user_profile=prfl,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
@@ -131,14 +141,15 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, qty in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=quantity,
+                                quantity=qty,
                                 product_size=size,
                             )
                             order_line_item.save()
+            # pylint: disable=broad-except
             except Exception as e:
                 if order:
                     order.delete()

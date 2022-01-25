@@ -1,7 +1,15 @@
+"""
+checkout/signals.py: config file for home app
+"""
+
+# - - - - - Django Imports - - - - - - - - -
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 
+# - - - - - Internal Imports - - - - - - - - -
 from .models import OrderLineItem
+
+# pylint: disable=unused-argument
 
 
 @receiver(post_save, sender=OrderLineItem)

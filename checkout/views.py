@@ -1,6 +1,6 @@
 """
-cart/views.py: views to display the shopping cart page and add/update/remove
-functionality for it. Most of the code is derived from the Code Institute
+checkout/views.py: views to process an order made on the site.
+Most of the code is derived from the Code Institute
 Boutique Ado project.
 """
 

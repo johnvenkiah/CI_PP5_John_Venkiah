@@ -1,16 +1,25 @@
+"""
+checkout/models.py: Models within the checkout app
+"""
+
+# - - - - - Native Python Imports - - - - - - - - -
 import uuid
 
+# - - - - - Django Imports - - - - - - - - -
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
-
 from django_countries.fields import CountryField
 
+# - - - - - Internal Imports - - - - - - - - -
 from products.models import Product
 from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """
+    Model to save a purchase instance with user info and the items purchased.
+    """
     order_number = models.CharField(
         max_length=32,
         null=False,
@@ -83,6 +92,9 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Model to save each item in an Order instance as a lineitem.
+    """
     order = models.ForeignKey(Order, null=False, blank=False,
                               on_delete=models.CASCADE,
                               related_name='lineitems')
@@ -107,5 +119,6 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         # pylint: disable=maybe-no-member
-        return f'Art. Nr {self.product.art_nr} \
-            on order {self.order.order_number}'
+        return (
+            f'Art. Nr {self.product.art_nr} on order {self.order.order_number}'
+        )

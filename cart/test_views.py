@@ -70,8 +70,11 @@ class TestCartViews(TestCase):
         self.assertEqual(cart[str(product.id)], 2)
         messages = list(get_messages(response.wsgi_request))
         product_id = cart[str(product.id)]
-        self.assertEqual(str(messages[0]), 'Updated Test Name quantity to '
-                         + str(product_id))
+        self.assertEqual(
+            str(messages[0]), (
+                f'Updated Test Name quantity to {str(product_id)}'
+            )
+        )
 
     def test_update_cart_quantity_to_zero(self):
         """
