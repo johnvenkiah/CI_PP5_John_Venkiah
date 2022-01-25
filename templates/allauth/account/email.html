@@ -30,10 +30,16 @@
 </div>
   {% endfor %}
 
-<div class="buttonHolder">
-      <button class="secondaryAction btn btn-blue" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="secondaryAction btn btn-grey" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-      <button class="primaryAction btn btn-red" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+<div class="buttonHolder row">
+    <div class="col-6">
+        <button class="secondaryAction btn btn-blue btn-block" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+    </div>
+    <div class="col-6">
+        <button class="secondaryAction btn btn-grey btn-block" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+    </div>
+    <div class="col-6 ml-auto mt-2">
+        <button class="primaryAction btn btn-red btn-block" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+    </div>
 </div>
 
 </fieldset>
@@ -49,8 +55,8 @@
 
     <form method="post" action="{% url 'account_email' %}" class="add_email">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-orange" name="action_add" type="submit">{% trans "Add E-mail" %}</button>
+        {{ form|crispy }}
+        <button class="btn btn-orange w-50" name="action_add" type="submit">{% trans "Add E-mail" %}</button>
     </form>
 
 {% endblock %}
