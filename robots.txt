@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /user_account/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /checkout/order_confirmation/
+Disallow: /my_stepup/
+Disallow: /products/add/
+Disallow: /products/manage_brands/
+Sitemap: https://stepup-shoes.herokuapp.com/sitemap.xml
