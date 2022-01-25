@@ -117,10 +117,10 @@ p {
 .main-logo-link {
     width: fit-content;
     padding: 10px 16px;
-    text-shadow: 0 0 5px black;
-    background: linear-gradient(45deg, #9351008c, #e17c008c 50%, #dd8b27b9 50%, #ffa73a);
+    border: 1px solid #dd8b27b9;
     box-shadow: 0 0 5px black;
     border-radius: 50px;
+    backdrop-filter: blur(2px);
 }
 
 .main-logo-link:hover,
@@ -437,7 +437,6 @@ input[name='q']::placeholder {
 
 div.dropdown-menu.mobile-search {
     border-radius: 0 0 9px 9px;
-    /* background-color: rgba(4, 20, 47, 0.5); */
     background: none;
     border: none !important;
 }
@@ -448,11 +447,6 @@ button:focus {
 
 .navbar-expand-lg > li {
     width: 50%;
-}
-
-.bg-trans-blue {
-    background-color: rgb(57, 102, 128, .4);
-    transition: all, .2s ease-in-out;
 }
 
 .carousel-indicators {
@@ -477,10 +471,6 @@ button:focus {
 
 .carousel-item a:hover {
     opacity: .7;
-}
-
-.logo {
-    margin-top: 114px;
 }
 
 .input-group-append .btn, .input-group-prepend .btn {
