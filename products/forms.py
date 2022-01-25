@@ -4,7 +4,7 @@ products/forms.py: forms to be used with the product app of the application
 
 # - - - - - Django Imports - - - - - - - - -
 from django.forms import (
-    Textarea, Select, ModelForm, CharField, ImageField, ChoiceField
+    Textarea, Select, ModelForm, CharField, ImageField
 )
 from django.core.exceptions import ValidationError
 
@@ -64,9 +64,7 @@ class ProductForm(ModelForm):
             kwargs (keyword arguments)
         """
         super(ProductForm, self).__init__(*args, **kwargs)
-        placeholders = {
 
-        }
         labels = {
             'category': 'Select a category:',
             'gender': 'Select a gender:',

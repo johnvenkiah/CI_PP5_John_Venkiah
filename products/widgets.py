@@ -1,5 +1,5 @@
 """
-product/widget.py: Allows customisation of the image field in the product and
+product/widgets.py: Allows customisation of the image field in the product and
 brand forms. This functionality is derived from the Boutique Ado project with
 Code Institute.
 """

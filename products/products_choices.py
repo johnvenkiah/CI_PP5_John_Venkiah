@@ -1,5 +1,6 @@
 """
-Choices for fields in product and review models, products app
+products_choices.py: Choices for fields in product and review models,
+products app
 """
 
 # Choices enabling user to filter products by gender
@@ -8,6 +9,8 @@ GENDER_CHOICES = (
     ('m', "Men's"),
     ('u', 'Unisex'),
 )
+
+# Choices to determine size_type
 SIZE_CHOICES = (
     ('shoes', 'Shoes'),
     ('socks', 'Socks'),

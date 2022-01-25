@@ -1,5 +1,5 @@
             
-            $(document).ready(function(){
+            $(document).ready(function() {
                 $('.toast').toast('show');
 
                 // Fix error where toast is invisible but

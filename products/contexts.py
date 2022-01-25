@@ -6,8 +6,10 @@ the navbar throughout the whole site.
 # - - - - - Internal imports - - - - - - - - -
 from .models import Brand
 
+# pylint: disable=unused-argument, no-member
 
-def get_brands(request):  # pylint: disable=unused-argument
+
+def get_brands(request):
     """
     Gets all instances of the brand model.
     Args:
@@ -15,7 +17,7 @@ def get_brands(request):  # pylint: disable=unused-argument
     Returns:
         All brand instances registered on the site.
     """
-    all_brands = Brand.objects.all()  # pylint: disable=no-member
+    all_brands = Brand.objects.all()
     return {
         'all_brands': all_brands,
     }
