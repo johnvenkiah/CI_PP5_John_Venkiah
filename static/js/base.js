@@ -21,7 +21,7 @@
                 })
 
                 // Make products menu visible if  item is clicked on
-                $('#user-options').click(function() {
+                $('#account-menu').click(function() {
                     $('.navbar-nav').toggleClass('d-md-none');
                 })
 

@@ -445,7 +445,7 @@ button:focus, a.btn:focus {
     outline: 1px #df9c4b auto;
 }
 
-.navbar-expand-lg > li {
+.navbar-expand-lg > .list-inline-item {
     width: 50%;
 }
 
@@ -1024,7 +1024,7 @@ take up whole screen if many items */
         padding: .5rem 0;
     }
 
-    .navbar-expand-lg > li, .navbar-expand-lg > button {
+    .navbar-expand-lg > .list-inline-item, .navbar-expand-lg > button {
         width: 25%;
         margin-right: 0 !important;
     }
@@ -1060,7 +1060,7 @@ take up whole screen if many items */
         max-height: 370px;
     }
 
-    .dropdown-menu.show[aria-labelledby=user-options] {
+    .dropdown-menu.show[aria-labelledby=mob-account-menu] {
         left: -50px;
     }
 

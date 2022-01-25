@@ -83,7 +83,7 @@
                 <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center d-flex my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="{% if request.user.is_authenticated %}My Account{% else %}Sign in or sign up{% endif %}">
+                            <a class="nav-link" href="#" id="account-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="{% if request.user.is_authenticated %}My Account{% else %}Sign in or sign up{% endif %}">
                                 <div class="text-center">
                                     <div>
                                         <i class="fas fa-user-circle"></i>
@@ -92,7 +92,7 @@
                                 </div>
                             </a>
                             <!-- Account Operations -->
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0" aria-labelledby="account-menu">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product_brand' %}" class="dropdown-item">Add Brand or Product</a>
