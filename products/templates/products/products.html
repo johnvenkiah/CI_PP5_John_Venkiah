@@ -78,10 +78,8 @@
                 </div>
                 <div class="row">
                     {% if not products %}
-                    <div class="col-12 col-md-7 mt-4">
+                    <div class="col-12 col-md-6 col-lg-4 mt-4">
                         <p class="lead text-white">Sorry, that didn't give any results we're afraid.</p>
-                    </div>
-                        <div class="col-12 col-md-5">
                         <a href="{% url 'products' %}" class="btn btn-block btn-orange btn-lg my-2">Go To All Products</a>
                     </div>
                     {% endif %}

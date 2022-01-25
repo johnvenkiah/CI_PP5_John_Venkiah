@@ -327,6 +327,10 @@ input[name='q']::placeholder {
     border-color: rgb(255, 255, 255, .5);
 }
 
+#id_remember {
+    bottom: .35rem;
+}
+
 .login li {
     list-style-type: none;
 }
