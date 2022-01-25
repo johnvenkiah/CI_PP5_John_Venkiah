@@ -109,10 +109,6 @@ p {
     color: #c5c5c5;
 }
 
-.bg-orange {
-    background: linear-gradient(#ffaa42b9, #e17c008c);
-}
-
 .logo-font {
     text-transform: uppercase;
     font-weight: bold;
@@ -183,12 +179,6 @@ p {
     /* background: linear-gradient(#ffaa42b9, #e17c008c), linear-gradient(150deg, rgba(42, 147, 165, 0.664), rgba(68, 0, 255, 0.589)); */
 }
 
-.btn-purple {
-    text-shadow: 0.4px 0.4px 3px black;
-    background: linear-gradient(45deg, #540093b8, #972be98c 50%, #bd65ff8c 50%, #d69fff9c);
-    border: 1px solid #3e006c;
-}
-
 .btn-blue {
     background: linear-gradient(
         45deg, #001f698c, #0058e18c 50%, #276eddb9 50%, #68a1ff);
@@ -213,10 +203,6 @@ p {
     background-color: rgb(92, 0, 0);
     text-shadow: 0 0 8px #d39191, 1px 1px 15px black;
     box-shadow: 0 0 5px #d39191;
-}
-
-.bg-black {
-    background: #000 !important;
 }
 
 .btt-button {
@@ -269,20 +255,16 @@ input[name='q']::placeholder {
     border-color: #2db300 !important;
 }
 
-.text--success {
-    color: #2db300 !important;
-}
-
 .border-error {
-    border-color: #dc3545 !important;
+    border-color: #ff3300 !important;
 }
 
 .border-warning {
-    border-color: #ffc107 !important;
+    border-color: #ffbd07 !important;
 }
 
 .border-info {
-    border-color: #17a2b8 !important;
+    border-color: #1778b8 !important;
 }
 
 .cart-notification-wrapper {
@@ -422,14 +404,6 @@ input[name='q']::placeholder {
 
 .bg-trans-dark {
     background-color: rgba(4, 20, 47, 0.5);
-}
-
-.bg-grad-trans-dark {
-    background-color: linear-gradient(
-        black,
-        rgba(0, 21, 48, 0.7),
-        transparent
-    );
 }
 
 .dropdown-menu {
