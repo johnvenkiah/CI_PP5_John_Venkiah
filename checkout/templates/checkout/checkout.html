@@ -80,13 +80,13 @@
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label text-orange px-2 w-auto">Your Details</legend>
+                        <legend class="fieldset-label text-orange px-2 w-auto"><h3>Your Details</h3></legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                         {{ order_form.phone_number | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label text-orange px-2 w-auto">Shipping Details</legend>
+                        <legend class="fieldset-label text-orange px-2 w-auto"><h3>Shipping Details</h3></legend>
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}
@@ -110,16 +110,16 @@
                         <div class="col">
                             <p class="my-0">Order Total:</p>
                             <p class="my-0">Delivery:</p>
-                            <p class="my-0 lead font-weight-bold">Grand Total:</p>
+                            <h4 class="my-2 lead font-weight-bold">Grand Total:</h4>
                         </div>
                         <div class="col-auto">
                             <p class="my-0">€{{ total | floatformat:2 }}</p>
                             <p class="my-0">€{{ delivery | floatformat:2 }}</p>
-                            <p class="my-0 text-orange lead font-weight-bold"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
+                            <h4 class="my-2 text-orange lead font-weight-bold"><strong>€{{ grand_total | floatformat:2 }}</strong></h4>
                         </div>
                     </div>
                     <fieldset class="px-3">
-                        <legend class="fieldset-label text-orange px-2 w-auto">Payment</legend>
+                        <legend class="fieldset-label text-orange px-2 w-auto"><h3>Payment</h3></legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>
                         <!-- Used to display form errors -->
@@ -147,11 +147,12 @@
         </div>
     </div>
     <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
-            <span class="icon">
+        <div class="text-light logo-font loading-spinner">
+            <h3 class="logo-font d-block mb-5">Processing your payment...</h3>
+            <p class="icon">
                 <i class="fas fa-3x fa-spinner fa-pulse"></i>
-            </span>
-        </h1>
+            </p>
+        </div>
     </div>
 {% endblock %}
 

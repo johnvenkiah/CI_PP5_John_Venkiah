@@ -53,6 +53,10 @@ hr {
     color: #a6a6a6 !important;
 }
 
+.text-danger {
+    color: #ff4f42 !important;
+}
+
 /* Disable buggy animation for some collapsing elements */
 .collapsing:not(#order-summary) {
     -webkit-transition: none;
