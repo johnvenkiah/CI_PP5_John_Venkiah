@@ -1,5 +1,5 @@
 """
-home/apps.py: config file for products app
+products/apps.py: config file for products app
 """
 
 # - - - - - Django Imports - - - - - - - - -

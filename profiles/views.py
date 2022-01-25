@@ -1,8 +1,14 @@
+"""
+profiles/views.py: views for profile app
+"""
+
+# - - - - - Django Imports - - - - - - - - -
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+# - - - - - Internal Imports - - - - - - - - -
 from .models import UserProfile, WishListItem
 from .forms import UserProfileForm
 from products.models import Product
@@ -84,6 +90,14 @@ def add_to_wishlist(request, product_id):
 
 @login_required
 def remove_from_wishlist(request, product_id):
+    """
+    Removes a product from the users Wishlist.
+    Args:
+        request (the request object)
+        product_id (the product in question)
+    Returns:
+        A redirect to the previously viewed page
+    """
     product = get_object_or_404(Product, pk=product_id)
     wishlistitem = get_object_or_404(WishListItem, user=request.user.id)
     if product in wishlistitem.product.all():
@@ -92,14 +106,25 @@ def remove_from_wishlist(request, product_id):
             request, f'Removed {product.name[:30]} from your Wishlist'
         )
     else:
-        messages.error(request, f'{product.name[:30]}.. is '
-                                'not in your Wishlist.')
+        messages.error(
+            request, (
+                f'{product.name[:30]}.. is not in your Wishlist.'
+            )
+        )
 
     # Return the previously viewed page
     return redirect(request.META.get('HTTP_REFERER'))
 
 
 def order_history(request, order_number):
+    """
+    Returns the users order history.
+    Args:
+        request (the request object)
+        order_number (the order instance)
+    Returns:
+        the order confirmation page (template and context)
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

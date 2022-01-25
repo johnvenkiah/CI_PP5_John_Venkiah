@@ -1,5 +1,5 @@
 """
-products/test_views.py: testing of product app views
+profiles/test_views.py: testing of profile app views
 """
 
 # - - - - - Django Imports - - - - - - - - -
