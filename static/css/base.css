@@ -327,6 +327,7 @@ input[name='q']::placeholder {
     border-color: rgb(255, 255, 255, .5);
 }
 
+/* To vertically align allauth checkbox with its label */
 #id_remember {
     bottom: .35rem;
 }
@@ -354,6 +355,8 @@ input[name='q']::placeholder {
     overflow: hidden;
 }
 
+/* Cred: Code Institute, Boutique Ado project */
+
 .btn-file input[type="file"] {
     position: absolute;
     top: 0;
@@ -380,6 +383,7 @@ input[name='q']::placeholder {
     border-radius: 3px !important;
 }
 
+/* --------------------------------------------- */
 
 .custom-control {
     display: inline;
@@ -392,10 +396,6 @@ input[name='q']::placeholder {
 
 .thmbnl {
     object-fit: contain;
-}
-
-.bg-trans-dark {
-    background-color: rgba(4, 20, 47, 0.5);
 }
 
 .dropdown-menu {
@@ -441,13 +441,15 @@ div.dropdown-menu.mobile-search {
     border: none !important;
 }
 
-button:focus {
+button:focus, a.btn:focus {
     outline: 1px #df9c4b auto;
 }
 
 .navbar-expand-lg > li {
     width: 50%;
 }
+
+/* Carousel */
 
 .carousel-indicators {
     width: 8%;
@@ -473,14 +475,27 @@ button:focus {
     opacity: .7;
 }
 
+/* Feature text in carousel */
+
+.feature-title, .feature-caption {
+    font-family: Average, sans-serif;
+}
+
+.feature-title {
+    font-size: 3.5rem;
+}
+
+.feature-caption {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Buttons in conjunction with an input element */
+
 .input-group-append .btn, .input-group-prepend .btn {
     position: relative;
     z-index: 2;
     padding: 0 .75rem;
-}
-
-.dialog {
-    border-radius: 20px;
 }
 
 .list-inline-item {
@@ -488,6 +503,7 @@ button:focus {
     text-align: center;
 }
 
+/* Only affect buttons that are not disabled */
 .input-group-append .btn:hover:not([disabled]),
 .input-group-prepend .btn:hover:not([disabled]),
 .input-group-append .btn:active:not([disabled]),
@@ -501,19 +517,6 @@ button:focus {
 
 footer {
     padding-bottom: 15px;
-  }
-
-.feature-title, .feature-caption {
-    font-family: Average, sans-serif;
-}
-
-.feature-title {
-    font-size: 3.5rem;
-}
-
-.feature-caption {
-    font-size: 1.5rem;
-    color: white;
 }
 
 .text-shadow {
@@ -703,6 +706,10 @@ textarea.form-control {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.dialog {
+    border-radius: 20px;
+}
+
 /* CLOSE BUTTON FOR MODALS AND TOASTS */
 .modal-header .close, .toast .close {
     padding: 0;
@@ -771,10 +778,6 @@ textarea.form-control {
     border: 1px solid #ffaa42;
 }
 
-.turn-white {
-    filter: invert(1);
-}
-
 .brand-img {
     width: 100%;
     height: 100px;
@@ -811,6 +814,8 @@ textarea.form-control {
     margin-bottom: 9px;
 }
 
+/* Wishlist in my_stepup page doesn't
+take up whole screen if many items */
 .wishlist {
     max-height: 45vh;
     overflow-y: scroll;
@@ -868,6 +873,7 @@ textarea.form-control {
 
 /* MEDIA QUERIES: LAPTOP AND LARGER */
 @media (min-width: 992px) {
+
     /* FIXED TOP NAV, LARGE SCREENS, CRED: BOUTIQUE ADO, CODE INSTITUTE */
     .fixed-top-desktop-only {
         position: fixed;
@@ -936,6 +942,9 @@ textarea.form-control {
 
 @media (max-width: 991px) {
 
+    body {
+            height: calc(100vh - 116px);
+        }
     h1 {
         font-size: 1.4rem;
     }
@@ -946,10 +955,6 @@ textarea.form-control {
 
     .header-container {
         padding-top: 70px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
     }
 
     .main-logo-link {
