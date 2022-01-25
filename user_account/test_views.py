@@ -42,7 +42,7 @@ class TestUserAccountViews(TestCase):
 
     def test_account_deletion(self):
         """
-        Checks to 
+        Checks whether a user account is successfully deleted
         """
         user = User.objects.get()
         self.client.login(username='test_user', password='test_password')
