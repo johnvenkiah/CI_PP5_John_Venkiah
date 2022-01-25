@@ -394,18 +394,6 @@ input[name='q']::placeholder {
     object-fit: contain;
 }
 
-/* PERSONAL STYLES */
-
-.small-main-header {
-    position: absolute;
-    z-index: 2;
-    left: 5rem;
-}
-
-.small-main-header p {
-    color: white;
-}
-
 .bg-trans-dark {
     background-color: rgba(4, 20, 47, 0.5);
 }
@@ -449,7 +437,8 @@ input[name='q']::placeholder {
 
 div.dropdown-menu.mobile-search {
     border-radius: 0 0 9px 9px;
-    background-color: #04142f80;
+    /* background-color: rgba(4, 20, 47, 0.5); */
+    background: none;
     border: none !important;
 }
 
@@ -1088,11 +1077,6 @@ textarea.form-control {
     .footer-content {
         margin: 0 auto 20px;
         text-align: center;
-    }
-
-    .small-main-header {
-        left: 2rem;
-        top: 1rem;
     }
 
     .sign-in-container {
