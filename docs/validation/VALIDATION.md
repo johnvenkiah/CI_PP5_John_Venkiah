@@ -2,6 +2,8 @@
 
 This is the validation results file for the StepUp project, containing results from testing the validation of the code.
 
+## Table Of Contents
+
 * [Overview](#overview)
 * [PEP8 Python Validation](#pep8-python-validation)
   + [Home App](#home-app)
