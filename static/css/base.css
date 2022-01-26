@@ -697,6 +697,7 @@ textarea.form-control {
 
 .modal-content {
     border: 2px solid #ffaa42;
+    backdrop-filter: blur(5px);
 }
 
 .modal-header {

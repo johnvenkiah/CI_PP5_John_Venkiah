@@ -93,29 +93,7 @@
 
 {% block postloadjs %}
     <script src="{% static 'products/js/result_sorting.js' %}"></script>
-    <script>
-        /**
-        * Script so that changes image filename is visible on each brands modal
-        * window. As the corresponding functionality on the add/edit product page
-        * uses the element id, I gave the elements a new class and loop through
-        * each of them to apply the new file-name to.
-        */
-        $(document).ready(function() {
-            const brandImges = $('.brand-img-class')
-            brandImges.each(function(_, item) {
-                const brandImg = "." + item.classList[0]
-                $(brandImg).change(function(e) {
-                    const {target} = e
-                    const {name} = target.files[0]
-                    const allFileName = $('.filename-for-brand')
-                    allFileName.each(function(_, item) {
-                        item.innerHTML =`Set new image to: ${name}`
-                    })
-                });
-            })
-        })
-        
-    </script>
+    <script src="{% static 'products/js/brand_modal.js' %}"></script>
     {{ block.super }}
     
 {% endblock %}
