@@ -305,7 +305,6 @@ The files here are in the main or project directory and are not part of a specif
 ## JSHint JavaScript Validation
 
 The JavaScript code was validated with JSHint. All files tested with 0 errors.
-See the results below.
 
 <details>
   <summary>View Results</summary>
@@ -347,5 +346,27 @@ See the results below.
 ![JSHint stripe_elements](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_stripe_elements.png)
 
 [To Top](#overview)
+
+</details>
+
+
+## W3C Jigsaw Validation
+
+The CSS code was validated with W3C Jigsaw. All files tested with 0 errors.
+
+<details>
+  <summary>View Results</summary>
+  
+#### base.css
+
+![Jigsaw base.css](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jigsaw/w3_css_base.png)
+  
+#### checkout.css
+
+![Jigsaw checkout.css](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jigsaw/w3_css_checkout.png)
+  
+#### profiles.css
+
+![Jigsaw profiles.css](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jigsaw/w3_css_profiles.png)
 
 </details>
