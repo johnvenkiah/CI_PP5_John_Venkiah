@@ -5,9 +5,9 @@ This is the validation file for the StepUp project, containing results from test
 ## Overview
 
 The languages tested are:
-* Python (validation performed with [PEP8](http://pep8online.com/" target="_blank))
+* Python (validation performed with [PEP8](http://pep8online.com/))
 * JavaScript (validation performed with [JSHint](https://jshint.com/))
-* HTML (validation performed with [W3 HTML Validator](https://validator.w3.org/nu/){target="_blank"})
+* HTML (validation performed with [W3 HTML Validator](https://validator.w3.org/nu/))
 * CSS (validation performed with [W3 Jigsaw CSS Validator](https://www.w3.org/))
 
 Accessibility tests were also performed with the [WAVE](https://wave.webaim.org/) Web Accessibility Evaluation Tool.
