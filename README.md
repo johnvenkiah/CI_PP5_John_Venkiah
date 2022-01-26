@@ -611,7 +611,7 @@ To make a clone, or 'Fork' this repository, follow the steps below.
 
 This application has been deployed from Github using Heroku. Here's how:
 
-1. Create an account at [heroku.com](https://.heroku.com/)
+1. Create an account at [heroku.com](https://www.heroku.com/)
 2. Create a new app, add app name and your region
 3. Click on create app
 4. Go to "Settings"
@@ -636,6 +636,8 @@ The steps to take are:
 5. Enable public access for your bucket so users can access and use the services on your website (upload, view, download, etc). More info can be read in the official documentation: https://aws.amazon.com/s3/
 
 ## Validation
+
+Thourough validation of all code was made without errors. The results can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/VALIDATION.md).
 
 ## Bugs
 
