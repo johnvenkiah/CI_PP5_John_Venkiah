@@ -271,3 +271,31 @@ See the results below.
 [To Top](#overview)
 
 </details>
+
+
+### Project Python Files
+
+The files here are in the main or project directory and are not part of a specific app.
+
+<details>
+  <summary>View Images</summary>
+
+#### stepup/settings.py
+
+![pep8 result stepup/settings.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_settings.png)
+  
+#### stepup/urls.py
+
+![pep8 result stepup/urls.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_urls.png)
+  
+#### manage.py
+
+![pep8 result manage.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_manage.png)
+  
+#### custom_storages.py
+
+![pep8 result custom_storages.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_custom_storages.png)
+
+[To Top](#overview)
+
+</details>
