@@ -17,10 +17,12 @@ class TestHomeForm(TestCase):
         """
         Here it is, the actual test.
         """
-        form = ContactForm({
-            'name': 'Test Name',
-            'from_email': 'test@email.com',
-            'subject': 'Message',
-            'message': 'Hello, this is a message',
-            })
+        form = ContactForm(
+            {
+                'name': 'Test Name',
+                'from_email': 'test@email.com',
+                'subject': 'Message',
+                'message': 'Hello, this is a message',
+            }
+        )
         self.assertTrue(form.is_valid())

@@ -28,17 +28,23 @@ class ContactForm(forms.Form):
             self.fields[field].widget.attrs['aria-label'] = placeholder
             self.fields[field].label = False
 
-    name = forms.CharField(max_length=100)
-    from_email = forms.EmailField(max_length=100)
-    subject = forms.CharField(max_length=100)
+    name = forms.CharField(
+        max_length=100
+    )
+    from_email = forms.EmailField(
+        max_length=100
+    )
+    subject = forms.CharField(
+        max_length=100
+    )
     message = forms.CharField(
-                            max_length=254,
-                            widget=forms.Textarea(
-                                {
-                                    'rows': 5,
-                                    'class': 'textarea',
-                                }
-                            )
+        max_length=254,
+        widget=forms.Textarea(
+            {
+                'rows': 5,
+                'class': 'textarea',
+            }
+        )
     )
 
     def __str__(self):

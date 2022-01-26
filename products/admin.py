@@ -34,13 +34,10 @@ class ProductAdmin(admin.ModelAdmin):
         'gender',
         'is_new'
     )
-    search_fields = (
+    search_fields = [
         'art_nr',
-        'category',
-        'brand',
         'name',
-        'price',
-    )
+    ]
 
     ordering = ('art_nr',)
 
@@ -85,12 +82,11 @@ class ReviewAdmin(admin.ModelAdmin):
         'product_rating',
         'date_created',
     )
-    search_fields = (
-        'user',
-        'product',
-        'product_rating'
+    search_fields = [
+        'user__username',
         'title',
-    )
+        'product__name'
+    ]
     list_per_page = 15
 
 
