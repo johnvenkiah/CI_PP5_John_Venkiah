@@ -50,9 +50,10 @@ See the results below.
 
 ![pep8 result home/views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_home_views.png)
 
+[To Top](#overview)
+
 </details>
 
-[To Top](#overview)
 
 ### Products App
 
@@ -107,9 +108,9 @@ See the results below.
 
 ![pep8 result products/widgets.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_widgets.png)
 
-</details>
-
 [To Top](#overview)
+
+</details>
 
 
 ### Cart App
@@ -141,6 +142,65 @@ See the results below.
 
 ![pep8 result cart/views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_cart_views.png)
 
+[To Top](#overview)
+
 </details>
 
+
+### Checkout App
+
+<details>
+  <summary>View Images</summary>
+  
+#### checkout/admin.py
+
+![pep8 result checkout/apps.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_admin.png)
+  
+#### checkout/apps.py
+
+![pep8 result checkout/apps.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_apps.png)
+  
+#### checkout/forms.py
+
+![pep8 result checkout/contexts.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_forms.png)
+  
+#### checkout/models.py
+
+![pep8 result checkout/models.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_models.png)
+  
+#### checkout/signals.py
+
+![pep8 result checkout/signals.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_signals.png)
+  
+#### checkout/test_forms.py
+
+![pep8 result checkout/test_forms.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_test_forms.png)
+  
+#### checkout/test_models.py
+
+![pep8 result checkout/test_models.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_test_models.png)
+  
+#### checkout/test_views.py
+
+![pep8 result checkout/test_views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_test_views.png)
+  
+#### checkout/urls.py
+
+![pep8 result checkout/urls.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_urls.png)
+  
+#### checkout/views.py
+
+![pep8 result checkout/views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_views.png)
+  
+#### checkout/webhook_handler.py
+
+![pep8 result checkout/webhook_handler.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_webhook_handler.png)
+  
+#### checkout/webhooks.py
+
+![pep8 result checkout/webhooks.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_checkout_webhooks.png)
+
 [To Top](#overview)
+
+</details>
+
