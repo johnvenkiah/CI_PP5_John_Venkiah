@@ -31,7 +31,7 @@ $(document).ready(function() {
     
     // Make products menu visible if  item is clicked on
     $('#account-menu').click(function() {
-        $('.navbar-nav').toggleClass('d-md-none');
+        $('.navbar-nav').addClass('d-md-none');
     });
     
     $(window).resize(function() {
