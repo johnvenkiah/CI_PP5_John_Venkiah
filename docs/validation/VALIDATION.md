@@ -12,7 +12,7 @@ The languages tested are:
 
 Accessibility tests were also performed with the [WAVE](https://wave.webaim.org/) Web Accessibility Evaluation Tool.
 
-## PEP8 Validation
+## PEP8 Python Validation
 
 The Python code was validated with the PEP8 Online tool. All files tested with 0 errors.
 See the results below.
@@ -295,6 +295,56 @@ The files here are in the main or project directory and are not part of a specif
 #### custom_storages.py
 
 ![pep8 result custom_storages.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_custom_storages.png)
+
+[To Top](#overview)
+
+</details>
+
+
+
+## JSHint JavaScript Validation
+
+The JavaScript code was validated with JSHint. All files tested with 0 errors.
+See the results below.
+
+<details>
+  <summary>View Results</summary>
+  
+#### base.js
+
+![JSHint base.js](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_base_js.png)
+  
+#### brand_modal.js
+
+![JSHint brand_modal.js](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_brand_modal.png)
+  
+#### cart_script.html
+
+![JSHint cart_script](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_cart_script.png)
+  
+#### edit_product.html script
+
+![JSHint edit_product](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_edit_product.png)
+  
+#### prevent_scroll.js
+
+![JSHint prevent_scroll](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_prevent_scroll.png)
+  
+#### products_form.js
+
+![JSHint products_form](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_products_form.png)
+
+#### quantity_input_script.js
+
+![JSHint quantity_input_script](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_quantity_input_script.png)
+
+#### results_sorting.js
+
+![JSHint results_sorting](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_results_sorting.png)
+  
+#### stripe_elements.js
+
+![JSHint stripe_elements](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_stripe_elements.png)
 
 [To Top](#overview)
 
