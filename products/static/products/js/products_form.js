@@ -1,11 +1,14 @@
 /**
-Products app JavaScript file
-
+ * products_form.js: Javascript file for add_product page in products app.
  */
+
+/*jshint esversion: 6 */
+/*globals $:false */
 
 /**
 The two functions below let the text displayed when uploading a new
-product or brand image is customizeable.
+product or brand image is customizeable. Credit: Code Institute,
+Boutique Ado project
 */
 
 $('#new-product-image').change(function() {

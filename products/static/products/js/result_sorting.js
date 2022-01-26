@@ -1,8 +1,16 @@
+/**
+ * results_sorting.js: Javascript file for sorting the results
+ * on the products page. Credit: Code Institute, Boutique Ado project
+ */
+
+/*jshint esversion: 6 */
+/*globals $:false */
+
 
 // Script for Back to top button -->
 $('.btt-link').click(function(e) {
-    window.scrollTo(0,0)
-})
+    window.scrollTo(0,0);
+});
 
 //Script for sorting products
 
@@ -25,4 +33,4 @@ $('#sort-selector, #sort-selector-brand').change(function() {
 
         window.location.replace(currentUrl);
     }
-})
+});
