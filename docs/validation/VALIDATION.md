@@ -1,6 +1,21 @@
 # StepUp - Validation
 
-This is the validation file for the StepUp project, containing results from testing the validation of the code.
+This is the validation results file for the StepUp project, containing results from testing the validation of the code.
+
+* [Overview](#overview)
+* [PEP8 Python Validation](#pep8-python-validation)
++ [Home App](#home-app)
++ [Products App](#products-app)
++ [Cart App](#cart-app)
++ [Checkout App](#checkout-app)
++ [Profiles App](#profiles-app)
++ [User Account App](#user-account-app)
++ [Project Python Files](#project-python-files)
+* [JSHint JavaScript Validation](#jshint-javascript-validation)
+* [W3C Jigsaw Validation](#w3c-jigsaw-validation)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Overview
 
@@ -10,7 +25,6 @@ The languages tested are:
 * HTML (validation performed with [W3 HTML Validator](https://validator.w3.org/nu/))
 * CSS (validation performed with [W3 Jigsaw CSS Validator](https://www.w3.org/))
 
-Accessibility tests were also performed with the [WAVE](https://wave.webaim.org/) Web Accessibility Evaluation Tool.
 
 ## PEP8 Python Validation
 
