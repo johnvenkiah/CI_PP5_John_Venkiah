@@ -74,7 +74,7 @@ See the results below.
   
 #### products/forms.py
 
-![pep8 result products/contexts.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_forms.png)
+![pep8 result products/forms.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_forms.png)
   
 #### products/models.py
 
@@ -204,3 +204,40 @@ See the results below.
 
 </details>
 
+
+### Profiles App
+
+<details>
+  <summary>View Images</summary>
+  
+#### profiles/apps.py
+
+![pep8 result profiles/apps.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_profiles_apps.png)
+  
+#### profiles/forms.py
+
+![pep8 result profiles/forms.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_profiles_forms.png)
+  
+#### profiles/models.py
+
+![pep8 result profiles/models.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_profiles_models.png)
+  
+#### profiles/test_models.py
+
+![pep8 result profiles/test_models.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_profiles_test_models.png)
+  
+#### profiles/test_views.py
+
+![pep8 result profiles/test_views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_profiles_test_views.png)
+  
+#### profiles/urls.py
+
+![pep8 result profiles/urls.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_profiles_urls.png)
+  
+#### profiles/views.py
+
+![pep8 result profiles/views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_profiles_views.png)
+
+[To Top](#overview)
+
+</details>
