@@ -120,6 +120,6 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script src="{% static 'cart/js/cart.js' %}"></script>
+    {% include 'cart/includes/cart_script.html' %}
     {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
