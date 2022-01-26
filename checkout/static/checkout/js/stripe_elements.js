@@ -1,5 +1,15 @@
+/**
+ * checkout.stripe_elements.js - Manages stripe front-end operations:
+ * styling the stripe elements, gets users order data, and disabling or
+ * showing elements on the checkout page depending on the users actions.
+ */
+
+/*jshint esversion: 6 */
+/*globals $:false */
+
 /*
-    Core logic/payment flow for this comes from here:
+    Core logic/payment flow for this comes from below
+    (and the Boutique Ado project, Code Institute)
     https://stripe.com/docs/payments/accept-a-payment
 
     CSS from here (but customized): 
@@ -55,6 +65,7 @@ form.addEventListener('submit', function(ev) {
     $('#loading-overlay').fadeToggle(100);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
+
     // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
@@ -113,7 +124,7 @@ form.addEventListener('submit', function(ev) {
             }
         });
     }).fail(function () {
-        // just reload the page, the error will be in django messages
+        // Just reloads the page, the error will be in django messages
         location.reload();
-    })
+    });
 });
