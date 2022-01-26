@@ -51,3 +51,62 @@ See the results below.
 ![pep8 result home/views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_home_views.png)
 
 </details>
+
+[To Top](#overview)
+
+### Products App
+
+<details>
+  <summary>View Images</summary>
+  
+#### products/admin.py
+
+![pep8 result products/apps.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_admin.png)
+  
+#### products/apps.py
+
+![pep8 result products/apps.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_apps.png)
+  
+#### products/contexts.py
+
+![pep8 result products/contexts.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_contexts.png)
+  
+#### products/forms.py
+
+![pep8 result products/contexts.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_forms.png)
+  
+#### products/models.py
+
+![pep8 result products/models.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_models.png)
+  
+#### products/product_choices.py
+
+![pep8 result products/product_choices.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_product_choices.png)
+  
+#### products/test_forms.py
+
+![pep8 result products/test_forms.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_test_forms.png)
+  
+#### products/test_models.py
+
+![pep8 result products/test_models.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_test_models.png)
+  
+#### products/test_views.py
+
+![pep8 result products/test_views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_test_views.png)
+  
+#### products/urls.py
+
+![pep8 result products/urls.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_urls.png)
+  
+#### products/views.py
+
+![pep8 result products/views.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_views.png)
+  
+#### products/widgets.py
+
+![pep8 result products/widgets.py](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/pep8/pep8_products_widgets.png)
+
+</details>
+
+[To Top](#overview)
