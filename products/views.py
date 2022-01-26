@@ -342,7 +342,7 @@ def delete_product(request, product_id):
 @login_required
 def manage_brands(request):
     """
-    Admin functionality to manage brands on the site.
+    Site owner feature to manage brands on the site.
     Args:
         request (object)
     Returns:
