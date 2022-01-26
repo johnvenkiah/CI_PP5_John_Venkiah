@@ -557,6 +557,7 @@ textarea.form-control {
 .card-img-top {
     width: 100%;
     height: 100%;
+    max-height: 350px;
     align-items: center;
     object-fit: cover;
 }
@@ -767,8 +768,11 @@ textarea.form-control {
     border-radius: 15px;
     padding: 10px;
     box-shadow: inset 0 -5px 5px black;
+    background: #0f12227a;
+    backdrop-filter: blur(2px);
     transition: all .3s ease-in-out;
     border: 1px solid #ffaa4241;
+    margin-top: 2.5rem;
 }
 
 .review-box:active,
@@ -1049,6 +1053,11 @@ take up whole screen if many items */
         right: 3rem;
         /* padding: 5px 12px 2px; */
     }
+
+    .review-box {
+        margin-top: 2.5rem;
+        height: 35.3vh;
+    }
 }
 
 /* MEDIA QUERIES: SMALLER MOBILE DEVICES */
@@ -1103,6 +1112,11 @@ take up whole screen if many items */
     .label-new, .sale-label {
         margin-right: .5rem !important;
         top: 45px !important;
+    }
+
+    .review-box {
+        margin-top: 1.5rem;
+        height: 35.3vh;
     }
 
     .message-container {

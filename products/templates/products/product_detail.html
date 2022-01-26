@@ -31,9 +31,7 @@
                 </a>
                 {% endif %}
             </div>
-            <!-- <div class="col-12 text-center">
 
-            </div> -->
             <!-- Product image -->
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
@@ -58,7 +56,17 @@
                     {% endif %}
                     <p class="pt-2 text-muted">Art-nr: {{ product.art_nr }}</p>
                 </div>
+                {% if product.details %}
+                    <div class="d-none d-md-block">
+                        <ul>
+                            {% for d in product.details_as_list %}
+                            <li>{{ d|title }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
             </div>
+
             <!-- Product details -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
@@ -109,14 +117,15 @@
                         </div>
                     </div>
                     <p class="mt-3">{{ product.description }}</p>
-                    <br>
-                    {% if product.details %}
+                    {% if product.details and is_mobile %}
+                    <div class="d-md-none my-4">
                         <ul>
                             {% for d in product.details_as_list %}
                             <li>{{ d|title }}</li>
                             {% endfor %}
                         </ul>
-                    {% endif %}
+                    </div>
+                {% endif %}
                     <div class="row">
                         <div class="col-12 col-lg-6">
                             {% if request.user.is_authenticated %}
@@ -190,7 +199,7 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <h3 class="lead text-orange">Product Reviews</h3>
                 {% if reviews %}
-                    <section class="review-box">
+                    <section class="review-box mb-3">
                         {% for review in reviews %}
                             <div class="row">
                                 <div class="col-6">
