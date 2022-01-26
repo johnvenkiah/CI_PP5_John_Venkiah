@@ -11,9 +11,13 @@
                 <p class="text-shadow">Are you sure you want to delete your review of <strong><i class="text-orange">{{ product.name }}</i></strong>?</p>
                 <p class="text-shadow">Your rating of the product will still be counted.</p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-grey text-white text-shadow" data-dismiss="modal">Cancel</button>
-                <a role="button" href="{% url 'delete_review' review.id %}" class="btn btn-red text-shadow">Delete Review</a>
+            <div class="row px-2">
+                <div class="col-6">
+                    <button type="button" class="btn btn-grey btn-block text-white text-shadow" data-dismiss="modal">Cancel</button>
+                </div>
+                <div class="col-6">
+                    <a role="button" href="{% url 'delete_review' review.id %}" class="btn btn-red btn-block text-shadow">Delete</a>
+                </div>
             </div>
         </div>
     </div>
