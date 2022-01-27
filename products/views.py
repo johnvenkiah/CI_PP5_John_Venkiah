@@ -38,6 +38,8 @@ def all_products(request):
     gender_pretty = []
     brands = None
     sort = None
+    news = None
+    sale = None
     direction = None
     price = None
     context = {}
@@ -80,9 +82,11 @@ def all_products(request):
 
         if 'news' in request.GET:
             products = products.filter(is_new=True)
+            news = True
 
         if 'on_sale' in request.GET:
             products = products.filter(~Q(initial_price=price))
+            sale = True
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -108,6 +112,8 @@ def all_products(request):
         'gender': gender,
         'gender_pretty': gender_pretty,
         'brands': brands,
+        'news': news,
+        'sale': sale,
         'wishlist': wishlist,
         'current_sorting': current_sorting,
     }

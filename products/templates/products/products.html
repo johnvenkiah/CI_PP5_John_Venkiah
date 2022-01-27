@@ -47,6 +47,19 @@
                         {% endfor %}
                     </div>
                 {% endif %}
+
+                {% if news or sale %}
+                    <div class="col text-center">
+                        <p class="text-white">Showing results in</p>
+                        {% if news %}
+                            <p class="p-2 mt-2 text-orange logo-font">New Arrivals</p>
+                            </div>
+                        {% endif %}
+                        {% if sale %}
+                            <p class="p-2 mt-2 text-orange logo-font">On Sale</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
             </div>
         </div>
         <div class="row">
