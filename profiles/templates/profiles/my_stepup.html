@@ -137,12 +137,19 @@
                 {% endif %}
             </div>
             <div class="col-12">
+                <h4 class="logo-font my-3 text-center">Account Operations</h4>
                 <hr>
-                <h4 class="text-danger font-weight-bold my-3 text-center">Danger Area</h4>
             </div>
             <div class="col-12 col-md-6 text-center mx-auto">
-                        <a href="{% url 'delete_account' request.user.id %}" class="btn btn-red btn-block">Delete Account</a>
-                        <p class="text-center mt-3 mt-md-0">This operation is irriversible!</p>
+                <h5 class="logo-font text-orange my-3 text-center">Change Password</h5>
+                <p class="text-right my-3">
+                    <a href="{% url 'account_change_password' %}" class="btn-black btn btn-block">Change Password</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-6 text-center mx-auto">
+                <h5 class="logo-font text-danger my-3 text-center">Danger Area</h5>
+                <a href="{% url 'delete_account' request.user.id %}" class="btn btn-red btn-block">Delete Account</a>
+                <p class="text-center mt-3 mt-md-0">This operation is irriversible!</p>
             </div>
             <div class="col-12">
                 <hr>

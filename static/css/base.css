@@ -170,6 +170,17 @@ p {
     box-shadow: 0 0 5px #ffaa42;
 }
 
+.btn-black {
+    background: linear-gradient(45deg, #000000b0 50%, rgb(80 80 80 / 25%) 50%);
+    border: 2px solid #ffc107;
+}
+
+.btn-black:hover {
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(255, 208, 0, 0.5);
+}
+
 .btn-orange:hover,
 .btn-green:hover,
 .btn-blue:hover {
