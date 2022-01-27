@@ -31,7 +31,7 @@
                 {% else %}
                     <div class="row wishlist">
                         {% for item in wishlist_items %}
-                            <div class="product-height col-6 col-md-4 col-lg-3 col-xl-2">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="card h-lg-100">
                                     <a class="products-link" href="{% url 'product_detail' item.id %}">
                                         <p class="mb-0 product-title text-orange">{{ item.name }}</p>
@@ -42,9 +42,9 @@
                                             <small class="sale-label text-shadow label-new{% if item.discount %} lower-label{% else %} mt-3{% endif %}">NEW!</small>
                                         {% endif %}
                                     {% if item.image %}
-                                        <img class="card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
+                                        <img class="wishlist-img img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
                                         {% else %}
-                                        <div class="card-img-top img-fluid bg-white mb-1 py-3">
+                                        <div class="wishlist-img img-fluid bg-white mb-1 py-3">
                                             <p class="text-center text-muted py-2">
                                                 <i class="fas fa-exclamation-circle py-2 py-md-4"></i>
                                                 <br>
@@ -58,12 +58,12 @@
                                     <div class="card-footer pt-0 border-0">
                                         <div class="row">
                                             <div class="col-6 px-0 text-left">
-                                                <p class="text-orange lead mb-0">
+                                                <p class="text-orange mb-0">
                                                     <span class="font-weight-bold">€{{ item.price }}</span>
                                                 </p>
                                             </div>
                                             <div class="col-6 px-0 text-right">
-                                                <small class="ml-3">
+                                                <small class="ml-md-3">
                                                     <!-- Button triggers the remove from wishlist product modal -->
                                                     <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#removeFromWishListModal{{ item.id }}">
                                                         Remove
