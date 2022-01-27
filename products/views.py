@@ -358,7 +358,7 @@ def manage_brands(request):
     form = BrandForm(request.POST)
     form_set = []
     for brand in brands:
-        form = BrandForm(request.POST or None, instance=brand)
+        form = BrandForm(request.POST or None, instance=brand, prefix=brand.id)
         form_set.append(form)
 
     if request.GET:
@@ -401,7 +401,9 @@ def update_brand(request, brand_id):
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
     brand = get_object_or_404(Brand, pk=brand_id)
-    form = BrandForm(request.POST, request.FILES, instance=brand)
+    form = BrandForm(
+        request.POST, request.FILES, instance=brand, prefix=brand.id
+    )
     if form.is_valid():
         brand = form.save()
         messages.success(
