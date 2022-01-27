@@ -87,7 +87,11 @@
                                 <span><a href="{% url 'products' %}" class="text-orange">Products Home</a> | </span>
                             {% endif %}
                             {{ products|length }} {% if products|length == 1 %}Product{% else %}Products{% endif %}{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                            <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" title="Add New Brand" aria-label="Add new brand"><i class="fas fa-plus"></i></a>
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" title="Add New Brand" aria-label="Add new brand">
+                                <i class="fas fa-plus"></i>
+                            </a>
+                            {% endif %}
                         </p>
                     </div>
                 </div>
