@@ -6,7 +6,7 @@
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
             <input class="custom-control-input" type="checkbox" name="{{ widget.checkbox_name }}" id="product-{{ widget.checkbox_id }}">
-            <label class="custom-control-label text-danger" for="product-{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
+            <label class="custom-control-label text-danger" for="product-{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }} {{ widget.value }}</label>
         </div>
     {% endif %}<br>
     {{ widget.input_text }}

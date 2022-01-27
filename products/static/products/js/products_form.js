@@ -16,9 +16,9 @@ $('#new-product-image').change(function() {
     $('#filename-product').text(`Set new image to: ${prodUpload.name}`);
 }); 
 
-$('#new-brand-image').change(function() {
-    let brandUpload = $('#new-brand-image')[0].files[0];
-    $('#filename-brand').text(`Set new image to: ${brandUpload.name}`);
+$('.brand-img-class').change(function() {
+    let brandUpload = $('.brand-img-class')[0].files[0];
+    $('.filename-for-brand').text(`Set new image to: ${brandUpload.name}`);
 });
 
 /**

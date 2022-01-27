@@ -400,7 +400,7 @@ input[name='q']::placeholder {
     margin: 0 0 0 50px;
 }
 
-#filename-brand, .filename-brand {
+.filename-for-brand {
     padding-top: 20px;
 }
 

@@ -160,6 +160,5 @@ class BrandForm(ModelForm):
         """
         super(BrandForm, self).__init__(*args, **kwargs)
 
-        self.fields['image'].widget.attrs['id'] = 'new-brand-image'
         self.fields['image'].widget.attrs['class'] = 'brand-img-class'
         self.fields['friendly_name'].label = 'User-friendly name:'
