@@ -4,7 +4,7 @@ StepUp is an ecommerce web application for customers seeking to purchase shoes o
 
 This is the fifth and last milestone project for the Code Institute Diploma in Fullstack Software Development.
 
-Users can create accounts and administrators have full write and delete access to all data. To test an administrator account, send me a pm at contact@johnvenkiah.com and I'll send the details.
+Users can create accounts and administrators have full write and delete access to all data. To test an administrator account, contact me through the form on the site and I'll send admin login details.
 
 You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
