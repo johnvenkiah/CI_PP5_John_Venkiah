@@ -115,6 +115,7 @@ p {
 }
 
 .main-logo-link {
+    color: #fff;
     width: fit-content;
     padding: 10px 16px;
     border: 2px solid #dd8b27b9;
