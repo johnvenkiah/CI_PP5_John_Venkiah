@@ -8,7 +8,7 @@ Users can create accounts and administrators have full write and delete access t
 
 You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
-![Mockup of live site on different devices](#)
+![Mockup of live site on different devices](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/mockup.jpg)
 
 
 ## Table of Contents
