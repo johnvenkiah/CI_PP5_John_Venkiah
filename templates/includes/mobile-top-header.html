@@ -56,7 +56,7 @@
         <div class="text-center">
             <div><i class="fas fa-shopping-cart fa-lg"></i>
             </div>
-            <small class="my-0 grand-total {% if grand_total %}btn-orange{% else %}btn-trans{% endif %}">
+            <small class="my-0 grand-total {% if grand_total %}border-orange{% else %}border-white{% endif %}">
                 {% if grand_total %}
                     €{{ grand_total|floatformat:2 }} ({{ product_count }})
                 {% else %}

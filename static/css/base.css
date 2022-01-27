@@ -117,7 +117,7 @@ p {
 .main-logo-link {
     width: fit-content;
     padding: 10px 16px;
-    border: 1px solid #dd8b27b9;
+    border: 2px solid #dd8b27b9;
     box-shadow: 0 0 5px black;
     border-radius: 50px;
     backdrop-filter: blur(2px);
@@ -615,8 +615,8 @@ textarea.form-control {
     transition: all .3s ease-in-out;
 }
 
-.card:hover .text-orange {
-    color: #fff;
+.card:hover .product-title {
+    color: #fff !important;
     text-shadow: 0 0 12px #ffaa42b9, 0.5px 0.5px 2px black;
 }
 
@@ -669,18 +669,20 @@ textarea.form-control {
 .sale-label {
     color: #fff !important;
     box-shadow: 0 0 10px black;
-    background: linear-gradient(24deg, #176a17 50%, #fff 30%, #168516 20%);
+    background: #1d283b91;
     width: fit-content;
-    padding: 5px 10px;
+    padding: 4px 8px 2px;
+    border: 2px solid #4a8b00;
     top: 50px;
     border-radius: 20px;
     right: 1px;
     position: absolute;
     z-index: 1;
+    font-size: .8rem;
 }
 
 .label-new {
-    background: linear-gradient(45deg, #e17c00 50%, #ffa73a 50%);
+    border-color: #ffa73a;
 }
 
 .lower-label {
@@ -808,9 +810,17 @@ textarea.form-control {
     right: .5rem;
     top: 5rem !important;
     border-radius: 20px;
-    padding: 3px 6px 1px;
+    padding: 6px 11px;
     opacity: 0;
     transition: opacity .3s ease-in-out;
+}
+
+.border-orange {
+    border: 2px solid #dd8b27b9;
+}
+
+.border-white {
+    border: 2px solid #ffffff;
 }
 
 .nav-link.btn-orange {
@@ -1040,6 +1050,10 @@ take up whole screen if many items */
     .product-height {
         height: 320px;
     }
+
+    .grand-total {
+        font-size: 1rem;
+    }
 }
 
 /* MEDIA QUERIES: MEDIUM SIZED TABLETS AND UP */
@@ -1050,8 +1064,7 @@ take up whole screen if many items */
     }
 
     .grand-total {
-        right: 3rem;
-        /* padding: 5px 12px 2px; */
+        right: 2rem;
     }
 
     .review-box {
@@ -1063,6 +1076,10 @@ take up whole screen if many items */
 /* MEDIA QUERIES: SMALLER MOBILE DEVICES */
 
 @media (max-width: 480px) {
+
+    .grand-total {
+        font-size: .8rem;
+    }
 
     .dropdown-menu.show {
         overflow: scroll;
