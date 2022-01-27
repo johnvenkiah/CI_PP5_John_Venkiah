@@ -12,7 +12,6 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #c5c5c5;
-
     font-family: 'Anaheim', sans-serif;
 }
 
@@ -559,6 +558,12 @@ textarea.form-control {
 
 /* PRODUCTS */
 
+.product-name {
+    font-family: 'Anaheim', sans-serif !important;
+    text-transform: none;
+    font-size: 1.4rem;
+}
+
 .products-link {
     height: 100%;
     overflow: hidden;
@@ -1069,6 +1074,10 @@ take up whole screen if many items */
         height: 320px;
     }
 
+    .product-name {
+        font-size: 1.2rem;
+    }
+
     .grand-total {
         font-size: 1rem;
     }
@@ -1142,6 +1151,10 @@ take up whole screen if many items */
     .nav-item {
         line-height: 1.4rem;
 
+    }
+
+    .product-name {
+        font-size: 1rem;
     }
 
     .label-new, .sale-label {
