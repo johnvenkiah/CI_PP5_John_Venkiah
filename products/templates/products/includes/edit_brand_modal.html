@@ -1,8 +1,8 @@
-<div class="modal fade" id="editBrandModal{{ brand.id }}" tabindex="-1" role="dialog" aria-labelledby="editBrandModalTitle" aria-hidden="true">
+<div class="modal fade" id="editBrandModal{{ brand.id }}" tabindex="-1" role="dialog" aria-labelledby="editBrandModalTitle_{{ brand.id }}" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title text-orange font-weight-bold" id="editBrandModalTitle">Edit Brand: {{ brand.friendly_name }}</h4>
+                <h4 class="modal-title text-orange font-weight-bold" id="editBrandModalTitle_{{ brand.id }}">Edit Brand: {{ brand.friendly_name }}</h4>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
