@@ -1,7 +1,17 @@
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
+    max-height: 65vh;
     overflow-y: auto;
-}
+    border: 1px solid #ffa60041;
+    border-radius: 15px;
+    box-shadow: inset 0 0px 4px 2px black;
+    padding: 5px 0 0 15px;
+    transition: all .3s ease-in-out;
+  }
+
+  .order-history:hover {
+    border: 1px solid #ffa6009a;
+    box-shadow: inset 0 0px 10px 2px black;
+  }
 
 #profile-update-form .form-control {
     color: #000;
@@ -18,4 +28,10 @@
 
 #id_default_country option:first-child {
     color: #aab7c4;
+}
+
+@media (max-width: 991px) {
+    .order-history {
+        max-height: 40vh;
+    }
 }
