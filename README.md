@@ -231,8 +231,6 @@ The following models have been used to populate the database and for the site to
 
 * **Review** - a model for users to give the product a rating and a review
 
-* **Cart** - the model for the users shopping cart
-
 * **Order** - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data
 
 * **LineItem** - a model holding the product information for a single product, binding the product model together with the order
@@ -303,7 +301,7 @@ The following models have been used to populate the database and for the site to
 
 26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
 
-27. As a logged in user, I can choose to inactivate my account, so that I can cancel my account should I wish to
+27. As a logged in user, I can choose to delete my account, so that my user account no longer exists
 
 #### Epic 6: The Wish List
 
@@ -311,7 +309,7 @@ The following models have been used to populate the database and for the site to
 
 29. As a logged in user, I can remove a product from my Wish List, so that it no longer is there
 
-30. As a logged in user, I can add products from my Wish List to my cart, so that I can easily purchase them
+30. As a logged in user, I can add products from my Wish List to my cart, so that I can easily purchase them (user story removed for now)
 
 #### Epic 7: Reviews
 
@@ -331,7 +329,9 @@ The following models have been used to populate the database and for the site to
 
 36. As a site owner, I can add, edit or remove any product on the site
 
-37. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
+37. As a site owner, I can add, edit or remove any brand on the site
+
+38. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
 
 ### Skeleton
 
@@ -347,9 +347,9 @@ All wireframes can be viewed [here](#)
 
 #### Colors
 
-![Colors](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/colors.png)
+![Colors](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/colors.png) (palette generated at https://imagecolorpicker.com/en)
 
-I have chosen the combination "Living Coral" and "Pacific Coast", as published on [designwizard.com's article](https://www.designwizard.com/blog/design-trends/colour-combination) on trending color combinations for 2021, as I thought they were sharp, trendy yet simple.
+I have chosen the combination of a dark purple night sky as the background, orange and white.
 
 #### Typography
 
@@ -555,7 +555,7 @@ The Django framework provides an excellent admin interface which this site has t
 
 This project is built solely through the framework [Django](https://www.djangoproject.com/), and I have tried to make use of its many powerfiul features.
 
-- I have used [Bootstrap 5](https://getbootstrap.com/) as a framework for styling for efficiency purposes, although that wasn't always the case.
+- I have used [Bootstrap 4](https://getbootstrap.com/) as a framework for styling for efficiency purposes.
 
 - The JavaScript framework [JQuery](https://jquery.com/) was used to minimize written code.
 
