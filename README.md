@@ -337,11 +337,11 @@ The following models have been used to populate the database and for the site to
 
 #### Wireframes
 
-![Wireframe of Homepage](#)
+![Wireframe of Product Detail on Desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/images/product_detail_desktop.png)
 
 Wireframe images were made for all pages except for the ones rarely used by the site, for example password change and email confirmation.
 
-All wireframes can be viewed [here](#)
+All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/wireframes.md)
 
 ### Surface
 
