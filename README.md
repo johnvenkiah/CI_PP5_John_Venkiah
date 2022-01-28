@@ -341,7 +341,7 @@ The following models have been used to populate the database and for the site to
 
 Wireframe images were made for all pages except for the ones rarely used by the site, for example password change and email confirmation.
 
-All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/wireframes.md)
+All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/WIREFRAMES.md)
 
 ### Surface
 
