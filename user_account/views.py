@@ -39,6 +39,7 @@ class DeleteAccountView(LoginRequiredMixin, DeleteView):
         Returns:
             the delete product page with the form and context.
         """
-
+        if 'cart' in request.session:
+            del request.session['cart']
         messages.success(self.request, self.success_message)
         return super(DeleteAccountView, self).delete(request, *args, **kwargs)
