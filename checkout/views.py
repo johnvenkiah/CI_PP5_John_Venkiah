@@ -197,11 +197,17 @@ def order_confirmation(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    wishlistitem = get_object_or_404(WishListItem, user=request.user.id)
+    wishlistitem = None
 
     if request.user.is_authenticated:
         # pylint: disable=no-member
         profile = UserProfile.objects.get(user=request.user)
+        try:
+            wishlistitem = get_object_or_404(
+                WishListItem, user=request.user.id
+            )
+        except Exception:
+            wishlistitem = None
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
@@ -224,10 +230,10 @@ def order_confirmation(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
-
-    for item in order.lineitems.all():
-        if item.product in wishlistitem.product.all():
-            wishlistitem.product.remove(item.product)
+    if wishlistitem:
+        for item in order.lineitems.all():
+            if item.product in wishlistitem.product.all():
+                wishlistitem.product.remove(item.product)
 
     if 'cart' in request.session:
         del request.session['cart']
