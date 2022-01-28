@@ -378,7 +378,7 @@ input[name='q']::placeholder {
 }
 
 .custom-checkbox .custom-control-label.text-danger {
-    margin-top: 2.25rem !important;
+    margin: 2rem 0 2.5rem 2rem !important;
 }
 
 .custom-checkbox .custom-control-label::before {
