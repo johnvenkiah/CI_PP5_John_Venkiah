@@ -7,8 +7,15 @@ I have included wireframes on desktop, tablet and mobile. Click the expander to 
 ## Home
 
 <details>
-  <summary>View Desktop Images</summary>
+  <summary>View Desktop Wireframes</summary>
   
-![]()
+![Wireframe image or home page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/images/home_desktop.png)
+
+</details>
+
+<details>
+  <summary>View Mobile/Tablet Wireframes</summary>
+  
+![Wireframe image or home page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/wireframes/images/home_mobile_tablet.png)
 
 </details>
