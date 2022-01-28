@@ -26,12 +26,22 @@ This function makes sure that the original price is higher that the current one,
 if it is set. If not, a modal window is triggered and values are set to null again.
 */
 
-$("#id_product-price, #id_product-initial_price").change(function() {
-if (
-    (parseInt($('#id_product-initial_price').val()) !== null) &&
-    (parseInt($('#id_product-price').val()) >= parseInt($('#id_product-initial_price').val()))
-) {
-    $('#wrongPriceModal').modal('show');
-    $('#id_product-price').val(null);
-    $('#id_product-initial_price').val(null);
+$('#id_product-price, #id_product-initial_price, #id_price, #id_initial_price').change(function() {
+    let price;
+    let initialPrice;
+    if ($('#id_product-price').length) {
+        price = $('#id_product-price');
+        initialPrice = $('#id_product-initial_price');
+    } else {
+        price = $('#id_price');
+        initialPrice = $('#id_initial_price');
+    }
+
+    if (
+        (parseInt($(initialPrice).val()) !== null) &&
+        (parseInt($(price).val()) >= parseInt($(initialPrice).val()))
+    ) {
+        $('#wrongPriceModal').modal('show');
+        $(price).val(null);
+        $(initialPrice).val(null);
 }});
