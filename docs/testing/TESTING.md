@@ -432,3 +432,54 @@ There is a search field in the navbar, in which users can search for products. p
 
 - **Conclusion, User story 8 - tests passed**
 
+
+--
+
+### Testing of user story 9:
+
+*As a user, I can sort the products list by category, alphabetically or by rating, so that i can quickly find the product I seek*
+
+The products page always displays a dropdown bar to sort products, by price (low to high), price (high to low),rating(high to low), rating(low to high), name (a-z), name (z-a), category (a-z) or category (z-a).
+
+This works as intended.
+
+<details>
+    <summary>View Image</summary>
+
+**Search of sneakers performed**
+
+![Search of sneakers performed](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_price_desc.png)
+---
+
+</details>
+
+- **Conclusion, User story 9 - tests passed**
+
+
+--
+
+### Testing of user story 10:
+
+*As a user, I can view the most important details of the product in the product list, such as model, brand, category, price, rating, and image so that i know most details without having to click on the product*
+
+The products are displayed as cards, each with:
+
+- Heading at the top
+- Product image with badges saying if the product is on sale or new
+- Price with intial price crossed out if on sale
+- Rating
+- Gender and category
+- Edit and delete buttons if user is admin user
+
+<details>
+    <summary>View Image</summary>
+
+**Product info in Products page for admin user**
+
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_closeup_two_products_admin.png)
+---
+
+</details>
+
+- **Conclusion, User story 10 - tests passed**
+
