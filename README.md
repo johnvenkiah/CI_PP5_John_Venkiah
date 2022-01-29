@@ -325,7 +325,7 @@ The following models have been used to populate the database and for the site to
 
 #### Epic 9: Site Owner functionality
 
-35. As a site owner, I can view an admin page, where I can view, add, edit and remove any model instance on the site including products, categories, orders etc
+35. As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories, orders and brands
 
 36. As a site owner, I can add, edit or remove any product on the site
 
@@ -442,6 +442,7 @@ There is a floating badge in the top right corner displaying the grand total and
 ### Feature 2: The Home Page
 
 The home page is the landing page of the site, with the purpose to entice the user to proceed to the products.
+
 ---
 
 **Home On Desktop**
@@ -479,9 +480,8 @@ The user is presented with a window-sized (half window on tablet/mobile) carouse
 
 ### Feature 3: The Footer
 
-The footer includes a signup form for a newsletter, as well as a link to the site's Facebook business page and important links, such as contact, terms of use and the pages privacy policy.
+The footer includes a signup form for a newsletter, as well as a link to the site's Facebook business page and important links, such as contact, terms of use and the pages privacy policy. Wherever the user is on the site, except for some account operations, the footer is visible at the bottom of the page, giving the user access to these important links at virtually all times.
 
-Whereever the user is on the site, except for some account operations, the footer is visible at the bottom of the page, giving the user access to these important links at virtually all times.
 ---
 
 **Footer on tablet:**
@@ -513,6 +513,7 @@ The policy and terms appear in a modal window, which users easily can close and 
 ### Feature 4: The Products List
 
 The products list is dynamic and will show the relevant products, depending on if the user has performed a search, clicked on a category or filtered the products in any other way.
+
 ---
 
 **The Products list**
@@ -569,6 +570,7 @@ In the products list, the most important details of each item are displayed; nam
 ### Feature 5: The Product Detail Page
 
 This page shows a dedicated page for the specific product. Here users can choose the size and the quantity of the product, as well as read a description and user reviews of it.
+
 ---
 
 **Desktop product detail**
@@ -622,12 +624,15 @@ Logged in users can also write and remove their own reviews here. lastly, admin 
 ### Feature 6: The Cart
 
 The Cart is the users digital shopping cart, containing all products the user has added to it and their details, including the chosen quantity and size if applicable.
-Its grand total and count is always partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
+
+---
 
 **The cart page on desktop**
 
 ![The cart page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_cart_several_items.png)
 ---
+
+Its grand total and count is always partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
 
 A toast, a small dialog window at the top right, will be visible after adding an item to the cart, letting the user know that the add was successful. The user can view, change quantity and remove items from the cart on the cart page.
 
@@ -669,15 +674,19 @@ A toast, a small dialog window at the top right, will be visible after adding an
 
 ### Feature 7: The Checkout Page
 
-The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details. From here, if user is authenticated, they can save their details to their My StepUp profile so they are prefilled for the next order. If they are not logged in, a link to log in is displayed in place of that option.
+The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details.
 
-If the payment fails or info is sufficient, the user gets a new chance to enter their info, without being charged.
 ---
 
 **Checkout page on desktop**
 
 ![Checkout page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
 ---
+
+From the checkout page, if user is authenticated, they can save their details to their My StepUp profile so they are prefilled for the next order. If they are not logged in, a link to log in is displayed in place of that option.
+
+If the payment fails or info is sufficient, the user gets a new chance to enter their info, without being charged.
+
 
 <details>
     <summary>View More Images Here</summary>
@@ -715,6 +724,7 @@ If the payment fails or info is sufficient, the user gets a new chance to enter 
 If the user has made a successful purchase, an order confirmation will be displayed to the user, and sent to the given email address during checkout. If the order was successful, the cart will be emptied, and, if the user is logged in and had any of the items in their wishlist, they are removed from there.
 
 In the confirmation, the user can view the items order, their sizes and quantity, an order number, grand total and delivery details.
+
 ---
 
 **Order confirmation page on desktop**
@@ -751,6 +761,7 @@ In the confirmation, the user can view the items order, their sizes and quantity
 ### Feature 9: The Sign Up/In/Out Pages
 
 Signing up, in and out are vital parts of this site, allowing users to save customer details to improve the users experience of the site. It also creates a possibility for the site owner to gain revisiting customers.
+
 ---
 
 **Sign Up page on mobile**
@@ -792,9 +803,10 @@ Upon registration, the site sends an email to confirm the users email address. T
 ### Feature 10: My StepUp
 
 Each user can access their own personal profile where they can enter their delivery information, subscribe or unsubscribe to the newsletter and keep track of their orders.
+
 ---
 
-**The My StepUp page on desktop**
+**The My StepUp page on desktop including the Wishlist**
 
 ![The My StepUp page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_my_stepup.png)
 ---
@@ -828,10 +840,10 @@ Here, users can also change their password, and delete their account completely 
 
 ### Feature 11: The Wishlist
 
-Users can also add products to their Wishlist, if they do not wish to purchase items straight away. This is located at the top of the My StepUp page. The products will remain in the users Wishlist until they have purchased the item or removed it from the list.
+Users can add products to their Wishlist, if they do not wish to purchase items straight away. This is located at the top of the My StepUp page. The products will remain in the users Wishlist until they have purchased the item or removed it from the list. Check image above for desktop view.
 
 <details>
-    <summary>View More Images Here</summary>
+    <summary>View Images Here</summary>
 
 ---
 
@@ -859,6 +871,7 @@ Users can also add products to their Wishlist, if they do not wish to purchase i
 ### Feature 12: The Contact Page
 
 This is a standard contact form, through which users can contact the site owner. The form is sent by email to the site owner.
+
 ---
 
 **Contact Page on desktop**
@@ -875,6 +888,7 @@ This is a standard contact form, through which users can contact the site owner.
 ### Feature 13: The Admin Features
 
 There are extra features for admin users, so that site owners can add, edit and remove products, brands and reviews on the site. This is visible in the navbar, where two more items are visible in the account menu; Add Brand or Product and Manage Brands.
+
 ---
 
 **The Admin account menu**
@@ -941,9 +955,16 @@ The Edit Product page consists of the same product form as on the previously men
 
 The Django framework provides an excellent admin interface which this site has taken full advantage of. The admin panel of this site contains all instances of all database models, and the ability to edit, remove or add instances.
 
+---
+
+**The Django Admin Panel**
+
+![The Django Admin Panel](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_home.png)
+---
+
 **User stories covered:**
 
-35. As a site owner, I can view an admin page, where I can view, add, edit and remove any model instance on the site including profiles, products, categories, orders etc
+35. As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories, orders and brands
 
 ## Features Yet to Implement
 
