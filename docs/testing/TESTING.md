@@ -8,7 +8,7 @@ I discovered some bugs during the testing phase, which you can read about [here]
 
 ### Overview
 
-As manual testing can be overwhelming for both the tester and the reader, I have created three user cases, in which the tests were performed.
+As manual testing can be overwhelming for both the tester and the reader, I have created three user cases, in which the tests were performed. As I have tested responsivity on mobile, tablet and desktop screen sizes, I have included images on different pages from different screen sizes.
 
 
 
@@ -135,4 +135,13 @@ As manual testing can be overwhelming for both the tester and the reader, I have
 
 ### Manual Testing - Regular User Case
 
-#### 
+#### Step 1 - User accesses the landing page
+
+![Home Desktop](/workspace/CI_PP5_John_Venkiah/docs/testing/screenshots/user_case_1/desktop_home.png)
+
+The user is presented with the landing page of the site, which consists of a window-sized (half window on tablet/mobile) carousel, consisting of three hero images giving the user a feel of edecation and quality on first sight. The images link to displaying the products results page, with different filtering (fitness, new and sneakers).
+
+
+
+The navbar is visible, as on any page on the site, and this consists of:
+    - products 
