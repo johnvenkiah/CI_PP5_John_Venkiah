@@ -505,5 +505,31 @@ The products are displayed as cards, each with:
 
 </details>
 
-- **Conclusion, User story 10 - tests passed**
+- **Conclusion, User story 11 - tests passed**
+
+
+--
+
+### Testing of user story 12:
+
+*As a user, I can choose the size of the product, as well as the quantity, so that I can purchase the correct size/quantity*
+
+**Steps:**
+
+- User clicks on the plus or minus signs to choose quantity
+- User chooses the size of the product in the dropdown size input
+- User clicks on the Add to Cart button
+- Item is added with the chosen quantity and size
+
+<details>
+    <summary>View GIF</summary>
+
+**Clicking on product in list**
+
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_choosing_prod_size_qty.png)
+---
+
+</details>
+
+- **Conclusion, User story 12 - tests passed**
 
