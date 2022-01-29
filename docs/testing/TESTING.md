@@ -137,14 +137,14 @@ As manual testing can be overwhelming for both the tester and the reader, I have
 
 #### Step 1 - User accesses the landing page
 
-![Home Desktop](/workspace/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_home.png)
+![Home Desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_home.png)
 
 The user is presented with the landing page of the site, which consists of a window-sized (half window on tablet/mobile) carousel, consisting of three hero images giving the user a feel of edecation and quality on first sight. The images link to displaying the products results page, with different filtering (fitness, new and sneakers).
 
 <details>
     <summary>View Images on mobile and tablet</summary>
   
-![Home Mobile](/workspace/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
+![Home Mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
 
 ![Home tablet](/workspace/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_home.png)
 
@@ -159,12 +159,12 @@ The navbar is visible, as on any page on the site, and this consists of:
 <details>
     <summary>View Images on mobile and tablet</summary>
 
-![Navbar mobile Products nav](/workspace/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_products_nav.png)
+![Navbar mobile Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_products_nav.png)
 
-![Home Desktop Products nav](/workspace/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
+![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
 
-![Navbar Sign In Up](/workspace/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
+![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
 
-![Navbar mobile Sign In](/workspace/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_account_nav.png)
+![Navbar mobile Sign In](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_account_nav.png)
 
 </details>
