@@ -112,6 +112,7 @@ As well as the Order summary, including the items added to the cart, their name,
 Under the card details field, the grand total amount is displayed once more in red.
 
 This to me is very clear, implying that after this step, the order is processed.
+
 <details>
     <summary>View Image</summary>
 
@@ -174,7 +175,7 @@ This to me is very clear, implying that after this step, the order is processed.
 <details>
     <summary>View Image</summary>
 
-![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_my_stepup.png)
 
 </details>
 
@@ -185,30 +186,14 @@ This to me is very clear, implying that after this step, the order is processed.
 
 **The Add Brand or Product Page**
 
-- **Intention: Allow users to enter the needed information for them to purchase the items in their cart**
+- **Intention: Allow admin users to add a new brand or product to the site**
 
-The Checkout Page is clear and simple, and contains the fields:
+This page is also rather clear if you ask me, with two forms on the page, each with its own heading. The fields speak for themselves, the image file is displayed if a file is chosen and, with the click of a button at the bottom, the new product or brand is visible just like all the other ones in the Products or Manage Brands pages.
 
-- Full Name
-- Email Address
-- Phone Number
-- Street Address 1
-- Street Address 2
-- Town or City
-- County or State
-- Postal Code
-- Country
-- Card Details
-
-As well as the Order summary, including the items added to the cart, their name, size, quantity and price. The Grand total is very visible at the bottom of the page.
-
-Under the card details field, the grand total amount is displayed once more in red.
-
-This to me is very clear, implying that after this step, the order is processed.
 <details>
     <summary>View Image</summary>
 
-![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_add_brand_product.png)
 
 </details>
 
@@ -219,30 +204,14 @@ This to me is very clear, implying that after this step, the order is processed.
 
 **The Edit Product Page**
 
-- **Intention: Allow users to enter the needed information for them to purchase the items in their cart**
+- **Intention: Allow admin users to edit a product on the site**
 
-The Checkout Page is clear and simple, and contains the fields:
+The Edit Product page, just like the Add Brand or Product page, has a form in which the fields are clear to the user. The user can see the current product details, edit them and is prevented from entering false information, for example a false url, an initial price that is lower that the current one, or omit important details, like the description, details or name.
 
-- Full Name
-- Email Address
-- Phone Number
-- Street Address 1
-- Street Address 2
-- Town or City
-- County or State
-- Postal Code
-- Country
-- Card Details
-
-As well as the Order summary, including the items added to the cart, their name, size, quantity and price. The Grand total is very visible at the bottom of the page.
-
-Under the card details field, the grand total amount is displayed once more in red.
-
-This to me is very clear, implying that after this step, the order is processed.
 <details>
     <summary>View Image</summary>
 
-![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/edit_product_desktop.png)
 
 </details>
 
@@ -253,32 +222,25 @@ This to me is very clear, implying that after this step, the order is processed.
 
 **The Manage Brands Page**
 
-- **Intention: Allow users to enter the needed information for them to purchase the items in their cart**
+- **Intention: To make managing the brands of the products on the site easy**
 
-The Checkout Page is clear and simple, and contains the fields:
+The brands are nicely displayed as a grid, with their names, images, and a dedicated edit or delete button just like in the products list when viewed by an admin user.
 
-- Full Name
-- Email Address
-- Phone Number
-- Street Address 1
-- Street Address 2
-- Town or City
-- County or State
-- Postal Code
-- Country
-- Card Details
+Upon clicking on edit, the brand form appears, with easy to understand fields, allowing the user to update a brand in seconds.
 
-As well as the Order summary, including the items added to the cart, their name, size, quantity and price. The Grand total is very visible at the bottom of the page.
-
-Under the card details field, the grand total amount is displayed once more in red.
-
-This to me is very clear, implying that after this step, the order is processed.
 <details>
     <summary>View Image</summary>
 
-![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/manage_brands.png)
 
 </details>
 
 - **Conclusion: tests passed**
 
+
+**Main conclusion, User story 1 - Tests passed**
+
+
+### Testing of user story 1:
+
+*As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page*
