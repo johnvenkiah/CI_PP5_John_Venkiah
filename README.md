@@ -375,41 +375,52 @@ The navbar allows users to easily navigate the website, no matter which page the
 - A Sign In/Sign Up icon
 - Cart
 
-<details>
-    <summary>View Images</summary>
-
----
-
-**Products Nav Mobile**
-
 **Products Nav Desktop**
 
 ![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
 
-**Sign In/Up Menu**
-
-![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
-
-</details>
 
 The navbar is also dynamic, transparent when users scroll down, for full content visibility, and turns a translucent blue shade when scrolling up, so menu items are visible.
-
-**Desktop nav after scroll up**
-
-![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_nav_after_scroll_up.png)
-
-**Mobile nav after scroll down**
-
-![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_nav_scroll_down.png)
 
 If the user us logged in, the Sign Up/Sign In menu becomes the Account menu, and if the user has admin privileges the user can access the manage brands an add product or brand pages through here.
 
 There is a floating badge in the top right corner displaying the grand total and item count, always visible of the user scrolls up, which also gets an orange border if items are added.
 
+
+<details>
+    <summary>View More Images</summary>
+
+---
+
+**Sign In/Up Menu**
+
+![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
+
+---
+
 **Mobile nav for admin users**
 
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
 
+---
+
+**Desktop nav after scroll up**
+
+![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_nav_after_scroll_up.png)
+
+---
+
+**Mobile nav after scroll down**
+
+![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_nav_scroll_down.png)
+
+---
+
+**Cart total and count badge**
+
+![Cart total and count badge](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_badge_filled.png)
+
+</details>
 
 
 **User stories covered**
@@ -443,12 +454,17 @@ The user is presented with a window-sized (half window on tablet/mobile) carouse
 ---
 
 **Home Mobile**
+
   
 ![Home Mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
+
+---
 
 **Home Tablet**
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_home.png)
+
+---
 
 </details>
 
@@ -468,9 +484,19 @@ Whereever the user is on the site, except for some account operations, the foote
 
 ![Footer](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_footer.png)
 
+---
+
 The policy and terms appear in a modal window, which users easily can close and access again at will, due to the links placement in the footer.
 
+<details>
+    <summary>View Privacy policy on mobile</summary>
+
+---
+
 ![Mobile privacy policy](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_privacy_policy.png)
+
+---
+</details>
 
 **User stories covered:**
 
@@ -486,6 +512,14 @@ The policy and terms appear in a modal window, which users easily can close and 
 
 The products list is dynamic and will show the relevant products, depending on if the user has performed a search, clicked on a category or filtered the products in any other way.
 
+**The Products list**
+
+---
+
+![Desktop products list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products.png)
+
+---
+
 Filtering can be done:
 
 - By category
@@ -494,12 +528,36 @@ Filtering can be done:
 - By whether items are new or on sale
 - By users performing a search
 
+
+On top of this, sorting can be done by price, rating, name or category. Users can see if the item is on sale or new, already in the products list, with a badge saying "new" or "save €".
+
+In the products list, the most important details of each item are displayed; name, brand, category, gender, price, if on sale, if new, and of course the product image. For admin users. the edit and delete buttons are also visible here.
+
+
+<details>
+    <summary>View More Images</summary>
+
+---
+
+**Performing a search**
+
 ![Mobile perform search](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_perform_search.png)
 
+---
+
+**Desktop products filtered**
 
 ![Desktop products filtered](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products_filter.png)
 
-On top of this, sorting can be done by price, rating, name or category. Users can see if the item is on sale or new, already in the products list, with a badge saying "new" or "save €".
+---
+
+**Tablet products for admin users**
+
+![Tablet products for admin users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_products.png)
+
+---
+
+</details>
 
 **User stories covered:**
 
@@ -515,7 +573,33 @@ On top of this, sorting can be done by price, rating, name or category. Users ca
 
 This page shows a dedicated page for the specific product. Here users can choose the size and the quantity of the product, as well as read a description and user reviews of it.
 
-Logged in users can also write and remove their own reviews here.
+---
+
+**Desktop product detail**
+
+![Desktop products detail](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products_detail.png)
+
+---
+
+Here users can decide the quantity as well as the size of the product to be added to their cart. If registered and logged in, users can add the item to their Wishlist.
+
+Logged in users can also write and remove their own reviews here. lastly, admin users can remove all reviews if desired.
+
+<details>
+    <summary>View Images of review part of product detail page</summary>
+
+---
+
+**Reviews Box if Product has reviews**
+
+![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_reviews.png)
+---
+
+**Delete review dialog modal**
+
+![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_delete_review.png)
+
+</details>
 
 **User stories covered:**
 
@@ -532,7 +616,9 @@ Logged in users can also write and remove their own reviews here.
 ### Feature 6: The Cart
 
 The Cart is the users digital shopping cart, containing all products the user has added to it.
-It is partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
+Its grand total and count is always partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
+
+
 
 **User stories covered:**
 
