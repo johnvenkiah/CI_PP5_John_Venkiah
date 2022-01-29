@@ -144,6 +144,8 @@ The user is presented with the landing page of the site, which consists of a win
 <details>
     <summary>View Images on mobile and tablet</summary>
 
+---
+
 **Home Mobile**
   
 ![Home Mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
@@ -155,13 +157,15 @@ The user is presented with the landing page of the site, which consists of a win
 </details>
 
 The navbar is visible, as on any page on the site, and this consists of:
-    - The products navigation menu, with sorting or filtering possibilities
-    - A search bar, displaying results based on product name
-    - A Sign In/Sign Up icon
-    - Cart
+- The products navigation menu, with sorting or filtering possibilities
+- A search bar, displaying results based on product name
+- A Sign In/Sign Up icon
+- Cart
 
 <details>
-    <summary>View Images on mobile and tablet</summary>
+    <summary>View Images</summary>
+
+---
 
 **Products Nav Mobile**
 
@@ -175,3 +179,37 @@ The navbar is visible, as on any page on the site, and this consists of:
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
 
 </details>
+
+At the bottom of the page is the footer, which is visible on all pages, except for when a modal window pops up or performing account operations such as password reset (more on that later)
+
+![Footer on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_footer.png)
+
+Via the footer, users can access:
+
+- a link to StepUps Facebook Business page
+- a field for users to sign up to a newsletter
+- a link to the site's Contact page
+- links to the site's terms of use and privacy policy
+
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Contact Page**
+
+Once clicked on, the contact link takes the user to the Contact Page.
+
+![Contact Page mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_contact_form.png)
+
+**Products Nav Desktop**
+
+![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
+
+**Sign In/Up Menu**
+![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
+
+</details>
+
+At the bottom of the page is the footer, which is visible on all pages, except for when a modal window pops up or performing account operations such as password reset (more on that later)

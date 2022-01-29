@@ -368,9 +368,41 @@ I have chosen the combination of a dark purple night sky as the background, oran
 
 ### Feature 1: The Navbar
 
-The navbar allows users to easily navigate the website, no matter which page they are on. From here they can navigate to all pages of relevance, Home, Products, My StepUp, Cart, Contact, and Sign In/Sign Up.
+The navbar allows users to easily navigate the website, no matter which page they are on. The navbar consists of:
 
-The navbar is also dynamic, showing the current total of the shopping cart, as well as showing relevant information for that page, for example the checkout button on the cart page.
+- The products navigation menu, with sorting or filtering possibilities
+- A search bar, displaying results based on product name
+- A Sign In/Sign Up icon
+- Cart
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Products Nav Mobile**
+
+![Navbar mobile Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_products_nav.png)
+
+**Products Nav Desktop**
+
+![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
+
+**Sign In/Up Menu**
+
+![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
+
+</details>
+
+The navbar is also dynamic, transparent when users scroll down, for full content visibility, and turns a translucent blue shade when scrolling up, so menu items are visible.
+
+**Desktop nav after scroll up**
+
+![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_nav_after_scroll_up.png)
+
+**Mobile nav after scroll down**
+
+![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_nav_scroll_down.png)
 
 **User stories covered**
 
@@ -402,6 +434,10 @@ The user is presented with, apart from the navbar, a two hero image carousel at 
 2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
 6. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
+
+40. As a user, I can view a terms document on the sites footer
+
+41. As a user, I can view a privacy policy document on the sites footer
 
 ### Feature 3: The Footer
 
@@ -528,7 +564,7 @@ This is a standard contact form, through which users can contact the site owner.
 
 34. As a user, I can get in touch with the site owner, regardless of whether I am signed in or not
 
-37. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
+39. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
 
 ### Feature 12: The Admin Features
 
@@ -537,6 +573,10 @@ There are extra features for admin users, so that site owners can edit products 
 **User stories covered:**
 
 36. As a site owner, I can add, edit or remove any product on the site
+
+37. As a site owner, I can add, edit or remove any brand on the site
+
+38. As a site owner, I can remove any products review on the site
 
 ### Feature 13: The Django Admin
 
