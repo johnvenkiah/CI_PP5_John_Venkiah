@@ -2,7 +2,7 @@
 
 StepUp is an ecommerce web application for customers seeking to purchase shoes online.
 
-This is the fifth and last milestone project for the Code Institute Diploma in Fullstack Software Development.
+This is the fifth and last portfolio project for the Code Institute Diploma in Fullstack Software Development.
 
 Users can create accounts and administrators have full write and delete access to all data. To test an administrator account, contact me through the form on the site and I'll send admin login details.
 
@@ -325,13 +325,22 @@ The following models have been used to populate the database and for the site to
 
 #### Epic 9: Site Owner functionality
 
-35. As a site owner, I can view an admin page, where I can view, add, edit and remove any model instance on the site including profiles, products, categories, orders etc
+35. As a site owner, I can view an admin page, where I can view, add, edit and remove any model instance on the site including products, categories, orders etc
 
 36. As a site owner, I can add, edit or remove any product on the site
 
 37. As a site owner, I can add, edit or remove any brand on the site
 
-38. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
+38. As a site owner, I can remove any products review on the site
+
+39. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
+
+
+#### Epic 10: Terms and Policy
+
+40. As a user, I can view a terms document on the sites footer
+
+41. As a user, I can view a privacy policy document on the sites footer
 
 ### Skeleton
 

@@ -386,3 +386,118 @@ The CSS code was validated with W3C Jigsaw. All files tested with 0 errors.
 ![Jigsaw profiles.css](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jigsaw/w3_css_profiles.png)
 
 </details>
+
+
+## W3C HTML Validation
+
+The HTML code was validated with the W3C Validator. All files tested with 0 errors. As the HTML files are never a single HTML file in this case, using Django and a base.html file as a base for all pages, I am referring to the pages as their name instead of the actual file name.
+
+<details>
+  <summary>View Results</summary>
+  
+#### Home
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Products
+
+![w3 html validation products](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_products.png)
+  
+  
+#### Product Detail
+
+![w3 html validation product detail](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_product_detail.png)
+  
+  
+#### Cart
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Checkout
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Order Confirmation
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Contact
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Sign In
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Sign Up
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### My StepUp
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Password Reset
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Password Reset Done
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Password Set
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Password Set Done
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Delete Account
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Add Brand or Product
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Edit Product
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+  
+  
+#### Manage Brands
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_manage_brands.png)
+  
+  
+#### Sign Out
+
+![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_logout.png)
+  
+  
+#### 404 Error
+
+![w3 html validation 404 Error](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_404.png)
+  
+  
+#### 500 Error
+
+![w3 html validation 500 Error](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_500.png)
+  
+
+</details>
