@@ -8,8 +8,7 @@ I discovered some bugs during the testing phase, which you can read about [here]
 
 ### Overview
 
-As manual testing can be overwhelming for both the tester and the reader, I have created three user cases, in which the tests were performed. As I have tested responsivity on mobile, tablet and desktop screen sizes, I have included images on different pages from different screen sizes.
-
+I have tested the features against their user stories that cover them.
 
 
 1. **Regular User Case** - User experience for non-authenticated users, performing all operations available to them. User stories covered in this user case:
@@ -136,6 +135,8 @@ As manual testing can be overwhelming for both the tester and the reader, I have
 ### Manual Testing - Regular User Case
 
 #### Step 1 - User accesses the landing page
+
+**Features tested - Home, Footer, Contact**
 
 ![Home Desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_home.png)
 

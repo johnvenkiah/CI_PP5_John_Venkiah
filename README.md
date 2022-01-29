@@ -293,7 +293,7 @@ The following models have been used to populate the database and for the site to
 
 22. As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits
 
-23. As a user, If I am not signed in, I am redirected to sign in/up if I click on any of the links or buttons restricted to logged in users
+23. As a user, I am not able to access pages that require authentication if I am not signed in
 
 24. As a user, I have to confirm my email address to complete my account registration
 
@@ -404,6 +404,14 @@ The navbar is also dynamic, transparent when users scroll down, for full content
 
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_nav_scroll_down.png)
 
+If the user us logged in, the Sign Up/Sign In menu becomes the Account menu, and if the user has admin privileges the user can access the manage brands an add product or brand pages through here.
+
+**Mobile nav for admin users**
+
+![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
+
+
+
 **User stories covered**
 
 2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
@@ -418,14 +426,29 @@ The navbar is also dynamic, transparent when users scroll down, for full content
 
 16. As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart
 
-23. As a user, If I am not signed in, I am redirected to sign in/up if I click on any of the links or buttons restricted to logged in users
+23. As a user, I am not able to access pages that require authentication if I am not signed in
 
 
 ### Feature 2: The Home Page
 
 The home page is the landing page of the site, with the purpose to entice the user to proceed to the products.
 
-The user is presented with, apart from the navbar, a two hero image carousel at the top, with short descriptions and links to the relevant categories. Below that are short paragraphs of the sites philosophy and products, as well as a few images to improve the user experience.
+![Home Desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_home.png)
+
+The user is presented with a window-sized (half window on tablet/mobile) carousel, consisting of three hero images giving the user a feel of edecation and quality on first sight. The images link to displaying the products results page, with different filtering (fitness, new and sneakers).
+
+<details>
+    <summary>View Images on mobile and tablet</summary>
+
+---
+
+**Home Mobile**
+  
+![Home Mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
+
+**Home Tablet**
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_home.png)
 
 **User stories covered:**
 
@@ -434,10 +457,6 @@ The user is presented with, apart from the navbar, a two hero image carousel at 
 2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
 6. As a user, the choices I make on the site are confirmed to me, so that I am always aware of them
-
-40. As a user, I can view a terms document on the sites footer
-
-41. As a user, I can view a privacy policy document on the sites footer
 
 ### Feature 3: The Footer
 
@@ -450,6 +469,10 @@ The footer is dynamic, and will on most pages display a signup form for a newsle
 3. As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns
 
 4. As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook
+
+40. As a user, I can view a terms document on the sites footer
+
+41. As a user, I can view a privacy policy document on the sites footer
 
 ### Feature 3: The Products List
 
