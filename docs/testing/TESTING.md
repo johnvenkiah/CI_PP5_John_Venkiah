@@ -500,7 +500,7 @@ The products are displayed as cards, each with:
 
 **Clicking on product in list**
 
-![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_product.png)
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_product.gif)
 ---
 
 </details>
@@ -526,7 +526,7 @@ The products are displayed as cards, each with:
 
 **Clicking on product in list**
 
-![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_choosing_prod_size_qty.png)
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_choosing_prod_size_qty.gif)
 ---
 
 </details>
