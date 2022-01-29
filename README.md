@@ -225,15 +225,15 @@ The following models have been used to populate the database and for the site to
 
 * **Product** - the model for the product itself and its details
 
-* **User** - the built in Django User model, facilitates the users basic information
-
-* **Profile** - the model storing the users product and order information
-
 * **Review** - a model for users to give the product a rating and a review
+
+* **User** - the built in Django User model, facilitates the users basic information
 
 * **Order** - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data
 
-* **LineItem** - a model holding the product information for a single product, binding the product model together with the order
+* **OrderLineItem** - a model holding the product information for a single product, binding the product model together with the order
+
+* **UserProfile** - the model storing the users product and order information
 
 * **WishListItem** - the customer has the option to save an item, which will then appear in their wish list on the My StepUp page
 
@@ -968,6 +968,12 @@ The Django framework provides an excellent admin interface which this site has t
 
 ## Features Yet to Implement
 
+User story 30, adding products to the cart, is a could have user story, and for this implementation I decided not to include in production. This due to the need for quantity and size input from user, and there was no space on the My StepUp page in the current design for this.
+
+Also, the ability for site owners to keep track of stock numbers is an important future update.
+
+Having several images for the products is intended, but, as this is a fictional site and the images are royalty free, I had to make do with the single image for each one. In a real world scenario, the site owner would provide me with all content for the site, erasing this issue.
+
 ## Technologies Used
 
 ### Languages
@@ -1015,7 +1021,21 @@ and pushed to Github.
 
 Thorough testing of the StepUp site was performed and can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/TESTING.md).
 
-## API's and Configuration
+## Other Services
+
+### Stripe
+
+Stripe was used as a payment service, allowing users to pay for products. The process:
+
+1. Create an account at https://stripe.com/
+2. Go to the developers pane and navigate to API keys
+3. Copy the publishable and secret keys and put them in your config vars in your development envirenment (and in Heroku config vars in production)
+
+Webhooks were created too to make sure payments did not fail due to web errors. This can be done by doing the following:
+
+1. Navigate to Webhooks on the page, and create an endpoint with the url you send your webhooks to, in this case, the url is https://stepup-shoes.herokuapp.com/checkout/wh/
+2. Add events to listen for, for example payment_intent_succeeded and payment_intent.payment_failed as in this case
+3. The webhooks should be sent when processing orders in all cases
 
 ## Deployment
 
@@ -1076,14 +1096,141 @@ Accessibility tests were also performed with the [WAVE](https://wave.webaim.org/
 
 ## Bugs
 
+Here are a few of the bugs found during the testing phase.
+
+**Bug** - The forms in the Manage Brands page were displaying information for the wrong brand instances
+*Fix* - Remove the sorting functionality in the pages Django view which sorted the instances of brands but not the forms
+
+**Bug** - Duplicate ID's in HTML elements due to Django creating the same form over again in Manage Brands
+*Fix* - Give a prefix of the brands ID to the form, ensuring each one is unique
+
+**Bug** - Sizes displaying as 'N/A' even though product has size on Order Confirmation page
+*Fix* - Logic in order confirmation had false values, updated and works
+
+**Bug** - When sent a password through the Django Allauth service, the link sent is http and not https. A warning by stripe in the terminal that payments for production only works with https is issued. This doesn't affect this site as the payments are for testing purposes, but needs to be investigated further in the future
+*Fix* - No fix as of now
+
+**Bug** - Price validation in product form failing
+*Fix* - Creating variables in the JavaScript file that controls this, as the id's for the form are different on the edit and add pages where the form is present
+
+**Bug** - Navbar animation jumpy and not displaying menus correctly at all times
+*Fix* - Refine JavaScript to add and remove classes to show and hide all elements of the nav upon clicking and accessing other menus, remove animations
+
+**Bug** - Modal not displaying for remove review, only overlay
+*Fix* - Remove css attribute backdrop filter for modal causing issues
+
+**Bug** - 404 error at checkout when processing payment
+*Fix* - Fix try and except in code that removes users wishlist items that are purchased
+
 ## Credits
 
 ### Copyrights
 
 #### Media
 
+Images of the products and the site background are all from [Unsplash](https://unsplash.com/).
+
+Images of logos are from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) and from the brands website, with consent.
+
+The shoe icon in the pages favicon comes from here: https://en.m.wikipedia.org/wiki/File:Running_shoe_icon.png
+
 #### Content
+
+As I have no data on the images of model or other information, I have taken product information from similar products for the ones on this site.
+
+The sites I have taken product information from are here:
+
+https://www.cucufashion.co.uk/hexya-orange-sock-sneakers/
+
+https://www.amazon.com/ElegantPark-Womens-Buckles-Evening-Sandals/dp/B01GR2ZJGY?th=1
+
+https://www.endclothing.com/gb/comme-des-garcons-play-x-converse-chuck-taylor-1970s-hi-p1-k112-1.html
+
+https://www.farfetch.com
+
+https://www.vallgatan12.se/
+
+https://erwans.com/
+
+https://www.google.com/shopping
+
+https://theluxurycloset.com/women/chanel-creamblack-leather-cap-toe-bow-mary-jane-block-heel-pumps-size-38-p499197?cur=GBP
+
+https://www.redbubble.com/i/socks/i-love-Mouths-pattern-by-virilamissa/62023266.9HZ1B
+
+clarks.co.uk
+
+https://www.sweatshop.com/Running-Shoes/Nike/Free-Run-5.0-Ladies-Running-Shoes-Black-or-White/255056
+
+https://danishendurance.com/products/low-cut-running-socks?variant=33432525307963
+
+https://axelarigato.com/
+
+https://www.gearcor.com/t53009/Timberland-Pro-Endurance-PR-Wedge-6inch-Soft-Toe.htm
+
+https://www.johnstonsofelgin.com/
+
+https://www.nike.com
+
+https://www.timberland.se
+
+https://www.asics.com
+
+https://www.bellabelleshoes.com
+
+https://www.minfot.se
+
+https://www.gucci.com
 
 ### Coding Tips and Tricks
 
+These are tips that have helped me along the way for this project
+
+**Hiding header on scroll down:**
+https://medium.com/@mariusc23/hide-header-on-scroll-**down-show-on-scroll-up-67bbaae9a78c
+
+**Distribute navbar items evenly:**
+https://stackoverflow.com/questions/32140607/horizontal-list-that-evenly-divides-remaining-space-via-css/32140682
+
+**Split list into li items from model:**
+https://stackoverflow.com/questions/8317537/django-templates-split-string-to-array
+
+**Proper way to handle two forms**
+https://stackoverflow.com/questions/1395807/proper-way-to-handle-multiple-forms-on-one-page-in-django
+
+**Title in Django template**
+https://stackoverflow.com/questions/14268342/make-the-first-letter-uppercase-inside-a-django-template
+
+
+**Raise error in model form method**
+https://docs.djangoproject.com/en/4.0/ref/forms/validation/
+
+**Parseint JQuery:**
+https://stackoverflow.com/questions/16269385/jquery-adding-2-numbers-from-input-fields
+
+**Smooth Scrolling:**
+https://css-tricks.com/snippets/jquery/smooth-scrolling/
+
+**Scroll incl for window width**
+https://stackoverflow.com/questions/7715124/do-something-if-screen-width-is-less-than-960-px
+
+**Looping, zip, lists in view and template:**
+https://stackoverflow.com/questions/12684128/looping-through-two-objects-in-a-django-template
+
+**Item at certain position in object from template:**
+https://stackoverflow.com/questions/4286461/django-templates-first-element-of-a-list
+
+**Back button:**
+https://stackoverflow.com/questions/27325505/django-getting-previous-url
+
+**Footer:**
+https://radu.link/make-footer-stay-bottom-page-bootstrap/
+
+**Removing navbar transitions:**
+https://stackoverflow.com/questions/13119912/disable-bootstraps-collapse-open-close-animation
+
 ### Acknowledgments
+
+I want to thank my mentor Mo Shami positive vibes throughout the course, and pointing me in the right directions. Also pmeenys project [Love Rugby](https://github.com/pmeeny/CI-MS4-LoveRugby) has given me tips on some of the elements on this site, including the review model and automated testing.
+
+Lastly, I want to thank all Tutors at Code Institute for their patience; Jo, Sheryl, John, Sean, Igor, Alan, Rebecca, James, and all the rest that have had to put up with me!
