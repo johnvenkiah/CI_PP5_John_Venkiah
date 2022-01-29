@@ -382,8 +382,6 @@ The navbar allows users to easily navigate the website, no matter which page the
 
 **Products Nav Mobile**
 
-![Navbar mobile Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_products_nav.png)
-
 **Products Nav Desktop**
 
 ![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
@@ -451,6 +449,8 @@ The user is presented with a window-sized (half window on tablet/mobile) carouse
 **Home Tablet**
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_home.png)
+
+</details>
 
 **User stories covered:**
 
