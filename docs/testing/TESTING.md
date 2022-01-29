@@ -237,10 +237,24 @@ Upon clicking on edit, the brand form appears, with easy to understand fields, a
 
 - **Conclusion: tests passed**
 
+---
 
-**Main conclusion, User story 1 - Tests passed**
+- **Conclusion, User story 1 - Tests passed**
+
+---
+### Testing of user story 2:
+
+*As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site*
+
+The navbar is present throughout the site, with the exceptions of when a modal or dialog window is present. I have chosen to include the navbar in the authentication pages (sign up/in/out, change password etc) if the user should wish to access them.
 
 
-### Testing of user story 1:
+<details>
+    <summary>View Image</summary>
 
-*As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page*
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/mobile_accessing_nav_sign_out.png)
+
+</details>
+
+- **Conclusion, User story 2 - : tests passed**
+
