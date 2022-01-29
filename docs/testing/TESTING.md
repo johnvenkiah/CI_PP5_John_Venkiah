@@ -333,3 +333,44 @@ On top of this, the user is reminded of this in the Product Detail and Checkout 
 </details>
 
 - **Conclusion, User story 5 - tests passed**
+
+--
+
+### Testing of user story 6:
+
+*As a user, the choices I make on the site are confirmed to me, so that I am always aware of them*
+
+A smart solution for giving users confirmation on when they have made a choice is the Toasts dialog function. Created with the help of Bootstrap and Django, the toast message is displayed to the user if the function they performed is successful. This includes everything from crating an account, signin in or out, adding or removing items from the wishlist or cart, updating the carts item quantity, and making a successful order, in excess of the order confirmation page of course.
+
+The toast will also display items in the cart, if there are any.
+
+For extra clarity, the border colours are coded for each type of message - blue for info, yellow for warnings, red for errors and green for success.
+
+Also, if a user enters wrong or sufficient info, a message is given to the user.
+
+<details>
+    <summary>View Images</summary>
+
+**Confirmation of sign in**
+
+![Conirmation of sign in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/toast_signed_in.png)
+---
+
+**Adding product to Wishlist**
+
+![Adding product to Wishlist](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_add_to_wl.png)
+---
+
+**Choosing a too similar password**
+
+![Choosing a too similar password](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/signup_val_2.png)
+---
+
+**Access denied message**
+
+![Access denied message](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_access_denied.png)
+---
+
+</details>
+
+- **Conclusion, User story 6 - tests passed**
