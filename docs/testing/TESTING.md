@@ -84,6 +84,7 @@ As manual testing can be overwhelming for both the tester and the reader, I have
 
     41. As a user, I can view a privacy policy document on the sites footer
 
+---
 
 2. **Registered User Case** - User experience for a user that creates an account and performs all available operations for authenticated users. User stories fulfilled in this user case:
 
@@ -113,6 +114,7 @@ As manual testing can be overwhelming for both the tester and the reader, I have
 
     33. As a logged in user, I can remove my review of a product, so that it no longer is there
 
+---
 
 3. **Admin User Case** - User experience for an admin user, able to perform all operations on the site. User stories fulfilled in this user case:
 
