@@ -143,8 +143,12 @@ The user is presented with the landing page of the site, which consists of a win
 
 <details>
     <summary>View Images on mobile and tablet</summary>
+
+**Home Mobile**
   
 ![Home Mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
+
+**Home Tablet**
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_home.png)
 
@@ -159,12 +163,15 @@ The navbar is visible, as on any page on the site, and this consists of:
 <details>
     <summary>View Images on mobile and tablet</summary>
 
+**Products Nav Mobile**
+
 ![Navbar mobile Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_products_nav.png)
+
+**Products Nav Desktop**
 
 ![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
 
+**Sign In/Up Menu**
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
-
-![Navbar mobile Sign In](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_account_nav_item.png)
 
 </details>
