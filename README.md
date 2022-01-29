@@ -961,7 +961,7 @@ The Django framework provides an excellent admin interface which this site has t
 
 ### Frameworks, Libraries and Other Resources
 
-This project is built solely through the framework [Django](https://www.djangoproject.com/), and I have tried to make use of its many powerfiul features.
+This project is built solely through the framework [Django](https://www.djangoproject.com/), and I have tried to make use of its many powerful features.
 
 - I have used [Bootstrap 4](https://getbootstrap.com/) as a framework for styling for efficiency purposes.
 
