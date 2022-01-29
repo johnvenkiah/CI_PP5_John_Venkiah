@@ -288,7 +288,7 @@ Like the navbar, the footer, which includes the mailchimp newsletter registratio
 
 </details>
 
-- **Conclusion, User story 3 - 4: tests passed**
+- **Conclusion, User story 3 and 4 - tests passed**
 
 --
 
@@ -519,7 +519,7 @@ The products are displayed as cards, each with:
 - User clicks on the plus or minus signs to choose quantity
 - User chooses the size of the product in the dropdown size input
 - User clicks on the Add to Cart button
-- Item is added with the chosen quantity and size
+- Item is added to the cart with the chosen quantity and size
 
 <details>
     <summary>View GIF</summary>
@@ -533,3 +533,61 @@ The products are displayed as cards, each with:
 
 - **Conclusion, User story 12 - tests passed**
 
+
+--
+
+### Testing of user story 13:
+
+*As a user, I can add a product to my cart by clicking ’Add to Cart’ from the product detail page so that I can purchase the product*
+
+This user story is already tested and displayed in user story 12, and passed too.
+
+- **Conclusion, User story 13 - tests passed**
+
+
+--
+
+### Testing of user story 14:
+
+*As a user, I can always see the total price of my cart in the navigation bar, so that I know what the total cost will be*
+
+The cart total (and count) is visible as a floating badge/button at the top right corner when the user scrolls up, and dissapears again when scrolling down as not to distract the user. This is true on all pages where the navbar is displayed, which is virtually all pages, except for when dialog modal windows appear.
+<details>
+    <summary>View Image</summary>
+
+**Cart total badge**
+
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_badge_filled.png)
+---
+
+</details>
+
+- **Conclusion, User story 14 - tests passed**
+
+
+--
+
+### Testing of user story 15 and 16:
+
+*As a user, i can adjust the quantity of the product chosen after adding it to the shopping cart*
+
+*As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart*
+
+Passed testing of this user story is displayed in user story 13. I have included a GIF file below displaying the actions:
+
+- Clicking on the Cart icon in the navbar
+- Being shown the Cart page
+- Changing the quantity of the product and clicking Update
+- The cart items and quantity are displayed both in the toast message at the top and on the Cart page
+
+<details>
+    <summary>View Image</summary>
+
+**Clicking the Cart icon and updatinge the quantity**
+
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_and_updating_cart.gif)
+---
+
+</details>
+
+- **Conclusion, User story 15 and 16 - tests passed**
