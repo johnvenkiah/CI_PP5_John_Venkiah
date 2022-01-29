@@ -593,6 +593,8 @@ and pushed to Github.
 
 ## Testing
 
+Thorough testing of the StepUp site was performed and can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/TESTING.md).
+
 ## API's and Configuration
 
 ## Deployment

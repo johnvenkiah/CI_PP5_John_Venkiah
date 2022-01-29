@@ -133,3 +133,6 @@ As manual testing can be overwhelming for both the tester and the reader, I have
     39. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
 
 
+### Manual Testing - Regular User Case
+
+#### 

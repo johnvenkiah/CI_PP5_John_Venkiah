@@ -358,11 +358,13 @@ def manage_brands(request):
         messages.error(request, 'Sorry, access to that page is denied.')
         return redirect(reverse('home'))
 
-    sort = None
-    direction = None
     brands = Brand.objects.all()  # pylint: disable=maybe-no-member
     form = BrandForm(request.POST)
     form_set = []
+
+    # Iterate over the brand instances and append the form to a list so brand
+    # instances are synced with the correct form. Give the form a prefix so
+    # each field has a unique id.
     for brand in brands:
         form = BrandForm(request.POST or None, instance=brand, prefix=brand.id)
         form_set.append(form)
