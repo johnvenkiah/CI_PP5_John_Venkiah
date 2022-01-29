@@ -114,9 +114,19 @@ Under the card details field, the grand total amount is displayed once more in r
 This to me is very clear, implying that after this step, the order is processed.
 
 <details>
-    <summary>View Image</summary>
+    <summary>View Images</summary>
 
-![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+---
+
+**The Checkout Page, desktop**
+
+![Checkout page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+---
+
+**Pay Button, Checkout on mobile**
+
+![Pay Button, Checkout on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_pay_btn.png)
+---
 
 </details>
 
@@ -242,6 +252,7 @@ Upon clicking on edit, the brand form appears, with easy to understand fields, a
 - **Conclusion, User story 1 - Tests passed**
 
 ---
+
 ### Testing of user story 2:
 
 *As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site*
@@ -260,6 +271,7 @@ The navbar is present throughout the site, with the exceptions of when a modal o
 
 
 ---
+
 ### Testing of user story 3 and 4:
 
 *As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns*
@@ -276,5 +288,48 @@ Like the navbar, the footer, which includes the mailchimp newsletter registratio
 
 </details>
 
-- **Conclusion, User story 3 - : tests passed**
+- **Conclusion, User story 3 - 4: tests passed**
 
+--
+
+### Testing of user story 5:
+
+*As a user, it is visible if I am signed in or not, so that I am made aware of this*
+
+As mentioned earlier, the navbar is visible almost everywhere on the site - and in the navbar, the user can see their authentication status. On desktop, the menu item says Sign In/Sign Up for non-authenticated users, and Account for authenticated ones.
+
+On mobile, the text isn't visible in the navbar, but clicking on it once will show that the user is either not logged in, logged in or logged in as an admin, displaying the admin account menu items, Add Brand or Product and Manage Brands.
+
+On top of this, the user is reminded of this in the Product Detail and Checkout pages, with links to sign in to use the Wishlist or save order details.
+
+<details>
+    <summary>View Image</summary>
+
+**Navbar for non-authenticated users**
+
+![Navbar for non-authenticated users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
+---
+
+**Navbar for authenticated users**
+
+![Navbar for non-authenticated users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_nav_logged_in.png)
+---
+
+**Navbar for admin users**
+
+![Navbar for admin users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
+---
+
+**Navbar for admin users**
+
+![Navbar for admin users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
+---
+
+**Links in place of functions for non-signed in users**
+
+![Links to sign in if not signed in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_sign_in_links.png)
+---
+
+</details>
+
+- **Conclusion, User story 5 - tests passed**
