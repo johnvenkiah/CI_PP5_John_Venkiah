@@ -573,7 +573,9 @@ The cart total (and count) is visible as a floating badge/button at the top righ
 
 *As a user, I can view the products added to my cart by clicking the cart icon or by adding an item to the cart*
 
-Passed testing of this user story is displayed in user story 13. I have included a GIF file below displaying the actions:
+Passed testing of this user story is displayed in user story 13, where adding the item caused the toast to appear. I have included a GIF file below displaying the actions.
+
+**Actions:**
 
 - Clicking on the Cart icon in the navbar
 - Being shown the Cart page
@@ -591,3 +593,30 @@ Passed testing of this user story is displayed in user story 13. I have included
 </details>
 
 - **Conclusion, User story 15 and 16 - tests passed**
+
+
+---
+
+### Testing of user story 17:
+
+*As a user, I can click the remove from cart button, so that I can easily remove products from my cart*
+
+**Actions**
+
+- User clicks on the red X button in the relevant products field
+- Toast is displayed telling the user the item is remove and displaying the updated cart and
+- The Cart page is reloaded, updated with the changes made (removal)
+
+<details>
+    <summary>View GIF</summary>
+
+**Cart total badge**
+
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_remove_from_cart.gif)
+---
+
+</details>
+
+- **Conclusion, User story 17 - tests passed**
+
+--
