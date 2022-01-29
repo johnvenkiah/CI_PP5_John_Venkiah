@@ -374,6 +374,7 @@ Also, if a user enters wrong or sufficient info, a message is given to the user 
 </details>
 
 - **Conclusion, User story 6 - tests passed**
+
 --
 
 ### Testing of user story 7:
@@ -410,3 +411,24 @@ The products list is also accessible via the Browse Products button on the home 
 </details>
 
 - **Conclusion, User story 7 - tests passed**
+
+--
+
+### Testing of user story 8:
+
+*As a user, i can perform a search, so that products matching the search appear in the products list*
+
+There is a search field in the navbar, in which users can search for products. performing a search on Nike for example will display the products list filtering to show products with Nike in the product name.
+
+<details>
+    <summary>View Image</summary>
+
+**Search of sneakers performed**
+
+![Search of sneakers performed](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_searched_sneakers.png)
+---
+
+</details>
+
+- **Conclusion, User story 8 - tests passed**
+
