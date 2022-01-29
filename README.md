@@ -792,6 +792,31 @@ Upon registration, the site sends an email to confirm the users email address. T
 ### Feature 10: My StepUp
 
 Each user can access their own personal profile where they can enter their delivery information, subscribe or unsubscribe to the newsletter and keep track of their orders.
+---
+
+**The My StepUp page on desktop**
+
+![The My StepUp page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_my_stepup.png)
+---
+
+Here, users can also change their password, and delete their account completely if desired.
+
+<details>
+    <summary>View More Images Here</summary>
+
+---
+
+**Order History box on the My StepUp page, tablet**
+
+![Add item to Wishlist on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_order_history.png)
+---
+
+**Account Operations area in My Stepup, mobile**
+
+![Account Operations area in My Stepup, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_account_operations.png)
+---
+
+</details>
 
 **User stories covered:**
 
@@ -801,9 +826,27 @@ Each user can access their own personal profile where they can enter their deliv
 
 27. As a logged in user, I can choose to delete my account, so that it no longer exists
 
-### Feature 11: The Wish List
+### Feature 11: The Wishlist
 
-Users can also add products to their Wish List, if they do not wish to purchase items straght away. The products will remain in the wish list until the user has purchased them or removed them from the list.
+Users can also add products to their Wishlist, if they do not wish to purchase items straight away. This is located at the top of the My StepUp page. The products will remain in the users Wishlist until they have purchased the item or removed it from the list.
+
+<details>
+    <summary>View More Images Here</summary>
+
+---
+
+**The My StepUp page on mobile**
+
+![The My StepUp page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_my_stepup_wl_filled.png)
+---
+
+**Add item to Wishlist on tablet**
+
+![Add item to Wishlist on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_add_to_wl.png)
+---
+
+</details>
+
 
 **User stories covered:**
 
@@ -816,6 +859,12 @@ Users can also add products to their Wish List, if they do not wish to purchase 
 ### Feature 12: The Contact Page
 
 This is a standard contact form, through which users can contact the site owner. The form is sent by email to the site owner.
+---
+
+**Contact Page on desktop**
+
+![Contact Page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_contact.png)
+---
 
 **User stories covered:**
 
@@ -825,7 +874,60 @@ This is a standard contact form, through which users can contact the site owner.
 
 ### Feature 13: The Admin Features
 
-There are extra features for admin users, so that site owners can edit products on the site.
+There are extra features for admin users, so that site owners can add, edit and remove products, brands and reviews on the site. This is visible in the navbar, where two more items are visible in the account menu; Add Brand or Product and Manage Brands.
+---
+
+**The Admin account menu**
+
+![The Admin account menu](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
+---
+
+It is also visible in the products page, where a plus sign has appeared at the top, aswell as the Edit and Delete buttons on each product card in the list. On the product detail page, the Edit and Delete buttons are also visible, and every review displays a delete button, which deletes the review in question after confirmation.
+
+The Manage Brands page provides an overview of the brands on the site, and the possibility to edit or remove brands. Here admin users can change the brand name or the logo image for the brand. The changes are reflected in the Brands menu item in the Products nav menu, as well as in the product detail page, where, if uploaded, a brand image is visible.
+
+The Add Brand or Product page has two forms, for brand and product respectively. The product form has a lot of fields, and complex validation (for example, if an item is on sale the sale price cannot be higner that the initial one). Each form has a "add" button and the product or brand is added to the site if the form is valid. If not, an error is visible or the user is taken back to the form for them to fill it out properly.
+
+The Edit Product page consists of the same product form as on the previously mentioned page, only already filled out with the products current information. Here the admin user can update any current info for the product, as well as change the product image.
+
+
+<details>
+    <summary>View More Images Here</summary>
+
+---
+
+**The Manage Brands page on tablet**
+
+![The Manage Brands page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_manage_brands.png)
+---
+
+**Added new brand, Manage Brands page on mobile**
+
+![Added new brand, Manage Brands page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/mobile_add_brand_successful.png)
+---
+
+**Add brand or product page on desktop**
+
+![Add brand or product page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_add_brand_product.png)
+---
+
+**Edit Product page on mobile**
+
+![Edit Product page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/mobile_edit_product_new_image.png)
+---
+
+**Products list with Edit and Delete buttons, desktop**
+
+![Edit Product page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_auth_products.png)
+---
+
+**Price validation in add or edit product form**
+
+![Price validation in add or edit product form](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/update_product_invalid_price.png)
+---
+
+</details>
+
 
 **User stories covered:**
 
