@@ -8,9 +8,9 @@ I discovered some bugs during the testing phase, which you can read about [here]
 
 ### Overview
 
-I have tested the features against their user stories that cover them.
+I have tested the features against their user stories that cover them. Though I am not including images on all screen sizes in this document, responsive design has been implemented and documetation of this with images is already in the [Existing Features](https://github.com/johnvenkiah/CI_PP5_John_Venkiah#existing-features) chapter of my README.md file. I found it repetetive and unnecessary to imclude this several times.
 
-Testing of user story 1:
+### Testing of user story 1:
 
 *As a user, the intention of the specific page is made clear to me, so that I know the purpose of that page*
 
@@ -83,6 +83,39 @@ The quantity and size controls are easy to understand, and adding to the cart or
     <summary>View Image</summary>
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_cart_several_items.png)
+
+</details>
+
+- **Conclusion: tests passed**
+
+---
+
+**The Checkout Page**
+
+- **Intention: Allow users to enter the needed information for them to purchase the items in their cart**
+
+The Checkout Page is clear and simple, and contains the fields:
+
+- Full Name
+- Email Address
+- Phone Number
+- Street Address 1
+- Street Address 2
+- Town or City
+- County or State
+- Postal Code
+- Country
+- Card Details
+
+As well as the Order summary, including the items added to the cart, their name, size, quantity and price. The Grand total is very visible at the bottom of the page.
+
+Under the card details field, the grand total amount is displayed once more in red.
+
+This to me is very clear, implying that after this step, the order is processed.
+<details>
+    <summary>View Image</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
 
 </details>
 
