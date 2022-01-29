@@ -406,6 +406,8 @@ The navbar is also dynamic, transparent when users scroll down, for full content
 
 If the user us logged in, the Sign Up/Sign In menu becomes the Account menu, and if the user has admin privileges the user can access the manage brands an add product or brand pages through here.
 
+There is a floating badge in the top right corner displaying the grand total and item count, always visible of the user scrolls up, which also gets an orange border if items are added.
+
 **Mobile nav for admin users**
 
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
@@ -460,11 +462,17 @@ The user is presented with a window-sized (half window on tablet/mobile) carouse
 
 ### Feature 3: The Footer
 
-The footer is dynamic, and will on most pages display a signup form for a newsletter, as well as a link to the site's Facebook business page and important links, such as contact or home. The footer will display less if the user is on the checkout page, to bring focus to the purchase.
+The footer includes a signup form for a newsletter, as well as a link to the site's Facebook business page and important links, such as contact, terms of use and the pages privacy policy.
+
+Whereever the user is on the site, except for some account operations, the footer is visible at the bottom of the page, giving the user access to these important links at virtually all times.
+
+![Footer](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_footer.png)
+
+The policy and terms appear in a modal window, which users easily can close and access again at will, due to the links placement in the footer.
+
+![Mobile privacy policy](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_privacy_policy.png)
 
 **User stories covered:**
-
-2. As a user, I can access important links such as home, products, my cart, sign in/out, and My StepUp by scrolling and/or clicking once, regardless of where on the site I am, so that i can easily navigate the site
 
 3. As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns
 
@@ -474,9 +482,24 @@ The footer is dynamic, and will on most pages display a signup form for a newsle
 
 41. As a user, I can view a privacy policy document on the sites footer
 
-### Feature 3: The Products List
+### Feature 4: The Products List
 
 The products list is dynamic and will show the relevant products, depending on if the user has performed a search, clicked on a category or filtered the products in any other way.
+
+Filtering can be done:
+
+- By category
+- By brand
+- By gender
+- By whether items are new or on sale
+- By users performing a search
+
+![Mobile perform search](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_perform_search.png)
+
+
+![Desktop products filtered](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products_filter.png)
+
+On top of this, sorting can be done by price, rating, name or category. Users can see if the item is on sale or new, already in the products list, with a badge saying "new" or "save €".
 
 **User stories covered:**
 
@@ -488,7 +511,7 @@ The products list is dynamic and will show the relevant products, depending on i
 
 10. As a user, I can view the most important details of the product in the product list, such as model, brand, category, price, rating, and image so that i know most details without having to click on the product
 
-### Feature 4: The Product Detail Page
+### Feature 5: The Product Detail Page
 
 This page shows a dedicated page for the specific product. Here users can choose the size and the quantity of the product, as well as read a description and user reviews of it.
 
@@ -506,7 +529,7 @@ Logged in users can also write and remove their own reviews here.
 
 33. As a logged in user, I can remove my review of a product, so that it no longer is there
 
-### Feature 5: The Cart
+### Feature 6: The Cart
 
 The Cart is the users digital shopping cart, containing all products the user has added to it.
 It is partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
@@ -523,7 +546,7 @@ It is partially visible in the navbar but has a dedicated page through which use
 
 17. As a user, I can click the remove from cart button, so that I can easily remove products from my cart
 
-### Feature 6: The Checkout Page
+### Feature 7: The Checkout Page
 
 The checkout page features a form for the user to fill in, with delivery address, contact and card info. Here, users can also opt in for a newsletter, should they wish to do so.
 
@@ -535,7 +558,7 @@ The checkout page features a form for the user to fill in, with delivery address
 
 20. As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
 
-### Feature 7: The Order Successful Page
+### Feature 8: The Order Successful Page
 
 If the user has made a successful purchase, the order created will be displayed to the user. This also informs the user that the order confirmation was sent to the users email address, so that the user can close their browser window should they wish.
 
@@ -543,7 +566,7 @@ If the user has made a successful purchase, the order created will be displayed 
 
 21. As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation
 
-### Feature 8: The Sign Up/In/Out Pages
+### Feature 9: The Sign Up/In/Out Pages
 
 Signing up, in and out are vital parts of this site, allowing users to save customer details to improve the users experience of the site. It also creates a possibility for the site owner to gain revisiting customers.
 
@@ -555,7 +578,7 @@ Signing up, in and out are vital parts of this site, allowing users to save cust
 
 24. As a user, I have to confirm my email address to complete my account registration
 
-### Feature 9: My StepUp
+### Feature 10: My StepUp
 
 Each user can access their own personal profile where they can enter their delivery information, subscribe or unsubscribe to the newsletter and keep track of their orders.
 
@@ -567,7 +590,7 @@ Each user can access their own personal profile where they can enter their deliv
 
 27. As a logged in user, I can choose to inactivate my account, so that I can cancel my account should I wish to
 
-### Feature 10: The Wish List
+### Feature 11: The Wish List
 
 Users can also add products to their Wish List, if they do not wish to purchase items straght away. The products will remain in the wish list until the user has purchased them or removed them from the list.
 
@@ -579,7 +602,7 @@ Users can also add products to their Wish List, if they do not wish to purchase 
 
 30. As a logged in user, I can add products from my Wish List to my cart, so that I can easily purchase them
 
-### Feature 11: The Contact Page
+### Feature 12: The Contact Page
 
 This is a standard contact form, through which users can contact the site owner. The form is sent by email to the site owner.
 
@@ -589,7 +612,7 @@ This is a standard contact form, through which users can contact the site owner.
 
 39. As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me
 
-### Feature 12: The Admin Features
+### Feature 13: The Admin Features
 
 There are extra features for admin users, so that site owners can edit products on the site.
 
@@ -601,7 +624,7 @@ There are extra features for admin users, so that site owners can edit products 
 
 38. As a site owner, I can remove any products review on the site
 
-### Feature 13: The Django Admin
+### Feature 14: The Django Admin
 
 The Django framework provides an excellent admin interface which this site has taken full advantage of. The admin panel of this site contains all instances of all database models, and the ability to edit, remove or add instances.
 
