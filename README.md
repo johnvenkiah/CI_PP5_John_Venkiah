@@ -669,7 +669,37 @@ A toast, a small dialog window at the top right, will be visible after adding an
 
 ### Feature 7: The Checkout Page
 
-The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details. From here, if user is authenticated, they can save their details to their My StepUp profile so they are prefilled for the next order.
+The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details. From here, if user is authenticated, they can save their details to their My StepUp profile so they are prefilled for the next order. If they are not logged in, a link to log in is displayed in place of that option.
+
+If the payment fails or info is sufficient, the user gets a new chance to enter their info, without being charged.
+---
+
+**Checkout page on desktop**
+
+![Checkout page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+---
+
+<details>
+    <summary>View More Images Here</summary>
+
+---
+
+**Checkout page on tablet**
+
+![Checkout page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_checkout_details_filled.png)
+---
+
+**Checkout page card details on mobile**
+
+![Checkout page bottom on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_pay_btn.png)
+---
+
+**Payment processing on mobile**
+
+![Checkout page bottom on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_payment_processing.png)
+---
+
+</details>
 
 **User stories covered:**
 
@@ -679,9 +709,40 @@ The checkout page features a form for the user to fill in, with name, email, pho
 
 20. As a user, i can enter my card details on the checkout page, so that I can make the desired purchase
 
+
 ### Feature 8: The Order Successful Page
 
-If the user has made a successful purchase, the order created will be displayed to the user. This also informs the user that the order confirmation was sent to the users email address, so that the user can close their browser window should they wish.
+If the user has made a successful purchase, an order confirmation will be displayed to the user, and sent to the given email address during checkout. If the order was successful, the cart will be emptied, and, if the user is logged in and had any of the items in their wishlist, they are removed from there.
+
+In the confirmation, the user can view the items order, their sizes and quantity, an order number, grand total and delivery details.
+---
+
+**Order confirmation page on desktop**
+
+![Order confirmation page on desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_order_confirmation.png)
+---
+
+<details>
+    <summary>View More Images Here</summary>
+
+---
+
+**Order Confirmation page on tablet**
+
+![Order Confirmation page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_order_confirmation.png)
+---
+
+**Order Confirmation page on mobile**
+
+![Order Confirmation page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_order_confirmation.png)
+---
+
+**Order Email Received**
+
+![Order Email Received](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/order_confirmation_email_received.png)
+---
+
+</details>
 
 **User stories covered:**
 
