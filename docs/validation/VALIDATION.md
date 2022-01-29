@@ -15,6 +15,7 @@ This is the validation results file for the StepUp project, containing results f
   + [Project Python Files](#project-python-files)
 * [JSHint JavaScript Validation](#jshint-javascript-validation)
 * [W3C Jigsaw Validation](#w3c-jigsaw-validation)
+* [W3C HTML Validation](#w3c-html-validation)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
