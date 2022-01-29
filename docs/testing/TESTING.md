@@ -121,3 +121,164 @@ This to me is very clear, implying that after this step, the order is processed.
 
 - **Conclusion: tests passed**
 
+
+---
+
+**The Contact Page**
+
+- **Intention: Provide a simple form through which the user can contact the site owner**
+
+This is one of the sites most simple pages, as the intention is so obvious to the user. The user should enter their name, email address, a subject and the message itself. On submission, a toast dialog window notifies the user that the message has been sent to the site owner and that they will reply shortly.
+
+<details>
+    <summary>View Image</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_contact_form.png)
+
+</details>
+
+- **Conclusion: tests passed**
+
+
+---
+
+**The Sign Up/Sign In/Sign Out Pages**
+
+- **Intention: Allow users to sign up, in or out**
+
+I have designed these pages as dialog windows, so the users choices are even clearer. Also, upon signup, the links to the sites terms and policies can be viewed through links in the dialog window too.
+
+<details>
+    <summary>View Images</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signup.png)
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signin.png)
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_sign_out.png)
+
+</details>
+
+- **Conclusion: tests passed**
+
+
+---
+
+**The My StepUp Page**
+
+- **Intention: To give the user a way to personalize their experience on the site, as well as a reason to return**
+
+As the My StepUp page includes info that the user themselves have chosen, the feeling of a personal experience in my opinion is evident. This together with the purchases that have already been processed makes the page complete.
+
+This to me is very clear, implying that after this step, the order is processed.
+<details>
+    <summary>View Image</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+
+</details>
+
+- **Conclusion: tests passed**
+
+
+---
+
+**The Add Brand or Product Page**
+
+- **Intention: Allow users to enter the needed information for them to purchase the items in their cart**
+
+The Checkout Page is clear and simple, and contains the fields:
+
+- Full Name
+- Email Address
+- Phone Number
+- Street Address 1
+- Street Address 2
+- Town or City
+- County or State
+- Postal Code
+- Country
+- Card Details
+
+As well as the Order summary, including the items added to the cart, their name, size, quantity and price. The Grand total is very visible at the bottom of the page.
+
+Under the card details field, the grand total amount is displayed once more in red.
+
+This to me is very clear, implying that after this step, the order is processed.
+<details>
+    <summary>View Image</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+
+</details>
+
+- **Conclusion: tests passed**
+
+
+---
+
+**The Edit Product Page**
+
+- **Intention: Allow users to enter the needed information for them to purchase the items in their cart**
+
+The Checkout Page is clear and simple, and contains the fields:
+
+- Full Name
+- Email Address
+- Phone Number
+- Street Address 1
+- Street Address 2
+- Town or City
+- County or State
+- Postal Code
+- Country
+- Card Details
+
+As well as the Order summary, including the items added to the cart, their name, size, quantity and price. The Grand total is very visible at the bottom of the page.
+
+Under the card details field, the grand total amount is displayed once more in red.
+
+This to me is very clear, implying that after this step, the order is processed.
+<details>
+    <summary>View Image</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+
+</details>
+
+- **Conclusion: tests passed**
+
+
+---
+
+**The Manage Brands Page**
+
+- **Intention: Allow users to enter the needed information for them to purchase the items in their cart**
+
+The Checkout Page is clear and simple, and contains the fields:
+
+- Full Name
+- Email Address
+- Phone Number
+- Street Address 1
+- Street Address 2
+- Town or City
+- County or State
+- Postal Code
+- Country
+- Card Details
+
+As well as the Order summary, including the items added to the cart, their name, size, quantity and price. The Grand total is very visible at the bottom of the page.
+
+Under the card details field, the grand total amount is displayed once more in red.
+
+This to me is very clear, implying that after this step, the order is processed.
+<details>
+    <summary>View Image</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_checkout.png)
+
+</details>
+
+- **Conclusion: tests passed**
+
