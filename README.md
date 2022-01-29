@@ -1011,6 +1011,8 @@ and pushed to Github.
 
 - [AWS S3 Bucket](https://aws.amazon.com/s3/) - Used to host media (images) and static(CSS and JavaScript) files for the site.
 
+- [Stripe](https://stripe.com/) - Used to process the users payments and handle webhooks.
+
 - [Gitpod](https://gitpod.com/) - All code was written and tested with the Gitpod web-based IDE.
 
 - [Balsamiq Wireframes](https://balsamiq.com/wireframes/) was used to create wireframe images of the website which you can view [here](#).
