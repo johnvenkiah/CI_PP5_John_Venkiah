@@ -125,6 +125,7 @@ This to me is very clear, implying that after this step, the order is processed.
 
 **Pay Button, Checkout on mobile**
 
+
 ![Pay Button, Checkout on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_pay_btn.png)
 ---
 
@@ -144,6 +145,8 @@ This is one of the sites most simple pages, as the intention is so obvious to th
 <details>
     <summary>View Image</summary>
 
+---
+
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_contact_form.png)
 
 </details>
@@ -161,6 +164,8 @@ I have designed these pages as dialog windows, so the users choices are even cle
 
 <details>
     <summary>View Images</summary>
+
+---
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signup.png)
 
@@ -185,6 +190,8 @@ This to me is very clear, implying that after this step, the order is processed.
 <details>
     <summary>View Image</summary>
 
+---
+
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_my_stepup.png)
 
 </details>
@@ -203,6 +210,8 @@ This page is also rather clear if you ask me, with two forms on the page, each w
 <details>
     <summary>View Image</summary>
 
+---
+
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_add_brand_product.png)
 
 </details>
@@ -220,6 +229,8 @@ The Edit Product page, just like the Add Brand or Product page, has a form in wh
 
 <details>
     <summary>View Image</summary>
+
+---
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/edit_product_desktop.png)
 
@@ -240,6 +251,8 @@ Upon clicking on edit, the brand form appears, with easy to understand fields, a
 
 <details>
     <summary>View Image</summary>
+
+---
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/manage_brands.png)
 
@@ -263,6 +276,8 @@ The navbar is present throughout the site, with the exceptions of when a modal o
 <details>
     <summary>View Image</summary>
 
+---
+
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/mobile_accessing_nav_sign_out.png)
 
 </details>
@@ -284,6 +299,8 @@ Like the navbar, the footer, which includes the mailchimp newsletter registratio
 <details>
     <summary>View Image</summary>
 
+---
+
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_footer.png)
 
 </details>
@@ -304,6 +321,8 @@ On top of this, the user is reminded of this in the Product Detail and Checkout 
 
 <details>
     <summary>View Image</summary>
+
+---
 
 **Navbar for non-authenticated users**
 
@@ -351,6 +370,8 @@ Also, if a user enters wrong or sufficient info, a message is given to the user 
 <details>
     <summary>View Images</summary>
 
+---
+
 **Confirmation of sign in**
 
 ![Conirmation of sign in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/toast_signed_in.png)
@@ -388,6 +409,8 @@ The products list is also accessible via the Browse Products button on the home 
 <details>
     <summary>View Images</summary>
 
+---
+
 **Desktop view of the products list**
 
 ![Desktop view of the products list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products.png)
@@ -423,6 +446,8 @@ There is a search field in the navbar, in which users can search for products. p
 <details>
     <summary>View Image</summary>
 
+---
+
 **Search of sneakers performed**
 
 ![Search of sneakers performed](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_searched_sneakers.png)
@@ -445,6 +470,8 @@ This works as intended.
 
 <details>
     <summary>View Image</summary>
+
+---
 
 **Search of sneakers performed**
 
@@ -474,6 +501,8 @@ The products are displayed as cards, each with:
 <details>
     <summary>View Image</summary>
 
+---
+
 **Product info in Products page for admin user**
 
 ![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/desktop_closeup_two_products_admin.png)
@@ -498,9 +527,11 @@ The products are displayed as cards, each with:
 <details>
     <summary>View GIF</summary>
 
+---
+
 **Clicking on product in list**
 
-![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_product.gif)
+![Clicking on product in list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_product.gif)
 ---
 
 </details>
@@ -524,9 +555,11 @@ The products are displayed as cards, each with:
 <details>
     <summary>View GIF</summary>
 
+---
+
 **Clicking on product in list**
 
-![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_choosing_prod_size_qty.gif)
+![Clicking on product in list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_choosing_prod_size_qty.gif)
 ---
 
 </details>
@@ -555,9 +588,11 @@ The cart total (and count) is visible as a floating badge/button at the top righ
 <details>
     <summary>View Image</summary>
 
+---
+
 **Cart total badge**
 
-![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_badge_filled.png)
+![Cart total badge](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_badge_filled.png)
 ---
 
 </details>
@@ -585,9 +620,11 @@ Passed testing of this user story is displayed in user story 13, where adding th
 <details>
     <summary>View Image</summary>
 
+---
+
 **Clicking the Cart icon and updatinge the quantity**
 
-![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_and_updating_cart.gif)
+![Clicking the Cart icon and updatinge the quantity](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_and_updating_cart.gif)
 ---
 
 </details>
@@ -610,13 +647,146 @@ Passed testing of this user story is displayed in user story 13, where adding th
 <details>
     <summary>View GIF</summary>
 
-**Cart total badge**
+---
 
-![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_remove_from_cart.gif)
+**Removing item from Cart**
+
+![Removing item from Cart](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_remove_from_cart.gif)
 ---
 
 </details>
 
 - **Conclusion, User story 17 - tests passed**
 
+
 --
+
+### Testing of user story 18:
+
+*As a user, I can click on Proceed to Checkout, so that I can purchase the items in my cart*
+
+**Actions**
+
+- User clicks on the Checkout button at the bottom of the Cart page
+- User is taken to the Checkout page
+
+<details>
+    <summary>View GIF</summary>
+
+---
+
+**Clicking on the Checkout button**
+
+![Clicking on the Checkout button](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_checkout.gif)
+---
+
+</details>
+
+- **Conclusion, User story 18 - tests passed**
+
+
+--
+
+### Testing of user story 19:
+
+*As a logged in user, on the Checkout page, I can choose to save my delivery address to My StepUp, so that I can retain it for future orders*
+
+**Actions**
+
+- Authenticated user clicks on the checkbox to save details to their profile
+- User proceeds with the order and it is processed
+- The details the user entered are now saved on the My StepUp page
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Details filled in on checkout**
+
+![Details filled in on checkout](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/details_checkout.gif)
+---
+
+**Details in My StepUp after checkout**
+
+![Details in My StepUp after checkout](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/details_my_stepup_after_checkout.gif)
+---
+
+</details>
+
+- **Conclusion, User story 19 - tests passed**
+
+
+--
+
+
+### Testing of user story 20:
+
+*As a user, i can enter my card details on the checkout page, so that I can make the desired purchase*
+
+**Actions**
+
+- User enters the card details (test card for stripe tested, details 4242 4242 4242 4242, cvc and postal code can be anything)
+- User proceeds with the order and it is processed
+- The order is completed
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Card details are filled in**
+
+![Details filled in on checkout](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_pay_btn.png)
+---
+
+**Payment processing screen after clicking Complete Order**
+
+![Details in My StepUp after checkout](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_payment_processing.png)
+---
+
+</details>
+
+- **Conclusion, User story 20 - tests passed**
+
+
+--
+
+
+### Testing of user story 21:
+
+*As a user, I am informed of whether my purchase was successful or not via the Order Successful page, as well as via an email sent upon order confirmation*
+
+**Actions**
+
+- User has entered their card information and clicked on Complete Order and the processing screen appears
+- Either the order is completed and user is cofirmed of this, in which case an email is sent to the user.
+- If this email is invalid, a message is sent to the site owner informing them of this
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Error message if invalid details**
+
+![Error message if invalid details](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/error_message_card_details_invalid.png)
+---
+
+**Order Confirmation**
+
+![Order Confirmation](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_order_confirmation.png)
+---
+
+**Email sent to user (different order)**
+
+![Email sent to user](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/order_confirmation_email_received.png)
+---
+
+</details>
+
+- **Conclusion, User story 21 - tests passed**
+
+
+--
+
