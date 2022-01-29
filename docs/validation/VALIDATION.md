@@ -458,7 +458,7 @@ The HTML code was validated with the W3C Validator. All files tested with 0 erro
   
 #### Password Set
 
-![W3C HTML Validation - Password Set](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_password_set.png)
+![W3C HTML Validation - Password Set](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_password_set.png)
   
   
 #### Password Set Done
