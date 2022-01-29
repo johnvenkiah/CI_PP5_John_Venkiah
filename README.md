@@ -356,7 +356,7 @@ All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_V
 
 #### Colors
 
-![Colors](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/colors.png) (palette generated at https://imagecolorpicker.com/en)
+![Colors](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/colors.png) (palette generated at https://imagecolorpicker.com)
 
 I have chosen the combination of a dark purple night sky as the background, orange and white.
 
@@ -399,7 +399,7 @@ There is a floating badge in the top right corner displaying the grand total and
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
 ---
 
-**Mobile nav for admin users**
+**Tablet nav for admin users**
 
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
 ---
@@ -751,6 +751,35 @@ In the confirmation, the user can view the items order, their sizes and quantity
 ### Feature 9: The Sign Up/In/Out Pages
 
 Signing up, in and out are vital parts of this site, allowing users to save customer details to improve the users experience of the site. It also creates a possibility for the site owner to gain revisiting customers.
+---
+
+**Sign Up page on mobile**
+
+![Sign Up page on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_sign_up.png)
+---
+
+Users can easily sign up through the link in the navbar.
+
+As users browse the site, they will see various links to sign in to access functionality, such as adding items to a wishlist, saving delivery details or posting reviews of products.
+
+Upon registration, the site sends an email to confirm the users email address. They then can sign in to the site and access their My StepUp profile and all other functionality for signed in users.
+
+<details>
+    <summary>View More Images Here</summary>
+
+---
+
+**Sign Up page on tablet**
+
+![Order Confirmation page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signup.png)
+---
+
+**Sign In page on tablet**
+
+![Order Confirmation page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signin.png)
+---
+
+</details>
 
 **User stories covered:**
 
@@ -770,7 +799,7 @@ Each user can access their own personal profile where they can enter their deliv
 
 26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
 
-27. As a logged in user, I can choose to inactivate my account, so that I can cancel my account should I wish to
+27. As a logged in user, I can choose to delete my account, so that it no longer exists
 
 ### Feature 11: The Wish List
 
