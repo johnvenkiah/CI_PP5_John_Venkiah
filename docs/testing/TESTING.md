@@ -483,3 +483,27 @@ The products are displayed as cards, each with:
 
 - **Conclusion, User story 10 - tests passed**
 
+
+--
+
+### Testing of user story 11:
+
+*As a user, i can click the product in the products list so that I can view the products details*
+
+**Steps:**
+
+- User is on Products page and clicks a single product
+- User is taken to the detail page of the product clicked on
+
+<details>
+    <summary>View GIF</summary>
+
+**Clicking on product in list**
+
+![Product info for admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/gif_clicking_on_product.png)
+---
+
+</details>
+
+- **Conclusion, User story 10 - tests passed**
+
