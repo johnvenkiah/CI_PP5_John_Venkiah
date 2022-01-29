@@ -397,107 +397,107 @@ The HTML code was validated with the W3C Validator. All files tested with 0 erro
   
 #### Home
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
   
   
 #### Products
 
-![w3 html validation products](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_products.png)
+![W3C HTML Validation - Products](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_products.png)
   
   
 #### Product Detail
 
-![w3 html validation product detail](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_product_detail.png)
+![W3C HTML Validation - Product Detail](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_product_detail.png)
   
   
 #### Cart
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Cart](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_cart.png)
   
   
 #### Checkout
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Checkout](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_checkout.png)
   
   
 #### Order Confirmation
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Order Confirmation](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_order_confirmation.png)
   
   
 #### Contact
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Contact](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_contact.png)
   
   
 #### Sign In
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Sign In](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_login.png)
   
   
 #### Sign Up
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Sign Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_signup.png)
   
   
 #### My StepUp
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - My StepUp](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_my_stepup.png)
   
   
 #### Password Reset
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Password Reset](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_password_reset.png)
   
   
 #### Password Reset Done
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Password Reset Done](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_password_reset_done.png)
   
   
 #### Password Set
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Password Set](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_password_set.png)
   
   
 #### Password Set Done
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Password Set Done](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_password_set_done.png)
   
   
 #### Delete Account
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Delete Account](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_account_delete.png)
   
   
 #### Add Brand or Product
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Add Brand of Product](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_add_product.png)
   
   
 #### Edit Product
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_home.png)
+![W3C HTML Validation - Edit Product](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_edit_product.png)
   
   
 #### Manage Brands
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_manage_brands.png)
+![W3C HTML Validation - Manage Brands](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_manage_brands.png)
   
   
 #### Sign Out
 
-![w3 html validation home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_logout.png)
+![W3C HTML Validation - Sign Out](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_logout.png)
   
   
 #### 404 Error
 
-![w3 html validation 404 Error](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_404.png)
+![W3C HTML Validation - 404 Error](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_404.png)
   
   
 #### 500 Error
 
-![w3 html validation 500 Error](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_500.png)
+![W3C HTML Validation - 500 Error](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/w3_html/w3_html_500.png)
   
 
 </details>
