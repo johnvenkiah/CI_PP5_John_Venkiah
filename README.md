@@ -375,10 +375,12 @@ The navbar allows users to easily navigate the website, no matter which page the
 - A Sign In/Sign Up icon
 - Cart
 
+---
+
 **Products Nav Desktop**
 
 ![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_prod_nav.png)
-
+---
 
 The navbar is also dynamic, transparent when users scroll down, for full content visibility, and turns a translucent blue shade when scrolling up, so menu items are visible.
 
@@ -395,30 +397,27 @@ There is a floating badge in the top right corner displaying the grand total and
 **Sign In/Up Menu**
 
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/sign_in_up_menu.png)
-
 ---
 
 **Mobile nav for admin users**
 
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_nav.png)
-
 ---
 
 **Desktop nav after scroll up**
 
 ![Home Desktop Products nav](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_nav_after_scroll_up.png)
-
 ---
 
 **Mobile nav after scroll down**
 
 ![Navbar Sign In Up](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_nav_scroll_down.png)
-
 ---
 
 **Cart total and count badge**
 
 ![Cart total and count badge](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_badge_filled.png)
+---
 
 </details>
 
@@ -443,8 +442,12 @@ There is a floating badge in the top right corner displaying the grand total and
 ### Feature 2: The Home Page
 
 The home page is the landing page of the site, with the purpose to entice the user to proceed to the products.
+---
+
+**Home On Desktop**
 
 ![Home Desktop](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_home.png)
+---
 
 The user is presented with a window-sized (half window on tablet/mobile) carousel, consisting of three hero images giving the user a feel of edecation and quality on first sight. The images link to displaying the products results page, with different filtering (fitness, new and sneakers).
 
@@ -457,13 +460,11 @@ The user is presented with a window-sized (half window on tablet/mobile) carouse
 
   
 ![Home Mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
-
 ---
 
 **Home Tablet**
 
 ![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_home.png)
-
 ---
 
 </details>
@@ -481,9 +482,11 @@ The user is presented with a window-sized (half window on tablet/mobile) carouse
 The footer includes a signup form for a newsletter, as well as a link to the site's Facebook business page and important links, such as contact, terms of use and the pages privacy policy.
 
 Whereever the user is on the site, except for some account operations, the footer is visible at the bottom of the page, giving the user access to these important links at virtually all times.
+---
+
+**Footer on tablet:**
 
 ![Footer](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_footer.png)
-
 ---
 
 The policy and terms appear in a modal window, which users easily can close and access again at will, due to the links placement in the footer.
@@ -494,7 +497,6 @@ The policy and terms appear in a modal window, which users easily can close and 
 ---
 
 ![Mobile privacy policy](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_privacy_policy.png)
-
 ---
 </details>
 
@@ -511,13 +513,11 @@ The policy and terms appear in a modal window, which users easily can close and 
 ### Feature 4: The Products List
 
 The products list is dynamic and will show the relevant products, depending on if the user has performed a search, clicked on a category or filtered the products in any other way.
+---
 
 **The Products list**
 
----
-
 ![Desktop products list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products.png)
-
 ---
 
 Filtering can be done:
@@ -542,19 +542,16 @@ In the products list, the most important details of each item are displayed; nam
 **Performing a search**
 
 ![Mobile perform search](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_perform_search.png)
-
 ---
 
 **Desktop products filtered**
 
 ![Desktop products filtered](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products_filter.png)
-
 ---
 
 **Tablet products for admin users**
 
 ![Tablet products for admin users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_products.png)
-
 ---
 
 </details>
@@ -572,22 +569,25 @@ In the products list, the most important details of each item are displayed; nam
 ### Feature 5: The Product Detail Page
 
 This page shows a dedicated page for the specific product. Here users can choose the size and the quantity of the product, as well as read a description and user reviews of it.
-
 ---
 
 **Desktop product detail**
 
-![Desktop products detail](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products_detail.png)
-
+![Desktop products detail](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_product_detail.png)
 ---
 
 Here users can decide the quantity as well as the size of the product to be added to their cart. If registered and logged in, users can add the item to their Wishlist.
 
-Logged in users can also write and remove their own reviews here. lastly, admin users can remove all reviews if desired.
+Logged in users can also write and remove their own reviews here. lastly, admin users can edit and remove the product through links here, and remove any review if desired.
 
 <details>
-    <summary>View Images of review part of product detail page</summary>
+    <summary>View More Images Here</summary>
 
+---
+
+**Product detail on mobile**
+
+![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_product_detail_buttons.png)
 ---
 
 **Reviews Box if Product has reviews**
@@ -598,6 +598,12 @@ Logged in users can also write and remove their own reviews here. lastly, admin 
 **Delete review dialog modal**
 
 ![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_delete_review.png)
+---
+
+**Delete product admin dialog modal on desktop**
+
+![Reviews Box](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/delete_product_modal.png)
+---
 
 </details>
 
@@ -615,9 +621,38 @@ Logged in users can also write and remove their own reviews here. lastly, admin 
 
 ### Feature 6: The Cart
 
-The Cart is the users digital shopping cart, containing all products the user has added to it.
+The Cart is the users digital shopping cart, containing all products the user has added to it and their details, including the chosen quantity and size if applicable.
 Its grand total and count is always partially visible in the navbar but has a dedicated page through which users can go through with the payment when they are done shopping.
 
+**The cart page on desktop**
+
+![The cart page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_cart_several_items.png)
+---
+
+A toast, a small dialog window at the top right, will be visible after adding an item to the cart, letting the user know that the add was successful. The user can view, change quantity and remove items from the cart on the cart page.
+
+
+<details>
+    <summary>View More Images Here</summary>
+
+---
+
+**Cart page on tablet**
+
+![Cart page on tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_cart_filled.png)
+---
+
+**Added item to cart dialog toast on mobile**
+
+![Added item to cart dialog toast on mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_added_to_cart.png)
+---
+
+**Buttons to update quantity or remove product from cart**
+
+![Buttons to update quantity or remove product from cart](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/cart_hover_update_btn.png)
+---
+
+</details>
 
 
 **User stories covered:**
@@ -634,7 +669,7 @@ Its grand total and count is always partially visible in the navbar but has a de
 
 ### Feature 7: The Checkout Page
 
-The checkout page features a form for the user to fill in, with delivery address, contact and card info. Here, users can also opt in for a newsletter, should they wish to do so.
+The checkout page features a form for the user to fill in, with name, email, phone nr, delivery address and card details. From here, if user is authenticated, they can save their details to their My StepUp profile so they are prefilled for the next order.
 
 **User stories covered:**
 
