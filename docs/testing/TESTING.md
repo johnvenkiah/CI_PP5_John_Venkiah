@@ -340,13 +340,13 @@ On top of this, the user is reminded of this in the Product Detail and Checkout 
 
 *As a user, the choices I make on the site are confirmed to me, so that I am always aware of them*
 
-A smart solution for giving users confirmation on when they have made a choice is the Toasts dialog function. Created with the help of Bootstrap and Django, the toast message is displayed to the user if the function they performed is successful. This includes everything from crating an account, signin in or out, adding or removing items from the wishlist or cart, updating the carts item quantity, and making a successful order, in excess of the order confirmation page of course.
+A smart solution for giving users confirmation on when they have made a choice is the Toasts dialog function. Created with the help of Bootstrap and Django, the toast message is displayed to the user if the function they performed is successful. This includes everything from creating an account, signin in or out, adding or removing items from the wishlist or cart, updating the carts item quantity, and making a successful order, in excess of the order confirmation page of course.
 
 The toast will also display items in the cart, if there are any.
 
 For extra clarity, the border colours are coded for each type of message - blue for info, yellow for warnings, red for errors and green for success.
 
-Also, if a user enters wrong or sufficient info, a message is given to the user.
+Also, if a user enters wrong or sufficient info, a message is given to the user if a choice cannot be made.
 
 <details>
     <summary>View Images</summary>
@@ -374,3 +374,39 @@ Also, if a user enters wrong or sufficient info, a message is given to the user.
 </details>
 
 - **Conclusion, User story 6 - tests passed**
+--
+
+### Testing of user story 7:
+
+*As a user, I can browse a list of products for sale on the site so that I can find the product I seek*
+
+The product list is accessible through the products navigation menu, via Products or the hamburger menu in the navbar. Here, users can choose to view all products, or filter them to their liking.
+
+The products list is also accessible via the Browse Products button on the home page, or similiar buttons here and there throughout the site, urging the user to browse more.
+
+<details>
+    <summary>View Images</summary>
+
+**Desktop view of the products list**
+
+![Desktop view of the products list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_products.png)
+---
+
+**Mobile view of the products list**
+
+![Mobile view of the products list](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_clicked_womens.png)
+---
+
+**Tablet view of the products list for admin users**
+
+![Tablet view of the products list for admin users](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_auth_products.png)
+---
+
+**Browse products button on Home page**
+
+![Browse products button on Home page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/mobile_home.png)
+---
+
+</details>
+
+- **Conclusion, User story 7 - tests passed**
