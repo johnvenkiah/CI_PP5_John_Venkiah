@@ -258,3 +258,23 @@ The navbar is present throughout the site, with the exceptions of when a modal o
 
 - **Conclusion, User story 2 - : tests passed**
 
+
+---
+### Testing of user story 3 and 4:
+
+*As a user, I can see a form to register for newsletters repeatedly throughout the website, so that I can receive news on products and campaigns*
+
+*As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook*
+
+Like the navbar, the footer, which includes the mailchimp newsletter registration form and the Facebook pages link, is almost always visible on each page. Exceptions are the authetication pages and when a dialog window appears, such as when removing an item from the wishlist or viewing the privacy policy.
+
+
+<details>
+    <summary>View Image</summary>
+
+![Home tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/tablet_footer.png)
+
+</details>
+
+- **Conclusion, User story 3 - : tests passed**
+
