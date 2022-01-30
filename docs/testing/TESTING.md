@@ -1218,3 +1218,80 @@ For example, an admin user can change the products in an order that has already 
 
 
 ---
+
+### Testing of user story 36:
+
+*As a site owner, I can add, edit or remove any product on the site*
+
+**Performed tests**
+
+- Adding a new product to the site
+
+    - Admin user navigates to the Add Brand or Product menu item in the Account nav menu
+    - User fills in the Add Product form
+    - If the form is valid, user is taken to the new products Product Detail page
+
+- Editing a product
+
+    - Admin clicks the Edit button, either on the product cart in the Products page or at the top of the Product detail page
+    - User is presented with the products current details in the product form and can edit it
+    - User clicks on Update Product
+    - If the form is valid, user is taken to the newly edited products Product Detail page
+
+- Removing a product
+
+    - Admin clicks the Delete button, either on the product cart in the Products page or at the top of the Product detail page
+    - User has to confirm this in a modal dialog window
+    - User clicks Delete Product and is notified via a toast that the product is removed
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**The Add Brand or Product Nav menu link**
+
+![The Add Brand or Product Nav menu link](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/add_brand_product_nav_menu.png)
+---
+
+**The Add Brand or Product Nav Page**
+
+![The Add Brand or Product Nav Page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/desktop_add_brand_product.png)
+---
+
+**Fields in the Add Product form must be correctly filled**
+
+![Form validation Product form](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/product_form_validation.png)
+---
+
+**Entering a lower intital price than the current one triggers an error modal**
+
+![Adding new category](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/update_product_invalid_price.png)
+---
+
+**Updating product name, brand and category**
+
+![Updating product name and category](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_product_new_name_brand_category.png)
+---
+
+**Users order in admin**
+
+![Users order in admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_before_edit.png)
+---
+
+**Users order details after editing**
+
+![Users order details after editing](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_after_edit_1.png)
+---
+
+**Order line items after editing**
+
+![Order line items after editing](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_after_edit_2.png)
+---
+
+</details>
+
+- **Conclusion, User story 35 - tests passed**
+
+
+---
