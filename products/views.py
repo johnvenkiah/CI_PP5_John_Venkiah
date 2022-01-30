@@ -59,7 +59,7 @@ def all_products(request):
                     )
                 else:
                     products = products.order_by(
-                        F(sortkey).asc()
+                        F(sortkey).asc(nulls_first=True)
                     )
             else:
                 if sortkey == 'name':
