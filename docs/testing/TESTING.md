@@ -948,7 +948,7 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 **Account Successfully deleted**
 
-![Order Confirmation](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/account_successfullt_deleted.png)
+![Account Successfully deleted](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/account_successfully_deleted.png)
 ---
 
 </details>
@@ -957,3 +957,31 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 
 ---
+
+### Testing of user story 28:
+
+*As a logged in user, I can add a product to my Wish List, so that I can easily view it later*
+
+**Actions**
+
+- User clicks on the Add to Wishlist button on the product detail page
+- User is notified that the product is added to their Wishlist
+- User can view the itme in their Wishlist
+
+<details>
+    <summary>View GIF</summary>
+
+---
+
+**User adding item to their Wishlist**
+
+![User adding item to their Wishlist](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/gif_add_to_wishlist.png)
+---
+
+</details>
+
+- **Conclusion, User story 28 - tests passed**
+
+
+---
+
