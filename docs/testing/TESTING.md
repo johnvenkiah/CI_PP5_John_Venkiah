@@ -1514,6 +1514,10 @@ The footer as mentioned is almost always visible at the bottom of the page and c
 
 Some tests were performed (37), mostly for me to learn the practice of automated testing. Credits to pmeeny and his project [Love Rugby](https://github.com/pmeeny/CI-MS4-LoveRugby) for the main part of these.
 
-Here are the results:
+The tests showed 74% coverage, meaning that 74% of the code was tested and passed. The tests are listed below:
 
-![Automated Testing part 1]()
+![Automated Testing part 1](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/auto_testing/automated_testing_1.png)
+
+![Automated Testing part 2](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/auto_testing/automated_testing_2.png)
+
+![Automated Testing part 3](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/auto_testing/automated_testing_3.png)
