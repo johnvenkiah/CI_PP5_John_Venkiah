@@ -140,23 +140,39 @@ This website has 9 custom pages, with a dynamic navigation bar at the top of the
 
 #### Pages
 
+**Accessible to all users**
+
 * Home - The landing page of the site, with a full screen carousel hero image giving first time visitors a nice welcome
 
-* Products List - This is a list of the products when clicking on a category in the navbar, or performing a search
+* Products - This is a list of the products when clicking on a category in the navbar, or performing a search
 
 * Product Detail - The dedicated page for a specific product, where users can read a description and perform all given tasks for the product
-
-* Add Product - This is where admin users can add new products to the website
-
-* Edit Product - The page for admins to edit or delete products
-
-* My StepUp - The users order history, billing and shipping info is here, as well as the users wish list, editable here in the My StepUp page.
 
 * Cart - A user purchases an item by adding it to the cart; clicking on it will show all cart items
 
 * Checkout - Here users enter their delivery details and card info to proceed with their order
 
-* Order Successful - The page show when a payment has successfully been made, showing the order information
+* Order Confirmation - The page show when a payment has successfully been made, showing the order information
+
+* The Sign In and Sign Up pages
+
+**Accessible to signed in users**
+
+* My StepUp - The users order history, billing and shipping info is here, as well as the users wish list, editable here in the My StepUp page.
+
+* Sign Out
+
+* Other accounts operations pages such as Change Password or Password reset
+
+* Delete Account - Allows the user to completely remove their account from StepUp
+
+**Accessible to Admin users**
+
+* Add Brand or Product - This is where admin users can add new products to the website
+
+* Edit Product - The page for admins to edit or delete products
+
+* Manage Brands - An overview of all brands on the site with edit and remove functionality
 
 #### Pages provided by Django
 
@@ -195,6 +211,7 @@ I have devided the code into apps as per the Django best practice, for the diffe
 * templates - contains the base template and templates (HTML-files with Django logic) for the Django allauth authentication
 
 * manage.py - the main python project file to get the web application running
+
 * README.md - the document you are reading right now, documentation of the whole project
 
 * TESTING.md - documentation of testing the project
@@ -211,15 +228,11 @@ Enviromental Variables such as API-keys, passwords etc are stored securely in th
 
 The [SQLite](https://www.sqlite.org/index.html) database was used for the development environment, and the [Postgres](https://www.postgresql.org/) database for production as an add-on via Heroku. Both are relational databases and work well with the Django framework used for this project.
 
-##### Schema of models
-
-Below is a schema of the models used in this application, created with [Lucidchart](https://lucid.co/product/lucidchart)
-
-![Schema of models](#)
-
 ##### Data Models
 
 The following models have been used to populate the database and for the site to function as it should:
+
+* **User** - the built in Django User model, facilitates the users basic information
 
 * **Category** - the category in which the product is placed
 
@@ -229,8 +242,6 @@ The following models have been used to populate the database and for the site to
 
 * **Review** - a model for users to give the product a rating and a review
 
-* **User** - the built in Django User model, facilitates the users basic information
-
 * **Order** - a users successful purchase leads to an instance of the Order model being created, storing delivery and user data
 
 * **OrderLineItem** - a model holding the product information for a single product, binding the product model together with the order
@@ -238,6 +249,12 @@ The following models have been used to populate the database and for the site to
 * **UserProfile** - the model storing the users product and order information
 
 * **WishListItem** - the customer has the option to save an item, which will then appear in their wish list on the My StepUp page
+
+##### Schema of models
+
+Below is a schema of the models used in this application, created with [Lucidchart](https://lucid.co/product/lucidchart)
+
+![Schema of models](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/schemas/db_model_schema.png)
 
 ### Scope - Epics and User Stories
 
