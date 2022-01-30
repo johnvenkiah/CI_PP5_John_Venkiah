@@ -140,11 +140,11 @@ I have generated a sitemap.xml and robots.txt file, and only included canonical 
 
 I have also done some research on highest searched words in shoe retailing, and came up with this title and description:
 
-![]()
+![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/seo.png)
 
 ### Structure
 
-This website has 9 custom pages, with a dynamic navigation bar at the top of the screen, giving users access to the most important pages at all times.
+This website has 11 custom built pages and 16 (not all are used) account operations Django Allauth pages. The navbar at the top of the screen gives users access to the most important pages at all times.
 
 #### Pages
 
@@ -192,7 +192,7 @@ These pages are provided by the Allauth package of the Django framework, but are
 
 * Sign Out - The same goes for signing out
 
-* Various pages for email verification and password reset, etc (16 pages in total)
+* Various pages for email verification and password reset, etc
 
 #### Technical Design
 
