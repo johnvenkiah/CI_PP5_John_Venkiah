@@ -1062,7 +1062,7 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 **Posting a user review (initial rating is 5)**
 
-![Posting a user review](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/git_post_review.gif)
+![Posting a user review](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/gif_post_review.gif)
 ---
 
 **Review is visible in the Product Reviews area**
@@ -1073,6 +1073,33 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 </details>
 
 - **Conclusion, User story 32 - tests passed**
+
+
+---
+
+### Testing of user story 33:
+
+*As a logged in user, I can remove my review of a product, so that it no longer is there*
+
+**Actions**
+
+- User clicks on the Delete button, on their review in the review box, on the Product Detail page
+- User is promted to cofirm this with a modal dialog window
+- Users review is removed from the product and user is notified of this with a toast
+
+<details>
+    <summary>View GIF and Image</summary>
+
+---
+
+**Posting a user review (initial rating is 5)**
+
+![Posting a user review](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/gif_remove_review.gif)
+---
+
+</details>
+
+- **Conclusion, User story 33 - tests passed**
 
 
 ---
