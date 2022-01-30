@@ -297,7 +297,7 @@ The following models have been used to populate the database and for the site to
 
 24. As a user, I have to confirm my email address to complete my account registration
 
-25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view, update or remove my delivery and contact details
+25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view and update my delivery and contact details
 
 26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
 
@@ -832,7 +832,7 @@ Here, users can also change their password, and delete their account completely 
 
 **User stories covered:**
 
-25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view, update or remove my delivery and contact details
+25. As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view and update my delivery and contact details
 
 26. As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page
 

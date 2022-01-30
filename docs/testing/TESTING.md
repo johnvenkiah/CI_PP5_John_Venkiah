@@ -874,7 +874,45 @@ As links to these pages are not present if the user is not signed in, users cann
 
 </details>
 
-- **Conclusion, User story 21 - tests passed**
+- **Conclusion, User story 23 - tests passed**
+
+
+---
+
+### Testing of user story 25:
+
+*As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view and update my delivery and contact details*
+
+**Actions**
+
+- User needs to be registered and signed in.
+- User clicks on the Account nav menu item
+- User is brought to the My Stepup page where she or he can update their details
+- The details are now visible on the Checkout page
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Checkout page only displays email from registering the account**
+
+![Checkout page only displays email from registering the account](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_checkout_details_not_saved.png)
+---
+
+**User enters the My StepUp page and clicks on update information**
+
+![User enters the My StepUp page and clicks on update information](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_my_stepup_details_saved.png)
+---
+
+**Checkout page now has this data prefilled**
+
+![Checkout page now has this data prefilled](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_checkout_saved_details.png)
+---
+
+</details>
+
+- **Conclusion, User story 25 - tests passed**
 
 
 ---
