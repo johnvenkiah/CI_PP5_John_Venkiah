@@ -221,7 +221,7 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <small class="text-muted">{{ review.user }} | {{ review.date_created }}</small>
+                                    <small class="text-muted">{% if not review.user == None %}{{ review.user }}{% else %}Account removed{% endif %} | {{ review.date_created }}</small>
                                 </div>
                             </div>
                             <p>{{ review.user_review }}</p>
