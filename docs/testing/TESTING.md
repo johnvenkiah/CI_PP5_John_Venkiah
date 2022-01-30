@@ -1141,3 +1141,80 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 
 ---
+
+### Testing of user story 35:
+
+*As a site owner, I can view an admin page, where I can perform batch editing of model instances on the site including products, categories, orders and brands*
+
+The models available in the Django Admin panel are:
+
+- Product
+- Brand
+- Category
+- Review
+- Order
+- Order Line Items (at the bottom of each order)
+
+Admin users can log in to the admin panel by signing in at https://stepup-shoes.herokuapp.com/admin. Here they have read write and remove access to these instances.
+
+For example, an admin user can change the products in an order that has already been processed, which they cannot do on the regular site. They can also remove multiple items at once, which is also an operation limited to this admin panel.
+
+**Performed tests**
+
+- Updating a processed order, user details and order line items
+- Removing multiple Brand instances
+- Adding a category
+- Updating a product with the new category
+- Removing a brand image
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Admin panel**
+
+![Admin Panel](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_home.png)
+---
+
+**Deleting several brands**
+
+![Deleting several brands](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/admin_deleting_several_brands.png)
+---
+
+**Confirmation on brand deletion**
+
+![Site owner recieves an email](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_deletion_brand_confirmation.png)
+---
+
+**Adding new category**
+
+![Adding new category](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_add_category.png)
+---
+
+**Updating product name, brand and category**
+
+![Updating product name and category](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_product_new_name_brand_category.png)
+---
+
+**Users order in admin**
+
+![Users order in admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_before_edit.png)
+---
+
+**Users order details after editing**
+
+![Users order details after editing](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_after_edit_1.png)
+---
+
+**Order line items after editing**
+
+![Order line items after editing](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_after_edit_2.png)
+---
+
+</details>
+
+- **Conclusion, User story 35 - tests passed**
+
+
+---
