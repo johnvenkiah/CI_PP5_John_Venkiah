@@ -103,6 +103,10 @@ def all_products(request):
             )
             products = products.filter(queries)
 
+    for product in products:
+        if not product.rating:
+            product.rating = 0
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
