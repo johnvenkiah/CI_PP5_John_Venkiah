@@ -845,3 +845,36 @@ Passed testing of this user story is displayed in user story 13, where adding th
 
 ---
 
+
+### Testing of user story 23:
+
+*As a user, I am not able to access pages that require authentication if I am not signed in*
+
+As links to these pages are not present if the user is not signed in, users cannot access these pages through any link on the page without signing in. If however a non authenticated user tries to enter any of the urls to the pages that are restricted to authenticated users, the user is brought to the signin page instead.
+
+**Actions**
+
+- User enters the url of a page restricted to authenticated users
+- User is brought to the sign in page instead
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**User enters a url that requires sign in**
+
+![User enters a url that requires sign in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/entering_url.png)
+---
+
+**User brought to the Sign In page and is taken to My StepUp after signing in**
+
+![Order Confirmation](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_sign_in_page_next_my_stepup.png)
+---
+
+</details>
+
+- **Conclusion, User story 21 - tests passed**
+
+
+---
