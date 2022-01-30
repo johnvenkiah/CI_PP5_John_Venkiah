@@ -879,9 +879,11 @@ As links to these pages are not present if the user is not signed in, users cann
 
 ---
 
-### Testing of user story 25:
+### Testing of user story 25 and 26:
 
 *As a logged in user, i can view a My StepUp page, so that I can view my previous orders, and view and update my delivery and contact details*
+
+*As a logged in user, I can add my delivery details to the My StepUp page, so that it is my default delivery address for my order on the checkout page*
 
 **Actions**
 
@@ -912,7 +914,46 @@ As links to these pages are not present if the user is not signed in, users cann
 
 </details>
 
-- **Conclusion, User story 25 - tests passed**
+- **Conclusion, User story 25 and 26 - tests passed**
+
+
+---
+
+### Testing of user story 27:
+
+*As a logged in user, I can choose to delete my account, so that it no longer exists*
+
+The delete account link is at the bottom of the My StepUp page. Usually, the link to remove an account is well hidden on pages like these, to keep members active. This leads to too many unwanted memberships. Instead, I put a clear "Danger Area" in the My StepUp page, where users are notified that the action is irriversible.
+
+**Actions**
+
+- User clicks on the Delete Account button
+- User is presented with a dialog modal window, where she or he has to confirm deletion by ticking a checkbox
+- If the checkbox is checked, clicking the Delete Account button signs the user out, takes them to the home page and notifies them that their account has been deleted.
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Account Operations/Danger Area on My StepUp page**
+
+![Danger Area on My StepUp page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/mobile_account_operations.png)
+---
+
+**Delete Account modal window (showing validation if user does not check box**
+
+![Delete Account modal window](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/delete_account_validation.png)
+---
+
+**Account Successfully deleted**
+
+![Order Confirmation](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/account_successfullt_deleted.png)
+---
+
+</details>
+
+- **Conclusion, User story 27 - tests passed**
 
 
 ---
