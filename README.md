@@ -164,6 +164,8 @@ This website has 11 custom built pages and 16 (not all are used) account operati
 
 * The Sign In and Sign Up pages
 
+* Contact - A simple contact form that is sent to the site owner
+
 **Accessible to signed in users**
 
 * My StepUp - The users order history, billing and shipping info is here, as well as the users wish list, editable here in the My StepUp page.
