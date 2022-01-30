@@ -6,6 +6,32 @@ Here are wireframes for the pages on the StepUp site. I have omitted the allauth
 
 I have included wireframes on desktop, tablet and mobile. Click the expander to view the image.
 
+## Table of Contents
+
+- [Wireframes](#wireframes)
+  * [Pages Accessible By All](#pages-accessible-by-all)
+    + [Home](#home)
+    + [Products](#products)
+    + [Product Detail](#product-detail)
+    + [Cart](#cart)
+    + [Checkout](#checkout)
+    + [Order Confirmation](#order-confirmation)
+    + [Contact](#contact)
+    + [Sign In](#sign-in)
+    + [Sign Up](#sign-up)
+  * [Pages Accessible By Authorised Users](#pages-accessible-by-authorised-users)
+    + [My StepUp (Profile)](#my-stepup--profile-)
+    + [Sign Out](#sign-out)
+    + [Change Password](#change-password)
+    + [Delete Account](#delete-account)
+  * [Pages Accessible Only to Admin Users](#pages-accessible-only-to-admin-users)
+    + [Add Product or Brand](#add-product-or-brand)
+    + [Edit Product](#edit-product)
+    + [Manage Brands](#manage-brands)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Pages Accessible By All
 
 ### Home

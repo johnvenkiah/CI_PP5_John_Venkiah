@@ -4,6 +4,51 @@ I have thoroughly tested the StepUp web application manually, and partially with
 
 I discovered some bugs during the testing phase, which you can read about [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah#bugs)
 
+## Table of Contents
+
+- [Testing](#testing)
+  * [Manual testing](#manual-testing)
+    + [Overview](#overview)
+    + [Testing of user story 1:](#testing-of-user-story-1-)
+    + [Testing of user story 2:](#testing-of-user-story-2-)
+    + [Testing of user story 3 and 4:](#testing-of-user-story-3-and-4-)
+    + [Testing of user story 5:](#testing-of-user-story-5-)
+    + [Testing of user story 6:](#testing-of-user-story-6-)
+    + [Testing of user story 7:](#testing-of-user-story-7-)
+    + [Testing of user story 8:](#testing-of-user-story-8-)
+    + [Testing of user story 9:](#testing-of-user-story-9-)
+    + [Testing of user story 10:](#testing-of-user-story-10-)
+    + [Testing of user story 11:](#testing-of-user-story-11-)
+    + [Testing of user story 12:](#testing-of-user-story-12-)
+    + [Testing of user story 13:](#testing-of-user-story-13-)
+    + [Testing of user story 14:](#testing-of-user-story-14-)
+    + [Testing of user story 15 and 16:](#testing-of-user-story-15-and-16-)
+    + [Testing of user story 17:](#testing-of-user-story-17-)
+    + [Testing of user story 18:](#testing-of-user-story-18-)
+    + [Testing of user story 19:](#testing-of-user-story-19-)
+    + [Testing of user story 20:](#testing-of-user-story-20-)
+    + [Testing of user story 21:](#testing-of-user-story-21-)
+    + [Testing of user story 22 and 24:](#testing-of-user-story-22-and-24-)
+    + [Testing of user story 23:](#testing-of-user-story-23-)
+    + [Testing of user story 25 and 26:](#testing-of-user-story-25-and-26-)
+    + [Testing of user story 27:](#testing-of-user-story-27-)
+    + [Testing of user story 28:](#testing-of-user-story-28-)
+    + [Testing of user story 29:](#testing-of-user-story-29-)
+    + [Testing of user story 31:](#testing-of-user-story-31-)
+    + [Testing of user story 32:](#testing-of-user-story-32-)
+    + [Testing of user story 33:](#testing-of-user-story-33-)
+    + [Testing of user story 34:](#testing-of-user-story-34-)
+    + [Testing of user story 35:](#testing-of-user-story-35-)
+    + [Testing of user story 36:](#testing-of-user-story-36-)
+    + [Testing of user story 37:](#testing-of-user-story-37-)
+    + [Testing of user story 38:](#testing-of-user-story-38-)
+    + [Testing of user story 39:](#testing-of-user-story-39-)
+    + [Testing of user story 40 and 41:](#testing-of-user-story-40-and-41-)
+  * [Automated Testing](#automated-testing)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Manual testing
 
 ### Overview

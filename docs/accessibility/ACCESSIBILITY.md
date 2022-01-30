@@ -4,6 +4,34 @@
 
 This document shows the results of testing the sites accessibility with the [WAVE](https://wave.webaim.org/) Web Accessibility Evaluation Tool.
 
+## Table of Contents
+
+- [StepUp - Accessibility Testing](#stepup-accessibility-testing)
+  * [Overview](#overview)
+    + [Home](#home)
+    + [Products](#products)
+    + [Product Detail](#product-detail)
+    + [Cart](#cart)
+    + [Checkout](#checkout)
+    + [Order Confirmation/Order History (Same HTML page)](#order-confirmation-order-history-same-html-page-)
+    + [Contact](#contact)
+    + [My StepUp](#my-stepup)
+    + [Add Brand or Product](#add-brand-or-product)
+    + [Manage Brands](#manage-brands)
+    + [Edit Product](#edit-product)
+    + [Sign Up](#sign-up)
+    + [Sign In](#sign-in)
+    + [Sign Out](#sign-out)
+    + [Change Password](#change-password)
+    + [Password Reset](#password-reset)
+    + [Password Reset Sent](#password-reset-sent)
+    + [Password Reset Confirmation](#password-reset-confirmation)
+    + [Password Reset Confirmation Done](#password-reset-confirmation-done)
+    + [Delete Account](#delete-account)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Overview
 
 The service basically tests the pages ease of use for users with screen readers, for example the use of aria-labels, page structure, contrast issues, etc. The results for all pages are below. All pages passed the tests.

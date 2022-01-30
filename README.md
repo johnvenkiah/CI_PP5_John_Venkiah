@@ -8,7 +8,7 @@ Users can create accounts and administrators have full write and delete access t
 
 You can test the card payment functionality without making a purchase. Use card details:
 
-4242 4242 4242 4242 and CVC and 5-number postal code at the end of the card.
+4242 4242 4242 4242 - CVC and 5-number postal code at the end of the card can be any numbers.
 
 You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
@@ -48,6 +48,7 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
       - [Wireframes](#wireframes)
     + [Surface](#surface)
       - [Colors](#colors)
+      - [Design Choices](#design-choices)
       - [Typography](#typography)
   * [Existing Features](#existing-features)
     + [Feature 1: The Navbar](#feature-1-the-navbar)
@@ -422,6 +423,8 @@ Here you can see some of the button elements, as well as the badge, here used to
 
 ![Button Elements](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/button_badge_elements.png)
 ---
+
+
 
 #### Typography
 

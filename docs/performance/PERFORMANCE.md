@@ -1,5 +1,34 @@
 # Performance
 
+## Table of Contents
+
+- [Performance](#performance)
+  * [Overview](#overview)
+  * [Home](#home)
+  * [Products](#products)
+  * [Product Detail](#product-detail)
+  * [Cart](#cart)
+  * [Checkout](#checkout)
+  * [Order Confirmation/History](#order-confirmation-history)
+  * [Contact](#contact)
+  * [![Test results of lighthouse, Contact, desktop]
+  * [My StepUp](#my-stepup)
+  * [Add Product or Brand](#add-product-or-brand)
+  * [Manage Brands](#manage-brands)
+  * [Edit Product](#edit-product)
+  * [Sign Up](#sign-up)
+  * [Sign In](#sign-in)
+  * [Sign Out](#sign-out)
+  * [Change Password](#change-password)
+  * [Reset Password](#reset-password)
+  * [Reset Password Link Sent](#reset-password-link-sent)
+  * [Reset Password Set](#reset-password-set)
+  * [Reset Password Done](#reset-password-done)
+  * [Delete Account](#delete-account)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Overview
 
 Performance was tested using the DevTools Lighhouse feature in the Chrome web browser. Performance was overall good on desktop and not too great on mobile. This was, according to the tests due to two things mainly:
