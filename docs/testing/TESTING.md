@@ -573,7 +573,7 @@ The products are displayed as cards, each with:
 
 *As a user, I can add a product to my cart by clicking ’Add to Cart’ from the product detail page so that I can purchase the product*
 
-This user story is already tested and displayed in user story 12, and passed too.
+This user story is already tested and displayed in [Testing of user story 12](#testing-of-user-story-12), and passed too.
 
 - **Conclusion, User story 13 - tests passed**
 
@@ -1463,3 +1463,11 @@ For example, an admin user can change the products in an order that has already 
 
 
 ---
+
+### Testing of user story 39:
+
+*As a site owner, I can receive an email from a user that fills in the contact form, so that they can get in touch with me*
+
+This user story is already covered at [Testing of user story 34](#testing-of-user-story-34) and passed
+
+- **Conclusion, User story 39 - tests passed**
