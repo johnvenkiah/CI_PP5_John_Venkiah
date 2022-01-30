@@ -52,6 +52,7 @@ def all_products(request):
         if 'direction' in request.GET:
             direction = request.GET['direction']
 
+            # Thanks to tutor Igor at Code Institute for tips on nulls_last
             if sortkey == 'rating':
                 if direction == 'desc':
                     products = products.order_by(
