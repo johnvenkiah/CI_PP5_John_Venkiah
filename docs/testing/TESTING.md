@@ -1045,3 +1045,34 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 
 ---
+
+### Testing of user story 32:
+
+*As a logged in user, i can write a review and rate a product in the list, so that other users can benefit from this*
+
+**Actions**
+
+- Authenticated user fills in the Review This Product form at the bottom of the Product Detail page
+- Review is posted and product rating takes effect of this
+
+<details>
+    <summary>View GIF and Image</summary>
+
+---
+
+**Posting a user review (initial rating is 5)**
+
+![Posting a user review](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/git_post_review.gif)
+---
+
+**Review is visible in the Product Reviews area**
+
+![Review is visible](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/review_box_after_posting_review.png)
+---
+
+</details>
+
+- **Conclusion, User story 32 - tests passed**
+
+
+---
