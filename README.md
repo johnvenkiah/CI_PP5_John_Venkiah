@@ -114,21 +114,23 @@ The focus points for this application are ecommerce, using the Django framework 
 
 * To be able to register for an account
 
-* To see my order history in their account
+* To see an order history in their account
 
 * To be able to edit their account details or remove their account
 
-* To easily navigate the whole website and keep track of all user interactions, for example the products in their cart and how much they have spent
+* To easily navigate the whole website and keep track of all user interactions, for example the products in their cart and how much they are to spend
 
 #### Business Model
 
-I have chosen a fairly traditional B2C (Business to Customer without middle person) application, which has a straightforward and user friendly interface. This online store offers no products of their own and relies on the wholesale of branded products. A real world version of the store would list all the retailers it is affiliated with.
+I have chosen a traditional B2C (Business to Customer without middle person) application, which has a straightforward and user friendly interface. This online store offers no products of their own and relies on the wholesale of branded products. A real world version of the store would list all the retailers it is affiliated with.
+
+I have explained in a diagram below.
 
 The intentions should be obvious and users should know as soon as they enter the site what it offers and how to use it's features.
 
 #### Marketing
 
-This site has a Facebook Business page with a link on the home page too. It can be viewed [here](https://www.facebook.com/stepupshoes-estore/)
+This site has a Facebook Business page with a link on the home page too. It can be viewed [here](https://www.facebook.com/stepupshoeseurope/)
 
 Upon registering for an account, customers can check a box to receive news and offers through email via Mailchimp.
 
