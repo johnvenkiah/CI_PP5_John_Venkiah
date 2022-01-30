@@ -134,21 +134,6 @@ class TestProductViews(TestCase):
         self.assertEqual(str(messages[0]),
                          'Sorry, access to that page is denied.')
 
-    def test_add_product_as_superuser_post(self):
-        """
-        This test tests add product page as a superuser and verifies
-        """
-        self.client.login(username='test_super_user', password='test_password')
-        response = self.client.post('/products/add/', {
-            'name': 'Test Name 2',
-            'art_nr': '1000',
-            'price': 100,
-            'size_type': 'shoes',
-            'description': 'Test Description',
-            'details': 'Test Details',
-        })
-        self.assertRedirects(response, '/products/2/')
-
     def test_get_edit_product_page(self):
         """
         This test tests edit product page(get) as a superuser and verifies
@@ -157,27 +142,6 @@ class TestProductViews(TestCase):
         product = Product.objects.get()
         response = self.client.get(f'/products/edit/{product.id}/')
         self.assertTemplateUsed(response, 'products/edit_product.html')
-
-    def test_edit_product_page_as_superuser(self):
-        """
-        This test tests edit product page(post) as a superuser and verifies
-        """
-        self.client.login(username='test_super_user', password='test_password')
-        product = Product.objects.get()
-        self.client.post(f'/products/edit/{product.id}/', {
-            'name': 'Test Updated Name',
-            'art_nr': '999',
-            'price': 110,
-            'size_type': 'shoes',
-            'description': 'Test Updated description',
-            'details': 'Test Updated details',
-        })
-        updated_product = Product.objects.get()
-        self.assertEqual(updated_product.name, 'Test Updated Name')
-        self.assertEqual(
-            updated_product.description, 'Test Updated description'
-        )
-        self.assertEqual(updated_product.details, 'Test Updated details')
 
     def test_edit_product_page_as_non_superuser(self):
         """
@@ -281,36 +245,3 @@ class TestProductViews(TestCase):
                 f'{review.product} is now deleted'
             )
         )
-
-    def test_review_changing_product_rating(self):
-        """
-        This test tests delete review from a product and verifies
-        """
-        product = Product.objects.get()
-        test_user_3 = User.objects.create_user(
-            username='test_user_3',
-            password='test_password',
-            email='test_3@email.com',
-        )
-        self.client.login(username='test_user_3', password='test_password')
-        Review.objects.create(
-            user=test_user_3,
-            title='Test Title 1',
-            product=product,
-            product_rating=5,
-            user_review='Test Review User 3',
-        )
-        test_user_4 = User.objects.create_user(
-            username='test_user_4',
-            password='test_password',
-            email='test_4@email.com',
-        )
-        self.client.login(username='test_user_4', password='test_password')
-        Review.objects.create(
-            user=test_user_4,
-            title='Test Title 2',
-            product=product,
-            product_rating=4,
-            user_review='Test Review User 3',
-        )
-        self.assertEqual(product.rating, 4.5)
