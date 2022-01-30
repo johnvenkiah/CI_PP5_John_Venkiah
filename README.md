@@ -6,6 +6,10 @@ This is the fifth and last portfolio project for the Code Institute Diploma in F
 
 Users can create accounts and administrators have full write and delete access to all data. To test an administrator account, contact me through the form on the site and I'll send admin login details.
 
+You can test the card payment functionality without making a purchase. Use card details:
+
+4242 4242 4242 4242 and CVC and 5-number postal code at the end of the card.
+
 You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
 ![Mockup of live site on different devices](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/mockup.jpg)
@@ -13,69 +17,76 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [User Experience](#user-experience)
-  * [Strategy](#strategy)
-    + [Primary Goals](#primary-goals)
-    + [Business Model](#business-model)
-    + [Marketing](#marketing)
-  * [Structure](#structure)
-    + [Pages](#pages)
-    + [Pages provided by Django](#pages-provided-by-django)
-    + [Technical Design](#technical-design)
-      - [Code Structure](#code-structure)
-      - [Database](#database)
-      - [Schema of models](#schema-of-models)
-      - [Data Models](#data-models)
-  * [Scope - Epics and User Stories](#scope---epics-and-user-stories)
-    + [Epic 1: Base functionality and ease of use](#epic-1-base-functionality-and-ease-of-use)
-    + [Epic 2: Products](#epic-2-products)
-    + [Epic 3: The Cart](#epic-3-the-cart)
-    + [Epic 4: Checkout](#epic-4-checkout)
-    + [Epic 5: User registration and account](#epic-5-user-registration-and-account)
-    + [Epic 6: The Wish List](#epic-6-the-wish-list)
-    + [Epic 7: Reviews](#epic-7-reviews)
-    + [Epic 8: Contact](#epic-8-contact)
-    + [Epic 9: Site Owner functionality](#epic-9-site-owner-functionality)
-  * [Skeleton](#skeleton)
-    + [Wireframes](#wireframes)
-  * [Surface](#surface)
-    + [Colors](#colors)
-    + [Typography](#typography)
-- [Existing Features](#existing-features)
-  * [Feature 1: The Navbar](#feature-1-the-navbar)
-  * [Feature 2: The Home Page](#feature-2-the-home-page)
-  * [Feature 3: The Footer](#feature-3-the-footer)
-  * [Feature 3: The Products List](#feature-3-the-products-list)
-  * [Feature 4: The Product Detail Page](#feature-4-the-product-detail-page)
-  * [Feature 5: The Cart](#feature-5-the-cart)
-  * [Feature 6: The Checkout Page](#feature-6-the-checkout-page)
-  * [Feature 7: The Order Successful Page](#feature-7-the-order-successful-page)
-  * [Feature 8: The Sign Up/In/Out Pages](#feature-8-the-sign-upinout-pages)
-  * [Feature 9: MyStepUp](#feature-9-my-stepup)
-  * [Feature 10: The Wish List](#feature-10-the-wish-list)
-  * [Feature 11: The Contact Page](#feature-11-the-contact-page)
-  * [Feature 12: The Admin Features](#feature-12-the-admin-features)
-  * [Feature 13: The Django Admin](#feature-13-the-django-admin)
-- [Features Yet to Implement](#features-yet-to-implement)
-- [Technologies Used](#technologies-used)
-  * [Languages](#languages)
-  * [Frameworks, Libraries and Other Resources](#frameworks-libraries-and-other-resources)
-- [Testing](#testing)
-- [API's and Configuration](#apis-and-configuration)
-- [Deployment](#deployment)
-  * [Forking the GitHub Repository](#forking-the-github-repository)
-  * [Making a Local Clone](#making-a-local-clone)
-  * [Heroku](#heroku)
-  * [AWS S3](#aws-s3)
-- [Validation](#validation)
-- [Bugs](#bugs)
-- [Credits](#credits)
-  * [Copyrights](#copyrights)
-    + [Media](#media)
-    + [Content](#content)
-  * [Coding Tips and Tricks](#coding-tips-and-tricks)
-  * [Acknowledgments](#acknowledgments)
+- [StepUp](#stepup)
+  * [Project Overview](#project-overview)
+  * [User Experience](#user-experience)
+    + [Strategy](#strategy)
+      - [Primary Goals](#primary-goals)
+      - [Business Model](#business-model)
+      - [Marketing](#marketing)
+      - [Search Engine Optimisation](#search-engine-optimisation)
+    + [Structure](#structure)
+      - [Pages](#pages)
+      - [Pages provided by Django](#pages-provided-by-django)
+      - [Technical Design](#technical-design)
+        * [Code Structure](#code-structure)
+        * [Database](#database)
+        * [Data Models](#data-models)
+        * [Schema of models](#schema-of-models)
+    + [Scope - Epics and User Stories](#scope-epics-and-user-stories)
+      - [Epic 1: Base functionality and ease of use](#epic-1-base-functionality-and-ease-of-use)
+      - [Epic 2: Products](#epic-2-products)
+      - [Epic 3: The Cart](#epic-3-the-cart)
+      - [Epic 4: Checkout](#epic-4-checkout)
+      - [Epic 5: User registration and account](#epic-5--user-registration-and-account)
+      - [Epic 6: The Wish List](#epic-6-the-wish-list)
+      - [Epic 7: Reviews](#epic-7-reviews)
+      - [Epic 8: Contact](#epic-8-contact)
+      - [Epic 9: Site Owner functionality](#epic-9--site-owner-functionality)
+      - [Epic 10: Terms and Policy](#epic-10--terms-and-policy)
+    + [Skeleton](#skeleton)
+      - [Wireframes](#wireframes)
+    + [Surface](#surface)
+      - [Colors](#colors)
+      - [Typography](#typography)
+  * [Existing Features](#existing-features)
+    + [Feature 1: The Navbar](#feature-1-the-navbar)
+    + [Feature 2: The Home Page](#feature-2-the-home-page)
+    + [Feature 3: The Footer](#feature-3-the-footer)
+    + [Feature 4: The Products List](#feature-4-the-products-list)
+    + [Feature 5: The Product Detail Page](#feature-5--the-product-detail-page)
+    + [Feature 6: The Cart](#feature-6-the-cart)
+    + [Feature 7: The Checkout Page](#feature-7-the-checkout-page)
+    + [Feature 8: The Order Successful Page](#feature-8-the-order-successful-page)
+    + [Feature 9: The Sign Up/In/Out Pages](#feature-9-the-sign-up-in-out-pages)
+    + [Feature 10: My StepUp](#feature-10-my-stepup)
+    + [Feature 11: The Wishlist](#feature-11-the-wishlist)
+    + [Feature 12: The Contact Page](#feature-12-the-contact-page)
+    + [Feature 13: The Admin Features](#feature-13-the-admin-features)
+    + [Feature 14: The Django Admin](#feature-14-the-django-admin)
+  * [Features Yet to Implement](#features-yet-to-implement)
+  * [Technologies Used](#technologies-used)
+    + [Languages](#languages)
+    + [Frameworks, Libraries and Other Resources](#frameworks--libraries-and-other-resources)
+  * [Testing](#testing)
+  * [Other Services](#other-services)
+    + [Stripe](#stripe)
+  * [Deployment](#deployment)
+    + [Forking the GitHub Repository](#forking-the-github-repository)
+    + [Making a Local Clone](#making-a-local-clone)
+    + [Heroku](#heroku)
+    + [AWS S3](#aws-s3)
+  * [Performance](#performance)
+  * [Validation](#validation)
+  * [Accessibility](#accessibility)
+  * [Bugs](#bugs)
+  * [Credits](#credits)
+    + [Copyrights](#copyrights)
+      - [Media](#media)
+      - [Content](#content)
+    + [Coding Tips and Tricks](#coding-tips-and-tricks)
+    + [Acknowledgments](#acknowledgments)
+
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -124,7 +135,11 @@ The focus points for this application are ecommerce, using the Django framework 
 
 I have chosen a traditional B2C (Business to Customer without middle person) application, which has a straightforward and user friendly interface. This online store offers no products of their own and relies on the wholesale of branded products. A real world version of the store would list all the retailers it is affiliated with.
 
-I have explained in a diagram below.
+The business flow is as follows:
+
+- StepUp buys products from wholesale retailers or from the manifacturers themselvse
+
+- The website handles selling of products from StepUp to the end customer, the website user.
 
 The intentions should be obvious and users should know as soon as they enter the site what it offers and how to use it's features.
 
@@ -391,10 +406,41 @@ All wireframes can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_V
 
 ![Colors](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/colors.png) (palette generated at https://imagecolorpicker.com)
 
-I have chosen the combination of a dark purple night sky as the background, orange and white.
+I have chosen the combination of a dark purple night sky as the background, orange and white for text and main buttons in orange and grey. As design is important to me, I couldn't help myself in experimenting and exploring in the possibilities for this project.
+
+#### Design Choices
+
+I have added lots of semi-transparent elements to create a feeling of three-dimentionality, for example the navbar. It fades to completely transparent on scroll, so users can view the content in full.
+
+![Navbar](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/gif_navbar_scroll.png)
+---
+
+Buttons are coloured with CSS-style attribute background: linear-gradient to create a glossy finish on the main buttons.
+Admin operation buttons on products and brands are styled differently to distinguish them from the others.
+
+Here you can see some of the button elements, as well as the badge, here used to indicate that the product is on sale.
+
+![Button Elements](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/button_badge_elements.png)
+---
 
 #### Typography
 
+Google Fonts was used for all fonts on this site, and I have used three fonts:
+
+- Anaheim for the general content, but also the main heading
+![Anaheim Font](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/font_anaheim.png)
+---
+
+- Average for the hero images
+![Anaheim Font](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/font_average.png)
+---
+
+- Abel for the page headings and main products nav menu
+
+I think they blend well together with the main Anaheim Logo:
+
+![Anaheim Font](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/surface/fonts_abel_anaheim.png)
+---
 
 
 ## Existing Features
