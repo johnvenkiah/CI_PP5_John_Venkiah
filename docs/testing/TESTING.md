@@ -1479,26 +1479,31 @@ This user story is already covered at [Testing of user story 34](#testing-of-use
 
 *As a user, I can view a privacy policy document via a link in the sites footer*
 
-**Actions**
-
-- Admin user navigates to the product detail page where the review in question is
-- In the review box, a delete button is visible for each review for the product
-- Admin user click the Delete Review button under the review in question
-- After confirmation the review is deleted
+The footer as mentioned is almost always visible at the bottom of the page and contains links to both of these, so I put them here together. All the user has to do is click the link and a modal with either of these appears for the user to view.
 
 <details>
     <summary>View Images</summary>
 
 ---
 
-**For admins, the review box has a delete button for each review, independant of who posted it**
+**The policy and terms links in the footer**
 
-![Contact form is filled in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_review_box.png)
+![Contact form is filled in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/policies_links_in_footer.png)
+---
+
+**The terms of use**
+
+![Contact form is filled in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/terms_of_use.png)
+---
+
+**The privacy policy**
+
+![Contact form is filled in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/privacy_policy.png)
 ---
 
 </details>
 
-- **Conclusion, User story 38 - tests passed**
+- **Conclusion, User story 40 and 41 - tests passed**
 
 
 ---
