@@ -1103,3 +1103,41 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 
 ---
+
+### Testing of user story 34:
+
+*As a user, I can get in touch with the site owner, regardless of whether I am signed in or not*
+
+**Actions**
+
+- User clicks on the Contact link in the page footer on any page (except for account operations or when a dialog modal is present)
+- User fills in the contact form
+- User is notified that the form is sent if all fields are filled in and the email address is valid
+- Site owner recieves an email with the message sent
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**Contact form is filled in**
+
+![Contact form is filled in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/contact_form_filled.png)
+---
+
+**Notification that message is sent**
+
+![Contact form is filled in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/toast_contact_form_sent.png)
+---
+
+**Site owner recieves an email**
+
+![Site owner recieves an email](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_email_from_user_recieved.png)
+---
+
+</details>
+
+- **Conclusion, User story 34 - tests passed**
+
+
+---
