@@ -307,7 +307,7 @@ Like the navbar, the footer, which includes the mailchimp newsletter registratio
 
 - **Conclusion, User story 3 and 4 - tests passed**
 
---
+---
 
 ### Testing of user story 5:
 
@@ -353,7 +353,7 @@ On top of this, the user is reminded of this in the Product Detail and Checkout 
 
 - **Conclusion, User story 5 - tests passed**
 
---
+---
 
 ### Testing of user story 6:
 
@@ -396,7 +396,7 @@ Also, if a user enters wrong or sufficient info, a message is given to the user 
 
 - **Conclusion, User story 6 - tests passed**
 
---
+---
 
 ### Testing of user story 7:
 
@@ -435,7 +435,7 @@ The products list is also accessible via the Browse Products button on the home 
 
 - **Conclusion, User story 7 - tests passed**
 
---
+---
 
 ### Testing of user story 8:
 
@@ -458,7 +458,7 @@ There is a search field in the navbar, in which users can search for products. p
 - **Conclusion, User story 8 - tests passed**
 
 
---
+---
 
 ### Testing of user story 9:
 
@@ -483,7 +483,7 @@ This works as intended.
 - **Conclusion, User story 9 - tests passed**
 
 
---
+---
 
 ### Testing of user story 10:
 
@@ -513,7 +513,7 @@ The products are displayed as cards, each with:
 - **Conclusion, User story 10 - tests passed**
 
 
---
+---
 
 ### Testing of user story 11:
 
@@ -539,7 +539,7 @@ The products are displayed as cards, each with:
 - **Conclusion, User story 11 - tests passed**
 
 
---
+---
 
 ### Testing of user story 12:
 
@@ -567,7 +567,7 @@ The products are displayed as cards, each with:
 - **Conclusion, User story 12 - tests passed**
 
 
---
+---
 
 ### Testing of user story 13:
 
@@ -578,7 +578,7 @@ This user story is already tested and displayed in user story 12, and passed too
 - **Conclusion, User story 13 - tests passed**
 
 
---
+---
 
 ### Testing of user story 14:
 
@@ -600,7 +600,7 @@ The cart total (and count) is visible as a floating badge/button at the top righ
 - **Conclusion, User story 14 - tests passed**
 
 
---
+---
 
 ### Testing of user story 15 and 16:
 
@@ -659,7 +659,7 @@ Passed testing of this user story is displayed in user story 13, where adding th
 - **Conclusion, User story 17 - tests passed**
 
 
---
+---
 
 ### Testing of user story 18:
 
@@ -685,7 +685,7 @@ Passed testing of this user story is displayed in user story 13, where adding th
 - **Conclusion, User story 18 - tests passed**
 
 
---
+---
 
 ### Testing of user story 19:
 
@@ -717,7 +717,7 @@ Passed testing of this user story is displayed in user story 13, where adding th
 - **Conclusion, User story 19 - tests passed**
 
 
---
+---
 
 
 ### Testing of user story 20:
@@ -750,7 +750,7 @@ Passed testing of this user story is displayed in user story 13, where adding th
 - **Conclusion, User story 20 - tests passed**
 
 
---
+---
 
 
 ### Testing of user story 21:
@@ -788,5 +788,60 @@ Passed testing of this user story is displayed in user story 13, where adding th
 - **Conclusion, User story 21 - tests passed**
 
 
---
+---
+
+### Testing of user story 22 and 24:
+
+*As a user, I can register for an account on the site, so that I can gain all the site’s customer benefits*
+
+*As a user, I have to confirm my email address to complete my account registration*
+
+**Actions**
+
+- User clicks on Sign Up in the nav or through any of the sign up links on the site
+- User is brought to the Sign Up page, where they are promted to enter their email and choose a username and password (password to be entered twice)
+- If the username and email address is unique for the site, the user is greeted with the email confirm page, letting the user know that an email has been sent to them with a confirmation link.
+- The user clicks the link and cofirms their email address, and 
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**The Sign Up page on Tablet**
+
+![The Sign Up page on Tablet](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_signup.png)
+---
+
+**Page letting user know that an email has been sent**
+
+![Page letting user know that an email has been sent](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_verification_sent.png)
+---
+
+**Email is received by user**
+
+![Page letting user know that an email has been sent](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/signup_email_received.png)
+---
+
+**User clicks confirmation link in email and is brought to the confirm email page**
+
+![User clicks confirmation link in email and is brought to the confirm email page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_confirm_email.png)
+---
+
+**User is notified that the email is confirmed and can now sign in**
+
+![User is notified that the email is confirmed and can now sign in](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/desktop_signin_after_email_confirm.png)
+---
+
+**Sign in is successful**
+
+![Sign in is successful](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/signin_successful.png)
+---
+
+</details>
+
+- **Conclusion, User story 22 and 24 - tests passed**
+
+
+---
 
