@@ -198,7 +198,7 @@ Performance was tested using the DevTools Lighhouse feature in the Chrome web br
 
 ---
 
-![Test results of lighthouse, Add Product or Brand, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/performance/screenshots/lighthouse_add_pro_br_mob.png)
+![Test results of lighthouse, Add Product or Brand, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/performance/screenshots/lighthouse_add_pro_br_mb.png)
 ---
 </details>
 
@@ -324,7 +324,7 @@ Performance was tested using the DevTools Lighhouse feature in the Chrome web br
 
 ---
 
-![Test results of lighthouse, Change Password, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/performance/screenshots/lighthouse_password_change_mob.png)
+![Test results of lighthouse, Change Password, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/performance/screenshots/lighthouse_password_change_mb.png)
 ---
 </details>
 
@@ -429,7 +429,7 @@ Performance was tested using the DevTools Lighhouse feature in the Chrome web br
 
 ---
 
-![Test results of lighthouse, Delete Account, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/performance/screenshots/lighthouse_delete_account_mob.png)
+![Test results of lighthouse, Delete Account, mobile](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/performance/screenshots/lighthouse_delete_account_mb.png)
 ---
 </details>
 
