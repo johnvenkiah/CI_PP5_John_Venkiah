@@ -1245,7 +1245,7 @@ For example, an admin user can change the products in an order that has already 
     - User clicks Delete Product and is notified via a toast that the product is removed
 
 <details>
-    <summary>View Images</summary>
+    <summary>View Add Product Images</summary>
 
 ---
 
@@ -1281,7 +1281,157 @@ For example, an admin user can change the products in an order that has already 
 
 </details>
 
+<details>
+    <summary>View Edit Product Images</summary>
+
+---
+
+**The Product Edit button on the product card, Products page**
+
+![The Product Edit button](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/product_edit_btn.png)
+---
+
+**The Edit Product page**
+
+![The Edit Product page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/edit_product_desktop.png)
+---
+
+**Setting the sale price**
+
+![Fields in the Add Product form must be correctly filled](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/edit_product_setting_sale_price.png)
+---
+
+**Adding a new image to the product**
+
+![Lower price error modal](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/edit_product_set_new_image.png)
+---
+
+**Updated product has a Save €! badge with correct amount saved and the new image**
+
+![User can check box if product is new](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/edited_product_with_sale_badge_new_img.png)
+---
+
+</details>
+
+<details>
+    <summary>View Delete Product Image</summary>
+
+---
+
+**The user has clicked on the Delete button and gets this dialog window**
+
+![The Add Brand or Product Nav menu link](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/delete_product_modal.png)
+---
+---
+
+**Upon confirmation the product is deleted**
+
+![The Add Brand or Product Nav menu link](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/product_deleted.png)
+---
+
+</details>
+
+
 - **Conclusion, User story 36 - tests passed**
 
 
----s
+---
+
+
+### Testing of user story 37:
+
+*As a site owner, I can add, edit or remove any brand on the site*
+
+**Performed tests**
+
+- Adding a new brand to the site
+
+    - Admin user navigates to the Add Brand or Product menu item in the Account nav menu
+    - User fills in the Add Brand form
+    - If the form is valid, user is taken to the Manage Brands page where the new brand is displayed among the others
+
+- Editing a brand
+
+    - Admin navigates to the Manage Brands page and click on the Edit button on the brand in question
+    - User is presented with a modal window containing the brand form and the brands current details
+    - User fills in the form and clicks on Update Brand
+    - If the form is valid, Manage Brands page is updated with the brands new details
+
+- Removing a brand
+
+    - Admin clicks the Delete button on the brand in question on the Manage Brands page
+    - User has to confirm this in a modal dialog window
+    - User clicks Delete Product and is notified via a toast that the brand is deleted
+
+<details>
+    <summary>View Add Brand Images</summary>
+
+---
+
+**The simple Add New Brand form on the Add Product or Brand page**
+
+![The add brand form](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/add_new_brand_form.png)
+---
+
+**Clicking on Select Image opens a window where users can upload an image**
+
+![Select image](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/select_image_edit_add_brand_or_product.png)
+---
+
+**Clicking on Add Brand reloads the Manage Brands page, notifies the user and the brand is visible in the grid of brands (2 images)**
+
+![New brand added](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/new_brand_added.png)
+---
+
+</details>
+
+<details>
+    <summary>View Edit Brand Images</summary>
+
+---
+
+**The brand Edit button on the brand card, Manage Brands page**
+
+![The brand Edit button](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/edit_brand_btn.png)
+---
+
+**The Edit Brand modal window**
+
+![The Edit Brand modal](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_1/edit_brand_form.png)
+---
+
+**The brand is updated and edit is reflected in the brand icon, Manage Brands page (2 images)**
+
+![Brand is updated](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/brand_updated.png)
+---
+
+</details>
+
+<details>
+    <summary>View Delete Brand Images</summary>
+
+---
+
+**The Delete brand button, Manage Brands**
+
+![The Delete brand button](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/brand_delete_btn.png)
+---
+
+**The Delete brand dialog modal window**
+
+![The Delete brand modal](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/brand_delete_modal.png)
+---
+
+**Upon confirmation the brand is deleted**
+
+![Brand is deleted](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/brand_deleted.png)
+---
+
+</details>
+
+
+- **Conclusion, User story 37 - tests passed**
+
+
+---
+
