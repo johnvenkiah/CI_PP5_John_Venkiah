@@ -1261,37 +1261,27 @@ For example, an admin user can change the products in an order that has already 
 
 **Fields in the Add Product form must be correctly filled**
 
-![Form validation Product form](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/product_form_validation.png)
+![Fields in the Add Product form must be correctly filled](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/product_form_validation.png)
 ---
 
 **Entering a lower intital price than the current one triggers an error modal**
 
-![Adding new category](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/update_product_invalid_price.png)
+![Lower price error modal](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/update_product_invalid_price.png)
 ---
 
-**Updating product name, brand and category**
+**User can check box if product is new**
 
-![Updating product name and category](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_product_new_name_brand_category.png)
+![User can check box if product is new](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/checkbox_new_product.png)
 ---
 
-**Users order in admin**
+**User is taken to Product detail page of the new product which can be viewed in the products list**
 
-![Users order in admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_before_edit.png)
----
-
-**Users order details after editing**
-
-![Users order details after editing](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_after_edit_1.png)
----
-
-**Order line items after editing**
-
-![Order line items after editing](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/admin_order_after_edit_2.png)
+![Users order in admin](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_3/tablet_add_product_new_added.png)
 ---
 
 </details>
 
-- **Conclusion, User story 35 - tests passed**
+- **Conclusion, User story 36 - tests passed**
 
 
----
+---s
