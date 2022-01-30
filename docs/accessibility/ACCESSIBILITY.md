@@ -10,97 +10,97 @@ The service basically tests the pages ease of use for users with screen readers,
 
 ### Home
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_home)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_home.png)
 
 
 ### Products
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_products)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_products.png)
 
 
 ### Product Detail
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_product_detail)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_product_detail.png)
 
 
 ### Cart
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_cart)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_cart.png)
 
 
 ### Checkout
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_checkout)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_checkout.png)
 
 
 ### Order Confirmation/Order History (Same HTML page)
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_order_confirmation_history)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_order_confirmation_history.png)
 
 
 ### Contact
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_contact)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_contact.png)
 
 
 ### My StepUp
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_my_stepup)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_my_stepup.png)
 
 
 ### Add Brand or Product
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_add_product)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_add_product.png)
 
 
 ### Manage Brands
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_manage_brands)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_manage_brands.png)
 
 
 ### Edit Product
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_edit_product)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_edit_product.png)
 
 
 ### Sign Up
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_signup)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_signup.png)
 
 
 ### Sign In
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_login)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_login.png)
 
 
 ### Sign Out
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_signout)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_signout.png)
 
 ### Change Password
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_change)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_change.png)
 
 
 ### Password Reset
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset.png)
 
 
 ### Password Reset Sent
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset_done)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset_done.png)
 
 
 ### Password Reset Confirmation
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset_sent)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset_sent.png)
 
 
 ### Password Reset Confirmation Done
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset_set)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_password_reset_set.png)
 
 ### Delete Account
 
-![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_delete_account)
+![Home](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/tree/main/docs/accessibility/screenshots/wave_delete_account.png)
