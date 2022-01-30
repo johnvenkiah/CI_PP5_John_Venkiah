@@ -1507,3 +1507,13 @@ The footer as mentioned is almost always visible at the bottom of the page and c
 
 
 ---
+
+
+## Automated Testing
+
+
+Some tests were performed (37), mostly for me to learn the practice of automated testing. Credits to pmeeny and his project [Love Rugby](https://github.com/pmeeny/CI-MS4-LoveRugby) for the main part of these.
+
+Here are the results:
+
+![Automated Testing part 1]()
