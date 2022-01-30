@@ -58,6 +58,8 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
 
+            products = products.order_by(sortkey)
+
             if sortkey == 'rating':
                 if direction == 'desc':
                     products = products.order_by(
@@ -67,8 +69,6 @@ def all_products(request):
                     products = products.order_by(
                         F('rating').desc(nulls_last=True)
                     )
-
-            products = products.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -113,10 +113,6 @@ def all_products(request):
                 description__icontains=query
             )
             products = products.filter(queries)
-
-        for product in products:
-            if not product.rating:
-                product.rating = 0
 
     current_sorting = f'{sort}_{direction}'
 
