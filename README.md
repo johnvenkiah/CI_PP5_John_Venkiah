@@ -130,9 +130,17 @@ The intentions should be obvious and users should know as soon as they enter the
 
 #### Marketing
 
-This site has a Facebook Business page with a link on the home page too. It can be viewed [here](https://www.facebook.com/stepupshoeseurope/)
+This site has a Facebook Business page with a link on the page footer. It can be viewed [here](https://www.facebook.com/stepupshoeseurope/)
 
 Upon registering for an account, customers can check a box to receive news and offers through email via Mailchimp.
+
+#### Search Engine Optimisation
+
+I have generated a sitemap.xml and robots.txt file, and only included canonical links (pages that are not duplicates) which helps Google map the pages of the site.
+
+I have also done some research on highest searched words in shoe retailing, and came up with this title and description:
+
+![]()
 
 ### Structure
 
@@ -190,23 +198,27 @@ These pages are provided by the Allauth package of the Django framework, but are
 
 ##### Code Structure
 
-I have devided the code into apps as per the Django best practice, for the different areas of functionality.
+I have devided the code into apps as per Django best practice, for the different areas of functionality.
 
 * Home - basic functionality for the home page
 
 * Products - all functionality related to the products on the site
 
-* Profile - functionality regarding the users profile and order data (My StepUp)
-
 * Cart - functionality for the users shopping cart
 
 * Checkout - functionality for the user to go through with the order and payment
 
-* Contact - basic functionality for users to get in touch
+* Profiles - functionality regarding the users profile and order data (My StepUp)
+
+* User Account - The app in which users can delete their account
 
 **Other Directories and files**
 
-* step_up - project folder containing settings, urls and other configuration files for the whole project
+* static - css and javascript files
+
+* media - images for the development website (other images are used in the production version)
+
+* stepup - project folder containing settings, urls and other configuration files for the whole project
 
 * templates - contains the base template and templates (HTML-files with Django logic) for the Django allauth authentication
 
@@ -214,13 +226,13 @@ I have devided the code into apps as per the Django best practice, for the diffe
 
 * README.md - the document you are reading right now, documentation of the whole project
 
-* TESTING.md - documentation of testing the project
-
 * custom_storages.py - configuration for storage of media and static files on AWS S3
 
 * Procfile - needed for deployment to Heroku to specify commands to be executed by the app on startup
 
 * requirements.txt - a list of dependancies (installed packages) that the project requires for the application to function
+
+* robots.txt and sitemap.xml - files configured for Search Engine Optimisation
 
 Enviromental Variables such as API-keys, passwords etc are stored securely in the back end (in the development environment and in the Heroku App settings) so that regular users do not have access to them.
 
