@@ -9,7 +9,7 @@ from django.shortcuts import (
 from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, F
 from django.db.models.functions import Lower
 
 # - - - - - Internal imports - - - - - - - - -
@@ -57,6 +57,17 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
+
+            if sortkey == 'rating':
+                if direction == 'desc':
+                    products = products.order_by(
+                        F('rating').desc(nulls_last=True)
+                    )
+                else:
+                    products = products.order_by(
+                        F('rating').desc(nulls_last=True)
+                    )
+
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
