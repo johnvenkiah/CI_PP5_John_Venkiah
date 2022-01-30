@@ -338,9 +338,9 @@ The following models have been used to populate the database and for the site to
 
 #### Epic 10: Terms and Policy
 
-40. As a user, I can view a terms document on the sites footer
+40. As a user, I can view a terms document via a link in the sites footer
 
-41. As a user, I can view a privacy policy document on the sites footer
+41. As a user, I can view a privacy policy document via a link in the sites footer
 
 ### Skeleton
 
@@ -506,9 +506,9 @@ The policy and terms appear in a modal window, which users easily can close and 
 
 4. As a user, I can see a link in the footer to the site’s Facebook Business Page, so that I can follow the company on Facebook
 
-40. As a user, I can view a terms document on the sites footer
+40. As a user, I can view a terms document via a link in the sites footer
 
-41. As a user, I can view a privacy policy document on the sites footer
+41. As a user, I can view a privacy policy document via a link in the sites footer
 
 ### Feature 4: The Products List
 
