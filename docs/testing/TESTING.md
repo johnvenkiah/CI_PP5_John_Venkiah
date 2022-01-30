@@ -975,7 +975,7 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 **User adding item to their Wishlist**
 
-![User adding item to their Wishlist](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/gif_add_to_wishlist.png)
+![User adding item to their Wishlist](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/gif_add_to_wishlist.gif)
 ---
 
 </details>
@@ -985,3 +985,63 @@ The delete account link is at the bottom of the My StepUp page. Usually, the lin
 
 ---
 
+### Testing of user story 29:
+
+*As a logged in user, I can add a product to my Wish List, so that I can easily view it later*
+
+**Actions**
+
+- User clicks on the Add to Wishlist button on the product detail page
+- User is notified that the product is added to their Wishlist
+- User can view the itme in their Wishlist
+
+<details>
+    <summary>View GIF</summary>
+
+---
+
+**Removing from Wishlist on Product Detail page**
+
+![Removing from Wishlist on Product Detail page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/gif_remove_wl_pr_detail.gif)
+---
+
+**Removing from Wishlist on My StepUp page**
+
+![Removing from Wishlist on My StepUp page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/gif_remove_wl_my_stepup.gif)
+---
+
+</details>
+
+- **Conclusion, User story 29 - tests passed**
+
+
+---
+
+**User story 30 was removed so testing of that has not been performed**
+
+
+### Testing of user story 31:
+
+*As a user, i can read user reviews for products that have received them, so that I easier know if the product is right for me*
+
+**Actions**
+
+- User navigates to the product detail page of the product in question
+- If there are reviews for that product, they will be visible at the bottom of the page
+
+<details>
+    <summary>View Image</summary>
+
+---
+
+**Reviews visible at the bottom of the Product Detail page**
+
+![Reviews visible at the bottom of the Product Detail page](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/testing/screenshots/user_case_2/tablet_reviews.png)
+---
+
+</details>
+
+- **Conclusion, User story 31 - tests passed**
+
+
+---
