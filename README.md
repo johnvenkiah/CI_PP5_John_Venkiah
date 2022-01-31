@@ -1289,6 +1289,8 @@ https://stackoverflow.com/questions/1395807/proper-way-to-handle-multiple-forms-
 **Title in Django template**
 https://stackoverflow.com/questions/14268342/make-the-first-letter-uppercase-inside-a-django-template
 
+**Adapted Mailchimp form**
+https://bootstrapious.com/p/mailchimp-signup-form -->
 
 **Raise error in model form method**
 https://docs.djangoproject.com/en/4.0/ref/forms/validation/
