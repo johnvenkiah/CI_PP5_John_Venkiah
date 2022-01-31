@@ -1,3 +1,6 @@
+<!-- Modal displayed to admin users when clicking the edit button in manage_brands.html -->
+
+<!-- Also this modal needs the instance id for it to work accordingly -->
 <div class="modal fade" id="editBrandModal{{ brand.id }}" tabindex="-1" role="dialog" aria-labelledby="editBrandModalTitle_{{ brand.id }}" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -9,6 +12,7 @@
             </div>
             <form method="POST" action="{% url 'update_brand' brand.id %}" class="form mb-2" enctype="multipart/form-data">
                 <div class="modal-body">
+                    <!-- Brand form -->
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -20,9 +24,11 @@
                 </div>
                 <div class="modal-footer row">
                     <div class="col-5 col-md-6">
+                        <!-- Go back to the manage_brands page -->
                         <a role="button" class="btn-block btn btn-grey" href="{% url 'manage_brands' %}">Cancel</a>
                     </div>
                     <div class="col">
+                        <!-- Updates the brand in question -->
                         <button class="btn-block btn btn-orange" type="submit">Save Brand</button>
                     </div>
                 </div>
