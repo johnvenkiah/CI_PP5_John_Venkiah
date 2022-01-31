@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+<!-- The idea of an overlay and the allauth-inner-content here is inspired by the Code Institute Boutique Ado project. -->
+
 {% block content %}
     <div class="modal--overlay"></div>
     <div class="container header-container">
@@ -12,7 +14,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Script to prevent scrolling in unneededly long pages as these pages display as modals-->
     {% include 'includes/prevent_scroll_script.html' %}
 
 {% endblock %}

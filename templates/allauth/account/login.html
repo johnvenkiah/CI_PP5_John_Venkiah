@@ -1,3 +1,5 @@
+<!-- Simple styling and editing of text has been applied to this Allauth file. -->
+
 {% extends "account/base.html" %}
 
 {% load i18n %}
@@ -44,10 +46,12 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
             <button class="mb-4 btn-orange w-100 btn primaryAction" type="submit">{% trans "Sign In" %}</button>
         </div>
         <div class="col-md-6">
+            <!-- Redirect to previously viewed page -->
             {% if not request.path in request.META.HTTP_REFERER %}
             <a href="{{ request.META.HTTP_REFERER }}" class="btn w-100 btn-grey">
                 Cancel
             </a>
+            <!-- If previous page is login, go home -->
             {% else %}
             <a href="{% url 'home' %}" class="btn w-100 btn-grey">
                 Home

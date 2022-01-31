@@ -1,3 +1,5 @@
+<!-- This Allauth page is styled to match the site and links to the terms and privacy policy and terms have been added. -->
+
 {% extends "account/base.html" %}
 
 {% load i18n %}
@@ -17,8 +19,10 @@
     {% endif %}
     <div class="row justify-content-center p-1 p-md-3">
         <div class="col-6">
+            <!-- Go to the previous page -->
         {% if not request.path in request.META.HTTP_REFERER %}
                 <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-grey btn-block">Back</a>
+                <!-- or home -->
             {% else %}
                 <a href="{% url 'home' %}" class="btn btn-grey btn-block">Home</a>
             {% endif %}
