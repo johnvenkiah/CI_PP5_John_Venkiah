@@ -1,6 +1,7 @@
 """
 products/admin.py: Admin models for superuser capabilities with models
-Category, Product and Review
+Category, Product and Review. Based on admin in
+Code Institute's Boutique Ado project.
 """
 
 # - - - - - Django Imports - - - - - - - - -

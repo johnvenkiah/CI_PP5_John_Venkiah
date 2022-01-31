@@ -1,5 +1,6 @@
 """
 products/forms.py: forms to be used with the product app of the application
+Some inpiration from pmeenys Love Rugby project for the review part.
 """
 
 # - - - - - Django Imports - - - - - - - - -

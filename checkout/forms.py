@@ -1,5 +1,6 @@
 """
-checkout/forms.py: forms for the checkout app
+checkout/forms.py: forms for the checkout app.
+Credit to Code Institute's Boutique Ado project.
 """
 
 # - - - - - Django Imports - - - - - - - - -

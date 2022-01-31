@@ -1,5 +1,7 @@
 """
-profiles/models.py: models for profiles app
+profiles/models.py: models for profiles app.
+Credit to Code Institute's Boutique Ado project.
+Also includes my WishListItem model.
 """
 
 # - - - - - Django Imports - - - - - - - - -

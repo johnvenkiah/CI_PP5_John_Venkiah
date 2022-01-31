@@ -1,5 +1,6 @@
 """
 products/views.py: views to display all pages in the products app.
+Credit to Code Institute's Boutique Ado project.
 """
 
 # - - - - - Django Imports - - - - - - - - -

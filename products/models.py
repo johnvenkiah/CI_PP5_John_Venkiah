@@ -1,5 +1,6 @@
 """
-products/models.py: Contains the models Category, Product and Review
+products/models.py: Contains the models Category, Product and Review.
+Inspired by Code Institute's Boutique Ado project.
 """
 
 # - - - - - Django Imports - - - - - - - - -

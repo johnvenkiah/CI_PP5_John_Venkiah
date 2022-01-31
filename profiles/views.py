@@ -1,5 +1,6 @@
 """
-profiles/views.py: views for profile app
+profiles/views.py: views for profile app.
+Credit to Code Institute for profile and order_history views.
 """
 
 # - - - - - Django Imports - - - - - - - - -

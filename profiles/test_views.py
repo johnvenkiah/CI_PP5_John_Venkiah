@@ -1,5 +1,6 @@
 """
 profiles/test_views.py: testing of profile app views
+Credit: https://github.com/pmeeny/CI-MS4-LoveRugby
 """
 
 # - - - - - Django Imports - - - - - - - - -

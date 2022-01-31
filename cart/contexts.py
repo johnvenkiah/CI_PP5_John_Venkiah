@@ -1,5 +1,6 @@
 """
 cart/contexts.py: enables the cart contents to be accessed throughout the site.
+Credit to Code Institute's Boutique Ado project.
 """
 
 # - - - - - Python Imports - - - - - - - - -

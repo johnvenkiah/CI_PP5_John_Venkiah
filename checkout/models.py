@@ -1,5 +1,6 @@
 """
-checkout/models.py: Models within the checkout app
+checkout/models.py: Models within the checkout app.
+Credit to Code Institute's Boutique Ado project.
 """
 
 # - - - - - Native Python Imports - - - - - - - - -
