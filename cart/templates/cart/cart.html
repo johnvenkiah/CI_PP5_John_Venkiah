@@ -1,4 +1,6 @@
-{% extends "base.html" %}
+<!-- The cart page. Credit to Code Institute's Boutique Ado project for a large portion of this page. -->
+
+{% extends 'base.html' %}
 {% load static %}
 {% load cart_tools %}
 
@@ -13,20 +15,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col-12 col-lg-10 offset-lg-1 mt-3">
-                <h2 class="logo-font">Shopping Cart{% if cart_items %} ({{ cart_items|length }}){% endif %}</h2>
-                <hr>
-            </div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1 mt-3">
+            <h2 class="logo-font">Shopping Cart{% if cart_items %} ({{ cart_items|length }}){% endif %}</h2>
+            <hr>
         </div>
-
-        <div class="row">
-            <div class="col-12 col-lg-10 offset-lg-1">
-                {% if cart_items %}
-                    <div class="d-block d-md-none">
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+            <!-- Display cart items if there are any -->
+            {% if cart_items %}
+            <!-- Two different displays, this one for mobile is hidden for larger screens. -->
+            <div class="d-block d-md-none">
                         {% for item in cart_items %}
                             <div class="row">
+                                <!-- load elements from the other pages -->
                                 <div class="col-6 mb-2">
                                         {% include "cart/product-image.html" %}
                                 </div>
@@ -43,10 +47,15 @@
                                     <button class="remove-item btn product-edit-link text-danger float-right my-0" aria-label="Remove item from cart" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><i class="fas fa-times"></i></button>
                                 </div>
                             </div>
-                            <div class="row"><div class="col"><hr></div></div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
                         {% endfor %}
                         <div class="row">
                             <div class="col">
+                                <!-- Load total and buttons -->
                                 {% include "cart/cart-total.html" %}
                                 {% include "cart/checkout-buttons.html" %}
                             </div>
@@ -58,6 +67,7 @@
                             </a>
                         </div>
                     </div>
+                    <!-- The second display, for larger screens. -->
                     <div class="d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-white">
@@ -71,6 +81,7 @@
                             </thead>
 
                             {% for item in cart_items %}
+                            <!-- Loop over the cart items and add the elements from the other pages -->
                                 <tr>
                                     <td class="py-3">
                                         {% include "cart/product-image.html" %}
@@ -92,6 +103,7 @@
                                 </tr>
                             {% endfor %}
                             <tr>
+                                <!-- Included the total and buttons for larger screens -->
                                 <td colspan="5" class="pt-5 text-right">
                                     {% include "cart/cart-total.html" %}
                                 </td>
@@ -104,6 +116,7 @@
                         </table>
                     </div>
                 {% else %}
+                    <!-- Display if no cart items -->
                     <p class="lead mb-5">Your cart is empty.</p>
                     <div class="col col-md-6 col-lg-4">
                         <a href="{% url 'products' %}" class="btn btn-grey btn-lg btn-block" aria-label="Browse products">
@@ -121,6 +134,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Javascript files for the page -->
     {% include 'cart/includes/cart_script.html' %}
     {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

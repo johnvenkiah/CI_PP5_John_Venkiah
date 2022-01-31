@@ -18,7 +18,8 @@ $('.update-link').click(function(e) {
 /**
 * Function to remove item and reload on click
 * Gets the csrf token as a string, the item id by using split with id attr
-* posts data to the url and reloads page to reflect updated cart.
+* posts data to the url and reloads page to reflect updated cart. Credit:
+* Boutique Ado, Code Institute
 */
 $('.remove-item').click(function(e) {
     let csrfToken = "{{ csrf_token }}";

@@ -1,3 +1,6 @@
+/* CSS file for the chekout and order confirmation pages. Credit: Code Intitute
+and Stripe, but added a lot myself too. */
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;

@@ -1,9 +1,12 @@
-{% extends "base.html" %}
+<!-- Order Confirmation page, shown when user has completed an order. Credits: code Institute, Boutique Ado project -->
+
+{% extends 'base.html' %}
 {% load static %}
 
 {% block extra_title %}Order Confirmation{% endblock %}
 
 {% block extra_css %}
+    <!-- Load extra css -->
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
@@ -19,6 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col mt-3 mw-lg">
+                <!-- The confirmation with order details -->
                 <h2 class="logo-font">Order Confirmation</h2>
                 <hr>
                 <p class="my-4">Thank you for your order at StepUp. You will recieve an email confirmation to <strong>{{ order.email }}</strong>.</p>

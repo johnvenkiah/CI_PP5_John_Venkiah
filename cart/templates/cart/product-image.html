@@ -1,3 +1,5 @@
+<!-- Part of the cart page. displays the image of each product in the cart if there is one. -->
+
 <a href="{% url 'product_detail' item.product.id %}" aria-label="Product Details">
     {% if item.product.image %}
         <img class="img-fluid cart-img rounded" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">

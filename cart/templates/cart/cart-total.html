@@ -1,6 +1,9 @@
+<!-- Displays the cart total in the cart page -->
+
 <p class="h5 text-orange"><strong>Cart Total: €{{ total|floatformat:2 }}</strong></p>
 <p class="h5 text-white">Delivery: €{{ delivery|floatformat:2 }}</p>
 <h3 class="mt-4 text-orange"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h3>
+<!-- If under €50, display this (Credit Code Institute) -->
 {% if free_delivery_delta > 0 %}
     <p class="mb-1 text-danger">
         You're <strong>€{{ free_delivery_delta }}</strong> from free delivery!

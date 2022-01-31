@@ -1,7 +1,12 @@
-<a class="my-0 text-orange" href="{% url 'product_detail' item.product.id %}" aria-label="Product Details"><strong>{{ item.product.name|truncatechars:38 }}</strong></a>
+<!-- Part of the cart page. displays info for each item in the cart -->
+
+<a class="my-0 text-orange" href="{% url 'product_detail' item.product.id %}" aria-label="Product Details">
+    <strong>{{ item.product.name|truncatechars:38 }}</strong>
+</a>
 <p class="my-0">
     <strong>Size: </strong>
     <span class="d-block float-right">
+        <!-- Size if there is a size for that product -->
         {% if item.product.size_type != 'N/A' %}{{ item.size }}{% else %}N/A{% endif %}
     </span>
 </p>

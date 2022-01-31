@@ -1,3 +1,6 @@
+<!-- Part of the cart page, credits: Code Institute, Boutique Ado project
+Controls choosing the quantity of the product together with the JavaScript in quantity_input_script.html -->
+
 <form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
@@ -24,6 +27,7 @@
                     </span>
                 </button>
             </div>
+            <!-- Add the size to the product if not N/A -->
             {% if item.product.size_type != 'N/A' %}
                 <input type="hidden" name="product_size" value="{{ item.size }}">
             {% endif %}
