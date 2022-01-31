@@ -1,4 +1,6 @@
-<!-- Mobile heading with navbar -->
+<!-- This is the mobile navbar, structure inspired by Code Institutes Boutique Ado project but customized and adapted to fit the sites needs.
+    This is injected into the base.html file, which makes it visible on all pages, if on a mobile device.
+ -->
 
 <!-- Searchbar -->
 <div class="list-inline-item hide-items">
@@ -50,7 +52,7 @@
     <p class="h3 main-logo-link mx-auto my-auto d-lg-none text-shadow text-center hide-2">StepUp</p>
 </a>
 
-<!-- Cart nav link -->
+<!-- Cart nav link that dynamically displays the cart count and total-->
 <div class="list-inline-item">
     <a class="nav-link d-block d-lg-none" href="{% url 'view_cart' %}" title="{% if grand_total %}Your cart grand total is {{ grand_total }}{% else %}Your cart is empty{% endif %}" aria-label="cart">
         <div class="text-center">
