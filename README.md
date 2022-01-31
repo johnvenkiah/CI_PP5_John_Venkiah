@@ -148,11 +148,42 @@ The intentions should be obvious and users should know as soon as they enter the
 
 This site has a Facebook Business page with a link on the page footer. It can be viewed [here](https://www.facebook.com/stepupshoeseurope/)
 
-Upon registering for an account, customers can check a box to receive news and offers through email via Mailchimp.
+Upon registering for an account, customers can check a box to receive news and offers through email via [Mailchimp](https://mailchimp.com/).
+
+Upon registering, the user ir redirected to a new page confirming their subscription. The site owner can now see the new subscriber on their audience dashboard, and new campaigns will be sent to them too.
+
+<details>
+    <summary>View Images</summary>
+
+---
+
+**The mailchimp signup form**
+
+![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_field.png)
+---
+
+**Confirmation after subscribing**
+
+![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_subscr_conf.png)
+---
+
+**The new subscriber is added to the site owners audience in the Mailchimp Dashboard**
+
+![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_audience.png)
+---
+
+**They  will receive emails when the site owner creates a new campaign**
+
+![Meta-tags seo](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/mailchimp_campaigns.png)
+---
+
+</details>
+
+
 
 #### Search Engine Optimisation
 
-I have generated a sitemap.xml and robots.txt file, and only included canonical links (pages that are not duplicates) which helps Google map the pages of the site.
+I have generated a sitemap.xml and robots.txt file, and only included relevant canonical links (pages that are not duplicates) which helps Google map the pages of the site.
 
 I have also done some research on highest searched words in shoe retailing, and came up with this title and description:
 
