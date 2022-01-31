@@ -19,6 +19,7 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 
 - [StepUp](#stepup)
   * [Project Overview](#project-overview)
+    + [Agile Workflow](#agile-workflow)
   * [User Experience](#user-experience)
     + [Strategy](#strategy)
       - [Primary Goals](#primary-goals)
@@ -101,6 +102,16 @@ You can view the deployed site [here](https://stepup-shoes.herokuapp.com/)
 StepUp is an assignment for the Code Institute Diploma in Full Stack Software Development, but also meant to be applicable in a real world scenario (except for the products being fictional of course).
 
 The focus points for this application are ecommerce, using the Django framework and the ability to go through with a payment for an order.
+
+### Agile Workflow
+
+![Kanban Board](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/misc/kanban_board.png)
+
+I have tried to implement the basic Agile strategy, creating issues for my user stories, a Kanban board for the project, Milestones for each epic and moving the stories from to do to done (or removed as in the case of US 30).
+
+As Github is limited with ways to do this, I have chosen to have the Milestones as Epics instead of sprints in this project.
+
+The Kanban board can be viewed [here](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/projects/1)
 
 ## User Experience
 
