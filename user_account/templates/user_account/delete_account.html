@@ -1,4 +1,6 @@
-{% extends "account/base.html" %}
+<!-- the delete account page deletes the users account if confirmed -->
+
+{% extends 'account/base.html' %}
 
 {% load i18n %}
 
@@ -15,9 +17,11 @@
         <p>{{ form.delete_checkbox }} <span class="ml-3">{{ form.delete_checkbox.label }}</span></p>
     </div>
     <div class="col-12 col-md-6 mb-2">
+        <!-- back to the My StepUp page -->
         <a href="{% url 'my_stepup' %}" class="btn btn-lg btn-grey btn-block">{% trans 'Cancel' %}</a>
     </div>
     <div class="col-12 col-md-6 mb-2">
+        <!-- Confirms account deletion -->
         <button type="submit" class="btn btn-lg btn-red btn-block">{% trans 'Delete Account' %}</button>
     </div>
 </div>
