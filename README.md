@@ -1314,7 +1314,9 @@ https://www.gucci.com
 
 ### Coding Tips and Tricks
 
-These are tips that have helped me along the way for this project
+These are tips that have helped me along the way for this project:
+
+**Code Institute Boutique Ado project**
 
 **Hiding header on scroll down:**
 https://medium.com/@mariusc23/hide-header-on-scroll-**down-show-on-scroll-up-67bbaae9a78c
