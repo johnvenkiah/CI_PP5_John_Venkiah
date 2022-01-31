@@ -366,6 +366,10 @@ The JavaScript code was validated with JSHint. All files tested with 0 errors.
 
 ![JSHint countryfield](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_countryfield.png)
 
+#### Script in checkout.html
+
+![Script in checkout.html](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/script_in_checkout.png)
+
 [To Top](#overview)
 
 </details>

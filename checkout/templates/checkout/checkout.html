@@ -1,10 +1,15 @@
-{% extends "base.html" %}
+<!-- Checkout page for the site. Credit for the base idea to Code Institute's Boutique Ado project,
+but I have enhanced it a bit. -->
+
+{% extends 'base.html' %}
 {% load static %}
+<!-- Load file to calculate subtotal for each item -->
 {% load cart_tools %}
 
 {% block extra_title %}Checkout{% endblock %}
 
 {% block extra_css %}
+    <!-- Extra css for checkout page -->
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
@@ -27,6 +32,8 @@
 
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <!-- Order Sumary:
+                Display order summary as a dropdown if on mobile -->
             {% if is_mobile %}
                 <a href="#" role="button" id="order-s-toggler" class="text-orange" data-toggle="collapse" data-target="#order-summary" aria-expanded="false" aria-controls="order-summary" aria-label="Click to expand">Order Summary ({{ product_count }}) <i class="fas fa-angle-down"></i><span class="float-right">Grand Total: €{{ grand_total }}</span></a>
                 <div id="order-summary" class="collapse">
@@ -41,6 +48,7 @@
                             <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                         </div>
                     </div>
+                    <!-- Loop over the items in the cart -->
                     {% for item in cart_items %}
                     <a href="{% url 'product_detail' item.product.id %}" aria-label="Product Details">
                         <div class="row">
@@ -73,11 +81,13 @@
                             </a>
                         </div>
                     </div>
+                    <!-- Close the collapse div if on mobile -->
                     {% if is_mobile %}
                 </div>
                 {% endif %}
             </div>
             <div class="col-12 col-lg-6">
+                <!-- Order form -->
                 <p class="text-white">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
@@ -147,6 +157,7 @@
             </div>
         </div>
     </div>
+    <!-- Overlay is shown when user click "Complete Order" before going to Order Confirmation -->
     <div id="loading-overlay">
         <div class="text-light logo-font loading-spinner">
             <h3 class="text-center logo-font d-block mb-5">Processing your payment...</h3>
@@ -159,14 +170,16 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Load stripe JavaScript files -->
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
     <script>
+        // Script to animate the arrow in the summary dropdown on mobile
         $(document).ready(function() {
             $('#order-s-toggler').click(function() {
                 $('.fa-angle-down').toggleClass('rotate');
-            })
-        })
+            });
+        });
     </script>
 {% endblock %}
