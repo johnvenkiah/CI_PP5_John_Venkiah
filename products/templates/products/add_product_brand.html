@@ -1,3 +1,7 @@
+<!-- Page for admin users to add a product or brand to the site.
+This page is based on the Boutique Ado project from Code Institute but enhanced to contain the brand form
+and adapted for the sites needs. -->
+
 {% extends 'base.html' %}
 {% load static %}
 
@@ -23,6 +27,7 @@
         <div class="row mw-lg">
             <p class="col-12 d-none d-md-block">If product brand is not in the list of brands, add it first in the form on the right.</p>
             <div class="col-12 col-md-6">
+                <!-- Add product form -->
                 <h3 class="h5 text-orange">Add New Product</h3>
                 <hr>
                 <form method="POST" action="{% url 'add_product_brand' %}" class="form mb-2" enctype="multipart/form-data">
@@ -42,12 +47,14 @@
                             <a class="d-block btn btn-grey" href="{% url 'products' %}">Cancel</a>
                         </div>
                         <div class="col-6">
+                            <!-- Submit the product form -->
                             <button class="w-100 btn btn-orange" type="submit">Add Product</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="col-12 col-md-6">
+                <!-- Add brand form -->
                 <h3 class="h5 text-orange mt-5 mt-md-0" id="add-brand-section">Add New Brand</h3>
                 <hr>
                 <form method="POST" action="{% url 'add_brand' %}" class="form mb-2" enctype="multipart/form-data">
@@ -67,12 +74,14 @@
                             <a class="d-block btn btn-grey" href="{% url 'products' %}">Cancel</a>
                         </div>
                         <div class="col-6">
+                            <!-- Submit the brand form -->
                             <button class="w-100 btn btn-orange" type="submit">Add Brand</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        <!-- Modal for if sale price is higher that initial price -->
         {% include 'products/includes/wrong_price_modal.html' %}
     </div>
 
@@ -80,5 +89,6 @@
 
 {% block postloadjs %}
     {{ block.super}}
+    <!-- Loads the JavaScript file for this page -->
 <script src="{% static 'products/js/products_form.js' %}"></script>
 {% endblock %}

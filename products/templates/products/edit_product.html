@@ -1,3 +1,5 @@
+<!-- Edit product page, limited to admin users. -->
+
 {% extends 'base.html' %}
 {% load static %}
 
@@ -22,6 +24,7 @@
         </div>
         <div class="row">
             <div class="col col-md-8 col-lg-6 mx-auto">
+                <!-- The product form -->
                 <h5 class="text-orange">Edit Product</h5>
                 <hr>
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
@@ -41,12 +44,14 @@
                             <a class="d-block btn btn-grey" href="{% url 'products' %}">Cancel</a>
                         </div>
                         <div class="col-6">
+                            <!-- Submit the form -->
                             <button class="w-100 btn btn-orange" type="submit">Save Product</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        <!-- Modal for if sale price is higner than the initial one -->
         {% include 'products/includes/wrong_price_modal.html' %}
     </div>
 
@@ -55,6 +60,7 @@
 {% block postloadjs %}
     {{ block.super}}
 
-<script src="{% static 'products/js/products_form.js' %}"></script>
+<!-- load the JavaScript file for this page -->
+    <script src="{% static 'products/js/products_form.js' %}"></script>
 
 {% endblock %}

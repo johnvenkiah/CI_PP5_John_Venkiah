@@ -1,3 +1,5 @@
+/* profiles.css - stying of specific elements on the My StepUp page.  */
+
 .order-history {
     max-height: 65vh;
     overflow-y: auto;
@@ -30,7 +32,9 @@
     color: #aab7c4;
 }
 
+/* Tablet and smaller */
 @media (max-width: 991px) {
+    /* So the order history doesn't take up the whole screen if many orders */
     .order-history {
         max-height: 40vh;
     }

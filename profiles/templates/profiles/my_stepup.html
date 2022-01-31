@@ -1,7 +1,10 @@
-{% extends "base.html" %}
+<!-- The profile page for the site. Originally derived from the Code Institute Boutique Ado profile page and adapted. -->
+
+{% extends 'base.html' %}
 {% load static %}
 
 {% block extra_css %}
+    <!-- Load extra CSS for the page -->
     <link rel="stylesheet" href="{% static 'profiles/css/profiles.css' %}">
 {% endblock %}
 
@@ -25,12 +28,14 @@
         </div>
         <div class="row">
             <div class="col-12">
+                <!-- Display users wishlist items first -->
                 <h3 class="text-orange my-4">My Wishlist ({{ wishlist_items|length}})</h3>
                 {% if not wishlist_items %}
                     <p class="text-white">No items in your Wishlist</p>
                 {% else %}
                     <div class="row wishlist">
                         {% for item in wishlist_items %}
+                            <!-- Each wishlist item's details -->
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="card h-lg-100">
                                     <a class="products-link" href="{% url 'product_detail' item.id %}">
@@ -93,6 +98,7 @@
                     </div>
                 </form>
             </div>
+            <!-- Users order history -->
             <div class="col-12 col-lg-6 mt-4">
                 <h4 class="text-orange my-3">Order History</h4>
                 {% if orders %}
@@ -132,11 +138,13 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- if no orders -->
                 {% else %}
                     <p class="my-3">You haven't placed any orders yet.</p>
                 {% endif %}
             </div>
             <div class="col-12">
+                <!-- Account operations area, change password and delete account -->
                 <h4 class="logo-font my-3 text-center">Account Operations</h4>
                 <hr>
             </div>
@@ -160,5 +168,6 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Controls the styling of the countryfield -->
     <script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

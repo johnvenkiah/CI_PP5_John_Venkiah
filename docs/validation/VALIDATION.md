@@ -362,6 +362,10 @@ The JavaScript code was validated with JSHint. All files tested with 0 errors.
 
 ![JSHint stripe_elements](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_stripe_elements.png)
 
+#### countryfield.js
+
+![JSHint countryfield](https://github.com/johnvenkiah/CI_PP5_John_Venkiah/blob/main/docs/validation/jshint/jshint_countryfield.png)
+
 [To Top](#overview)
 
 </details>

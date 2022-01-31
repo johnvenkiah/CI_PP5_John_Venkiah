@@ -17,6 +17,7 @@
             <div class="col mt-3">
                 <h2 class="logo-font">Products</h2>
                 <hr class="mb-1">
+                <!-- Displays the gender(s) if filtered by that -->
                 {% if gender and gender|length <= 2 %}
                     <div class="col text-center">
                         <p class="text-white">Showing results in 
@@ -26,6 +27,7 @@
                         </p>
                     </div>
                 {% endif%}
+                <!-- If filtered by brands, show which brands -->
                 {% if brands %}
                     <div class="col text-center">
                         <p class="text-white mx-auto">Showing results from</p>
@@ -39,6 +41,7 @@
                             {% endfor %}
                     </div>
                 {% endif %}
+                <!-- If filtered by category, displaywhich categories -->
                 {% if current_categories %}
                     <div class="col text-center">
                         <p class="text-white">Showing results in</p>
@@ -47,7 +50,7 @@
                         {% endfor %}
                     </div>
                 {% endif %}
-
+                <!-- If items are filtered by new or on sale filters, show this -->
                 {% if news or sale %}
                     <div class="col text-center">
                         <p class="text-white">Showing results in</p>
@@ -65,6 +68,8 @@
             <div class="product-container col-12">
                 <div class="row mt-1 mb-2 justify-content-between">
                     <div class="col-12 col-md-6 col-lg-3 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+
+                        <!-- Results sorting, credits: Code Institute Boutique Ado project -->
                         <div class="sort-select-wrapper w-100">
                             <label for="sort-selector" hidden>Sort results</label>
                             <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -82,10 +87,13 @@
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-white mt-3">
+                            <!-- Display the products home link if results are not sorted or if search has been made -->
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span><a href="{% url 'products' %}" class="text-orange">Products Home</a> | </span>
                             {% endif %}
+                            <!-- If 1 product only display "Product" instead of "Products" -->
                             {{ products|length }} {% if products|length == 1 %}Product{% else %}Products{% endif %}{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            <!-- Add product link if admin user -->
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product_brand' %}" class="float-right float-md-none btn btn-orange front-weight-bold px-3 mx-3" title="Add New Brand" aria-label="Add new brand">
                                 <i class="fas fa-plus"></i>
@@ -96,6 +104,7 @@
                 </div>
                 <div class="row">
                     {% if not products %}
+                    <!-- Let's user know if no results were found and display a button to all products -->
                     <div class="col-12 col-md-6 col-lg-4 mt-4">
                         <p class="lead text-white">Sorry, that didn't give any results we're afraid.</p>
                         <a href="{% url 'products' %}" class="btn btn-block btn-orange btn-lg my-2">Go To All Products</a>
@@ -112,6 +121,7 @@
                                     {% if product.is_new %}
                                         <p class="sale-label text-shadow label-new{% if product.discount %} lower-label{% endif %}">NEW!</p>
                                     {% endif %}
+                                    <!-- Display image if there is one, else a white div box with inae unavailable text -->
                                     {% if product.image %}
                                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                     {% else %}
@@ -130,6 +140,7 @@
                                     <div class="row">
                                         <div class="col-6 px-0 text-left">
                                             <p class="text-orange lead mb-0">
+                                                <!-- If product is on sale, show the initial price crossed out -->
                                                 {% if product.initial_price %}
                                                     <small><del class="text-muted">€{{ product.initial_price }} </del></small>
                                                 {% endif %}
@@ -137,6 +148,7 @@
                                             </p>
                                         </div>
                                         <div class="col-6 px-0 text-right">
+                                            <!-- Show the product rating -->
                                             {% if product.rating > 0 %}
                                                 <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ product.rating|floatformat:1 }} / 5</small>
                                             {% else %}
@@ -146,13 +158,17 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-5 px-0 text-left align-self-end">
+                                            <!-- display the gender and / or category of the product -->
                                             {% if product.gender or product.category %}
                                                 <p class="small mt-1 mb-0">
                                                     {% if product.gender %}
+                                                        <!-- logic to display the correct link -->
                                                         <a class="text-orange" href="{% if product.gender == 'u' %}{% url 'products' %}{% else %}{% url 'products' %}?gender={{ product.gender }},u{% endif %}">
+                                                            <!-- get gender display was needed due to data type -->
                                                             {{ product.get_gender_display }}
                                                         </a> | 
                                                     {% endif %}
+                                                    <!-- display the category -->
                                                     {% if product.category %}
                                                         <a class="text-orange" href="{% url 'products' %}?category={{ product.category.name }}">
                                                             {{ product.category.friendly_name }}
@@ -162,6 +178,7 @@
                                             {% endif %}
                                         </div>
                                         <div class="col px-0 text-right">
+                                            <!-- Edit and Delete buttons for admin users -->
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}" class="btn text-orange product-edit-link">Edit</a>
@@ -176,6 +193,8 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- put the hr element on the page dependant on the size of the screen and amount of products shown.
+                        Credit: Code Institute, Boutique Ado project -->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>
@@ -204,6 +223,7 @@
             </div>
         </div>
         <div class="btt-button shadow-sm btn-trans">
+            <!-- Back to top button -->
             <label for="back-to-top-link" hidden>Back To Top</label>
             <a class="btt-link d-flex h-100" id="back-to-top-link">
                 <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
@@ -214,5 +234,6 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- JavaScript to sort results -->
     <script src="{% static 'products/js/result_sorting.js' %}"></script>
 {% endblock %}

@@ -1,4 +1,7 @@
-{% extends "base.html" %}
+<!-- Detail page for each product. Based on the product detail page in the Code Institute
+    Boutique Ado project but adapted to fit the site. -->
+
+{% extends 'base.html' %}
 {% load static %}
 
 {% block extra_title %}{{ product.brand.friendly_name }} {{ product.category.friendly_name }}{% endblock %}
@@ -17,6 +20,7 @@
             <div class="col-12 col-lg-8 offset-lg-2 mt-5">
                 <h2 class="product-name text-orange">{{ product.name }}
                 {% if product.brand %}
+                    <!-- Display link to brand differently if on desktop -->
                     {% if not is_mobile %}
                         <small class="float-right text-white small text-uppercase">
                             Check out more from 
@@ -28,6 +32,7 @@
                 </h2>
                 {% if is_mobile %}
                 <small class="text-white text-uppercase">
+                    <!-- Brand link for mobile -->
                     Check out more from 
                     <a href="{% url 'products' %}?brand={{ product.brand.name }}" class="text-orange">
                         {{ product.brand.friendly_name }}
@@ -35,6 +40,7 @@
                 </small>
             {% endif %}
                 <a href="{% url 'products' %}?brand={{ product.brand.name }}">
+                    <!-- Display the brand image as a link if there is one -->
                     {% if product.brand.image %}
                     <img class="max-150 float-right" src="{{ product.brand.image.url }}" alt="{{ product.brand.friendly_name }}-logo">
                     {% endif %}
@@ -45,12 +51,14 @@
             <!-- Product image -->
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
+                    <!-- Badges if product is on sale or new, bioth together work too -->
                     {% if product.is_new %}
                         <p class="mr-2 mb-2 sale-label text-shadow label-new{% if product.discount %} lower-label{% endif %}">NEW!</p>
                     {% endif %}
                     {% if product.discount %}
                         <p class="mr-2 mb-2 sale-label text-shadow">Save €{{ product.discount }}!</p>
                     {% endif %}
+                    <!-- Display product image or empty white div with text of no image -->
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -69,6 +77,7 @@
                 {% if product.details %}
                     <div class="d-none d-md-block">
                         <ul>
+                            <!-- Gets the product details and displays them as an unordered list -->
                             {% for d in product.details_as_list %}
                             <li>{{ d|title }}</li>
                             {% endfor %}
@@ -83,6 +92,7 @@
                     <div class="row">
                         <div class="col-6 px-lg-0 text-left">
                             <p class="text-orange lead mb-0">
+                                <!-- Original price crossed out of item on sale -->
                                 {% if product.initial_price %}
                                     <small><del class="text-muted">€{{ product.initial_price }} </del></small>
                                 {% endif %}
@@ -90,6 +100,7 @@
                             </p>
                         </div>
                         <div class="col-6 px-lg-0 text-right">
+                            <!-- Display the products rating -->
                             {% if product.rating %}
                                 <small class="text-orange"><i class="fas fa-star mr-1"></i>{{ product.rating|floatformat:1 }} / 5</small>
                             {% else %}
@@ -99,6 +110,7 @@
                     </div>
                     <div class="row">
                         <div class="col-6 px-lg-0 text-left align-self-end">
+                            <!-- Display the products gender and/or category -->
                             {% if product.gender or product.category %}
                                 <p class="small mt-1 mb-0">
                                     {% if product.gender %}
@@ -115,6 +127,7 @@
                             {% endif %}
                         </div>
                         <div class="col-6 px-lg-0 text-right">
+                            <!-- Edit and delete buttons for admin users -->
                             {% if request.user.is_superuser %}
                                 <small class="ml-3">
                                     <a href="{% url 'edit_product' product.id %}" class="btn text-orange product-edit-link">Edit</a>
@@ -127,6 +140,7 @@
                         </div>
                     </div>
                     <p class="mt-3">{{ product.description }}</p>
+                    <!-- Product details fit better here if on mobile -->
                     {% if product.details and is_mobile %}
                     <div class="d-md-none my-4">
                         <ul>
@@ -138,6 +152,7 @@
                 {% endif %}
                     <div class="row">
                         <div class="col-12 col-lg-6">
+                            <!-- If user is logged in and has item in wishlist, this is visible on the button -->
                             {% if request.user.is_authenticated %}
                                 {% if product in wishlist %}
                                     <a href="{% url 'remove_from_wishlist' product.id %}" aria-label="Remove product from Wishlist" class="w-100 btn inline btn-grey"><i class="fas fa-heart"></i> Remove from Wishlist</a>
@@ -145,13 +160,14 @@
                                     <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist" class="w-100 btn inline btn-grey"><i class="far fa-heart"></i> Add to Wishlist</a>
                                 {% endif %}
                             {% else %}
+                            <!-- Prompt the user to sign in if not signed in -->
                                 <a href="{% url 'account_login' %}" aria-label="Sign In" class="w-100 btn inline btn-grey"><i class="far fa-heart"></i> Sign In</a>
                                 <p class="text-center py-2">to add item to Wishlist.</p>
                             {% endif %}
 
                         </div>
                     </div>
-                    <!-- Product Quantity form -->
+                    <!-- Product Quantity form, credit: Code Institute, Boutique Ado project -->
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="row">
@@ -179,6 +195,7 @@
                             <div class="col-6 text-center">
                                 <p class="mt-3 text-orange"><strong>Size:</strong></p>
                                 <label for="id_product_size" hidden>Pick size</label>
+                                <!-- Displays the relevant size type in the dropdown menu, depending on the product -->
                                 <select {% if product.get_sizes.0.0 == 'n_a' %}disabled{% endif %} class="custom-select form-control mx-auto" name="product_size" id='id_product_size'>
                                     {% for s, v in product.get_sizes %}
                                         <option value="{{ s }}">{{ v }}</option>
@@ -204,43 +221,51 @@
                 </div>
             </div>
         </div>
-        <!-- Reviews -->
+        <!-- Reviews section -->
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <h3 class="lead text-orange">Product Reviews</h3>
                 {% if reviews %}
                     <section class="review-box mb-3">
+                        <!-- Loop over the reviews -->
                         {% for review in reviews %}
                             <div class="row">
                                 <div class="col-6">
                                     <p class="text-orange">{{ review.title }}</p>
                                 </div>
                                 <div class="col-6">
+                                    <!-- Product rating is updated for each review -->
                                     <p class="text-orange text-right"><i class="fas fa-star"></i> {{ review.product_rating }}/5</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
+                                    <!-- If user has removed their account, "Account removed" will be displayed instead of the users username -->
                                     <small class="text-muted">{% if not review.user == None %}{{ review.user }}{% else %}Account removed{% endif %} | {{ review.date_created }}</small>
                                 </div>
                             </div>
                             <p>{{ review.user_review }}</p>
+                            <!-- If user is admin, buttons to remove all reviews are visible. If logged in, users can remove their own.
+                            If not logged in, users don't see any delete buttons. -->
                             {% if request.user == review.user or request.user.is_superuser %}
                             <button type="button" class="btn product-edit-link text-danger" data-toggle="modal" data-target="#deleteReviewModal{{ review.id }}">
                                 Delete Review
                             </button>
                             {% endif %}
                             <hr>
+                            <!-- Modal to confirm review deletion -->
                             {% include 'products/includes/delete_review_modal.html' %}
                         {% endfor %}
                     </section>
                 {% else %}
+                <!-- If no reviews display this -->
                     <p>No reviews for this product yet.</p>
                     <hr>
                 {% endif %}
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 {% if request.user.is_authenticated %}
+                <!-- Review form -->
                     <section class="review-form">
                         {% if reviews %}
                         <h3 class="lead text-orange">Review this product</h3>
@@ -265,5 +290,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- Script to control the quantity of the product added -->
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
