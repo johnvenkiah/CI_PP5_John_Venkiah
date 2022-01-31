@@ -1,3 +1,6 @@
+<!-- This is the contact page and its simple task is to provide the user with a form to contact the site owner.
+I have styled it as I have the other allauth pages, like a modal window bringing focus to the form. -->
+
 {% extends 'base.html' %}
 {% block extra_title %}Contact{% endblock %}
 {% block content %}
@@ -6,12 +9,14 @@
     <div class="modal-content m-2">
         <div class="modal-header">
             <h2 class="modal-title text-orange font-weight-bold">Contact Us</h2>
+            <!-- Back to previous page -->
             {% if not request.path in request.META.HTTP_REFERER %}
             <a href="{{ request.META.HTTP_REFERER }}" class="close text-center text-white" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </a>
             {% endif %}
         </div>
+        <!-- The contact form -->
         <form method="POST" action="{% url 'contact' %}" class="form mb-2">
             <div class="modal-body">
                 {% csrf_token %}
@@ -19,10 +24,12 @@
             </div>
             <div class="row px-3">
                 <div class="col-6">
+                    <!-- Back to previous page -->
                     {% if not request.path in request.META.HTTP_REFERER %}
                     <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-block btn-grey text-white">
                         Cancel
                     </a>
+                    <!-- Provide means to get home if meta referer is contact page -->
                     {% else %}
                     <a href="{% url 'home' %}" class="btn btn-block btn-grey text-white">
                         Home
@@ -36,6 +43,6 @@
         </form>
     </div>
 </div>
-
+<!-- Prevent user from scrolling empty space -->
 {% include 'includes/prevent_scroll_script.html' %}
     {% endblock %}
