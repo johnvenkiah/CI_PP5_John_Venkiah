@@ -1,1 +1,0 @@
-web: gunicorn stepup.wsgi:application
